@@ -1,7 +1,23 @@
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <img 
+                src="/assets/img/logo.png" 
+                alt="logo"
+                height= "50%"/>
+            </div>
+            <div class="col">
+
+            </div>   
+        </div>
+    </div>
+</footer>
+
+<!--
 <footer class="footer text-center">
         <div class="container">
             <div class="row">
-                <!-- Footer Location-->
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <h4 class="text-uppercase mb-4">Location</h4>
                     <p class="lead mb-0">
@@ -10,7 +26,6 @@
                         Clark, MO 65243
                     </p>
                 </div>
-                <!-- Footer Social Icons-->
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <h4 class="text-uppercase mb-4">Around the Web</h4>
                     <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
@@ -20,7 +35,6 @@
                             class="fab fa-fw fa-linkedin-in"></i></a>
                     <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
                 </div>
-                <!-- Footer About Text-->
                 <div class="col-lg-4">
                     <h4 class="text-uppercase mb-4">About Freelancer</h4>
                     <p class="lead mb-0">
@@ -32,4 +46,4 @@
             </div>
         </div>
     </footer>
-
+-->
