@@ -3,7 +3,7 @@
 <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img
-              src="./img/DALL_E-2024-10-07-10.35-removebg-preview.png"
+              src="/assets/img/logo.png"
               alt="logo"
               height="60"
             />
@@ -19,28 +19,18 @@
           <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#">Item 1</a>
+                <a class="nav-link text-white" href="#">PELCIULAS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Item 2</a>
+                <a class="nav-link text-white" href="#">SERIES</a>
               </li>
-              <li class="nav-item dropdown ">
-                <a
-                  class="nav-link dropstart dropdown-toggle"
-                  href="#"
-                  data-bs-toggle="dropdown"
-                  >Item 3</a
-                >
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Item 3.1</a></li>
-                  <li><a class="dropdown-item" href="#">Item 3.2</a></li>
-                  <li><a class="dropdown-item" href="#">Item 3.3</a></li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">GENEROS</a>
               </li>
             </ul>
-            <div class="ms-auto">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-user"></i>
+            <div class="ms-auto h-20">
+            <i class="fa-solid fa-magnifying-glass me-5 text-secondary"></i>
+            <i class="fa-solid fa-user me-5 text-secondary"></i>
             </div>
           
           </div>
