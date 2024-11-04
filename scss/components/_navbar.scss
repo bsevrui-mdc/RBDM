@@ -3,9 +3,9 @@
 // 
 
 #mainNav {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-family: $headings-font-family;
+    
+    
+    font-family: $font-family-oxanium;
     font-weight: $headings-font-weight;
 
     .navbar-brand {
@@ -35,7 +35,7 @@
             div.dropdown-menu{
                 a.dropdown-item{
                     &:hover {
-                        background-color: $primary;
+                        background-color: $secondary;
 
                     }
                 }
