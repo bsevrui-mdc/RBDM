@@ -2,8 +2,9 @@
 	switch ($_SERVER["SCRIPT_NAME"]) {
 		case "/index.php":
 			$CURRENT_PAGE = "Index"; 
-			$PAGE_TITLE = "Portfolio";
+			$PAGE_TITLE = "GCM - RBDM";
 			break;
+		/*
 		case "/about.php":
 			$CURRENT_PAGE = "About"; 
 			$PAGE_TITLE = "About Us";
@@ -15,5 +16,6 @@
 		default:
 			$CURRENT_PAGE = "Index";
 			$PAGE_TITLE = "Welcome to my homepage!";
+		*/
 	}
 ?>
