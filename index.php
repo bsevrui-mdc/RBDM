@@ -1,15 +1,14 @@
-<?php include("includes/a_config.php");?>
+<?php // include("includes/a_config.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <?php include("includes/head-tag-contents.php");?>
+        <?php // include("includes/head-tag-contents.php"); ?>
     </head>
     <body>
-        <?php include("includes/design-top.php");?>
-        <?php include("includes/navbar.php");?>
+        <?php include("includes/navbar.php"); ?>
         <main>
             <!-- Aquí iría nuestro código -->
         </main>
-        <?php include("includes/footer.php");?>
+        <?php include("includes/footer.php"); ?>
     </body>
 </html>
