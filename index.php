@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <?php // include("includes/head-tag-contents.php"); ?>
+        <?php include("includes/head-tags.php"); ?>
     </head>
     <body>
         <?php include("includes/navbar.php"); ?>
