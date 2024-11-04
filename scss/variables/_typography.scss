@@ -2,12 +2,35 @@
 // Typography
 // 
 
+<<<<<<< HEAD
 
 $font-family-oxanium: "Oxanium", serif;
 
 $headings-font-family-julius: "Julius Sans One", serif;
 
 $headings-font-julius-weight: 400;
+=======
+
+$font-family-sans-serif: "Lato",
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+"Noto Sans",
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol",
+'Noto Color Emoji';
+
+$headings-font-family: "Oxanium", sans-serif;
+>>>>>>> 63abcbe66e2a20207087abcb519ca9c056e22fb4
 
 $font-size-base: 1rem;
+<<<<<<< HEAD
 $font-size-lg: $font-size-base * 1.75;
+=======
+$font-size-lg:                $font-size-base * 1.75;
+>>>>>>> 63abcbe66e2a20207087abcb519ca9c056e22fb4
