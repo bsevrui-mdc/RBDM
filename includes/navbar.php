@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg bg-primary text-uppercase fixed-top" id="mainNav">
 <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img
@@ -37,59 +37,11 @@
                 </ul>
               </li>
             </ul>
-
-            <form class="d-flex">
-              <input
-                class="form-control me-2"
-                type="text"
-                placeholder="Search"
-              />
-              <button
-                type="button"
-                class="btn btn-success"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-              >
-                Login
-              </button>
-
-              <!-- Modal -->
-              <div
-                class="modal fade"
-                id="staticBackdrop"
-                data-bs-backdrop="static"
-                data-bs-keyboard="false"
-                tabindex="-1"
-                aria-labelledby="staticBackdropLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">
-                        Modal title
-                      </h5>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">Pulsa aceptar para salir</div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-success"
-                        data-bs-dismiss="modal"
-                      >
-                        Aceptar
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
+            <div class="ms-auto">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-user"></i>
+            </div>
+          
           </div>
         </div>
 </nav>
