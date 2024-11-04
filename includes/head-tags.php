@@ -4,7 +4,7 @@
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 <!-- Font Awesome icons (free version) -->
-<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/c83f895bf6.js" crossorigin="anonymous"></script>
 <!-- Google fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
 <!-- Core theme CSS (includes Bootstrap) -->
