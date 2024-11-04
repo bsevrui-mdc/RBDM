@@ -1,35 +1,95 @@
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand" href="index.php">Start Bootstrap</a>
-        <button class="navbar-toggler text-uppercase font-weight-bold text-white rounded" type="button"
-            data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars fa-2x"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link py-3 px-0 px-lg-3  dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu bg-secondary text-uppercase border-0 " aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item text-white" href="#">Action</a>
-                        <a class="dropdown-item text-white" href="#">Another action</a>
-                        <a class="dropdown-item text-white" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item mx-0 mx-lg-1"><a
-                        class="nav-link <?php if ($CURRENT_PAGE == "Index") {?>active<?php }?> py-3 px-0 px-lg-3 rounded"
-                        href="index.php">Portfolio</a></li>
-                <li class="nav-item mx-0 mx-lg-1"><a
-                        class="nav-link <?php if ($CURRENT_PAGE == "About") {?>active<?php }?> py-3 px-0 px-lg-3 rounded"
-                        href="about.php">About</a></li>
-                <li class="nav-item mx-0 mx-lg-1"><a
-                        class="nav-link <?php if ($CURRENT_PAGE == "Contact") {?>active<?php }?> py-3 px-0 px-lg-3 rounded"
-                        href="contact.php">Contact</a></li>
+<div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./img/DALL_E-2024-10-07-10.35-removebg-preview.png"
+              alt="logo"
+              height="60"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mynavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Item 1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Item 2</a>
+              </li>
+              <li class="nav-item dropdown ">
+                <a
+                  class="nav-link dropstart dropdown-toggle"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  >Item 3</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Item 3.1</a></li>
+                  <li><a class="dropdown-item" href="#">Item 3.2</a></li>
+                  <li><a class="dropdown-item" href="#">Item 3.3</a></li>
+                </ul>
+              </li>
             </ul>
+
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="text"
+                placeholder="Search"
+              />
+              <button
+                type="button"
+                class="btn btn-success"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+                Login
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="staticBackdrop"
+                data-bs-backdrop="static"
+                data-bs-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">
+                        Modal title
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">Pulsa aceptar para salir</div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-success"
+                        data-bs-dismiss="modal"
+                      >
+                        Aceptar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-    </div>
 </nav>
