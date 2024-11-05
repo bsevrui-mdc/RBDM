@@ -5,7 +5,7 @@
         <?php include("includes/head-tags.php"); ?>
     </head>
     <body>
-        <?php // include("includes/navbar.php"); ?>
+        <?php include("includes/navbar.php"); ?>
         <main>
             <div class="container-fluid">
             <div class="carousel carousel-dark slide" data-bs-ride="carousel">
