@@ -1,3 +1,13 @@
 .footer {
-    background-color: grey;
+    background-color: $footer !important;
+
+}
+
+.footer .logo-container {
+    padding-top: 0px;
+}
+
+.footer .logo {
+    width: 50px;
+    height: auto;
 }
