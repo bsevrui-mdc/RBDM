@@ -7,7 +7,9 @@
     <body>
         <?php include("includes/navbar.php"); ?>
         <main>
-            <!-- Aquí iría nuestro código -->
+            <div class="content">
+                <h3>Hola</h3>
+            </div>
             <?php include("includes/main.php"); ?>
         </main>
         <?php include("includes/footer.php"); ?>
