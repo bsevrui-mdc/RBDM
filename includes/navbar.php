@@ -9,7 +9,7 @@
             />
           </a>
           <div class="me-0 d-flex d-lg-none justify-content-center align-items-center">
-              <i class="fa-solid fa-magnifying-glassn mx-3"></i>
+              <i class="fa-solid fa-magnifying-glass mx-3"></i>
               <button
             class="navbar-toggler"
             type="button"
