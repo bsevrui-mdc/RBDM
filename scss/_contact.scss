@@ -1,4 +1,10 @@
 .contact .content {
     border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.10);
+    padding: 20px 30px;
+}
+
+@media (min-width: 992px) {
+    .contact .content {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
 }
