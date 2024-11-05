@@ -1,23 +1,24 @@
 <footer class="footer">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-2">
-                <img src="/assets/img/logo.png" class="logo" alt="logo">
+            <div class="d-none d-lg-block col-lg-2">
+                <img src="/assets/img/logo.png" class="logo img-fluid" alt="logo">
             </div>
-            <div class="col-lg-8">
+            <div class="col-12 col-lg-8">
                 <div class="row">
-                    <div class="col-lg">
+                    <div class="col-6 col-lg">
                         <p>INICIO</p>
                         <p>PELICULAS</p>
                         <p>SERIES</p>
                         <p>GENEROS</p>
                     </div>
-                    <div class="col-lg">
+                    <div class="col-6 col-lg">
                         <p>Ayuda</p>
                         <p>Contacto</p>
                         <p>Enlaces</p>
                     </div>
-                    <div class="col-lg">
+                    <div class="d-block d-lg-none"><hr></div>
+                    <div class="col-12 col-lg">
                         <p>Politicas de privacidad</p>
                         <p>Condiciones de usos</p>
                         <p>Politicas de cookies</p>
