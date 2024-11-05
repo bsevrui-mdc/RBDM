@@ -1,5 +1,5 @@
 <header>
-<nav class="navbar navbar-expand-lg bg-primary text-uppercase fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg bg-primary text-uppercase" id="mainNav">
 <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img
@@ -8,7 +8,9 @@
               height="60"
             />
           </a>
-          <button
+          <div class="me-0 ms-auto d-flex d-lg-none justify-content-center align-items-center">
+              <i class="fa-solid fa-magnifying-glass text-info mx-3"></i>
+              <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -16,10 +18,12 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+          </div>
+          
           <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">PELCIULAS</a>
+                <a class="nav-link text-white" href="#">PELICULAS</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white" href="#">SERIES</a>
@@ -27,13 +31,16 @@
               <li class="nav-item">
                 <a class="nav-link text-white" href="#">GENEROS</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link text-white d-lg-none">PERFIL</a>
+              </li>
             </ul>
-            <div class="ms-auto h-20">
-            <i class="fa-solid fa-magnifying-glass me-5 text-secondary"></i>
-            <i class="fa-solid fa-user me-5 text-secondary"></i>
-            </div>
-          
           </div>
+          <div class="ms-auto d-lg-block d-none">
+              <i class="fa-solid fa-magnifying-glass me-5 text-info"></i>
+              <i class="fa-solid fa-user me-5 text-info "></i>
+          </div>
+          
         </div>
 </nav>
 </header>
