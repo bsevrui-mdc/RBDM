@@ -3,44 +3,13 @@
 // 
 
 #mainNav {
+            font-family: $font-family-oxanium;
+            font-weight: $headings-font-weight;
+            font-size: $font-family-oxanium-size;
     
-    
-    font-family: $font-family-oxanium;
-    font-weight: $headings-font-weight;
-    font-size: $font-family-oxanium-size;
-
-    .navbar-brand {
-        color: $white;
-    }
-
-    .navbar-nav {
-        margin-top: 1rem;
-
-        li.nav-item {
-            a.nav-link a.dropdown-item {
-                color: $white;
-
-                &:hover {
-                    color: $primary;
-                }
-
-                &:active,
-                &:focus {
-                    color: $white;
-                }
-
-                &.active {
-                    color: $primary;
-                }
-            }
-            
-        }
-    }
-
-    .navbar-toggler {
-        font-size: 80%;
-        padding: 0.8rem;
-    }
 }
+
+
+
 
 

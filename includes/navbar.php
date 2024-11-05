@@ -8,7 +8,7 @@
               height="60"
             />
           </a>
-          <div class="me-0 d-flex d-lg-none justify-content-center align-items-center w-70">
+          <div class="me-0 d-flex d-lg-none justify-content-center align-items-center">
               <i class="fa-solid fa-magnifying-glass text-secondary mx-3"></i>
               <button
             class="navbar-toggler"
@@ -23,16 +23,16 @@
           <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">PELICULAS</a>
+                <a class="nav-link text-white mx-3" href="#">PELICULAS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">SERIES</a>
+                <a class="nav-link text-white mx-3" href="#">SERIES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">GENEROS</a>
+                <a class="nav-link text-white mx-3" href="#">GENEROS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white d-lg-none">PERFIL</a>
+                <a class="nav-link text-white mx-3 d-lg-none">PERFIL</a>
               </li>
             </ul>
           </div>
