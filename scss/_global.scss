@@ -33,9 +33,16 @@
 body {
     background-color: black;
     color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h3 {
+    font-family: $font-family-oxanium;
 }
 
 button {
     border-radius: 0 !important;
+    font-family: $font-family-oxanium !important;
+    text-transform: uppercase;
 }
 
