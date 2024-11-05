@@ -8,15 +8,15 @@
               height="60"
             />
           </a>
-          <div class="me-0 ms-auto d-flex d-lg-none justify-content-center align-items-center">
-              <i class="fa-solid fa-magnifying-glass text-info mx-3"></i>
+          <div class="me-0 d-flex d-lg-none justify-content-center align-items-center w-70">
+              <i class="fa-solid fa-magnifying-glass text-secondary mx-3"></i>
               <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#mynavbar"
           >
-            <span class="navbar-toggler-icon"></span>
+          <i class="fa-solid fa-bars text-secondary"></i>
           </button>
           </div>
           
@@ -37,8 +37,8 @@
             </ul>
           </div>
           <div class="ms-auto d-lg-block d-none">
-              <i class="fa-solid fa-magnifying-glass me-5 text-info"></i>
-              <i class="fa-solid fa-user me-5 text-info "></i>
+              <i class="fa-solid fa-magnifying-glass me-5 text-secondary"></i>
+              <i class="fa-solid fa-user me-5 text-secondary "></i>
           </div>
           
         </div>
