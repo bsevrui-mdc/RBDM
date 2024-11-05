@@ -1,7 +1,7 @@
 <footer>
-    <div class="container-fluid bg-dark gray">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-2">
                 <img 
                 src="/assets/img/logo.png" 
                 alt="logo"
@@ -9,21 +9,28 @@
             </div>
             <div class="col-lg-8">
                 <div class="row">
-                    <div class="col-lg-3">
-                        <p>Inicio</p>
-                        <p>Peliculas</p>
-                        <p>Series</p>
-                        <p>Generos</p>
+                    <div class="col-lg">
+                        <p>INICIO</p>
+                        <p>PELCIULAS</p>
+                        <p>SERIES</p>
+                        <p>GENEROS</p>
                     </div>
-                    <div class="col-lg-3"></div>
-                    <div class="col-lg-3"></div>
-                    <div class="col-lg-3"></div>
-                 
+                    <div class="col-lg">
+                        <p>Ayuda</p>
+                        <p>Contacto</p>
+                        <p>Enlaces</p>
+                    </div>
+                    <div class="col-lg">
+                        <p>Politicas de privacidad</p>
+                        <p>Condiciones de usos</p>
+                        <p>Politicas de cookies</p>
+                    </div>
+
                 </div>
             </div>
-            <div class="col">
+            <div class="col-lg-2">
 
-            </div>   
+            </div> 
         </div>
     </div>
 </footer>
