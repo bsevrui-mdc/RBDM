@@ -1,11 +1,8 @@
 <footer class="footer">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-2 logo-container">
-                <img 
-                src="/assets/img/logo.png" 
-                alt="logo"
-                height= "50%"/>
+            <div class="col-lg-2">
+                <img src="/assets/img/logo.png" class="logo" alt="logo">
             </div>
             <div class="col-lg-8">
                 <div class="row">
@@ -30,10 +27,10 @@
             </div>
             <div class="col-lg-2">
                 <div class="row">
-                    <div class="col-3 col-lg-12"><img src="/assets/img/logo.png" class="logo" alt=""></div>
-                    <div class="col-3 col-lg-12"><img src="/assets/img/logo.png" class="logo" alt=""></div>
-                    <div class="col-3 col-lg-12"><img src="/assets/img/logo.png" class="logo" alt=""></div>
-                    <div class="col-3 col-lg-12"><img src="/assets/img/logo.png" class="logo" alt=""></div>
+                    <div class="col-3 col-lg-12"><img src="/assets/img/logo.png" class="icon" alt=""></div>
+                    <div class="col-3 col-lg-12"><img src="/assets/img/logo.png" class="icon" alt=""></div>
+                    <div class="col-3 col-lg-12"><img src="/assets/img/logo.png" class="icon" alt=""></div>
+                    <div class="col-3 col-lg-12"><img src="/assets/img/logo.png" class="icon" alt=""></div>
                 </div>
                 
             </div> 
