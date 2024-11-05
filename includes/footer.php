@@ -1,17 +1,14 @@
-<footer>
+<footer class="footer">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2">
-                <img 
-                src="/assets/img/logo.png" 
-                alt="logo"
-                height= "50%"/>
+                <img src="/assets/img/logo.png" class="logo" alt="logo">
             </div>
             <div class="col-lg-8">
                 <div class="row">
                     <div class="col-lg">
                         <p>INICIO</p>
-                        <p>PELCIULAS</p>
+                        <p>PELICULAS</p>
                         <p>SERIES</p>
                         <p>GENEROS</p>
                     </div>
@@ -29,7 +26,13 @@
                 </div>
             </div>
             <div class="col-lg-2">
-
+                <div class="row">
+                    <div class="col-3 col-lg-12"><img src="/assets/img/logo.png" class="icon" alt=""></div>
+                    <div class="col-3 col-lg-12"><img src="/assets/img/logo.png" class="icon" alt=""></div>
+                    <div class="col-3 col-lg-12"><img src="/assets/img/logo.png" class="icon" alt=""></div>
+                    <div class="col-3 col-lg-12"><img src="/assets/img/logo.png" class="icon" alt=""></div>
+                </div>
+                
             </div> 
         </div>
     </div>
