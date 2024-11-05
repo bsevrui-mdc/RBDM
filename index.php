@@ -8,6 +8,7 @@
         <?php include("includes/navbar.php"); ?>
         <main>
             <!-- Aquí iría nuestro código -->
+            <?php include("includes/main.php"); ?>
         </main>
         <?php include("includes/footer.php"); ?>
     </body>

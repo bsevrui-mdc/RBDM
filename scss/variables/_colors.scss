@@ -12,9 +12,15 @@
 // $secondary: $dark-blue;
 // $danger: yellow;
 $primary: #1565C0;
-$info: #BBDEFB;
-$secondary: #3D3D3D;
+$secondary: #BBDEFB;
 $white: white;
+$footer: #3D3D3D;
+
+$statusOnHold: #FFFF00;
+$statusCurrentlyWatching: #1565C0;
+$statusDropped: #FF0000;
+$statusPlanToWatch: #BEBEBE;
+$statusCompleted: #00FF00;
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
 // $min-contrast-ratio: 2.4;

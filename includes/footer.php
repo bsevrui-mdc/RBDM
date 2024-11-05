@@ -1,11 +1,25 @@
 <footer>
-    <div class="container-fluid">
+    <div class="container-fluid bg-dark gray">
         <div class="row">
-            <div class="col">
+            <div class="col-lg-4">
                 <img 
                 src="/assets/img/logo.png" 
                 alt="logo"
                 height= "50%"/>
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <p>Inicio</p>
+                        <p>Peliculas</p>
+                        <p>Series</p>
+                        <p>Generos</p>
+                    </div>
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-3"></div>
+                 
+                </div>
             </div>
             <div class="col">
 
