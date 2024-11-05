@@ -11,7 +11,7 @@
     </head>
     <body>
         <!-- Añadir luego la navbar -->
-        <main class="container-fluid">
+        <main class="container-fluid contact">
             <div class="row">
                 <div class="col-6 content">
                     <h3>Encuéntranos en Redes Sociales</h3>
