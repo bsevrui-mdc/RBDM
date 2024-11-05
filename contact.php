@@ -7,16 +7,6 @@
             div {
                 border: 1px solid white;
             }
-
-            .content {
-                border-radius: 15px;
-                background-color: rgba(255, 255, 255, 0.10);
-            }
-
-            .content h3 {
-                text-align: center;
-                font-family: cambria;
-            }
         </style>
     </head>
     <body>
