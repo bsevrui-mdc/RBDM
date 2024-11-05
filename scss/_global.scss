@@ -7,6 +7,7 @@
 // 
 // https://caniuse.com/?search=scroll-padding
 
+/*
 html {
     height: 100%;
     // scroll-padding-top: calc(#{$navbar-height} - 1px);
@@ -28,3 +29,11 @@ html {
         }
     }
 }
+
+*/
+
+body {
+    background-color: black;
+    color: white;
+}
+
