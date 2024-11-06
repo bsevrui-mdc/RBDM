@@ -5,6 +5,9 @@
 .contact .content .row {
     border-radius: 15px;
     padding: 20px 10px;
+    @include media-breakpoint-up(lg) {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
 }
 
 .contact .content .row a {
@@ -13,10 +16,4 @@
 
 .contact .content .row a:hover {
     color: $primary;
-}
-
-@media (min-width: 992px) {
-    .contact .content .row {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
 }

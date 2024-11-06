@@ -36,8 +36,14 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+h1 {
+    font-family: $headings-font-family-julius;
+    font-weight: $headings-font-julius-weight;
+}
+
 h3 {
     font-family: $font-family-oxanium;
+    font-style: $font-family-oxanium-size;
 }
 
 button {
