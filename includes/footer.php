@@ -2,39 +2,58 @@
     <div class="container-fluid">
         <div class="row">
             <div class="d-none d-lg-block col-lg-2">
-                <img src="/assets/img/logo.png" class="logo img-fluid" alt="logo">
+                <img src="/assets/img/logo.PNG" class="logo img-fluid" alt="logo">
             </div>
             <div class="col-12 col-lg-8">
                 <div class="row">
                     <div class="col-6 col-lg">
-                        <p>INICIO</p>
-                        <p>PELICULAS</p>
-                        <p>SERIES</p>
-                        <p>GENEROS</p>
+                        <a href="" class="text-decoration-none"><p>INICIO</p></a>
+                        <a href="" class="text-decoration-none"><p>PELICULAS</p></a>
+                        <a href="" class="text-decoration-none"><p>SERIES</p></a>
+                        <a href="" class="text-decoration-none"><p>GENEROS</p></a>
                     </div>
                     <div class="col-6 col-lg">
-                        <p>Ayuda</p>
-                        <p>Contacto</p>
-                        <p>Enlaces</p>
+                        <a href="" class="text-decoration-none"><p>AYUDA</p></a>
+                        <a href="" class="text-decoration-none"><p>CONTACTO</p></a>
+                        <a href="" class="text-decoration-none"><p>ENLACES</p></a>
                     </div>
                     <div class="d-block d-lg-none"><hr></div>
                     <div class="col-12 col-lg">
-                        <p>Politicas de privacidad</p>
-                        <p>Condiciones de usos</p>
-                        <p>Politicas de cookies</p>
+                        <a href="" class="text-decoration-none"><p>POLITICAS DE PRIVACIDAD</p></a>
+                        <a href="" class="text-decoration-none"><p>CONDICIONES DE USOS</p></a>
+                        <a href="" class="text-decoration-none"><p>POLITICAS DE COOKIES</p></a>
                     </div>
 
                 </div>
             </div>
             <div class="col-lg-2">
                 <div class="row">
-                    <div class="col-3 col-lg-12"><img src="/assets/img/logo.png" class="icon" alt=""></div>
-                    <div class="col-3 col-lg-12"><img src="/assets/img/logo.png" class="icon" alt=""></div>
-                    <div class="col-3 col-lg-12"><img src="/assets/img/logo.png" class="icon" alt=""></div>
-                    <div class="col-3 col-lg-12"><img src="/assets/img/logo.png" class="icon" alt=""></div>
+                    <div class="col-3 col-lg-12"><img src="/assets/icons/tiktok.svg" class="icon" alt=""></div>
+                    <div class="col-3 col-lg-12"><img src="/assets/icons/tiktok.svg" class="icon" alt=""></div>
+                    <div class="col-3 col-lg-12"><img src="/assets/icons/tiktok.svg" class="icon" alt=""></div>
+                    <div class="col-3 col-lg-12"><img src="/assets/icons/tiktok.svg" class="icon" alt=""></div>
                 </div>
                 
             </div> 
+        </div>
+        <div class="row py-5"> 
+            <div class="col">
+               <div class="icons">
+                <img src="/assets/icons/tiktok.svg" alt="" class="icon img-fluid">
+                <img src="/assets/icons/instagram.svg" alt="" class="icon img-fluid">
+                <img src="/assets/icons/twitter-x.svg" alt="" class="icon img-fluid">
+                <img src="/assets/icons/facebook.svg" alt="" class="icon img-fluid">
+                <img src="/assets/icons/youtube.svg" alt="" class="icon img-fluid">
+                <img src="/assets/icons/reddit.svg" alt="" class="icon img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="icons">
+                <p>© 1990-2024&nbsp;by rbdm.com, Inc.</p>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
