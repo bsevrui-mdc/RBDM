@@ -13,16 +13,26 @@
                         <div class="col-12">
                             <h3 class="text-center">Encuéntranos en Redes Sociales</h3>
                         </div>
-                        <div class="col-12">@rbdm_gcm_TT</div>
-                        <div class="col-12">@rbdm_gcm_IG</div>
                         <div class="col-12">
-                            <a class="text-decoration-none">
-                                <img src="/assets/icons/twitter-x.svg" alt="x_logo">
-                                <p>@rbdm_gcm_X</p>
-                            </a>
+                            <img src="/assets/icons/tiktok.svg" alt="TikTok_logo">
+                            <a class="text-decoration-none">@rbdm_gcm_TT</a>
                         </div>
-                        <div class="col-12">@rbdm_gcm_F</div>
-                        <div class="col-12">@rbdm_gcm_YT</div>
+                        <div class="col-12">
+                            <img src="/assets/icons/instagram.svg" alt="instagram_logo">
+                            <a class="text-decoration-none">@rbdm_gcm_IG</a>
+                        </div>
+                        <div class="col-12">
+                            <img src="/assets/icons/twitter-x.svg" alt="x_logo">
+                            <a class="text-decoration-none">@rbdm_gcm_X</a>
+                        </div>
+                        <div class="col-12">
+                            <img src="/assets/icons/facebook.svg" alt="facebook_logo">
+                            <a class="text-decoration-none">@rbdm_gcm_F</a>
+                        </div>
+                        <div class="col-12">
+                            <img src="/assets/icons/youtube.svg" alt="youtube_logo">
+                            <a class="text-decoration-none">@rbdm_gcm_YT</a>
+                        </div>
                     </div>
                 </div>
                 <div class="d-none d-lg-block col-lg-6 content">
