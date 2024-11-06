@@ -28,10 +28,10 @@
             </div>
             <div class="col-lg-2">
                 <div class="row">
-                    <div class="col-3 col-lg-12"><img src="/assets/icons/tiktok.svg" class="icon" alt=""></div>
-                    <div class="col-3 col-lg-12"><img src="/assets/icons/tiktok.svg" class="icon" alt=""></div>
-                    <div class="col-3 col-lg-12"><img src="/assets/icons/tiktok.svg" class="icon" alt=""></div>
-                    <div class="col-3 col-lg-12"><img src="/assets/icons/tiktok.svg" class="icon" alt=""></div>
+                    <div class="col-3 col-lg-12"><img src="/assets/icons/amazon.svg" class="icon" alt=""></div>
+                    <div class="col-3 col-lg-12"><img src="/assets/icons/netflix.svg" class="icon" alt=""></div>
+                    <div class="col-3 col-lg-12"><img src="/assets/icons/hbo.svg" class="icon" alt=""></div>
+                    <div class="col-3 col-lg-12"><img src="/assets/icons/disney.svg" class="icon" alt=""></div>
                 </div>
                 
             </div> 
