@@ -10,10 +10,21 @@
     }
 }
 
-.contact .content .row a {
+.contact .content .rrss {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contact .content .rrss .icon {
+    width: 3rem;
+    height: auto;
+    margin-right: 25px;
+}
+
+.contact .content .rrss a {
     color: white;
 }
 
-.contact .content .row a:hover {
+.contact .content .rrss a:hover {
     color: $primary;
 }

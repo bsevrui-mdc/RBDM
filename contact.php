@@ -13,24 +13,24 @@
                         <div class="col-12">
                             <h3 class="text-center">Encuéntranos en Redes Sociales</h3>
                         </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <img src="/assets/icons/tiktok.svg" alt="TikTok_logo">
+                        <div class="col-12 d-flex justify-content-center align-items-center rrss">
+                            <img src="/assets/icons/tiktok.svg" class="icon" alt="TikTok_logo">
                             <a class="text-decoration-none" href="">@rbdm_gcm_TT</a>
                         </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <img src="/assets/icons/instagram.svg" alt="instagram_logo">
+                        <div class="col-12 d-flex justify-content-center align-items-center rrss">
+                            <img src="/assets/icons/instagram.svg" class="icon" alt="instagram_logo">
                             <a class="text-decoration-none" href="">@rbdm_gcm_IG</a>
                         </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <img src="/assets/icons/twitter-x.svg" alt="x_logo">
+                        <div class="col-12 d-flex justify-content-center align-items-center rrss">
+                            <img src="/assets/icons/twitter-x.svg" class="icon" alt="x_logo">
                             <a class="text-decoration-none" href="">@rbdm_gcm_X</a>
                         </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <img src="/assets/icons/facebook.svg" alt="facebook_logo">
+                        <div class="col-12 d-flex justify-content-center align-items-center rrss">
+                            <img src="/assets/icons/facebook.svg" class="icon" alt="facebook_logo">
                             <a class="text-decoration-none" href="">@rbdm_gcm_F</a>
                         </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <img src="/assets/icons/youtube.svg" alt="youtube_logo">
+                        <div class="col-12 d-flex justify-content-center align-items-center rrss">
+                            <img src="/assets/icons/youtube.svg" class="icon" alt="youtube_logo">
                             <a class="text-decoration-none" href="">@rbdm_gcm_YT</a>
                         </div>
                     </div>
