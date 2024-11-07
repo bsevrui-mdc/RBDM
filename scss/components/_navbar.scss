@@ -9,7 +9,11 @@
 #mynavbar ul li a{
     color: $white;
     margin-left: 20px;
-    margin-left: 20px;
+    margin-top: $espacio-navbar-top;
+}
+
+nav i{
+    font-size: $font-family-oxanium-size;
 }
 
 
