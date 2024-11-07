@@ -23,16 +23,16 @@
           <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#">PELICULAS</a>
+                <a class="nav-link" href="#"><h3>PELICULAS</h3></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">SERIES</a>
+                <a class="nav-link" href="#"><h3>SERIES</h3></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">GENEROS</a>
+                <a class="nav-link" href="#"><h3>GENEROS</h3></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link d-lg-none">PERFIL</a>
+                <a class="nav-link d-lg-none"><h3>PERFIL</h3></a>
               </li>
             </ul>
           </div>

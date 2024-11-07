@@ -1,7 +1,6 @@
 <?php include("includes/a_config.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
-<<<<<<< HEAD
     <head>
         <?php include("includes/head-tags.php"); ?>
     </head>
@@ -10,7 +9,8 @@
         <main>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-8">
+                    
+                <div class="col-8">
                         <!-- Carousel -->
                         <div id="demo" class="carousel slide" data-bs-ride="carousel">
                             <!-- Indicators/dots -->
