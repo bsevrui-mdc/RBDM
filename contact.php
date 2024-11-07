@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="d-none d-lg-block col-lg-6 content">
-                    <div class="row">
+                    <div class="row form">
                         <div class="col-12">
                             <h3 class="text-center">¿Necesitas contacto más directo?</h3>
                         </div>
