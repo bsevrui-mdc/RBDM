@@ -63,5 +63,6 @@
             </div>
         </main>
         <!-- Añadir luego el footer -->
+        <?php include "includes/footer.php" ?>
     </body>
 </html>
