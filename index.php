@@ -62,33 +62,36 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="https://placehold.co/1920x1080" class="d-block" style="width:100%">
+                    <div class="d-flex flex-column h-100">
+                        <div class="row d-flex flex-grow-1">
+                            <div class="col-4">
+                                <img src="https://placehold.co/500" class="img-fluid">
+                            </div>
+                            <div class="col align-content-center">
+                                <h1>Aventura</h1>
+                                <p>Género: Drama</p>
+                            </div>
                         </div>
-                        <div class="col">
-                            <h1>Aventura</h1>
-                            <p>Género: Drama</p>
+                        <div class="row d-flex flex-grow-1">
+                            <div class="col-4">
+                                <img src="https://placehold.co/1920x1080" class="d-block" style="width: 100%;">
+                            </div>
+                            <div class="col align-content-center">
+                                <h1>Aventura</h1>
+                                <p>Género: Drama</p>
+                            </div>
+                        </div>
+                        <div class="row d-flex flex-grow-1">
+                            <div class="col-4">
+                                <img src="https://placehold.co/1920x1080" class="d-block" style="width: 100%;">
+                            </div>
+                            <div class="col align-content-center">
+                                <h1>Aventura</h1>
+                                <p>Género: Drama</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="https://placehold.co/1920x1080" class="d-block" style="width:100%">
-                        </div>
-                        <div class="col">
-                            <h1>Aventura</h1>
-                            <p>Género: Drama</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="https://placehold.co/1920x1080" class="d-block" style="width:100%">
-                        </div>
-                        <div class="col">
-                            <h1>Aventura</h1>
-                            <p>Género: Drama</p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
