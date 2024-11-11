@@ -34,35 +34,35 @@ button {
 /* Estilos para contact.php */
 .contact .content {
     padding: 20px 30px;
-}
 
-.contact .content .row {
-    border-radius: 15px;
-    padding: 20px 10px;
-    @include media-breakpoint-up(lg) {
-        background-color: $divTransparency;
+    .row {
+        border-radius: 15px;
+        padding: 20px 10px;
+        @include media-breakpoint-up(lg) {
+            background-color: $divTransparency;
+        }
     }
-}
 
-.contact .content .rrss {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
+    .rrss {
+        margin-top: 10px;
+        margin-bottom: 10px;
 
-.contact .content .rrss .icon {
-    width: 3rem;
-    height: auto;
-    margin-right: 25px;
-}
+        a {
+            color: $white;
+        }
 
-.contact .content .rrss a {
-    color: $white;
-}
+        a:hover {
+            color: $primary;
+        }
 
-.contact .content .rrss a:hover {
-    color: $primary;
-}
+        .icon {
+            width: 3rem;
+            height: auto;
+            margin-right: 25px;
+        }
+    }
 
-.contact .content .form {
-    height: 100%;
+    .form {
+        height: 100%;
+    }
 }

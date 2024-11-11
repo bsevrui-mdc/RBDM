@@ -1,1 +1,17 @@
-.about {}
+.about .content {
+    h3 {
+        text-align: center;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    @include media-breakpoint-up(lg) {
+        background-color: $divTransparency;
+
+        h3 {
+            text-align: left;
+        }
+    }
+}
