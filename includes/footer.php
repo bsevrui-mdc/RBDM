@@ -26,7 +26,7 @@
 
                 </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 py-5 py-lg-0">
                 <div class="row">
                     <div class="col-3 col-lg-12"><img src="/assets/icons/amazon.svg" class="icon" alt=""></div>
                     <div class="col-3 col-lg-12"><img src="/assets/icons/netflix.svg" class="icon" alt=""></div>
@@ -38,12 +38,12 @@
         </div>
         <div class="row py-5"> 
             <div class="col icons">
-                <img src="/assets/icons/tiktok.svg" alt="" class="icon img-fluid">
-                <img src="/assets/icons/instagram.svg" alt="" class="icon img-fluid">
-                <img src="/assets/icons/twitter-x.svg" alt="" class="icon img-fluid">
-                <img src="/assets/icons/facebook.svg" alt="" class="icon img-fluid">
-                <img src="/assets/icons/youtube.svg" alt="" class="icon img-fluid">
-                <img src="/assets/icons/reddit.svg" alt="" class="icon img-fluid">
+                <img src="/assets/icons/tiktok.svg" alt="" class="rrss img-fluid">
+                <img src="/assets/icons/instagram.svg" alt="" class="rrss img-fluid">
+                <img src="/assets/icons/twitter-x.svg" alt="" class="rrss img-fluid">
+                <img src="/assets/icons/facebook.svg" alt="" class="rrss img-fluid">
+                <img src="/assets/icons/youtube.svg" alt="" class="rrss img-fluid">
+                <img src="/assets/icons/reddit.svg" alt="" class="rrss img-fluid">
             </div>
         </div>
         <div class="row">
