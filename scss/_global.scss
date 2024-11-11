@@ -36,10 +36,10 @@ button {
     padding: 20px 30px;
 
     .row {
-        border-radius: 15px;
         padding: 20px 10px;
         @include media-breakpoint-up(lg) {
             background-color: $divTransparency;
+            border-radius: 15px;
         }
     }
 
@@ -64,5 +64,17 @@ button {
 
     .form {
         height: 100%;
+    }
+}
+
+/* Estilos para about.php */
+.about .content {
+    p {
+        text-align: justify;
+    }
+
+    @include media-breakpoint-up(lg) {
+        background-color: $divTransparency;
+        border-radius: 15px;
     }
 }
