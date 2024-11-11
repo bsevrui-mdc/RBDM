@@ -8,12 +8,10 @@
 			$CURRENT_PAGE = "Contact"; 
 			$PAGE_TITLE = "Contacto - RBDM";
 			break;
-		/*
 		case "/about.php":
 			$CURRENT_PAGE = "About"; 
-			$PAGE_TITLE = "About Us";
+			$PAGE_TITLE = "Términos Legales";
 			break;
-		*/
 		default:
 			$CURRENT_PAGE = "Index";
 			$PAGE_TITLE = "GCM - RBDM";
