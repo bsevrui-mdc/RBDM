@@ -13,15 +13,15 @@
                         <a href="" class="text-decoration-none"><p>GENEROS</p></a>
                     </div>
                     <div class="col-6 col-lg">
-                        <a href="" class="text-decoration-none"><p>AYUDA</p></a>
-                        <a href="" class="text-decoration-none"><p>CONTACTO</p></a>
-                        <a href="" class="text-decoration-none"><p>ENLACES</p></a>
+                        <a href="/contact.php" class="text-decoration-none"><p>AYUDA</p></a>
+                        <a href="/contact.php" class="text-decoration-none"><p>CONTACTO</p></a>
+                        <a href="/contact.php" class="text-decoration-none"><p>ENLACES</p></a>
                     </div>
                     <div class="d-block d-lg-none"><hr></div>
                     <div class="col-12 col-lg">
-                        <a href="" class="text-decoration-none"><p>POLITICAS DE PRIVACIDAD</p></a>
-                        <a href="" class="text-decoration-none"><p>CONDICIONES DE USOS</p></a>
-                        <a href="" class="text-decoration-none"><p>POLITICAS DE COOKIES</p></a>
+                        <a href="/about.php" class="text-decoration-none"><p>POLITICAS DE PRIVACIDAD</p></a>
+                        <a href="/about.php" class="text-decoration-none"><p>CONDICIONES DE USOS</p></a>
+                        <a href="/about.php" class="text-decoration-none"><p>POLITICAS DE COOKIES</p></a>
                     </div>
 
                 </div>
@@ -38,12 +38,12 @@
         </div>
         <div class="row py-5"> 
             <div class="col icons">
-                <img src="/assets/icons/tiktok.svg" alt="" class="rrss img-fluid">
-                <img src="/assets/icons/instagram.svg" alt="" class="rrss img-fluid">
-                <img src="/assets/icons/twitter-x.svg" alt="" class="rrss img-fluid">
-                <img src="/assets/icons/facebook.svg" alt="" class="rrss img-fluid">
-                <img src="/assets/icons/youtube.svg" alt="" class="rrss img-fluid">
-                <img src="/assets/icons/reddit.svg" alt="" class="rrss img-fluid">
+                <a href="https://www.tiktok.com/es/"><img src="/assets/icons/tiktok.svg" alt="" class="rrss img-fluid"></a>
+                <a href="https://www.instagram.com/"><img src="/assets/icons/instagram.svg" alt="" class="rrss img-fluid"></a>
+                <a href="https://x.com/?lang=es"><img src="/assets/icons/twitter-x.svg" alt="" class="rrss img-fluid"></a>
+                <a href="https://www.facebook.com/"><img src="/assets/icons/facebook.svg" alt="" class="rrss img-fluid"></a>
+                <a href="https://www.youtube.com/"><img src="/assets/icons/youtube.svg" alt="" class="rrss img-fluid"></a>
+                <a href="https://www.reddit.com/?rdt=60910"><img src="/assets/icons/reddit.svg" alt="" class="rrss img-fluid"></a>
             </div>
         </div>
         <div class="row">
