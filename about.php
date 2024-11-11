@@ -7,8 +7,8 @@
     <body>
         <?php include("includes/navbar.php"); ?>
         <main class="container-fluid about">
-            <div class="row">
-                <div class="col-12 content">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 content">
                     <h3>Términos Legales</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed orci elit, vulputate at mi sit amet, condimentum vestibulum libero. Nam purus velit, lacinia nec rhoncus vitae, sodales id velit. Suspendisse vitae massa quis leo semper pulvinar. Pellentesque varius malesuada suscipit. Donec molestie tempor erat id fermentum. Curabitur vel erat fermentum, dignissim sem ac, condimentum arcu. Vestibulum consectetur, arcu ac rutrum convallis, sapien leo tincidunt leo, eleifend interdum nibh justo ut turpis. In bibendum eu orci in commodo. Suspendisse auctor pharetra nisi vitae suscipit. Nullam fermentum nunc ac lectus porttitor accumsan. </p>
                     <p>Fusce commodo nunc ac venenatis gravida. Morbi mattis nibh nibh. Aliquam ac aliquet lacus. Nulla consequat lectus eget mollis lobortis. Proin sed nisl non justo dapibus fringilla eu viverra neque. Donec congue ipsum felis, nec lacinia dolor semper sed. Cras porta aliquam nibh, a dapibus turpis consequat sed. Fusce fringilla efficitur egestas. Vestibulum elit eros, vehicula nec rutrum ac, ullamcorper vitae justo. Nunc vitae iaculis eros. Fusce efficitur justo diam, nec facilisis sem tincidunt vitae. Pellentesque scelerisque diam non leo porttitor sagittis. Proin a libero pretium, vestibulum augue sed, gravida ligula. Nam dui odio, consectetur sit amet lacus et, volutpat feugiat tellus. </p>
