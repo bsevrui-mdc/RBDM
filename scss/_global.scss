@@ -12,6 +12,7 @@ h1 {
 h3 {
     font-family: $font-family-oxanium;
     font-style: $font-family-oxanium-size;
+    text-transform: uppercase; // Comprobar en FIGMA que todos los h3 sean en mayúscula
 }
 
 button {
