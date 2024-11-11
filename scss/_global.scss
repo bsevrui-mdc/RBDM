@@ -5,13 +5,25 @@ body {
 }
 
 h1 {
-    font-family: $headings-font-family-julius;
-    font-weight: $headings-font-julius-weight;
+    font-family: $font-family-julius;
+    font-weight: $font-family-julius-weight;
+    font-size: $font-family-julius-size-h1;
+}
+
+h2 {
+    font-family: $font-family-julius;
+    font-size: $font-family-julius-size-h2;
+    font-weight: $font-family-julius-weight;
 }
 
 h3 {
     font-family: $font-family-oxanium;
-    font-style: $font-family-oxanium-size;
+    font-size: $font-family-oxanium-size;
+    text-transform: uppercase; // Comprobar en FIGMA que todos los h3 sean en mayúscula
+}
+p{
+    font-family: $font-family-calibri;
+    font-size: $font-family-calibri-size-p;
 }
 
 button {
@@ -19,3 +31,38 @@ button {
     text-transform: uppercase;
 }
 
+/* Estilos para contact.php */
+.contact .content {
+    padding: 20px 30px;
+
+    .row {
+        border-radius: 15px;
+        padding: 20px 10px;
+        @include media-breakpoint-up(lg) {
+            background-color: $divTransparency;
+        }
+    }
+
+    .rrss {
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        a {
+            color: $white;
+        }
+
+        a:hover {
+            color: $primary;
+        }
+
+        .icon {
+            width: 3rem;
+            height: auto;
+            margin-right: 25px;
+        }
+    }
+
+    .form {
+        height: 100%;
+    }
+}
