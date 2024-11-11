@@ -33,20 +33,14 @@ button {
 
 /* Estilos para contact.php */
 .contact .content {
-    padding: 20px 30px;
-
     .row {
-        border-radius: 15px;
-        padding: 20px 10px;
         @include media-breakpoint-up(lg) {
             background-color: $divTransparency;
+            border-radius: 15px;
         }
     }
 
     .rrss {
-        margin-top: 10px;
-        margin-bottom: 10px;
-
         a {
             color: $white;
         }
@@ -62,7 +56,19 @@ button {
         }
     }
 
-    .form {
-        height: 100%;
+    form textarea {
+        height: 175px;
+    }
+}
+
+/* Estilos para about.php */
+.about .content {
+    p {
+        text-align: justify;
+    }
+
+    @include media-breakpoint-up(lg) {
+        background-color: $divTransparency;
+        border-radius: 15px;
     }
 }
