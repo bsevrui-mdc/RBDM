@@ -14,7 +14,19 @@
                             <h3 class="text-center">Inicio de Sesión</h3>
                         </div>
                         <div class="col-12">
-                            
+                            <form action="" method="POST" class="">
+                                <div class="mb-3">
+                                    <label class="form-label">Correo Electrónico/Nombre de usuario:</label>
+                                    <input type="email" class="form-control" placeholder="ejemplo@ejemplo.com" id="">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Contraseña:</label>
+                                    <input type="password" class="form-control" id="">
+                                </div>
+                                <div class="mb-3 d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
