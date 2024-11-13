@@ -39,8 +39,6 @@
                     <div class="row mx-2">
                         <div class="col-12">
                             <h3 class="text-center my-lg-4">¿Necesitas contacto más directo?</h3>
-                        </div>
-                        <div class="col-12">
                             <h3 class="text-center">Mándanos un Email</h3>
                         </div>
                         <div class="col-12">

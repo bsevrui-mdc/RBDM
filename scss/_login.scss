@@ -1,0 +1,6 @@
+.login .content {
+    @include media-breakpoint-up(lg) {
+        background-color: $divTransparency;
+        border-radius: 15px;
+    }
+}

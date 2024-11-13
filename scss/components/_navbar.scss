@@ -2,19 +2,28 @@
 // Navbar
 // 
 
-#mainNav div i{
+nav i {
+    // height: 1000px;
+    margin-top: $espacio-navbar-top;
+    font-size: 30px;
     color: $secondary;
 }
 
+
+/*#mainNav div i{
+    color: $secondary;
+    height: 100px;
+}
+    */
+
 #mynavbar ul li a{
+    font-family: $font-family-oxanium;
+    font-size: 30px;
     color: $white;
     margin-left: 20px;
     margin-top: $espacio-navbar-top;
 }
 
-nav i{
-    font-size: $font-family-oxanium-size;
-}
 
 
 
