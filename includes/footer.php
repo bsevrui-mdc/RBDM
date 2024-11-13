@@ -6,22 +6,22 @@
             </div>
             <div class="col-12 col-lg-8">
                 <div class="row">
-                    <div class="col-6 col-lg">
-                        <a href="" class="text-decoration-none"><p>INICIO</p></a>
-                        <a href="" class="text-decoration-none"><p>PELICULAS</p></a>
-                        <a href="" class="text-decoration-none"><p>SERIES</p></a>
-                        <a href="" class="text-decoration-none"><p>GENEROS</p></a>
+                    <div class="col-6 col-lg enlaces">
+                        <a href="" class="text-decoration-none">INICIO</a>
+                        <a href="" class="text-decoration-none">PELICULAS</a>
+                        <a href="" class="text-decoration-none">SERIES</a>
+                        <a href="" class="text-decoration-none">GENEROS</a>
                     </div>
-                    <div class="col-6 col-lg">
-                        <a href="/contact.php" class="text-decoration-none"><p>AYUDA</p></a>
-                        <a href="/contact.php" class="text-decoration-none"><p>CONTACTO</p></a>
-                        <a href="/contact.php" class="text-decoration-none"><p>ENLACES</p></a>
+                    <div class="col-6 col-lg enlaces">
+                        <a href="/contact.php" class="text-decoration-none">AYUDA</a>
+                        <a href="/contact.php" class="text-decoration-none">CONTACTO</a>
+                        <a href="/contact.php" class="text-decoration-none">ENLACES</a>
                     </div>
                     <div class="d-block d-lg-none"><hr></div>
-                    <div class="col-12 col-lg">
-                        <a href="/about.php" class="text-decoration-none"><p>POLITICAS DE PRIVACIDAD</p></a>
-                        <a href="/about.php" class="text-decoration-none"><p>CONDICIONES DE USOS</p></a>
-                        <a href="/about.php" class="text-decoration-none"><p>POLITICAS DE COOKIES</p></a>
+                    <div class="col-12 col-lg enlaces">
+                        <a href="/about.php" class="text-decoration-none">POLITICAS DE PRIVACIDAD</a>
+                        <a href="/about.php" class="text-decoration-none">CONDICIONES DE USOS</a>
+                        <a href="/about.php" class="text-decoration-none">POLITICAS DE COOKIES</a>
                     </div>
 
                 </div>

@@ -1,25 +1,37 @@
 .footer {
     background-color: $info !important;
 
-}
+    a {
+        color: $white;
+        padding-top: 1rem;
+    }
 
-.footer .logo {
-    width: 200px;
-    height: auto;
-}
-
-.footer .icon {
-    width: 4rem;
-    height: auto;
-    margin: 1rem;
+    .logo {
+        width: 200px;
+        height: auto;
+    }
+    .icon {
+        width: 4rem;
+        height: auto;
+        margin: 1rem;
+    }
+    .rrss {
+        width: 2rem;
+        height: auto;
+        margin: 1rem;
+    }
+    a:hover {
+        color: $primary;
+    }
+    .icons {
+        display: flex;
+        justify-content: center;
+    }
+    .enlaces {
+        display: flex;
+        flex-direction: column;
+        font-size: $font-family-oxanium-size;
+        font-family: $font-family-oxanium;
     
-}
-.footer .rrss{
-    width: 2rem;
-    height: auto;
-    margin: 1rem;
-}
-.footer .icons {
-    display: flex;
-    justify-content:center;
+    }
 }
