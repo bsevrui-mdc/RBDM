@@ -8,7 +8,7 @@
         <?php include("includes/navbar.php"); ?>
         <main>
             <div class="container-fluid">
-                <div class="row my-4">
+                <div class="row my-4 d-lg-block d-none">
                     <div class="col-lg-2 justify-content-center text-center d-flex">Ranking</div>
                     <div class="col-lg-2 justify-content-center text-center d-flex">Imagen</div>
                     <div class="col-lg-4 justify-content-center text-center d-flex">Titulo</div>
@@ -17,7 +17,7 @@
                 </div>
                 <div class="row my-4">
                     <div class="col-lg-2 align-items-center justify-content-center d-flex"><h1>1</h1></div>
-                    <div class="col-lg-2 justify-content-center"><img src="./assets/img/logo.png" alt="imagen" class="img-fluid"></div>
+                    <div class="col-lg-2 justify-content-center"><img src="https://placehold.co/1920x1200" alt="imagen" class="img-fluid"></div>
                     <div class="col-lg-4 d-flex flex-column">
                         <div class="row d-flex align-items-center h-75">
                             <div class="col"><h1>título de película 1</h1></div>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="row my-4 bg-info">
                     <div class="col-lg-2 align-items-center justify-content-center d-flex"><h1>1</h1></div>
-                    <div class="col-lg-2 justify-content-center"><img src="./assets/img/logo.png" alt="imagen" class="img-fluid"></div>
+                    <div class="col-lg-2 justify-content-center"><img src="https://placehold.co/1920x1200" alt="imagen" class="img-fluid"></div>
                     <div class="col-lg-4 d-flex flex-column">
                         <div class="row d-flex align-items-center h-75">
                             <div class="col"><h1>título de película 1</h1></div>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="row my-4">
                     <div class="col-lg-2 align-items-center justify-content-center d-flex"><h1>1</h1></div>
-                    <div class="col-lg-2 justify-content-center"><img src="./assets/img/logo.png" alt="imagen" class="img-fluid"></div>
+                    <div class="col-lg-2 justify-content-center"><img src="https://placehold.co/1920x1200" alt="imagen" class="img-fluid"></div>
                     <div class="col-lg-4 d-flex flex-column">
                         <div class="row d-flex align-items-center h-75">
                             <div class="col"><h1>título de película 1</h1></div>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="row my-4 bg-info">
                     <div class="col-lg-2 align-items-center justify-content-center d-flex"><h1>1</h1></div>
-                    <div class="col-lg-2 justify-content-center"><img src="./assets/img/logo.png" alt="imagen" class="img-fluid"></div>
+                    <div class="col-lg-2 justify-content-center"><img src="https://placehold.co/1920x1200" alt="imagen" class="img-fluid"></div>
                     <div class="col-lg-4 d-flex flex-column">
                         <div class="row d-flex align-items-center h-75">
                             <div class="col"><h1>título de película 1</h1></div>
