@@ -33,7 +33,7 @@
                         <h1>9.45</h1>
                     </div>
                 </div>
-                <div class="row my-4">
+                <div class="row my-4 bg-info">
                     <div class="col-lg-2 align-items-center justify-content-center d-flex"><h1>1</h1></div>
                     <div class="col-lg-2 justify-content-center"><img src="./assets/img/logo.png" alt="imagen" class="img-fluid"></div>
                     <div class="col-lg-4 d-flex flex-column">
@@ -69,7 +69,7 @@
                         <h1>9.45</h1>
                     </div>
                 </div>
-                <div class="row my-4">
+                <div class="row my-4 bg-info">
                     <div class="col-lg-2 align-items-center justify-content-center d-flex"><h1>1</h1></div>
                     <div class="col-lg-2 justify-content-center"><img src="./assets/img/logo.png" alt="imagen" class="img-fluid"></div>
                     <div class="col-lg-4 d-flex flex-column">
