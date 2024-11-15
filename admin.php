@@ -35,11 +35,16 @@
                 <!--Parte derecha-->
                 <div class="col-lg-10">
                     <div class="row">
-                        <div class="col">
-                            <form class="d-flex justify-content-end" role="search" action="/buscar" method="GET">
-                                <input class="form-control me-2 rounded-pill w-25" type="search" placeholder="Search"
-                                    aria-label="Search" name="query" required>
-                            </form>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <input class="form-control py-2 border-right-0 border" type="search"
+                                    placeholder="Buscar" id="example-search-input">
+                                <button class="btn bg-white border-0">
+                                    
+                                        <i class="fa fa-search"></i>
+                                    
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
