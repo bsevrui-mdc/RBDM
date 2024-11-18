@@ -1,42 +1,42 @@
+/* Script carrusel multiple endex.php */
 
-//
-// Poner aquí los scripts 
-// 
+document.addEventListener("DOMContentLoaded", function () {
+  const carouselInner = document.querySelector(".carousel-inner");
+  const carouselItems = document.querySelectorAll(".carousel-item");
+  let scrollPosition = 0;
 
-window.addEventListener('DOMContentLoaded', event => {
+  // Evento para el botón "Siguiente"
+  document
+    .querySelector(".carousel-control-next")
+    .addEventListener("click", () => {
+      const cardWidth = carouselItems[0].offsetWidth; // Calcula el ancho de una tarjeta
+      const maxScrollPosition =
+        carouselInner.scrollWidth - carouselInner.clientWidth; // Máximo scroll permitido
 
-    // Navbar shrink function
-    var navbarShrink = function () {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
-            return;
-        }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-        }
-
-    };
-
-    // Shrink the navbar 
-    navbarShrink();
-
-    // Shrink the navbar when page is scrolled
-    document.addEventListener('scroll', navbarShrink);
-
-    
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
+      if (scrollPosition < maxScrollPosition) {
+        scrollPosition += cardWidth;
+        if (scrollPosition > maxScrollPosition)
+          scrollPosition = maxScrollPosition; // No pasar del máximo
+        carouselInner.scrollTo({
+          left: scrollPosition,
+          behavior: "smooth",
         });
+      }
     });
 
+  // Evento para el botón "Anterior"
+  document
+    .querySelector(".carousel-control-prev")
+    .addEventListener("click", () => {
+      const cardWidth = carouselItems[0].offsetWidth; // Calcula el ancho de una tarjeta
+
+      if (scrollPosition > 0) {
+        scrollPosition -= cardWidth;
+        if (scrollPosition < 0) scrollPosition = 0; // No pasar del mínimo
+        carouselInner.scrollTo({
+          left: scrollPosition,
+          behavior: "smooth",
+        });
+      }
+    });
 });
