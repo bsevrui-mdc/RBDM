@@ -27,6 +27,7 @@
                                     <button type="submit" class="btn btn-primary">Enviar</button>
                                 </div>
                             </form>
+                            <a href="" class="text-decoration-none text-center">¿Has olvidado tu contraseña?</a>
                         </div>
                     </div>
                 </div>
