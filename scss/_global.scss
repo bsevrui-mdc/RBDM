@@ -73,3 +73,11 @@ a:hover {
         border-radius: 15px;
     }
 }
+
+/* Estilos para login.php */
+.login .content {
+    @include media-breakpoint-up(lg) {
+        background-color: $divTransparency;
+        border-radius: 15px;
+    }
+}
