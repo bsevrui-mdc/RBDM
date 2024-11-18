@@ -3,20 +3,21 @@
     @include media-breakpoint-down(lg) {
         border: 5px solid $primary;  // Puedes usar cualquier color que desees
         width: 100%;
-        border-radius: 5%;
+        border-radius: 20px;
         img {
             width: 100%; // Hace que la imagen ocupe todo el ancho en pantallas más pequeñas
-            border-radius: 5%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
         }
         margin-left: auto;
         margin-right: auto;
+        
         
     }
     
     // Opcionalmente, puedes asegurarte de que el borde se elimine cuando el tamaño de pantalla sea mayor a 'lg'
     @include media-breakpoint-up(lg) {
         border: none;
-        
     }
 }
 
