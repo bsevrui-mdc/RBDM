@@ -20,6 +20,14 @@
 			$CURRENT_PAGE = "Sign Up";
 			$PAGE_TITLE = "Registro - RBDM";
 			break;
+		case "/topPeliculas.php":
+			$CURRENT_PAGE = "Top Peliculas";
+			$PAGE_TITLE = "Top Películas - RBDM";
+			break;
+		case "/eleccionGenero.php":
+			$CURRENT_PAGE = "Eleccion Genero";
+			$PAGE_TITLE = "Géneros - RBDM";
+			break;
 		case "/admin.php":
 			$CURRENT_PAGE = "admin";
 			$PAGE_TITLE = "Administración - RBDM";
