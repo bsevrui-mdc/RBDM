@@ -15,7 +15,7 @@
                 <div class="col-lg-2">
                     <div class="row ">
                         <div class="col-lg-12">
-                            <img src="https://placehold.co/100x100" alt="">
+                            <img src="https://placehold.co/100x100" alt="" class="imgAdmin">
                         </div>
                         <div class="col-lg-12">
                             <h1>admin</h1>
@@ -40,9 +40,9 @@
                                 <input class="form-control py-2 border-right-0 border" type="search"
                                     placeholder="Buscar" id="example-search-input">
                                 <button class="btn bg-white border-0">
-                                    
-                                        <i class="fa fa-search"></i>
-                                    
+
+                                    <i class="fa fa-search"></i>
+
                                 </button>
                             </div>
                         </div>
@@ -68,56 +68,59 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>img</td>
+                                            <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
+                                            <td>Fallguys</td>
+                                            <td>Infantil</td>
+                                            <td>18-11-2000</td>
+                                            <td>
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
                                             <td>Fallguys</td>
                                             <td>Infantil</td>
                                             <td>18-11-2000</td>
                                             <td>iconos</td>
                                         </tr>
                                         <tr>
-                                            <td>img</td>
+                                            <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
                                             <td>Fallguys</td>
                                             <td>Infantil</td>
                                             <td>18-11-2000</td>
                                             <td>iconos</td>
                                         </tr>
                                         <tr>
-                                            <td>img</td>
+                                            <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
                                             <td>Fallguys</td>
                                             <td>Infantil</td>
                                             <td>18-11-2000</td>
                                             <td>iconos</td>
                                         </tr>
                                         <tr>
-                                            <td>img</td>
+                                            <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
                                             <td>Fallguys</td>
                                             <td>Infantil</td>
                                             <td>18-11-2000</td>
                                             <td>iconos</td>
                                         </tr>
                                         <tr>
-                                            <td>img</td>
+                                            <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
                                             <td>Fallguys</td>
                                             <td>Infantil</td>
                                             <td>18-11-2000</td>
                                             <td>iconos</td>
                                         </tr>
                                         <tr>
-                                            <td>img</td>
+                                            <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
                                             <td>Fallguys</td>
                                             <td>Infantil</td>
                                             <td>18-11-2000</td>
                                             <td>iconos</td>
                                         </tr>
                                         <tr>
-                                            <td>img</td>
-                                            <td>Fallguys</td>
-                                            <td>Infantil</td>
-                                            <td>18-11-2000</td>
-                                            <td>iconos</td>
-                                        </tr>
-                                        <tr>
-                                            <td>img</td>
+                                            <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
                                             <td>Fallguys</td>
                                             <td>Infantil</td>
                                             <td>18-11-2000</td>

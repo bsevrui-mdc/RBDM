@@ -1,8 +1,6 @@
 .footer {
     background-color: $info !important;
 
-
-
     .logo {
         width: 200px;
         height: auto;
@@ -34,5 +32,9 @@
         flex-direction: column;
         font-size: $font-family-oxanium-size;
         font-family: $font-family-oxanium;
+
+        a {
+            text-transform: uppercase;
+        }
     }
 }
