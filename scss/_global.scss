@@ -21,6 +21,7 @@ h3 {
     font-size: $font-family-oxanium-size;
     text-transform: uppercase; // Comprobar en FIGMA que todos los h3 sean en mayúscula
 }
+
 p{
     font-family: $font-family-calibri;
     font-size: $font-family-calibri-size-p;
@@ -29,6 +30,14 @@ p{
 button {
     font-family: $font-family-oxanium !important;
     text-transform: uppercase;
+}
+
+a {
+    color: $white;
+}
+
+a:hover {
+    color: $primary;
 }
 
 /* Estilos para contact.php */
@@ -41,14 +50,6 @@ button {
     }
 
     .rrss {
-        a {
-            color: $white;
-        }
-
-        a:hover {
-            color: $primary;
-        }
-
         .icon {
             width: 3rem;
             height: auto;
@@ -57,7 +58,7 @@ button {
     }
 
     form textarea {
-        height: 175px;
+        height: 167px;
     }
 }
 
