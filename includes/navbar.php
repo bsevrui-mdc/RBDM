@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar navbar-expand-lg bg-primary text-uppercase" id="mainNav">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.php">
         <img
           src="/assets/img/logo.png"
           alt="logo"
@@ -21,13 +21,13 @@
       <div class="collapse navbar-collapse" id="mynavbar">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">PELICULAS</a>
+            <a class="nav-link" href="topPeliculas.php">PELICULAS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">SERIES</a>
+            <a class="nav-link" href="topSeries.php">SERIES</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">GENEROS</a>
+            <a class="nav-link" href="eleccionGenero.php">GENEROS</a>
           </li>
           <li class="nav-item">
             <a class="nav-link d-lg-none">PERFIL</a>
