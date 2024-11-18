@@ -72,7 +72,10 @@
                                             <td>Fallguys</td>
                                             <td>Infantil</td>
                                             <td>18-11-2000</td>
-                                            <td>iconos</td>
+                                            <td>
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>img</td>
