@@ -8,7 +8,7 @@
         <?php include("includes/navbar.php"); ?>
         <main class="container-fluid contact">
             <div class="row my-4">
-                <div class="col-12 col-lg-6 content">
+                <div id="enlacesContacto" class="col-12 col-lg-6 content">
                     <div class="row mx-2">
                         <div class="col-12">
                             <h3 class="text-center my-lg-4">Encuéntranos en Redes Sociales</h3>
@@ -35,11 +35,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-none d-lg-block col-lg-6 content">
+                <div id="formularioContacto" class="col-12 col-lg-6 mt-5 mt-lg-0 content">
                     <div class="row mx-2">
                         <div class="col-12">
-                            <h3 class="text-center my-lg-4">¿Necesitas contacto más directo?</h3>
-                            <h3 class="text-center">Mándanos un Email</h3>
+                            <h3 class="text-center mt-lg-4">¿Necesitas contacto más directo?</h3>
+                            <h3 class="text-center mb-lg-3">Mándanos un Email</h3>
                         </div>
                         <div class="col-12">
                             <form action="" method="POST" class="px-lg-4">

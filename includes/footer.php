@@ -7,21 +7,21 @@
             <div class="col-12 col-lg-8">
                 <div class="row">
                     <div class="col-6 col-lg enlaces">
-                        <a href="" class="text-decoration-none">INICIO</a>
-                        <a href="" class="text-decoration-none">PELICULAS</a>
-                        <a href="" class="text-decoration-none">SERIES</a>
-                        <a href="" class="text-decoration-none">GENEROS</a>
+                        <a href="" class="text-decoration-none">Inicio</a>
+                        <a href="" class="text-decoration-none">Películas</a>
+                        <a href="" class="text-decoration-none">Series</a>
+                        <a href="" class="text-decoration-none">Géneros</a>
                     </div>
                     <div class="col-6 col-lg enlaces">
-                        <a href="/contact.php" class="text-decoration-none">AYUDA</a>
-                        <a href="/contact.php" class="text-decoration-none">CONTACTO</a>
-                        <a href="/contact.php" class="text-decoration-none">ENLACES</a>
+                        <a href="/contact.php" class="text-decoration-none">Ayuda</a>
+                        <a href="/contact.php#formularioContacto" class="text-decoration-none">Contacto</a>
+                        <a href="/contact.php#enlacesContacto" class="text-decoration-none">Enlaces</a>
                     </div>
                     <div class="d-block d-lg-none"><hr></div>
                     <div class="col-12 col-lg enlaces">
-                        <a href="/about.php" class="text-decoration-none">POLITICAS DE PRIVACIDAD</a>
-                        <a href="/about.php" class="text-decoration-none">CONDICIONES DE USOS</a>
-                        <a href="/about.php" class="text-decoration-none">POLITICAS DE COOKIES</a>
+                        <a href="/about.php#cuAbout" class="text-decoration-none">Condiciones de Uso</a>
+                        <a href="/about.php#ppAbout" class="text-decoration-none">Política de Privacidad</a>
+                        <a href="/about.php#pcAbout" class="text-decoration-none">Política de Cookies</a>
                     </div>
 
                 </div>
