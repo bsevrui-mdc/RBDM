@@ -15,7 +15,7 @@
                         </div>
                         <div class="col-12">
                             <form action="" method="POST" class="">
-                                <div class="mb-3">
+                                <div class="mb-3 text-center">
                                     <label class="form-label">Correo Electrónico/Nombre de usuario:</label>
                                     <input type="email" class="form-control" placeholder="ejemplo@ejemplo.com" id="">
                                 </div>

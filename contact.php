@@ -43,11 +43,11 @@
                         </div>
                         <div class="col-12">
                             <form action="" method="POST" class="px-lg-4">
-                                <div class="mb-3">
+                                <div class="mb-3 text-center">
                                     <label class="form-label">Correo Electrónico:</label>
                                     <input type="email" class="form-control" placeholder="ejemplo@ejemplo.com" id="">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 text-center">
                                     <label class="form-label">Tu Mensaje:</label>
                                     <textarea class="form-control" placeholder="Tu mensaje aquí"></textarea>
                                 </div>
