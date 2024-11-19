@@ -14,11 +14,11 @@
                 <!--Parte izquierda-->
                 <div class="col-lg-2">
                     <div class="row ">
-                        <div class="col-lg-12">
+                        <div class="col-6 col-lg-12">
                             <img src="https://placehold.co/100x100" alt="" class="imgAdmin">
                         </div>
-                        <div class="col-lg-12">
-                            <h1>admin</h1>
+                        <div class="col-6 col-lg-12">
+                            <div class="display-2 nameAdmin">admin</div>
                             <p>nombre</p>
                             <p>apll1</p>
                             <p>apll2</p>
@@ -73,8 +73,8 @@
                                             <td>Infantil</td>
                                             <td>18-11-2000</td>
                                             <td>
-                                                <i class="fa-solid fa-magnifying-glass"></i>
-                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                <i class="fa-solid fa-pen"></i>
+                                                <i class="fa-solid fa-trash-can color-trash"></i>
                                             </td>
                                         </tr>
                                         <tr>
