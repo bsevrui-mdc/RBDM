@@ -92,21 +92,21 @@ a:hover {
 }
 
 /* Estilos para contact.php */
-.contact .content {
-  .row {
+.contact {
+  .content {
     @include media-breakpoint-up(lg) {
       background-color: $divTransparency;
       border-radius: 15px;
     }
-  }
 
-  .enlaces {
-    display: flex;
-    align-items: center;
-  }
-
-  form textarea {
-    height: 175px;
+    .enlaces {
+      display: flex;
+      align-items: center;
+    }
+  
+    form textarea {
+      height: 150px;
+    }
   }
 }
 
