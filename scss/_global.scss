@@ -44,7 +44,6 @@ a:hover {
       display: flex;
       overflow-x: auto;
       scroll-behavior: smooth;
-      overflow-x: scroll;
       scrollbar-width: none;
     }
 
@@ -53,20 +52,32 @@ a:hover {
     }
 
     .carousel-item {
-      flex: 0 0 33.333%;
-      /* Cada ítem ocupa un tercio del ancho */
-      margin-right: 1em;
-      /* Espaciado entre tarjetas */
-      display: flex;
-      /* Asegura diseño consistente */
-    }
+      flex: 0 0 25%; /* Cada ítem ocupa un 25% del ancho */
+      margin-right: 1em; /* Espaciado entre tarjetas */
+      display: flex; /* Asegura diseño consistente */
+      justify-content: center; /* Centra los ítems */
+      align-items: center; /* Centra los ítems verticalmente */
+      img{
+        border-radius: 20px;
+      }
 
-    .card {
-      margin: 0 0.5em;
-      box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-      border: none;
-    }
+      .position-relative {
+        position: relative;
+      }
 
+      .overlay-text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        z-index: 1; /* Asegura que el texto esté sobre la imagen */
+      }
+    }
+    
+    /* Estilos para los controles de navegación */
     .carousel-control-prev,
     .carousel-control-next {
       background-color: $primary;
@@ -75,13 +86,7 @@ a:hover {
       height: 6vh;
       border-radius: 50%;
       top: 50%;
-    }
-
-    @media (max-width: 767px) {
-      .carousel-item {
-        flex: 0 0 100%;
-        margin-right: 0;
-      }
+      transform: translateY(-50%); /* Centra verticalmente */
     }
   }
 }
@@ -172,10 +177,10 @@ a:hover {
 
 .bordeNota {
   @include media-breakpoint-down(lg) {
-      border-top: 5px solid $primary;
-      height: 100%;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
+    border-top: 5px solid $primary;
+    height: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
   }
 }
 

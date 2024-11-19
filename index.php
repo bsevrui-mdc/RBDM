@@ -97,140 +97,96 @@
                 </div>
             </div>
 
-
-
             <div class="row d-none d-lg-block">
-
-                <div class="col-12 text-center my-4">
+                <div class="col text-center my-4">
                     <h1 class="text-primary">Peliculas destacadas</h1>
                 </div>
+            </div>
+
+            <div class="row d-none d-lg-block">
                 <div class="col-12">
                     <div id="carouselExampleControls" class="carousel multiple">
                         <div class="carousel-inner">
-                            <div class="carousel-item multiple-item active">
-                                <div class="card">
-                                    <div class="img-wrapper"><img src="https://placehold.co/1920x1080"
-                                            class="d-block w-100" alt="..."> </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 1</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the bulk of the
-                                            card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
+                            <div class="carousel-item multiple-item">
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item multiple-item">
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
                                 </div>
                             </div>
                             <div class="carousel-item multiple-item">
-                                <div class="card">
-                                    <div class="img-wrapper"><img src="https://placehold.co/1920x1080"
-                                            class="d-block w-100" alt="..."> </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 2</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the bulk of the
-                                            card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
                                 </div>
                             </div>
                             <div class="carousel-item multiple-item">
-                                <div class="card">
-                                    <div class="img-wrapper"><img src="https://placehold.co/1920x1080"
-                                            class="d-block w-100" alt="..."> </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 3</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the bulk of the
-                                            card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
                                 </div>
                             </div>
                             <div class="carousel-item multiple-item">
-                                <div class="card">
-                                    <div class="img-wrapper"><img src="https://placehold.co/1920x1080"
-                                            class="d-block w-100" alt="..."> </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 4</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the bulk of the
-                                            card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
                                 </div>
                             </div>
                             <div class="carousel-item multiple-item">
-                                <div class="card">
-                                    <div class="img-wrapper"><img src="https://placehold.co/1920x1080"
-                                            class="d-block w-100" alt="..."> </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 5</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the bulk of the
-                                            card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
                                 </div>
                             </div>
                             <div class="carousel-item multiple-item">
-                                <div class="card">
-                                    <div class="img-wrapper"><img src="https://placehold.co/1920x1080"
-                                            class="d-block w-100" alt="..."> </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 6</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the bulk of the
-                                            card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
                                 </div>
                             </div>
                             <div class="carousel-item multiple-item">
-                                <div class="card">
-                                    <div class="img-wrapper"><img src="https://placehold.co/1920x1080"
-                                            class="d-block w-100" alt="..."> </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 7</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the bulk of the
-                                            card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
                                 </div>
                             </div>
                             <div class="carousel-item multiple-item">
-                                <div class="card">
-                                    <div class="img-wrapper"><img src="https://placehold.co/1920x1080"
-                                            class="d-block w-100" alt="..."> </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 8</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the bulk of the
-                                            card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item multiple-item">
-                                <div class="card">
-                                    <div class="img-wrapper"><img src="https://placehold.co/1920x1080"
-                                            class="d-block w-100" alt="..."> </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 9</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the bulk of the
-                                            card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
                                 </div>
                             </div>
                         </div>
@@ -248,137 +204,110 @@
                 </div>
             </div>
 
+
             <div class="row d-none d-lg-block">
-                <div id="carouselExampleControls" class="carousel multiple">
-                    <div class="carousel-inner">
-                        <div class="carousel-item multiple-item active">
-                            <div class="card">
-                                <div class="img-wrapper"><img src="https://placehold.co/1920x1080" class="d-block w-100"
-                                        alt="..."> </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title 1</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="col text-center my-4">
+                    <h1 class="text-primary">Series destacadas</h1>
+                </div>
+            </div>
+            <div class="row d-none d-lg-block">
+                <div class="col-12">
+                    <div id="carouselExampleControls" class="carousel multiple">
+                        <div class="carousel-inner">
+                            <div class="carousel-item multiple-item">
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item multiple-item">
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item multiple-item">
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item multiple-item">
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item multiple-item">
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item multiple-item">
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item multiple-item">
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item multiple-item">
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="carousel-item multiple-item">
+                                <div class="position-relative">
+                                    <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                                    <h3
+                                        class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
+                                        Pelicula
+                                    </h3>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item multiple-item">
-                            <div class="card">
-                                <div class="img-wrapper"><img src="https://placehold.co/1920x1080" class="d-block w-100"
-                                        alt="..."> </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title 2</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item multiple-item">
-                            <div class="card">
-                                <div class="img-wrapper"><img src="https://placehold.co/1920x1080" class="d-block w-100"
-                                        alt="..."> </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title 3</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item multiple-item">
-                            <div class="card">
-                                <div class="img-wrapper"><img src="https://placehold.co/1920x1080" class="d-block w-100"
-                                        alt="..."> </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title 4</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item multiple-item">
-                            <div class="card">
-                                <div class="img-wrapper"><img src="https://placehold.co/1920x1080" class="d-block w-100"
-                                        alt="..."> </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title 5</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item multiple-item">
-                            <div class="card">
-                                <div class="img-wrapper"><img src="https://placehold.co/1920x1080" class="d-block w-100"
-                                        alt="..."> </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title 6</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item multiple-item">
-                            <div class="card">
-                                <div class="img-wrapper"><img src="https://placehold.co/1920x1080" class="d-block w-100"
-                                        alt="..."> </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title 7</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item multiple-item">
-                            <div class="card">
-                                <div class="img-wrapper"><img src="https://placehold.co/1920x1080" class="d-block w-100"
-                                        alt="..."> </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title 8</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item multiple-item">
-                            <div class="card">
-                                <div class="img-wrapper"><img src="https://placehold.co/1920x1080" class="d-block w-100"
-                                        alt="..."> </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title 9</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the bulk of the
-                                        card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
+                        <button class="carousel-control-prev multiple-prev" type="button"
+                            data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="fa-solid fa-arrow-left" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next multiple-next" type="button"
+                            data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="fa-solid fa-arrow-right" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <button class="carousel-control-prev multiple-prev" type="button"
-                        data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                        <span class="fa-solid fa-arrow-left" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next multiple-next" type="button"
-                        data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                        <span class="fa-solid fa-arrow-right" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
             </div>
 
