@@ -134,6 +134,10 @@ a:hover {
 }
 
 /* Estilos de Rafa */
+.bg-info {
+  background-color: $info !important;
+}
+
 .top {
   // Aplica el borde solo cuando el tamaño de pantalla sea menor a 'lg' (menos de 992px)
   @include media-breakpoint-down(lg) {
