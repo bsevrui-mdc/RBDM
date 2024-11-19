@@ -1,10 +1,29 @@
 .imgAdmin {
     border-radius: 50%;
+    @include media-breakpoint-down(lg) {
+        width: 200px;
+        height: auto;
+    }
+}
+.nameAdmin{
+    font-family: $font-family-julius;
 }
 .imgFilms {
-    text-align: center;
-    width: 100px;
+    width:10%;
 }
 td {
     align-content: center;
+    text-align: center;
+}
+th {
+    text-align: center;
+}
+.color-trash {
+    color: red;
+    margin-left: 1rem;
+    
+}
+
+.table> :not(caption) > * > * {
+    background-color: black;
 }
