@@ -26,7 +26,7 @@
           </li>
         </ul>
       </div>
-      <div class="ms-auto d-lg-block d-none">
+      <div class="ms-auto d-lg-block d-none iconos">
         <i class="fa-solid fa-magnifying-glass me-5"></i>
         <i class="fa-solid fa-user me-5 "></i>
       </div>
