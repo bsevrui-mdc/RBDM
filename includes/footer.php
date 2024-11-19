@@ -13,8 +13,8 @@
                 </div>
                 <div class="col-6 col-lg-4 text-center enlaces">
                     <a href="/contact.php" class="text-decoration-none">Ayuda</a>
-                    <a href="/contact.php#formularioContacto" class="text-decoration-none">Contacto</a>
                     <a href="/contact.php#enlacesContacto" class="text-decoration-none">Enlaces</a>
+                    <a href="/contact.php#formularioContacto" class="text-decoration-none">Contacto</a>
                 </div>
                 <div class="col-6 col-lg-4 text-center enlaces">
                     <a href="/about.php#cuAbout" class="text-decoration-none">Condiciones de Uso</a>
