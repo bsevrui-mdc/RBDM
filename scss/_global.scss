@@ -95,16 +95,13 @@ a:hover {
     }
   }
 
-  .rrss {
-    .icon {
-      width: 3rem;
-      height: auto;
-      margin-right: 25px;
-    }
+  .enlaces {
+    display: flex;
+    align-items: center;
   }
 
   form textarea {
-    height: 167px;
+    height: 175px;
   }
 }
 
