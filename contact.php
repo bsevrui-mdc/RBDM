@@ -13,25 +13,20 @@
                         <div class="col-12">
                             <h3 class="text-center my-lg-4">Encuéntranos en Redes Sociales</h3>
                         </div>
-                        <div class="col-12 d-flex justify-content-center align-items-center py-3 rrss">
-                            <img src="/assets/icons/tiktok.svg" class="icon" alt="TikTok_logo">
-                            <a class="text-decoration-none" href="">@rbdm_gcm_TT</a>
+                        <div class="col-12 d-flex justify-content-center py-3">
+                            <a class="text-decoration-none enlaces" href=""><i class="fa-brands fa-tiktok fa-3x mx-4"></i>@rbdm_gcm_TT</a>
                         </div>
-                        <div class="col-12 d-flex justify-content-center align-items-center py-3 rrss">
-                            <img src="/assets/icons/instagram.svg" class="icon" alt="instagram_logo">
-                            <a class="text-decoration-none" href="">@rbdm_gcm_IG</a>
+                        <div class="col-12 d-flex justify-content-center py-3">
+                            <a class="text-decoration-none enlaces" href=""><i class="fa-brands fa-instagram fa-3x mx-4"></i>@rbdm_gcm_IG</a>
                         </div>
-                        <div class="col-12 d-flex justify-content-center align-items-center py-3 rrss">
-                            <img src="/assets/icons/twitter-x.svg" class="icon" alt="x_logo">
-                            <a class="text-decoration-none" href="">@rbdm_gcm_X</a>
+                        <div class="col-12 d-flex justify-content-center py-3">
+                            <a class="text-decoration-none enlaces" href=""><i class="fa-brands fa-x-twitter fa-3x mx-4"></i>@rbdm_gcm_X</a>
                         </div>
-                        <div class="col-12 d-flex justify-content-center align-items-center py-3 rrss">
-                            <img src="/assets/icons/facebook.svg" class="icon" alt="facebook_logo">
-                            <a class="text-decoration-none" href="">@rbdm_gcm_F</a>
+                        <div class="col-12 d-flex justify-content-center py-3">
+                            <a class="text-decoration-none enlaces" href=""><i class="fa-brands fa-facebook fa-3x mx-4"></i>@rbdm_gcm_F</a>
                         </div>
-                        <div class="col-12 d-flex justify-content-center align-items-center py-3 rrss">
-                            <img src="/assets/icons/youtube.svg" class="icon" alt="youtube_logo">
-                            <a class="text-decoration-none" href="">@rbdm_gcm_YT</a>
+                        <div class="col-12 d-flex justify-content-center py-3">
+                            <a class="text-decoration-none enlaces" href=""><i class="fa-brands fa-youtube fa-3x mx-4"></i>@rbdm_gcm_YT</a>
                         </div>
                     </div>
                 </div>
