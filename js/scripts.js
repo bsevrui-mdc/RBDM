@@ -1,42 +1,38 @@
-/* Script carrusel multiple endex.php */
+document.addEventListener("DOMContentLoaded", function() {
+    // Seleccionar todos los carruseles
+    const carousels = document.querySelectorAll(".multiple");
 
-document.addEventListener("DOMContentLoaded", function () {
-  const carouselInner = document.querySelector(".carousel-inner");
-  const carouselItems = document.querySelectorAll(".carousel-item");
-  let scrollPosition = 0;
+    carousels.forEach((carousel) => {
+        const carouselInner = carousel.querySelector(".carousel-inner");
+        let cardWidth = carousel.querySelector(".multiple-item").getBoundingClientRect().width;
+        let scrollPosition = 0;
 
-  // Evento para el botón "Siguiente"
-  document
-    .querySelector(".carousel-control-next")
-    .addEventListener("click", () => {
-      const cardWidth = carouselItems[0].offsetWidth; // Calcula el ancho de una tarjeta
-      const maxScrollPosition =
-        carouselInner.scrollWidth - carouselInner.clientWidth; // Máximo scroll permitido
-
-      if (scrollPosition < maxScrollPosition) {
-        scrollPosition += cardWidth;
-        if (scrollPosition > maxScrollPosition)
-          scrollPosition = maxScrollPosition; // No pasar del máximo
-        carouselInner.scrollTo({
-          left: scrollPosition,
-          behavior: "smooth",
+        // Botón "Siguiente"
+        carousel.querySelector(".multiple-next").addEventListener("click", () => {
+            const maxScroll = carouselInner.scrollWidth - carouselInner.clientWidth;
+            if (scrollPosition < maxScroll) {
+                scrollPosition += cardWidth;
+                carouselInner.scrollTo({
+                    left: scrollPosition,
+                    behavior: "smooth",
+                });
+            }
         });
-      }
-    });
 
-  // Evento para el botón "Anterior"
-  document
-    .querySelector(".carousel-control-prev")
-    .addEventListener("click", () => {
-      const cardWidth = carouselItems[0].offsetWidth; // Calcula el ancho de una tarjeta
-
-      if (scrollPosition > 0) {
-        scrollPosition -= cardWidth;
-        if (scrollPosition < 0) scrollPosition = 0; // No pasar del mínimo
-        carouselInner.scrollTo({
-          left: scrollPosition,
-          behavior: "smooth",
+        // Botón "Anterior"
+        carousel.querySelector(".multiple-prev").addEventListener("click", () => {
+            if (scrollPosition > 0) {
+                scrollPosition -= cardWidth;
+                carouselInner.scrollTo({
+                    left: scrollPosition,
+                    behavior: "smooth",
+                });
+            }
         });
-      }
+
+        // Actualizar el ancho de las tarjetas en cambio de tamaño
+        window.addEventListener("resize", () => {
+            cardWidth = carousel.querySelector(".multiple-item").getBoundingClientRect().width;
+        });
     });
 });
