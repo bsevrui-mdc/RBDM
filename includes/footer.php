@@ -34,14 +34,14 @@
                 </div>
             </div> 
         </div>
-        <div class="row py-5"> 
-            <div class="col icons">
-                <a href="https://www.tiktok.com/es/"><img src="/assets/icons/tiktok.svg" alt="TikTok" class="rrss img-fluid"></a>
-                <a href="https://www.instagram.com/"><img src="/assets/icons/instagram.svg" alt="Instagram" class="rrss img-fluid"></a>
-                <a href="https://x.com/?lang=es"><img src="/assets/icons/twitter-x.svg" alt="X/Twitter" class="rrss img-fluid"></a>
-                <a href="https://www.facebook.com/"><img src="/assets/icons/facebook.svg" alt="Facebook" class="rrss img-fluid"></a>
-                <a href="https://www.youtube.com/"><img src="/assets/icons/youtube.svg" alt="YouTube" class="rrss img-fluid"></a>
-                <a href="https://www.reddit.com/?rdt=60910"><img src="/assets/icons/reddit.svg" alt="Reddit" class="rrss img-fluid"></a>
+        <div class="row"> 
+            <div class="col-12 d-flex justify-content-center pb-4">
+                <a href=""><i class="fa-brands fa-tiktok fa-3x px-3"></i></a>
+                <a href=""><i class="fa-brands fa-instagram fa-3x px-3"></i></a>
+                <a href=""><i class="fa-brands fa-x-twitter fa-3x px-3"></i></a>
+                <a href=""><i class="fa-brands fa-facebook fa-3x px-3"></i></a>
+                <a href=""><i class="fa-brands fa-youtube fa-3x px-3"></i></a>
+                <a href=""><i class="fa-brands fa-reddit fa-3x px-3"></i></a>
             </div>
         </div>
         <div class="row">
