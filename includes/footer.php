@@ -1,4 +1,4 @@
-<footer class="footer container-fluid">
+<footer class="container-fluid footer">
     <div class="row">
         <div class="d-none d-lg-flex justify-content-center col-lg-2">
             <img src="/assets/img/logo.PNG" class="logo img-fluid" alt="logo">

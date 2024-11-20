@@ -4,9 +4,9 @@
     <head>
         <?php include("includes/head-tags.php"); ?>
     </head>
-    <body>
+    <body class="login">
         <?php include("includes/navbar.php"); ?>
-        <main class="container-fluid login">
+        <main class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-6 my-lg-4 content">
                     <h3 class="text-center py-4 pb-lg-1 pt-lg-3">Inicio de Sesión</h3>

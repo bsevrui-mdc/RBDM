@@ -123,10 +123,16 @@ a:hover {
 }
 
 /* Estilos para login.php */
-.login .content {
-  @include media-breakpoint-up(lg) {
-    background-color: $divTransparency;
-    border-radius: 15px;
+.login {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .content {
+    @include media-breakpoint-up(lg) {
+      background-color: $divTransparency;
+      border-radius: 15px;
+    }
   }
 }
 
