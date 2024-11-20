@@ -174,3 +174,54 @@ a:hover {
     padding-bottom: 5px;
   }
 }
+
+/* Estilos pagina usuario.php */
+
+.usuario {
+  .pelicula-favorita {
+    height: 500px;
+    width: 100%;
+
+    @include media-breakpoint-down(lg) {
+      height: 450px;
+    }
+    background-position: center;
+    background-image: url(https://placehold.co/1920x1080);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    i {
+      font-size: 70px;
+      
+      @include media-breakpoint-down(lg) {
+        font-size: 30px;
+      }
+    }
+  }
+  .datos-usuario {
+    .foto-perfil {
+      width: 320px;
+      height: 320px;
+      img {
+        border-radius: 10%;
+      }
+    }
+
+    .campos {
+      .campo {
+        div {
+          font-family: $font-family-calibri;
+          font-size: $font-family-calibri-size-p;
+        }
+
+        border: 3px solid $black;
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, .5);
+
+      }
+
+      //@include media-breakpoint-down(lg) {
+      //  width: 320px;
+      //}
+    }
+  }
+}
