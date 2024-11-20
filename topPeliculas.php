@@ -10,6 +10,11 @@
     <?php include("includes/navbar.php"); ?>
     <main>
         <div class="container-fluid">
+            <div class="row my-5">
+                <div class="col text-center">
+                    <h1>Ranking de Peliculas</h1>
+                </div>
+            </div>
             <div class="row my-4 d-none d-lg-block d-lg-flex">
                 <div class="col-lg-2 justify-content-center text-center">Ranking</div>
                 <div class="col-lg-2 justify-content-center text-center">Imagen</div>
@@ -23,7 +28,7 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
                         <div class="col text-center text-lg-start">
-                            <h1>título de película 1</h1>
+                            <h2>título de película 1</h2>
                         </div>
                     </div>
                     <div class="row h-25">
@@ -31,7 +36,7 @@
                             <h3>TERROR</h3>
                         </div>
                         <div class="col-4 bordeNota d-flex justify-content-end d-lg-none">
-                            <p><i class="fa-solid fa-star text-primary px-2"></i>10</p>
+                            <div class="nota"><i class="fa-solid fa-star text-primary px-2"></i>10</div>
                         </div>
                     </div>
                 </div>
@@ -48,7 +53,7 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
                         <div class="col text-center text-lg-start">
-                            <h1>título de película 2</h1>
+                            <h2>título de película 2</h2>
                         </div>
                     </div>
                     <div class="row h-25">
@@ -73,7 +78,7 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
                         <div class="col text-center text-lg-start">
-                            <h1>título de película 3</h1>
+                            <h2>título de película 3</h2>
                         </div>
                     </div>
                     <div class="row h-25">
@@ -98,7 +103,7 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
                         <div class="col text-center text-lg-start">
-                            <h1>título de película 4</h1>
+                            <h2>título de película 4</h2>
                         </div>
                     </div>
                     <div class="row h-25">
