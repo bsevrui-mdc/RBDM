@@ -196,3 +196,13 @@ a:hover {
     padding: 0;
   }
 }
+
+.nota{
+  font-size: $font-family-julius-size-h1;
+  font-family: $font-family-julius;
+  @include media-breakpoint-down(lg){
+    font-size: $font-family-calibri-size-p;
+    font-family: $font-family-calibri;
+    padding-bottom: 5px;
+  }
+}
