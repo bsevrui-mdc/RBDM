@@ -1,0 +1,57 @@
+.carrusel-multiple {
+  .carousel-inner {
+    padding: 1em;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  .carousel-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-item {
+    flex: 0 0 25%; /* Cada ítem ocupa un 25% del ancho */
+    margin-right: 1em; /* Espaciado entre tarjetas */
+    display: flex; /* Asegura diseño consistente */
+    justify-content: center; /* Centra los ítems */
+    align-items: center; /* Centra los ítems verticalmente */
+    img {
+      border-radius: 20px;
+    }
+
+    h2 {
+      font-family: $font-family-oxanium;
+      font-size: $font-family-oxanium-size;
+      text-transform: uppercase;
+    }
+
+    .position-relative {
+      position: relative;
+    }
+
+    .overlay-text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      z-index: 1; /* Asegura que el texto esté sobre la imagen */
+    }
+  }
+
+  /* Estilos para los controles de navegación */
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: $primary;
+    color: $dark;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%); /* Centra verticalmente */
+  }
+}

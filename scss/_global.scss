@@ -38,55 +38,23 @@ a:hover {
 
 /* Estilos para index.php */
 .index {
-  .multiple {
-    .carousel-inner {
-      padding: 1em;
-      display: flex;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      scrollbar-width: none;
+  .topGenero {
+    h2 {
+      font-family: $font-family-julius;
+      font-weight: $font-family-julius-weight;
+      font-size: $font-family-julius-size-h1;
     }
-
-    .carousel-inner::-webkit-scrollbar {
-      display: none;
+    .genero {
+      font-family: $font-family-calibri;
+      font-size: $font-family-calibri-size-p;
     }
+  }
 
-    .carousel-item {
-      flex: 0 0 25%; /* Cada ítem ocupa un 25% del ancho */
-      margin-right: 1em; /* Espaciado entre tarjetas */
-      display: flex; /* Asegura diseño consistente */
-      justify-content: center; /* Centra los ítems */
-      align-items: center; /* Centra los ítems verticalmente */
-      img{
-        border-radius: 20px;
-      }
-
-      .position-relative {
-        position: relative;
-      }
-
-      .overlay-text {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        color: white;
-        text-align: center;
-        padding: 15px;
-        z-index: 1; /* Asegura que el texto esté sobre la imagen */
-      }
-    }
-    
-    /* Estilos para los controles de navegación */
-    .carousel-control-prev,
-    .carousel-control-next {
-      background-color: $primary;
-      color: $dark;
-      width: 6vh;
-      height: 6vh;
-      border-radius: 50%;
-      top: 50%;
-      transform: translateY(-50%); /* Centra verticalmente */
+  .movil {
+    h2 {
+      font-family: $font-family-julius;
+      font-weight: $font-family-julius-weight;
+      font-size: $font-family-julius-size-h1;
     }
   }
 }
@@ -103,7 +71,7 @@ a:hover {
       display: flex;
       align-items: center;
     }
-  
+
     form textarea {
       height: 150px;
     }
@@ -197,10 +165,10 @@ a:hover {
   }
 }
 
-.nota{
+.nota {
   font-size: $font-family-julius-size-h1;
   font-family: $font-family-julius;
-  @include media-breakpoint-down(lg){
+  @include media-breakpoint-down(lg) {
     font-size: $font-family-calibri-size-p;
     font-family: $font-family-calibri;
     padding-bottom: 5px;

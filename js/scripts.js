@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Seleccionar todos los carruseles
-    const carousels = document.querySelectorAll(".multiple");
+    const carousels = document.querySelectorAll(".carrusel-multiple");
 
     carousels.forEach((carousel) => {
         const carouselInner = carousel.querySelector(".carousel-inner");
