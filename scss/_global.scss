@@ -112,68 +112,7 @@ a:hover {
   }
 }
 
-/* Estilos de Rafa */
-.bg-info {
-  background-color: $info !important;
-}
 
-.top {
-  // Aplica el borde solo cuando el tamaño de pantalla sea menor a 'lg' (menos de 992px)
-  @include media-breakpoint-down(lg) {
-    border: 5px solid $primary; // Puedes usar cualquier color que desees
-    width: 100%;
-    border-radius: 20px;
-    img {
-      width: 100%; // Hace que la imagen ocupe todo el ancho en pantallas más pequeñas
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-    }
-    margin-left: auto;
-    margin-right: auto;
-    background-color: black !important;
-  }
-
-  // Opcionalmente, puedes asegurarte de que el borde se elimine cuando el tamaño de pantalla sea mayor a 'lg'
-  @include media-breakpoint-up(lg) {
-    border: none;
-  }
-}
-
-.bordeGenero {
-  @include media-breakpoint-down(lg) {
-    border-top: 5px solid $primary;
-    border-right: 5px solid $primary;
-    height: 100%;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-  }
-}
-
-.bordeNota {
-  @include media-breakpoint-down(lg) {
-    border-top: 5px solid $primary;
-    height: 100%;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-  }
-}
-
-.contenedorImagen {
-  @include media-breakpoint-down(lg) {
-    width: 100%;
-    padding: 0;
-  }
-}
-
-.nota {
-  font-size: $font-family-julius-size-h1;
-  font-family: $font-family-julius;
-  @include media-breakpoint-down(lg) {
-    font-size: $font-family-calibri-size-p;
-    font-family: $font-family-calibri;
-    padding-bottom: 5px;
-  }
-}
 
 /* Estilos pagina usuario.php */
 
