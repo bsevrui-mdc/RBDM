@@ -6,10 +6,10 @@
     <?php include("includes/head-tags.php"); ?>
 </head>
 
-<body>
+<body class="fondoImagen">
     <?php include("includes/navbar.php"); ?>
     <main>
-        <div class="container bg-divTransparency w-75 my-5">
+        <div class="container transparente w-75 my-5">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="row py-3">
@@ -24,7 +24,7 @@
                     </div>
                     <div class="row">
                         <div class="col text-center py-4">
-                            <h3><i class="fa-solid fa-star text-primary px-2"></i>9.83</h3>
+                            <h3><i class="fa-solid fa-star text-primary px-2"></i>9,83</h3>
                         </div>
                     </div>
                 </div>
@@ -51,6 +51,11 @@
                 </div>
             </div>
             <div class="row my-5">
+            <div class="col-lg-3 order-lg-1 d-flex align-items-center justify-content-center flex-column">
+                    <h3>DIRECTOR</h3>
+                    <img src="https://placehold.co/1920x1080" alt="imagen" class="img-fluid py-2">
+                    <div class="nota py-2">Nombre</div>
+               </div>
                <div class="col-lg-9">
                     <div class="row">
                         <div class="col text-start">
@@ -69,7 +74,7 @@
                         <div class="col-lg-4 px-5 py-5">
                             <div class="card">
                                 <img src="https://placehold.co/1920x1080" class="img-fluid card-img-top" alt="imagen">
-                                <div class="card-body bg-dark text-white text-center">
+                                <div class="card-body">
                                     <h1>Alvaro morte</h1>
                                 </div>
                             </div>
@@ -110,11 +115,7 @@
                         </div>
                     </div>
                </div>
-               <div class="col-lg-3 order-lg-1 d-flex align-items-center justify-content-center flex-column">
-                    <h3>DIRECTOR</h3>
-                    <img src="https://placehold.co/1920x1080" alt="imagen" class="img-fluid py-2">
-                    <div class="nota py-2">Nombre</div>
-               </div>
+               
             </div>
         </div>
     </main>

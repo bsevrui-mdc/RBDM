@@ -164,3 +164,32 @@ a:hover {
     }
   }
 }
+
+.fondoImagen{
+  /* Configura la imagen como fondo */
+  background-image: url('../assets/img/image.png');
+            
+  /* Ajustes adicionales */
+  background-size: cover; /* Escala la imagen para cubrir todo el fondo */
+  background-repeat: no-repeat; /* Evita que se repita la imagen */
+  background-position: center; /* Centra la imagen */
+
+  padding: 0px;
+  margin: 0;
+}
+
+.card{
+  background-color: black !important;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.transparente{
+  background-color: $divConFondoOscuro !important;
+  border-radius: 2%;
+  padding: 20px;
+  img{
+    border-radius: 5%;
+  }
+}
