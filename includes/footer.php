@@ -5,18 +5,18 @@
         </div>
         <div class="col-lg-8">
             <div class="row">
-                <div class="col-lg-4 text-center enlaces">
+                <div class="col-6 col-lg-4 enlaces">
                     <a href="" class="text-decoration-none">Inicio</a>
                     <a href="" class="text-decoration-none">Películas</a>
                     <a href="" class="text-decoration-none">Series</a>
                     <a href="" class="text-decoration-none">Géneros</a>
                 </div>
-                <div class="col-6 col-lg-4 text-center enlaces">
+                <div class="col-6 col-lg-4 enlaces">
                     <a href="/contact.php" class="text-decoration-none">Ayuda</a>
                     <a href="/contact.php#enlacesContacto" class="text-decoration-none">Enlaces</a>
                     <a href="/contact.php#formularioContacto" class="text-decoration-none">Contacto</a>
                 </div>
-                <div class="col-6 col-lg-4 text-center enlaces">
+                <div class="col-lg-4 enlaces">
                     <a href="/about.php#cuAbout" class="text-decoration-none">Condiciones de Uso</a>
                     <a href="/about.php#ppAbout" class="text-decoration-none">Política de Privacidad</a>
                     <a href="/about.php#pcAbout" class="text-decoration-none">Política de Cookies</a>
@@ -40,12 +40,12 @@
             </div>
         </div>
         <div class="d-flex justify-content-center pb-4">
-            <a href=""><i class="fa-brands fa-tiktok fa-3x px-3"></i></a>
-            <a href=""><i class="fa-brands fa-instagram fa-3x px-3"></i></a>
-            <a href=""><i class="fa-brands fa-x-twitter fa-3x px-3"></i></a>
-            <a href=""><i class="fa-brands fa-facebook fa-3x px-3"></i></a>
-            <a href=""><i class="fa-brands fa-youtube fa-3x px-3"></i></a>
-            <a href=""><i class="fa-brands fa-reddit fa-3x px-3"></i></a>
+            <a href=""><i class="fa-brands fa-tiktok fa-2x px-3"></i></a>
+            <a href=""><i class="fa-brands fa-instagram fa-2x px-3"></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter fa-2x px-3"></i></a>
+            <a href=""><i class="fa-brands fa-facebook fa-2x px-3"></i></a>
+            <a href=""><i class="fa-brands fa-youtube fa-2x px-3"></i></a>
+            <a href=""><i class="fa-brands fa-reddit fa-2x px-3"></i></a>
         </div>
         <p class="text-center">© 1990-2024&nbsp;by rbdm.com, Inc.</p>
     </div>

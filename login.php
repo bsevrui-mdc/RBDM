@@ -13,11 +13,11 @@
                     <form action="" method="POST" class="px-3 px-lg-5">
                         <div class="mb-3 text-center">
                             <label class="form-label">Correo Electrónico:</label>
-                            <input type="email" class="form-control" placeholder="ejemplo@ejemplo.com" id="">
+                            <input type="email" class="form-control" placeholder="ejemplo@ejemplo.com">
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">Contraseña:</label>
-                            <input type="password" class="form-control" id="">
+                            <input type="password" class="form-control">
                         </div>
                         <div class="mb-3 d-flex justify-content-center">
                             <button type="submit" class="btn btn-primary">Iniciar</button>

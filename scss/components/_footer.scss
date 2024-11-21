@@ -23,5 +23,9 @@
         a {
             text-transform: uppercase;
         }
+
+        @include media-breakpoint-up(lg) {
+            text-align: center;
+        }
     }
 }
