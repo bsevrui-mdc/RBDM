@@ -13,15 +13,20 @@
             <div class="row py-2">
                 <!--Parte izquierda-->
                 <div class="col-lg-2">
-                    <div class="row ">
-                        <div class="col-6 col-lg-12">
-                            <img src="https://placehold.co/100x100" alt="" class="imgAdmin">
+                    <div class="row text-center">
+                        <div class="col-6 col-lg-12 ">
+                            <img src="https://placehold.co/150x150" alt="" class="imgAdmin">
                         </div>
                         <div class="col-6 col-lg-12">
-                            <div class="display-2 nameAdmin">admin</div>
+                            <div class="display-3 nameAdmin">admin</div>
                             <p>nombre</p>
                             <p>apll1</p>
                             <p>apll2</p>
+                        </div>
+                        <div class="col-6 col-lg-12 d-none">
+                            <i class="fa-solid fa-film"></i>
+                            <i class="fa-solid fa-tv"></i>
+                            <i class="fa-solid fa-user"></i>
                         </div>
                         <div class="col-lg">
                             <form action="" method="post" class="d-flex flex-column">
@@ -34,20 +39,18 @@
                 </div>
                 <!--Parte derecha-->
                 <div class="col-lg-10">
-                    <div class="row">
-                        <div class="col-md-4">
+                    <div class="row py-3">
+                        <div class="col-md-4 ms-auto">
                             <div class="input-group">
                                 <input class="form-control py-2 border-right-0 border" type="search"
                                     placeholder="Buscar" id="example-search-input">
                                 <button class="btn bg-white border-0">
-
                                     <i class="fa fa-search"></i>
-
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row py-3">
                         <div class="col d-flex justify-content-between">
                             <h1>Lista de Peliculas</h1>
                             <input type="button" class="btn btn-primary w-25" value="Añadir">
@@ -82,49 +85,70 @@
                                             <td>Fallguys</td>
                                             <td>Infantil</td>
                                             <td>18-11-2000</td>
-                                            <td>iconos</td>
+                                            <td>
+                                                <i class="fa-solid fa-pen"></i>
+                                                <i class="fa-solid fa-trash-can color-trash"></i>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
                                             <td>Fallguys</td>
                                             <td>Infantil</td>
                                             <td>18-11-2000</td>
-                                            <td>iconos</td>
+                                            <td>
+                                                <i class="fa-solid fa-pen"></i>
+                                                <i class="fa-solid fa-trash-can color-trash"></i>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
                                             <td>Fallguys</td>
                                             <td>Infantil</td>
                                             <td>18-11-2000</td>
-                                            <td>iconos</td>
+                                            <td>
+                                                <i class="fa-solid fa-pen"></i>
+                                                <i class="fa-solid fa-trash-can color-trash"></i>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
                                             <td>Fallguys</td>
                                             <td>Infantil</td>
                                             <td>18-11-2000</td>
-                                            <td>iconos</td>
+                                            <td>
+                                                <i class="fa-solid fa-pen"></i>
+                                                <i class="fa-solid fa-trash-can color-trash"></i>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
                                             <td>Fallguys</td>
                                             <td>Infantil</td>
                                             <td>18-11-2000</td>
-                                            <td>iconos</td>
+                                            <td>
+                                                <i class="fa-solid fa-pen"></i>
+                                                <i class="fa-solid fa-trash-can color-trash"></i>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
                                             <td>Fallguys</td>
                                             <td>Infantil</td>
                                             <td>18-11-2000</td>
-                                            <td>iconos</td>
+                                            <td>
+                                                <i class="fa-solid fa-pen"></i>
+                                                <i class="fa-solid fa-trash-can color-trash"></i>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
                                             <td>Fallguys</td>
                                             <td>Infantil</td>
                                             <td>18-11-2000</td>
-                                            <td>iconos</td>
+                                            <td>
+                                                <i class="fa-solid fa-pen"></i>
+                                                <i class="fa-solid fa-trash-can color-trash"></i>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
