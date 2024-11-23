@@ -19,13 +19,13 @@
                         </div>
                         <div class="col-9 d-lg-none d-sm-block align-content-center">
                             <div class="row justify-content-around">
-                                <div class="col-auto">
+                                <div class="col">
                                     <i class="fa-solid fa-film"></i>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col">
                                     <i class="fa-solid fa-tv"></i>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col">
                                     <i class="fa-solid fa-user"></i>
                                 </div>
                             </div>
