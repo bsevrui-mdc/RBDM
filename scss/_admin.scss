@@ -1,9 +1,20 @@
 .imgAdmin {
     border-radius: 50%;
     @include media-breakpoint-down(lg) {
-        width: 200px;
+        width: 100px;
         height: auto;
-        
+        display: flex;
+    }
+}
+.textList{
+    display: flex;
+    justify-content: space-between;
+    @include media-breakpoint-down(lg){
+        h1{
+            display: none;
+        }
+        display: flex;
+        justify-content: end;
     }
 }
 .nameAdmin{
