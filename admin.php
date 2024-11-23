@@ -10,7 +10,7 @@
     <?php include("includes/navbar.php"); ?>
     <main>
         <div class="container-fluid">
-            <div class="row py-2">
+            <div class="row py-3">
                 <!--Parte izquierda-->
                 <div class="col-lg-2">
                     <div class="row text-center">
