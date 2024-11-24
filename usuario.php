@@ -12,7 +12,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 pelicula-favorita text-end p-2">
-                    <i class=" fa-border fa-solid fa-star text-secondary"></i>
+                    <i class="fa-solid fa-star text-primary"></i>
                 </div>
             </div>
         </div>
@@ -37,6 +37,115 @@
                             <div class="d-inline">8-10-2024</div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid lista-usuario gap-2">
+            <div class="row d-none d-lg-flex p-4">
+                <div class="col text-center">
+                    <h1>Lista Personal</h1>
+                </div>
+            </div>
+            <div class="row d-none d-lg-flex">
+                <div class="col-2 text-center">
+                    <h3>Imagen</h3>
+                </div>
+                <div class="col-8 text-center">
+                    <h3>titulo</h3>
+                </div>
+                <div class="col-2 text-center">
+                    <h3>Valoracion</h3>
+                </div>
+            </div>
+            <div class="row top">
+                <div class="col-lg-2 contenedorImagen"><img src="https://placehold.co/1920x1080" alt="imagen"
+                        class="img-fluid"></div>
+                <div class="col-lg d-flex flex-column">
+                    <div class="row d-flex align-items-center h-75">
+                        <div class="col text-center text-lg-start">
+                            <h2>título de película 4</h2>
+                        </div>
+                    </div>
+                    <div class="row h-25 align-content-center">
+                        <div class="col-8 bordeGenero m-0">
+                            <h3>TERROR</h3>
+                        </div>
+                        <div class="col-4 bordeNota d-flex justify-content-end d-lg-none m-0">
+                            <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.05</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 justify-content-center align-items-center border-start d-lg-flex d-none">
+                    <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.05</div>
+                </div>
+            </div>
+
+            <div class="row top">
+                <div class="col-lg-2 contenedorImagen"><img src="https://placehold.co/1920x1080" alt="imagen"
+                        class="img-fluid"></div>
+                <div class="col-lg d-flex flex-column">
+                    <div class="row d-flex align-items-center h-75">
+                        <div class="col text-center text-lg-start">
+                            <h2>título de película 4</h2>
+                        </div>
+                    </div>
+                    <div class="row h-25  align-content-center">
+                        <div class="col-8 bordeGenero m-0">
+                            <h3>TERROR</h3>
+                        </div>
+                        <div class="col-4 bordeNota d-flex justify-content-end d-lg-none m-0">
+                            <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.05</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 justify-content-center align-items-center border-start d-lg-flex d-none">
+                    <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.05</div>
+                </div>
+            </div>
+
+            <div class="row top">
+                <div class="col-lg-2 contenedorImagen"><img src="https://placehold.co/1920x1080" alt="imagen"
+                        class="img-fluid"></div>
+                <div class="col-lg d-flex flex-column">
+                    <div class="row d-flex align-items-center h-75">
+                        <div class="col text-center text-lg-start">
+                            <h2>título de película 4</h2>
+                        </div>
+                    </div>
+                    <div class="row h-25  align-content-center">
+                        <div class="col-8 bordeGenero m-0">
+                            <h3>TERROR</h3>
+                        </div>
+                        <div class="col-4 bordeNota d-flex justify-content-end d-lg-none m-0">
+                            <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.05</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 justify-content-center align-items-center border-start d-lg-flex d-none">
+                    <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.05</div>
+                </div>
+            </div>
+
+            <div class="row top">
+                <div class="col-lg-2 contenedorImagen"><img src="https://placehold.co/1920x1080" alt="imagen"
+                        class="img-fluid"></div>
+                <div class="col-lg d-flex flex-column">
+                    <div class="row d-flex align-items-center h-75">
+                        <div class="col text-center text-lg-start">
+                            <h2>título de película 4</h2>
+                        </div>
+                    </div>
+                    <div class="row h-25 align-content-center">
+                        <div class="col-8 bordeGenero m-0">
+                            <h3>TERROR</h3>
+                        </div>
+                        <div class="col-4 bordeNota d-flex justify-content-end d-lg-none m-0">
+                            <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.05</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 justify-content-center align-items-center border-start d-lg-flex d-none">
+                    <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.05</div>
                 </div>
             </div>
         </div>

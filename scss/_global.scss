@@ -112,8 +112,6 @@ a:hover {
   }
 }
 
-
-
 /* Estilos pagina usuario.php */
 
 .usuario {
@@ -131,7 +129,7 @@ a:hover {
 
     i {
       font-size: 70px;
-      
+
       @include media-breakpoint-down(lg) {
         font-size: 30px;
       }
@@ -154,8 +152,7 @@ a:hover {
         }
 
         border: 3px solid $black;
-        box-shadow: 10px 10px 5px rgba(0, 0, 0, .5);
-
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
       }
 
       //@include media-breakpoint-down(lg) {
@@ -163,12 +160,19 @@ a:hover {
       //}
     }
   }
+  .lista-usuario {
+    .top {
+      border-left: 5px solid $primary;
+    }
+
+    width: 85%;
+  }
 }
 
-.fondoImagen{
+.fondoImagen {
   /* Configura la imagen como fondo */
-  background-image: url('../assets/img/image.png');
-            
+  background-image: url("../assets/img/image.png");
+
   /* Ajustes adicionales */
   background-size: cover; /* Escala la imagen para cubrir todo el fondo */
   background-repeat: no-repeat; /* Evita que se repita la imagen */
@@ -178,7 +182,7 @@ a:hover {
   margin: 0;
 }
 
-.card{
+.card {
   background-color: black !important;
   color: white;
   text-align: center;
@@ -187,16 +191,16 @@ a:hover {
   font-size: $font-family-julius-size-h1;
 }
 
-.transparente{
+.transparente {
   background-color: $divConFondoOscuro !important;
   border-radius: 2%;
   padding: 20px;
-  img{
+  img {
     border-radius: 5%;
   }
 }
 
-.transparente .calificacion{
+.transparente .calificacion {
   font-family: $font-family-oxanium;
   font-size: $font-family-oxanium-size;
 }
