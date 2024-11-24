@@ -66,102 +66,59 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <div class="table-responsive">
-                                <table class="table table-dark table-borderless">
-                                    <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th>Nombre</th>
-                                            <th>Genero</th>
-                                            <th>Fecha</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
-                                            <td>Fallguys</td>
-                                            <td>Infantil</td>
-                                            <td>18-11-2000</td>
-                                            <td>
-                                                <i class="fa-solid fa-pen"></i>
-                                                <i class="fa-solid fa-trash-can color-trash"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
-                                            <td>Fallguys</td>
-                                            <td>Infantil</td>
-                                            <td>18-11-2000</td>
-                                            <td>
-                                                <i class="fa-solid fa-pen"></i>
-                                                <i class="fa-solid fa-trash-can color-trash"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
-                                            <td>Fallguys</td>
-                                            <td>Infantil</td>
-                                            <td>18-11-2000</td>
-                                            <td>
-                                                <i class="fa-solid fa-pen"></i>
-                                                <i class="fa-solid fa-trash-can color-trash"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
-                                            <td>Fallguys</td>
-                                            <td>Infantil</td>
-                                            <td>18-11-2000</td>
-                                            <td>
-                                                <i class="fa-solid fa-pen"></i>
-                                                <i class="fa-solid fa-trash-can color-trash"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
-                                            <td>Fallguys</td>
-                                            <td>Infantil</td>
-                                            <td>18-11-2000</td>
-                                            <td>
-                                                <i class="fa-solid fa-pen"></i>
-                                                <i class="fa-solid fa-trash-can color-trash"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
-                                            <td>Fallguys</td>
-                                            <td>Infantil</td>
-                                            <td>18-11-2000</td>
-                                            <td>
-                                                <i class="fa-solid fa-pen"></i>
-                                                <i class="fa-solid fa-trash-can color-trash"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
-                                            <td>Fallguys</td>
-                                            <td>Infantil</td>
-                                            <td>18-11-2000</td>
-                                            <td>
-                                                <i class="fa-solid fa-pen"></i>
-                                                <i class="fa-solid fa-trash-can color-trash"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="imgFilms"><img src="https://placehold.co/100x100" alt=""></td>
-                                            <td>Fallguys</td>
-                                            <td>Infantil</td>
-                                            <td>18-11-2000</td>
-                                            <td>
-                                                <i class="fa-solid fa-pen"></i>
-                                                <i class="fa-solid fa-trash-can color-trash"></i>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <?php include("includes/table.php"); ?>
+                            <div class="row d-lg-none mb-3">
+                                <div class="col-4">
+                                    <img src="https://placehold.co/500" class="img-fluid">
+                                </div>
+                                <div class="col-6 d-flex flex-column justify-content-center text-center">
+                                    <p>Fallguys</p>
+                                    <p>Infantil</p>
+                                </div>
+                                <div class="col d-flex flex-column justify-content-around align-items-center">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <i class="fa-solid fa-trash-can color-trash "></i>
+                                </div>
                             </div>
-
+                            <div class="row d-lg-none mb-3">
+                                <div class="col-4">
+                                    <img src="https://placehold.co/500" class="img-fluid">
+                                </div>
+                                <div class="col-6 d-flex flex-column justify-content-center text-center">
+                                    <p>Fallguys</p>
+                                    <p>Infantil</p>
+                                </div>
+                                <div class="col d-flex flex-column justify-content-around align-items-center">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <i class="fa-solid fa-trash-can color-trash "></i>
+                                </div>
+                            </div>
+                            <div class="row d-lg-none mb-3">
+                                <div class="col-4">
+                                    <img src="https://placehold.co/500" class="img-fluid">
+                                </div>
+                                <div class="col-6 d-flex flex-column justify-content-center text-center">
+                                    <p>Fallguys</p>
+                                    <p>Infantil</p>
+                                </div>
+                                <div class="col d-flex flex-column justify-content-around align-items-center">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <i class="fa-solid fa-trash-can color-trash "></i>
+                                </div>
+                            </div>
+                            <div class="row d-lg-none mb-3">
+                                <div class="col-4">
+                                    <img src="https://placehold.co/500" class="img-fluid">
+                                </div>
+                                <div class="col-6 d-flex flex-column justify-content-center text-center">
+                                    <p>Fallguys</p>
+                                    <p>Infantil</p>
+                                </div>
+                                <div class="col d-flex flex-column justify-content-around align-items-center">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <i class="fa-solid fa-trash-can color-trash "></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
