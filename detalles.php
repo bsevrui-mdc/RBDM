@@ -24,14 +24,14 @@
                     </div>
                     <div class="row">
                         <div class="col text-center py-4">
-                            <h3><i class="fa-solid fa-star text-primary px-2"></i>9,83</h3>
+                            <div class="calificacion"><i class="fa-solid fa-star text-primary px-2"></i>9.83</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-9 px-5">
                     <div class="row">
                         <div class="col text-start py-2 px-2">
-                            <h1>sinopsis</h1>
+                            <h2>sinopsis</h2>
                         </div>
                     </div>
                     <div class="row">
@@ -59,57 +59,57 @@
                <div class="col-lg-9">
                     <div class="row">
                         <div class="col text-start">
-                            <h1>Reparto</h1>
+                            <div class="nota">Reparto</div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-4 px-5 py-5">
+                        <div class="col-lg-4 px-4 py-5">
                             <div class="card">
                                 <img src="https://placehold.co/1920x1080" class="img-fluid card-img-top" alt="imagen">
                                 <div class="card-body">
-                                    <h1>Alvaro morte</h1>
+                                    Alvaro morte
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 px-5 py-5">
+                        <div class="col-lg-4 px-4 py-5">
                             <div class="card">
                                 <img src="https://placehold.co/1920x1080" class="img-fluid card-img-top" alt="imagen">
                                 <div class="card-body">
-                                    <h1>Alvaro morte</h1>
+                                    Alvaro morte
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 px-5 py-5">
+                        <div class="col-lg-4 px-4 py-5">
                             <div class="card">
                                 <img src="https://placehold.co/1920x1080" class="img-fluid card-img-top" alt="imagen">
                                 <div class="card-body">
-                                    <h1>Alvaro morte</h1>
+                                    Alvaro morte
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-4 px-5 py-5">
+                        <div class="col-lg-4 px-4 py-5">
                             <div class="card">
                                 <img src="https://placehold.co/1920x1080" class="img-fluid card-img-top" alt="imagen">
                                 <div class="card-body">
-                                    <h1>Alvaro morte</h1>
+                                    Alvaro morte
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 px-5 py-5">
+                        <div class="col-lg-4 px-4 py-5">
                             <div class="card">
                                 <img src="https://placehold.co/1920x1080" class="img-fluid card-img-top" alt="imagen">
                                 <div class="card-body">
-                                    <h1>Alvaro morte</h1>
+                                    Alvaro morte
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 px-5 py-5">
+                        <div class="col-lg-4 px-4 py-5">
                             <div class="card">
                                 <img src="https://placehold.co/1920x1080" class="img-fluid card-img-top" alt="imagen">
                                 <div class="card-body">
-                                    <h1>Alvaro morte</h1>
+                                    Alvaro morte
                                 </div>
                             </div>
                         </div>
