@@ -57,6 +57,63 @@ a:hover {
       font-size: $font-family-julius-size-h1;
     }
   }
+  
+  .imgs{
+    width: 247px;
+    height: auto;
+  }
+}
+
+/* Estilos para admin.php */
+.admin {
+  th, td {
+    align-content: center;
+    text-align: center;
+  }
+
+  .imgAdmin {
+      border-radius: 50%;
+
+      @include media-breakpoint-down(lg) {
+          width: 100px;
+          height: auto;
+          display: flex;
+      }
+  }
+
+  .textList{
+      display: flex;
+      justify-content: space-between;
+      
+      @include media-breakpoint-down(lg){
+          display: flex;
+          justify-content: end;
+          
+          h1{
+              display: none;
+          }
+      }
+  }
+
+  .nameAdmin{
+      font-family: $font-family-julius;
+  }
+
+  .imgFilms {
+      width:10%;
+  }
+
+  .color-trash {
+      color: red;
+      
+      @include media-breakpoint-up(lg) {
+          margin-left: 1rem;
+      }    
+  }
+
+  .table> :not(caption) > * > * {
+      background-color: black;
+  }
 }
 
 /* Estilos para contact.php */
@@ -113,19 +170,18 @@ a:hover {
 }
 
 /* Estilos pagina usuario.php */
-
 .usuario {
   .pelicula-favorita {
     height: 500px;
     width: 100%;
-
-    @include media-breakpoint-down(lg) {
-      height: 450px;
-    }
     background-position: center;
     background-image: url(https://placehold.co/1920x1080);
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include media-breakpoint-down(lg) {
+      height: 450px;
+    }
 
     i {
       font-size: 70px;
@@ -154,30 +210,22 @@ a:hover {
         border: 3px solid $black;
         box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
       }
-
-      //@include media-breakpoint-down(lg) {
-      //  width: 320px;
-      //}
     }
   }
   .lista-usuario {
+    width: 85%;
+
     .top {
       border-left: 5px solid $primary;
     }
-
-    width: 85%;
   }
 }
 
 .fondoImagen {
-  /* Configura la imagen como fondo */
   background-image: url("../assets/img/image.png");
-
-  /* Ajustes adicionales */
-  background-size: cover; /* Escala la imagen para cubrir todo el fondo */
-  background-repeat: no-repeat; /* Evita que se repita la imagen */
-  background-position: center; /* Centra la imagen */
-
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 0px;
   margin: 0;
 }
@@ -197,7 +245,6 @@ a:hover {
   width: 75%;
   
   @include media-breakpoint-down(lg){
-    
     width: 90%;
   }
 }
@@ -205,5 +252,4 @@ a:hover {
 .transparente .calificacion {
   font-family: $font-family-oxanium;
   font-size: $font-family-oxanium-size;
-  
 }
