@@ -1,39 +1,45 @@
+th, td {
+    align-content: center;
+    text-align: center;
+}
+
 .imgAdmin {
     border-radius: 50%;
+
     @include media-breakpoint-down(lg) {
         width: 100px;
         height: auto;
         display: flex;
     }
 }
+
 .textList{
     display: flex;
     justify-content: space-between;
+    
     @include media-breakpoint-down(lg){
+        display: flex;
+        justify-content: end;
+        
         h1{
             display: none;
         }
-        display: flex;
-        justify-content: end;
     }
 }
 .nameAdmin{
     font-family: $font-family-julius;
 }
+
 .imgFilms {
     width:10%;
 }
-td {
-    align-content: center;
-    text-align: center;
-}
-th {
-    text-align: center;
-}
+
 .color-trash {
     color: red;
-    margin-left: 1rem;
     
+    @include media-breakpoint-up(lg) {
+        margin-left: 1rem;
+    }    
 }
 
 .table> :not(caption) > * > * {

@@ -77,7 +77,7 @@
                                 </div>
                                 <div class="col d-flex flex-column justify-content-around align-items-center">
                                     <i class="fa-solid fa-pen"></i>
-                                    <i class="fa-solid fa-trash-can color-trash "></i>
+                                    <i class="fa-solid fa-trash-can color-trash"></i>
                                 </div>
                             </div>
                             <div class="row d-lg-none mb-3">
