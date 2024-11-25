@@ -22,10 +22,10 @@
                 <div class="col-lg-8">
                     <?php include("includes/carrusel-normal.php"); ?>
                 </div>
-                <div class="col-4 d-none d-lg-block topGenero">
-                   <!-- <div class="d-flex flex-column h-100 topGenero"> -->
-                        <div class="row d-flex mb-3">
-                            <div class="col-4 align-content-center imgs">
+                <div class="col-4 d-none d-lg-block">
+                    <div class="d-flex flex-column h-100 topGenero">
+                        <div class="row d-flex flex-grow-1">
+                            <div class="col-4 align-content-center">
                                 <img src="https://placehold.co/500" class="img-fluid">
                             </div>
                             <div class="col align-content-center">
@@ -33,8 +33,8 @@
                                 <div class="genero">Género: Drama</div>
                             </div>
                         </div>
-                        <div class="row d-flex mb-3">
-                            <div class="col-4 align-content-center imgs">
+                        <div class="row d-flex flex-grow-1">
+                            <div class="col-4 align-content-center">
                                 <img src="https://placehold.co/500" class="img-fluid">
                             </div>
                             <div class="col align-content-center">
@@ -42,8 +42,8 @@
                                 <div class="genero">Género: Drama</div>
                             </div>
                         </div>
-                        <div class="row d-flex mb-3">
-                            <div class="col-4 align-content-center imgs">
+                        <div class="row d-flex flex-grow-1">
+                            <div class="col-4 align-content-center">
                                 <img src="https://placehold.co/500" class="img-fluid">
                             </div>
                             <div class="col align-content-center">
@@ -51,7 +51,7 @@
                                 <div class="genero">Género: Drama</div>
                             </div>
                         </div>
-                   <!-- </div> -->
+                    </div>
 
                 </div>
             </div>
