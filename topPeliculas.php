@@ -23,7 +23,7 @@
                 <div class="col-lg-2 justify-content-center text-center">Tu nota</div>
             </div>
             <div class="row top">
-                <div class="col-lg-2 align-items-center justify-content-center d-none d-lg-flex"><div class="nota">2</div></div>
+                <div class="col-lg-2 align-items-center justify-content-center d-none d-lg-flex"><div class="nota">1</div></div>
                 <div class="col-lg-2 contenedorImagen"><img src="https://placehold.co/1920x1200" alt="imagen" class="img-fluid"></div>
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="row top">
-                <div class="col-lg-2 align-items-center justify-content-center d-none d-lg-flex"><div class="nota">2</div></div>
+                <div class="col-lg-2 align-items-center justify-content-center d-none d-lg-flex"><div class="nota">3</div></div>
                 <div class="col-lg-2 contenedorImagen"><img src="https://placehold.co/1920x1200" alt="imagen" class="img-fluid"></div>
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
@@ -98,7 +98,7 @@
                 </div>
             </div>
             <div class="row top">
-                <div class="col-lg-2 align-items-center justify-content-center d-none d-lg-flex"><div class="nota">2</div></div>
+                <div class="col-lg-2 align-items-center justify-content-center d-none d-lg-flex"><div class="nota">4</div></div>
                 <div class="col-lg-2 contenedorImagen"><img src="https://placehold.co/1920x1200" alt="imagen" class="img-fluid"></div>
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
@@ -126,5 +126,4 @@
     </main>
     <?php include("includes/footer.php"); ?>
 </body>
-
 </html>
