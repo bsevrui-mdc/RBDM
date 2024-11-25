@@ -9,7 +9,7 @@
 <body class="fondoImagen">
     <?php include("includes/navbar.php"); ?>
     <main>
-        <div class="container transparente w-75 my-5">
+        <div class="container transparente my-5 rounded-4">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="row py-3">
@@ -64,24 +64,24 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-4 px-4 py-5">
-                            <div class="card">
-                                <img src="https://placehold.co/1920x1080" class="img-fluid card-img-top" alt="imagen">
+                            <div class="card rounded-4">
+                                <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
                                     Alvaro morte
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 px-4 py-5">
-                            <div class="card">
-                                <img src="https://placehold.co/1920x1080" class="img-fluid card-img-top" alt="imagen">
+                            <div class="card rounded-4">
+                                <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
                                     Alvaro morte
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 px-4 py-5">
-                            <div class="card">
-                                <img src="https://placehold.co/1920x1080" class="img-fluid card-img-top" alt="imagen">
+                            <div class="card rounded-4">
+                                <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
                                     Alvaro morte
                                 </div>
@@ -90,8 +90,8 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-4 px-4 py-5">
-                            <div class="card">
-                                <img src="https://placehold.co/1920x1080" class="img-fluid card-img-top" alt="imagen">
+                            <div class="card rounded-4">
+                                <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
                                     Alvaro morte
                                 </div>
@@ -99,7 +99,7 @@
                         </div>
                         <div class="col-lg-4 px-4 py-5">
                             <div class="card">
-                                <img src="https://placehold.co/1920x1080" class="img-fluid card-img-top" alt="imagen">
+                                <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
                                     Alvaro morte
                                 </div>
@@ -107,7 +107,7 @@
                         </div>
                         <div class="col-lg-4 px-4 py-5">
                             <div class="card">
-                                <img src="https://placehold.co/1920x1080" class="img-fluid card-img-top" alt="imagen">
+                                <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
                                     Alvaro morte
                                 </div>

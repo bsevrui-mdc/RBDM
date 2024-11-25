@@ -193,14 +193,17 @@ a:hover {
 
 .transparente {
   background-color: $divConFondoOscuro !important;
-  border-radius: 2%;
   padding: 20px;
-  img {
-    border-radius: 5%;
+  width: 75%;
+  
+  @include media-breakpoint-down(lg){
+    
+    width: 90%;
   }
 }
 
 .transparente .calificacion {
   font-family: $font-family-oxanium;
   font-size: $font-family-oxanium-size;
+  
 }
