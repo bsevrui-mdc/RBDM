@@ -213,11 +213,12 @@ a:hover {
     }
   }
   .lista-usuario {
-    width: 85%;
-
     .top {
-      border-left: 5px solid $primary;
+      border-left: 5px solid $statusCurrentlyWatching;
+
+      width: 100%;
     }
+    width: 85%;
   }
 }
 
