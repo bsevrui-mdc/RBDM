@@ -16,7 +16,7 @@
                     <a href="/contact.php#enlacesContacto" class="text-decoration-none">Enlaces</a>
                     <a href="/contact.php#formularioContacto" class="text-decoration-none">Contacto</a>
                 </div>
-                <hr class="d-lg-none mt-3">
+                <hr class="d-lg-none mt-3 mx-3">
                 <div class="col-lg-4 enlaces">
                     <a href="/about.php#cuAbout" class="text-decoration-none">Condiciones de Uso</a>
                     <a href="/about.php#ppAbout" class="text-decoration-none">Política de Privacidad</a>
