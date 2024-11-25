@@ -6,10 +6,10 @@
         <div class="col-lg-8">
             <div class="row">
                 <div class="col-6 col-lg-4 enlaces">
-                    <a href="" class="text-decoration-none">Inicio</a>
-                    <a href="" class="text-decoration-none">Películas</a>
-                    <a href="" class="text-decoration-none">Series</a>
-                    <a href="" class="text-decoration-none">Géneros</a>
+                    <a href="/index.php" class="text-decoration-none">Inicio</a>
+                    <a href="/topPeliculas.php" class="text-decoration-none">Películas</a>
+                    <a href="/topSeries.php" class="text-decoration-none">Series</a>
+                    <a href="/eleccionGenero.php" class="text-decoration-none">Géneros</a>
                 </div>
                 <div class="col-6 col-lg-4 enlaces">
                     <a href="/contact.php" class="text-decoration-none">Ayuda</a>
