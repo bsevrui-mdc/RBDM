@@ -23,8 +23,11 @@
                             <button type="submit" class="btn btn-primary">Iniciar</button>
                         </div>
                     </form>
-                    <div class="text-center pb-3 pt-1">
-                        <a href="" class="text-decoration-none text-center pb-3 pt-1">¿Has olvidado tu contraseña?</a>
+                    <div class="text-center pt-1">
+                        <a href="" class="text-decoration-none pt-1">¿Has olvidado tu contraseña?</a>
+                    </div>
+                    <div class="text-center pb-3">
+                        <a href="signup.php" class="text-decoration-none">¿No tienes una cuenta? Registrate</a>
                     </div>
                 </div>
             </div>
