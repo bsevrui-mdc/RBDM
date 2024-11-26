@@ -69,4 +69,11 @@
     }
   }
 
+  .h-lg-75{
+    height: 75%;
+    @include media-breakpoint-down(lg){
+      height: 100%;
+    }
+  }
+
   

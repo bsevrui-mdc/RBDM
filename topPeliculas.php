@@ -28,7 +28,7 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
-                            <h2>título de pelicula  mas largo para ver como pasa a la siguiente linea y mas palabras por aqui</h2>
+                            <h2>título de pelicula 1 </h2>
                         </div>
                     </div>
                     <div class="row">

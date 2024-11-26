@@ -9,14 +9,14 @@
 <body>
     <?php include("includes/navbar.php"); ?>
     <main>
-        <div class="container-fluid py-5">
+        <div class="container-fluid py-5 contenedorGeneros">
             <div class="row d-flex justify-content-around">
                 <div class="col-lg-4 px-4">
                     <div class="card mx-3">
                         <img src="https://placehold.co/1920x1200" class="card-img-top" alt="imagen">
                     </div>
                     <div class="card-body text-center py-3">
-                        <h1>Terror</h1>
+                        <a href="topGenero.php">Terror</a>
                     </div>
                 </div>
                 <div class="col-lg-4 px-4">
@@ -24,7 +24,7 @@
                         <img src="https://placehold.co/1920x1200" class="card-img-top" alt="imagen">
                     </div>
                     <div class="card-body text-center py-3">
-                        <h1>Accion</h1>
+                        <a href="topGenero.php">Accion</a>
                     </div>
                 </div>
                 <div class="col-lg-4 px-4">
@@ -32,7 +32,7 @@
                         <img src="https://placehold.co/1920x1200" class="card-img-top" alt="imagen">
                     </div>
                     <div class="card-body text-center py-3">
-                        <h1>Comedia</h1>
+                        <a href="topGenero.php">Aventura</a>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                         <img src="https://placehold.co/1920x1200" class="card-img-top" alt="imagen">
                     </div>
                     <div class="card-body text-center py-3">
-                        <h1>Aventura</h1>
+                        <a href="topGenero.php">Comedia</a>
                     </div>
                 </div>
                 <div class="col-lg-4 px-4">
@@ -50,7 +50,7 @@
                         <img src="https://placehold.co/1920x1200" class="card-img-top" alt="imagen">
                     </div>
                     <div class="card-body text-center py-3">
-                        <h1>Drama</h1>
+                        <a href="topGenero.php">Drama</a>
                     </div>
                 </div>
                 <div class="col-lg-4 px-4">
@@ -58,7 +58,7 @@
                         <img src="https://placehold.co/1920x1200" class="card-img-top" alt="imagen">
                     </div>
                     <div class="card-body text-center py-3">
-                        <h1>Infantil</h1>
+                        <a href="topGenero.php">Infantil</a>
                     </div>
                 </div>
             </div>
