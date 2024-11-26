@@ -26,9 +26,20 @@
           </li>
         </ul>
       </div>
-      <div class="ms-auto d-lg-block d-none iconos">
+      <div class="ms-auto d-lg-flex d-none iconos me-5">
+        <input class="d-none d-lg-block me-2 rounded-2 px-2" placeholder="Search..." type="text" name="buscador">
         <i class="fa-solid fa-magnifying-glass me-5"></i>
-        <a href="usuario.php"><i class="fa-solid fa-user me-5 "></i></a>
+        <div class="dropdown">
+          <a href="#" class="d-inline-block text-white" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-user"></i>
+          </a>
+          <ul class="dropdown-menu bg-secondary dropdown-menu-end">
+            <li><a class="dropdown-item" href="usuario.php">Perfil</a></li>
+            <li><a class="dropdown-item" href="admin.php">Administracion</a></li>
+            <hr>
+            <li><a class="dropdown-item" href="login.php">Log Out <i class="fa-solid fa-arrow-right-from-bracket icono-Log-Out"></i></a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
