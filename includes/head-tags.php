@@ -9,7 +9,6 @@
 <link href="css/styles.css" rel="stylesheet">
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
 <!-- Include Boostrap JS for interactive components -->
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
