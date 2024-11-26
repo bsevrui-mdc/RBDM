@@ -42,7 +42,13 @@ a:hover {
     h2 {
       font-family: $font-family-julius;
       font-weight: $font-family-julius-weight;
-      font-size: $font-family-julius-size-h1;
+      font-size: 30px !important;
+
+      @include media-breakpoint-up(lg) {
+        font-size: $font-family-julius-size-h1 !important;
+      }
+
+      word-wrap: break-word;
     }
     .genero {
       font-family: $font-family-calibri;
@@ -55,10 +61,11 @@ a:hover {
       font-family: $font-family-julius;
       font-weight: $font-family-julius-weight;
       font-size: $font-family-julius-size-h1;
+      word-wrap: break-word;
     }
   }
-  
-  .imgs{
+
+  .imgs {
     width: 247px;
     height: auto;
   }
@@ -66,53 +73,54 @@ a:hover {
 
 /* Estilos para admin.php */
 .admin {
-  th, td {
+  th,
+  td {
     align-content: center;
     text-align: center;
   }
 
   .imgAdmin {
-      border-radius: 50%;
+    border-radius: 50%;
 
-      @include media-breakpoint-down(lg) {
-          width: 100px;
-          height: auto;
-          display: flex;
-      }
-  }
-
-  .textList{
+    @include media-breakpoint-down(lg) {
+      width: 100px;
+      height: auto;
       display: flex;
-      justify-content: space-between;
-      
-      @include media-breakpoint-down(lg){
-          display: flex;
-          justify-content: end;
-          
-          h1{
-              display: none;
-          }
-      }
+    }
   }
 
-  .nameAdmin{
-      font-family: $font-family-julius;
+  .textList {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(lg) {
+      display: flex;
+      justify-content: end;
+
+      h1 {
+        display: none;
+      }
+    }
+  }
+
+  .nameAdmin {
+    font-family: $font-family-julius;
   }
 
   .imgFilms {
-      width:10%;
+    width: 10%;
   }
 
   .color-trash {
-      color: red;
-      
-      @include media-breakpoint-up(lg) {
-          margin-left: 1rem;
-      }    
+    color: red;
+
+    @include media-breakpoint-up(lg) {
+      margin-left: 1rem;
+    }
   }
 
-  .table> :not(caption) > * > * {
-      background-color: black;
+  .table > :not(caption) > * > * {
+    background-color: black;
   }
 }
 
@@ -244,8 +252,8 @@ a:hover {
   background-color: $divConFondoOscuro !important;
   padding: 20px;
   width: 75%;
-  
-  @include media-breakpoint-down(lg){
+
+  @include media-breakpoint-down(lg) {
     width: 90%;
   }
 }
@@ -253,4 +261,12 @@ a:hover {
 .transparente .calificacion {
   font-family: $font-family-oxanium;
   font-size: $font-family-oxanium-size;
+}
+
+.text-clamp {
+  display: -webkit-box; /* Define un contenedor flex para el recorte */
+  -webkit-box-orient: vertical; /* Define la orientación vertical de la caja */
+  overflow: hidden; /* Oculta el contenido desbordado */
+  -webkit-line-clamp: 2; /* Limita a 2 líneas */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos */
 }
