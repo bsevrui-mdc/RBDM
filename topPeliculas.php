@@ -26,9 +26,9 @@
                 <div class="col-lg-2 align-items-center justify-content-center d-none d-lg-flex"><div class="nota">1</div></div>
                 <div class="col-lg-2 contenedorImagen"><img src="https://placehold.co/1920x1200" alt="imagen" class="img-fluid"></div>
                 <div class="col-lg-4 d-flex flex-column">
-                    <div class="row d-flex align-items-center h-75">
+                    <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
-                            <h2>título de pelicula 1</h2>
+                            <h2>título de pelicula  mas largo para ver como pasa a la siguiente linea y mas palabras por aqui</h2>
                         </div>
                     </div>
                     <div class="row">
@@ -51,7 +51,7 @@
                 <div class="col-lg-2 align-items-center justify-content-center d-none d-lg-flex"><div class="nota">2</div></div>
                 <div class="col-lg-2 contenedorImagen"><img src="https://placehold.co/1920x1200" alt="imagen" class="img-fluid"></div>
                 <div class="col-lg-4 d-flex flex-column">
-                    <div class="row d-flex align-items-center h-75">
+                    <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
                             <h2>título de pelicula 2</h2>
                         </div>
@@ -76,7 +76,7 @@
                 <div class="col-lg-2 align-items-center justify-content-center d-none d-lg-flex"><div class="nota">3</div></div>
                 <div class="col-lg-2 contenedorImagen"><img src="https://placehold.co/1920x1200" alt="imagen" class="img-fluid"></div>
                 <div class="col-lg-4 d-flex flex-column">
-                    <div class="row d-flex align-items-center h-75">
+                    <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
                             <h2>título de pelicula 3</h2>
                         </div>
@@ -101,7 +101,7 @@
                 <div class="col-lg-2 align-items-center justify-content-center d-none d-lg-flex"><div class="nota">4</div></div>
                 <div class="col-lg-2 contenedorImagen"><img src="https://placehold.co/1920x1200" alt="imagen" class="img-fluid"></div>
                 <div class="col-lg-4 d-flex flex-column">
-                    <div class="row d-flex align-items-center h-75">
+                    <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
                             <h2>título de pelicula 4</h2>
                         </div>
