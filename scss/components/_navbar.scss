@@ -13,13 +13,18 @@ nav i {
     margin-left: 10px;
 }
 
-#mynavbar ul li a{
+.nav-link {
     font-family: $font-family-oxanium;
-    font-size: 30px;
+    font-size: $font-family-oxanium-size;
     color: $white;
     margin-left: 20px;
     margin-top: $espacio-navbar-top;
+    &:hover { 
+        text-decoration: none;
+        color: $white;
+      }
 }
+
 
 
 
