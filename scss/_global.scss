@@ -69,6 +69,13 @@ a:hover {
     width: 247px;
     height: auto;
   }
+  .text-clamp {
+    display: -webkit-box; /* Define un contenedor flex para el recorte */
+    -webkit-box-orient: vertical; /* Define la orientación vertical de la caja */
+    overflow: hidden; /* Oculta el contenido desbordado */
+    -webkit-line-clamp: 2; /* Limita a 2 líneas */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos */
+  }
 }
 
 /* Estilos para admin.php */
@@ -275,10 +282,4 @@ a:hover {
 }
 
 
-.text-clamp {
-  display: -webkit-box; /* Define un contenedor flex para el recorte */
-  -webkit-box-orient: vertical; /* Define la orientación vertical de la caja */
-  overflow: hidden; /* Oculta el contenido desbordado */
-  -webkit-line-clamp: 2; /* Limita a 2 líneas */
-  text-overflow: ellipsis; /* Agrega puntos suspensivos */
-}
+
