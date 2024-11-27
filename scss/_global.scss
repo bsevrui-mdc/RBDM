@@ -62,6 +62,9 @@ a:hover {
       font-weight: $font-family-julius-weight;
       font-size: $font-family-julius-size-h1;
       word-wrap: break-word;
+      @include media-breakpoint-down(lg){
+        font-size: $font-family-julius-size-h2-mobile;
+      }
     }
   }
 
