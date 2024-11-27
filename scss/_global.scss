@@ -62,12 +62,22 @@ a:hover {
       font-weight: $font-family-julius-weight;
       font-size: $font-family-julius-size-h1;
       word-wrap: break-word;
+      @include media-breakpoint-down(lg){
+        font-size: $font-family-julius-size-h2-mobile;
+      }
     }
   }
 
   .imgs {
     width: 247px;
     height: auto;
+  }
+  .text-clamp {
+    display: -webkit-box; /* Define un contenedor flex para el recorte */
+    -webkit-box-orient: vertical; /* Define la orientación vertical de la caja */
+    overflow: hidden; /* Oculta el contenido desbordado */
+    -webkit-line-clamp: 2; /* Limita a 2 líneas */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos */
   }
 }
 
@@ -275,10 +285,4 @@ a:hover {
 }
 
 
-.text-clamp {
-  display: -webkit-box; /* Define un contenedor flex para el recorte */
-  -webkit-box-orient: vertical; /* Define la orientación vertical de la caja */
-  overflow: hidden; /* Oculta el contenido desbordado */
-  -webkit-line-clamp: 2; /* Limita a 2 líneas */
-  text-overflow: ellipsis; /* Agrega puntos suspensivos */
-}
+

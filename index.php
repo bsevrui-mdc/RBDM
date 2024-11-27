@@ -83,8 +83,12 @@
                         <div class="col-4">
                             <img src="https://placehold.co/500" class="img-fluid">
                         </div>
-                        <div class="col align-content-center">
-                            <h2>Aventuratydyjhdyjtrhdjydyyjt</h2>
+                        <div class="col-8 align-content-center">
+                            <div class="text-clamp">
+                                <h2>Aventuratydyjhdyjtrhdjydyyjttntjntjmt6mt6k6tmtjmthrengbwejhvfhevkewhbiewghkrehvvbthghkjervbiu4
+                                </h2>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -93,8 +97,11 @@
                         <div class="col-4">
                             <img src="https://placehold.co/500" class="img-fluid">
                         </div>
-                        <div class="col align-content-center">
-                            <h2>Aventura</h2>
+                        <div class="col-8 align-content-center">
+                            <div class="text-clamp">
+                                <h2>Aventuratydyjhdyjtrhdjydyyjttntjntjmt6mt6k6tmtjmthrengbwejhvfhevkewhbiewghkrehvvbthghkjervbiu4
+                                </h2>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -103,8 +110,11 @@
                         <div class="col-4">
                             <img src="https://placehold.co/500" class="img-fluid">
                         </div>
-                        <div class="col align-content-center">
-                            <h2>Aventura</h2>
+                        <div class="col-8 align-content-center">
+                            <div class="text-clamp">
+                                <h2>Aventuratydyjhdyjtrhdjydyyjttntjntjmt6mt6k6tmtjmthrengbwejhvfhevkewhbiewghkrehvvbthghkjervbiu4
+                                </h2>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -128,8 +138,11 @@
                         <div class="col-4">
                             <img src="https://placehold.co/500" class="img-fluid">
                         </div>
-                        <div class="col align-content-center">
-                            <h2>Aventura</h2>
+                        <div class="col-8 align-content-center">
+                            <div class="text-clamp">
+                                <h2>Aventuratydyjhdyjtrhdjydyyjttntjntjmt6mt6k6tmtjmthrengbwejhvfhevkewhbiewghkrehvvbthghkjervbiu4
+                                </h2>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -138,8 +151,11 @@
                         <div class="col-4">
                             <img src="https://placehold.co/500" class="img-fluid">
                         </div>
-                        <div class="col align-content-center">
-                            <h2>Aventura</h2>
+                        <div class="col-8 align-content-center">
+                            <div class="text-clamp">
+                                <h2>Aventuratydyjhdyjtrhdjydyyjttntjntjmt6mt6k6tmtjmthrengbwejhvfhevkewhbiewghkrehvvbthghkjervbiu4
+                                </h2>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -148,8 +164,11 @@
                         <div class="col-4">
                             <img src="https://placehold.co/500" class="img-fluid">
                         </div>
-                        <div class="col align-content-center">
-                            <h2>Aventura</h2>
+                        <div class="col-8 align-content-center">
+                            <div class="text-clamp">
+                                <h2>Aventuratydyjhdyjtrhdjydyyjttntjntjmt6mt6k6tmtjmthrengbwejhvfhevkewhbiewghkrehvvbthghkjervbiu4
+                                </h2>
+                            </div>
                         </div>
                     </div>
                 </div>
