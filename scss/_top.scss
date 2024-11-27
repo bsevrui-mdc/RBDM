@@ -1,4 +1,9 @@
 /* Estilos de Rafa */
+.topContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 .top{
     margin-top: 20px;

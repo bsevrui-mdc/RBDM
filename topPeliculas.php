@@ -6,7 +6,7 @@
     <?php include("includes/head-tags.php"); ?>
 </head>
 
-<body>
+<body class="topContainer">
     <?php include("includes/navbar.php"); ?>
     <main>
         <div class="container-fluid">
