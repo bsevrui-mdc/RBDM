@@ -38,6 +38,10 @@ a:hover {
 
 /* Estilos para index.php */
 .index {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
   .topGenero {
     h2 {
       font-family: $font-family-julius;
@@ -189,6 +193,10 @@ a:hover {
 
 /* Estilos pagina usuario.php */
 .usuario {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
   .pelicula-favorita {
     height: 500px;
     width: 100%;
