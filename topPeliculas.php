@@ -28,12 +28,12 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
-                            <h2>título de pelicula 1 </h2>
+                            <a href="detalles.php">título de pelicula 1 </a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-7 bordeGenero  align-items-center my-auto">
-                            <h3 class="m-0">COMEDIA</h3>
+                            <h2 class="m-0">COMEDIA</h2>
                         </div>
                         <div class="col-5 bordeNota d-flex justify-content-end d-lg-none align-items-center my-auto">
                             <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.35</div>
@@ -53,12 +53,12 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
-                            <h2>título de pelicula 2</h2>
+                            <a href="detalles.php">Titulo de pelicula 2</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-7 bordeGenero  align-items-center my-auto">
-                            <h3 class="m-0">COMEDIA</h3>
+                            <h2 class="m-0">COMEDIA</h2>
                         </div>
                         <div class="col-5 bordeNota d-flex justify-content-end d-lg-none align-items-center my-auto">
                             <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.35</div>
@@ -78,12 +78,12 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
-                            <h2>título de pelicula 3</h2>
+                            <a href="detalles.php">título de pelicula 3</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-7 bordeGenero  align-items-center my-auto">
-                            <h3 class="m-0">COMEDIA</h3>
+                            <h2 class="m-0">COMEDIA</h2>
                         </div>
                         <div class="col-5 bordeNota d-flex justify-content-end d-lg-none align-items-center my-auto">
                             <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.35</div>
@@ -103,12 +103,12 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
-                            <h2>título de pelicula 4</h2>
+                            <a href="detalles.php">título de pelicula 4</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-7 bordeGenero  align-items-center my-auto">
-                            <h3 class="m-0">COMEDIA</h3>
+                            <h2 class="m-0">COMEDIA</h2>
                         </div>
                         <div class="col-5 bordeNota d-flex justify-content-end d-lg-none align-items-center my-auto">
                             <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.35</div>

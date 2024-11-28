@@ -18,6 +18,22 @@
       margin-left: auto;
       margin-right: auto;      
     }
+
+    a{
+      font-family: $font-family-julius;
+      font-size: $font-family-julius-size-h2;
+      font-weight: $font-family-julius-weight;
+      text-decoration: none;
+
+      &:hover{
+        color: $white;
+      }
+    }
+
+    h2{
+      font-size: $font-family-oxanium-size;
+      font-family: $font-family-oxanium;
+    }
   }
   
   .top:nth-child(odd) {
@@ -52,14 +68,18 @@
   }
   
   .contenedorImagen {
+      align-items: center;
+      justify-content: center;
+      display: flex;
     @include media-breakpoint-down(lg) {
       width: 100%;
       padding: 0;
+      
     }
   }
   
   .nota {
-    font-size: $font-family-julius-size-h1;
+    font-size: $font-family-julius-size-h2;
     font-family: $font-family-julius;
     @include media-breakpoint-down(lg) {
       font-size: $font-family-calibri-size-p;
