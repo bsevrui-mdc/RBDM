@@ -14,20 +14,20 @@
                         <div class="col-3 col-lg-12">
                             <img src="https://placehold.co/150x150" alt="" class="imgAdmin">
                         </div>
-                        <div class="col-9 d-lg-none d-sm-block align-content-center">
+                        <div class="col-9 d-lg-none d-block align-content-center">
                             <div class="row justify-content-around">
                                 <div class="col"><i class="fa-solid fa-film"></i></div>
                                 <div class="col"><i class="fa-solid fa-tv"></i></div>
                                 <div class="col"><i class="fa-solid fa-user"></i></div>
                             </div>
                         </div>
-                        <div class="col-lg-12 d-none d-lg-block">
+                        <div class="col d-none d-lg-block">
                             <div class="display-3 nameAdmin">admin</div>
                             <p>nombre</p>
                             <p>apll1</p>
                             <p>apll2</p>
                         </div>
-                        <div class="col-lg d-none d-lg-block">
+                        <div class="col d-none d-lg-block">
                             <form action="" method="post" class="d-flex flex-column">
                                 <input type="submit" class="btn btn-primary mb-2 rounded-pill" value="Peliculas">
                                 <input type="submit" class="btn btn-primary mb-2 rounded-pill" value="Series">
