@@ -9,7 +9,7 @@
         <main class="container-fluid signup">
             <div class="row justify-content-center">
                 <div class="col-lg-6 my-lg-4 content">
-                    <h3 class="text-center mt-3">Registro</h3>
+                    <h1 class="text-center mt-3">Registro</h1>
                     <form action="" method="POST" class="px-3 px-lg-5">
                         <div class="mb-3 text-center">
                             <label class="form-label">Correo Electrónico:</label>
