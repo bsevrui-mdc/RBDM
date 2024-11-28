@@ -23,7 +23,7 @@ h2 {
 h3 {
   font-family: $font-family-oxanium;
   font-size: $font-family-oxanium-size;
-  text-transform: uppercase; // Comprobar en FIGMA que todos los h3 sean en mayúscula
+  text-transform: uppercase;
 }
 
 p {
@@ -162,14 +162,6 @@ a:hover {
     text-align: justify;
   }
 
-  h1 {
-
-  }
-
-  h2 {
-    
-  }
-
   @include media-breakpoint-up(lg) {
     background-color: $divTransparency;
     border-radius: 15px;
@@ -177,12 +169,16 @@ a:hover {
 }
 
 /* Estilos para login.php */
-.login {
-  .content {
-    @include media-breakpoint-up(lg) {
-      background-color: $divTransparency;
-      border-radius: 15px;
-    }
+.login .content {
+  h1 {
+    font-family: $font-family-oxanium;
+    font-size: $font-family-oxanium-size;
+    text-transform: uppercase;
+  }
+
+  @include media-breakpoint-up(lg) {
+    background-color: $divTransparency;
+    border-radius: 15px;
   }
 }
 

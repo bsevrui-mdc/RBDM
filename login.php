@@ -9,7 +9,7 @@
         <main class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-6 my-lg-4 content">
-                    <h3 class="text-center py-4 pb-lg-1 pt-lg-3">Inicio de Sesión</h3>
+                    <h1 class="text-center pt-4 pb-2 pt-lg-3 pb-lg-1">Inicio de Sesión</h1>
                     <form action="" method="POST" class="px-3 px-lg-5">
                         <div class="mb-3 text-center">
                             <label class="form-label">Correo Electrónico:</label>
