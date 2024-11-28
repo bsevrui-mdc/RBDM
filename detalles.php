@@ -56,7 +56,7 @@
             <div class="col-lg-3 order-lg-1 d-flex align-items-center justify-content-center flex-column">
                     <h3>DIRECTOR</h3>
                     <img src="https://placehold.co/1920x1080" alt="imagen" class="img-fluid py-2">
-                    <h1 class="py-3">Nombre</h1>
+                    <h1 class="pb-5">Nombre</h1>
                </div>
                <div class="col-lg-9">
                     <div class="row">
