@@ -78,7 +78,7 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
-                            <a href="detalles.php">título de pelicula 3</a>
+                            <a href="detalles.php">titulo de pelicula 3</a>
                         </div>
                     </div>
                     <div class="row">
