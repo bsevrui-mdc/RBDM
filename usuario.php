@@ -19,7 +19,7 @@
 
         <div class="container-fluid p-5 datos-usuario">
             <div class="row bg-info p-lg-5 rounded-3">
-                <div class="col-12 col-lg-4 foto-perfil align-content-center mx-auto">
+                <div class="col-lg-4 foto-perfil align-content-center mx-auto">
                     <img src="https://placehold.co/320x320" class="img-fluid rounded-3">
                 </div>
                 <div class="col-12 col-lg align-content-center">
