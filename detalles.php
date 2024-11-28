@@ -36,11 +36,13 @@
                     </div>
                     <div class="row">
                         <div class="col py-3">
+                            <p>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores voluptatem consequuntur iure reiciendis debitis, minus ducimus, vitae, autem blanditiis earum quaerat animi. At soluta impedit amet quod necessitatibus cumque eius.
                             Perspiciatis commodi modi molestiae totam nostrum saepe tempore rem consequatur, corrupti a ratione vitae est asperiores nemo quod porro, ab rerum distinctio neque debitis voluptates nesciunt, maxime itaque! Qui, mollitia!
                             Obcaecati quaerat iure temporibus facere adipisci eum necessitatibus ea rerum quae porro iusto quidem ut nesciunt reprehenderit ex at quibusdam nihil deserunt quos, dolorem aliquid, iste deleniti, error veritatis! Similique?
                             Mollitia alias similique expedita sed. Magni, repellendus deleniti rem non vel sit dolores explicabo magnam velit adipisci ipsa quo fugit aperiam illo ad soluta voluptatem architecto. Harum neque aperiam voluptatem.
                             Enim, ad amet quis in, laboriosam et, nam excepturi vel iure alias quia dicta? Veniam, dolorem at officia magni aliquid fugit, saepe ea nesciunt voluptatibus quidem alias animi hic minima!
+                            </p>
                         </div>
                     </div>
                     <div class="row">
@@ -54,16 +56,16 @@
             <div class="col-lg-3 order-lg-1 d-flex align-items-center justify-content-center flex-column">
                     <h3>DIRECTOR</h3>
                     <img src="https://placehold.co/1920x1080" alt="imagen" class="img-fluid py-2">
-                    <div class="nota py-2">Nombre</div>
+                    <h1 class="py-3">Nombre</h1>
                </div>
                <div class="col-lg-9">
                     <div class="row">
                         <div class="col text-start">
-                            <div class="nota">Reparto</div>
+                            <h2>Reparto</h2>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-4 px-4 py-5">
+                        <div class="col-lg-4 px-3 py-5">
                             <div class="card rounded-4">
                                 <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
@@ -71,7 +73,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 px-4 py-5">
+                        <div class="col-lg-4 px-3 py-5">
                             <div class="card rounded-4">
                                 <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
@@ -79,7 +81,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 px-4 py-5">
+                        <div class="col-lg-4 px-3 py-5">
                             <div class="card rounded-4">
                                 <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
@@ -89,7 +91,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-4 px-4 py-5">
+                        <div class="col-lg-4 px-3 py-5">
                             <div class="card rounded-4">
                                 <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
@@ -97,7 +99,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 px-4 py-5">
+                        <div class="col-lg-4 px-3 py-5">
                             <div class="card">
                                 <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
@@ -105,7 +107,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 px-4 py-5">
+                        <div class="col-lg-4 px-3 py-5">
                             <div class="card">
                                 <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
