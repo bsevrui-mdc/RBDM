@@ -24,6 +24,7 @@
       font-size: $font-family-julius-size-h2;
       font-weight: $font-family-julius-weight;
       text-decoration: none;
+      word-wrap: break-word;
 
       &:hover{
         color: $white;
@@ -31,6 +32,7 @@
     }
 
     h2{
+      
       font-size: $font-family-oxanium-size;
       font-family: $font-family-oxanium;
     }
