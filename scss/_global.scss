@@ -162,6 +162,14 @@ a:hover {
     text-align: justify;
   }
 
+  h1 {
+
+  }
+
+  h2 {
+    
+  }
+
   @include media-breakpoint-up(lg) {
     background-color: $divTransparency;
     border-radius: 15px;
