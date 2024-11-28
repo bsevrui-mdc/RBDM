@@ -39,7 +39,7 @@
                             </div>
                             <div class="pb-3 text-center">
                                 <label class="form-label">Tu Mensaje:</label>
-                                <textarea class="form-control" placeholder="Tu mensaje aquí"></textarea>
+                                <textarea class="form-control" placeholder="Tu mensaje aquí" resizable=""></textarea>
                             </div>
                             <div class="pb-3 d-flex justify-content-center">
                                 <button type="submit" class="btn btn-primary">Enviar</button>
