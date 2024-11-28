@@ -5,7 +5,7 @@
         <img src="/assets/img/logo.png" alt="logo" height="60">
       </a>
       <div class="me-0 d-flex d-lg-none justify-content-center align-items-center">
-        <input class="me-2 rounded-2 px-2 w-75" placeholder="Search..." type="text" name="buscador">
+        <input class="me-2 rounded-2 px-2 w-75 d-none d-lg-block" placeholder="Search..." type="text" name="buscador">
         <i class="fa-solid fa-magnifying-glass mx-3"></i>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
           <i class="fa-solid fa-bars "></i>
@@ -30,7 +30,7 @@
               <li><a class="dropdown-item item" href="usuario.php">Perfil</a></li>
               <li><a class="dropdown-item item" href="admin.php">Administración</a></li>
               <hr>
-              <li><a class="dropdown-item item" href="login.php">Log Out <i class="fa-solid fa-arrow-right-from-bracket icono-Log-out"></i></a></li>
+              <li><a class="dropdown-item item" href="login.php">Log Out <i class="fa-solid fa-arrow-right-from-bracket icono-Log-Out"></i></a></li>
             </ul>
           </li>
         </ul>
