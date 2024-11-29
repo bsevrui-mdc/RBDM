@@ -62,7 +62,7 @@
                 <div class="col-lg d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
                         <div class="col text-center text-lg-start py-2 py-lg-0">
-                            <h2>título de serie 2</h2>
+                            <a href="detalles.php">título de serie 2</a>
                         </div>
                     </div>
                     <div class="row">
@@ -84,7 +84,7 @@
                 <div class="col-lg d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
                         <div class="col text-center text-lg-start py-2 py-lg-0">
-                            <h2>título de serie 2</h2>
+                            <a href="detalles.php">título de serie 2</a>
                         </div>
                     </div>
                     <div class="row">
@@ -106,7 +106,7 @@
                 <div class="col-lg d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
                         <div class="col text-center text-lg-start py-2 py-lg-0">
-                            <h2>título de serie 2</h2>
+                            <a href="detalles.php">título de serie 2</a>
                         </div>
                     </div>
                     <div class="row">
@@ -128,7 +128,7 @@
                 <div class="col-lg d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
                         <div class="col text-center text-lg-start py-2 py-lg-0">
-                            <h2>título de serie 2</h2>
+                            <a href="detalles.php">título de serie 2</a>
                         </div>
                     </div>
                     <div class="row">
