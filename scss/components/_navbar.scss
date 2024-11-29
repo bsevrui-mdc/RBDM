@@ -1,30 +1,35 @@
-nav i {
-    font-size: 30px;
-    color: $secondary;
-}
+nav {
+    i {
+        font-size: 30px;
+        color: $secondary;
+    }
 
-.iconos {
-    margin-top: $espacio-navbar-top;
-}
+    .iconos {
+        margin-top: $espacio-navbar-top;
+    }
 
-.icono-Log-Out {
-    color: red !important;
-    font-size: 16px;
-    margin-left: 10px;
-}
+    .icono-Log-Out {
+        color: red;
+        font-size: 16px;
+        margin-left: 10px;
+    }
 
-.nav-link {
-    font-family: $font-family-oxanium;
-    font-size: $font-family-oxanium-size;
-    color: $white;
-    margin-left: 20px;
-    margin-top: $espacio-navbar-top;
-    &:hover { 
-        text-decoration: none;
+    .nav-link {
+        font-family: $font-family-oxanium;
+        font-size: $font-family-oxanium-size;
         color: $white;
-      }
-}
+        margin-left: 20px;
+        margin-top: $espacio-navbar-top;
+        &:hover {
+            text-decoration: none;
+            color: $white;
+        }
+    }
 
+    .menuDropdown a {
+        font-family: $font-family-oxanium;
+    }
+}
 
 
 
