@@ -8,8 +8,7 @@
 
 <body>
     <?php include("includes/navbar.php"); ?>
-    <main>
-        <div class="container-fluid py-5 contenedorGeneros">
+    <main class="container-fluid py-5 contenedorGeneros">
             <div class="row d-flex justify-content-around">
                 <div class="col-lg-4 px-4">
                     <div class="card mx-3">
@@ -62,7 +61,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </main>
     <?php include("includes/footer.php"); ?>
 </body>
