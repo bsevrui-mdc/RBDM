@@ -36,7 +36,7 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      color: white;
+      color: white; /*CF2: No se pueden poner valores absolutos de colores, hay que usar variables*/
       text-align: center;
       padding: 15px;
       z-index: 1; /* Asegura que el texto esté sobre la imagen */

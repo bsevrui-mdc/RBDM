@@ -70,7 +70,7 @@ a:hover {
       }
     }
   }
-
+/* Esta clase para qué es??? y por qué está definida en globlal???*/
   .imgs {
     width: 247px;
     height: auto;
@@ -125,7 +125,7 @@ a:hover {
   }
 
   .color-trash {
-    color: red;
+    color: red;/*CF2: No se pueden poner valores absolutos de colores, hay que usar variables*/
 
     @include media-breakpoint-up(lg) {
       margin-left: 1rem;
@@ -133,7 +133,7 @@ a:hover {
   }
 
   .table > :not(caption) > * > * {
-    background-color: black;
+    background-color: black; /*CF2: No se pueden poner valores absolutos de colores, hay que usar variables*/
   }
 }
 
