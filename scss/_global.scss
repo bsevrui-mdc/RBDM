@@ -218,10 +218,10 @@ a:hover {
     }
 
     i {
-      font-size: 70px;
+      font-size: 70px; /*CF2: El tamaño de la fuente debe estar en variables sass */
 
       @include media-breakpoint-down(lg) {
-        font-size: 30px;
+        font-size: 30px;/*CF2:El tamaño de la fuente debe estar en variables sass */
       }
     }
   }
@@ -230,7 +230,7 @@ a:hover {
       width: 320px;
       height: 320px;
       img {
-        border-radius: 10%;
+        border-radius: 10%;/*CF2: El radio debe debe estar en variables sass */
       }
     }
 
@@ -241,7 +241,7 @@ a:hover {
           font-size: $font-family-calibri-size-p;
         }
 
-        border: 3px solid $black;
+        border: 3px solid $black; /*CF2: de nuevo olvidas las variables*/
         box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
       }
     }

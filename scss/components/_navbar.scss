@@ -10,7 +10,7 @@ nav {
 
     .icono-Log-Out {
         color: red;/*CF2: No se pueden poner valores absolutos de colores, hay que usar variables*/
-        font-size: 16px;
+        font-size: 16px; /*CF2: Usa las variables sass!*/
         margin-left: 10px;
     }
 

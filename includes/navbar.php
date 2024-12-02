@@ -1,7 +1,7 @@
 <header>
   <nav class="container-fluid navbar navbar-expand-lg bg-primary text-uppercase px-3" id="mainNav">
     <a class="navbar-brand" href="index.php">
-      <img src="/assets/img/logo.png" alt="logo" height="60">
+      <img src="/assets/img/logo.png" alt="logo" height="60"> <!--CF2: la propiedad height está prohibidísima aqui!!! Hay que ponerla en los estilos-->
     </a>
     <!-- Navbar <lg -->
     <div class="me-0 d-flex d-lg-none justify-content-center align-items-center">

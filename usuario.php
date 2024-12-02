@@ -22,6 +22,7 @@
                 <div class="col-lg-4 foto-perfil align-content-center mx-auto">
                     <img src="https://placehold.co/320x320" class="img-fluid rounded-3">
                 </div>
+                <!--CF2: el col-12 no es necesario.  -->
                 <div class="col-12 col-lg align-content-center">
                     <div class="row h-100 align-content-around gap-4 campos text-dark p-3">
                         <div class="col-12 bg-secondary campo p-lg-2 rounded-3">
@@ -48,6 +49,7 @@
             </div>
             <div class="row d-none d-lg-flex">
                 <div class="col-2 text-center">
+                /*CF2: No puedes poner h3 si antes no hay h2*/
                     <h3>Imagen</h3>
                 </div>
                 <div class="col text-center">
