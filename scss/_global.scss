@@ -48,7 +48,7 @@ a:hover {
       font-size: 30px !important;
 
       @include media-breakpoint-up(lg) {
-        font-size: $font-family-julius-size-h1 !important;
+        font-size: $font-family-julius-size-h2-mobile !important;
       }
 
       word-wrap: break-word;
