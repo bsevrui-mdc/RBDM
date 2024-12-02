@@ -28,7 +28,7 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
-                            <a href="detalles.php">título de serie 2</a>
+                            <a href="detalles.php">La casa de papel</a>
                         </div>
                     </div>
                     <div class="row">
@@ -53,7 +53,7 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
-                            <a href="detalles.php">título de serie 2</a>
+                            <a href="detalles.php">Breaking Bad</a>
                         </div>
                     </div>
                     <div class="row">
@@ -78,7 +78,7 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
-                            <a href="detalles.php">título de serie 2</a>
+                            <a href="detalles.php">FROM</a>
                         </div>
                     </div>
                     <div class="row">
@@ -103,12 +103,12 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
-                            <a href="detalles.php">título de serie 2</a>
+                            <a href="detalles.php">La que se avecina</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-7 bordeGenero  align-items-center my-auto">
-                            <h2 class="m-0">INFANTL</h2>
+                            <h2 class="m-0">COMEDIA</h2>
                         </div>
                         <div class="col-5 bordeNota d-flex justify-content-end d-lg-none align-items-center my-auto">
                             <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.35</div>
