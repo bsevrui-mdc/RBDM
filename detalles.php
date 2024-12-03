@@ -49,6 +49,13 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col">
+                    <div class="ratio ratio-16x9">
+                        <video src="./assets/video/trailer.mp4"></video>
+                    </div>
+                </div>
+            </div>
             <div class="row my-5">
                 <div class="col-lg-3 order-lg-1 d-flex align-items-center justify-content-center flex-column">
                     <h3>DIRECTOR</h3>
