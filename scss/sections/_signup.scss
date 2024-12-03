@@ -1,0 +1,12 @@
+.signup .content {
+    h1 {
+      font-family: $font-family-oxanium;
+      font-size: $font-family-oxanium-size;
+      text-transform: uppercase;
+    }
+  
+    @include media-breakpoint-up(lg) {
+      background-color: $divTransparency;
+      border-radius: 15px;
+    }
+}
