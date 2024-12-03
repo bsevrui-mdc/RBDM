@@ -9,6 +9,16 @@
 @import "./global.scss";
 @import "./top.scss";
 
+// Sections
+@import "./sections/about.scss";
+@import "./sections/admin.scss";
+@import "./sections/contact.scss";
+@import "./sections/index.scss";
+@import "./sections/login.scss";
+@import "./sections/signup.scss";
+@import "./sections/top.scss";
+@import "./sections/usuario.scss";
+
 // Components
 @import "./components/buttons.scss";
 @import "./components/navbar.scss";
