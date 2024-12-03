@@ -20,9 +20,9 @@
                 <hr>
                 </div>
                 <div class="col-lg-4 enlaces">
-                    <a href="/about.php#cuAbout" class="text-decoration-none">Condiciones de Uso</a>
-                    <a href="/about.php#ppAbout" class="text-decoration-none">Política de Privacidad</a>
+                    <a href="/about.php#alAbout" class="text-decoration-none">Aviso Legal</a>
                     <a href="/about.php#pcAbout" class="text-decoration-none">Política de Cookies</a>
+                    <a href="/about.php#ppAbout" class="text-decoration-none">Política de Privacidad</a>
                 </div>
             </div>
         </div>
