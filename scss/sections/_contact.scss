@@ -1,18 +1,18 @@
 .contact {
-    .content {
-      @include media-breakpoint-up(lg) {
-        background-color: $divTransparency;
-        border-radius: 15px;
-      }
-  
-      .enlaces {
-        display: flex;
-        align-items: center;
-      }
-  
-      form textarea {
-        height: 150px;
-        resize: none;
-      }
+  .content {
+    @include media-breakpoint-up(lg) {
+      background-color: $divTransparency;
+      border-radius: 15px;
     }
+  
+    .enlaces {
+      display: flex;
+      align-items: center;
+    }
+  
+    form textarea {
+      height: 150px;
+      resize: none;
+    }
+  }
 }
