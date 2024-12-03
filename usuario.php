@@ -49,14 +49,13 @@
             </div>
             <div class="row d-none d-lg-flex">
                 <div class="col-2 text-center">
-                /*CF2: No puedes poner h3 si antes no hay h2*/
-                    <h3>Imagen</h3>
+                    <h2>Imagen</h2>
                 </div>
                 <div class="col text-center">
-                    <h3 class="m-0">titulo</h3>
+                    <h2 class="m-0">titulo</h2>
                 </div>
                 <div class="col-3 text-center">
-                    <h3 class="m-0">Valoracion</h3>
+                    <h2 class="m-0">Valoracion</h2>
                 </div>
             </div>
             <div class="row top">
