@@ -28,7 +28,7 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
-                            <a href="detalles.php">título de pelicula 1 </a>
+                            <a href="detalles.php">Descarrilados</a>
                         </div>
                     </div>
                     <div class="row">
@@ -53,12 +53,12 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
-                            <a href="detalles.php">Titulo de pelicula 2</a>
+                            <a href="detalles.php">Interstellar</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-7 bordeGenero  align-items-center my-auto">
-                            <h2 class="m-0">COMEDIA</h2>
+                            <h2 class="m-0">ACCION</h2>
                         </div>
                         <div class="col-5 bordeNota d-flex justify-content-end d-lg-none align-items-center my-auto">
                             <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.35</div>
@@ -78,12 +78,12 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
-                            <a href="detalles.php">titulo de pelicula 3</a>
+                            <a href="detalles.php">Veronica</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-7 bordeGenero  align-items-center my-auto">
-                            <h2 class="m-0">COMEDIA</h2>
+                            <h2 class="m-0">TERROR</h2>
                         </div>
                         <div class="col-5 bordeNota d-flex justify-content-end d-lg-none align-items-center my-auto">
                             <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.35</div>
@@ -103,7 +103,7 @@
                 <div class="col-lg-4 d-flex flex-column">
                     <div class="row d-flex align-items-center h-lg-75">
                         <div class="col text-center text-lg-start py-2">
-                            <a href="detalles.php">título de pelicula 4</a>
+                            <a href="detalles.php">Padre no hay más que uno</a>
                         </div>
                     </div>
                     <div class="row">
