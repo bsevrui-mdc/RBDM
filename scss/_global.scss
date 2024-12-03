@@ -5,7 +5,7 @@ body {
   min-height: 100vh;
   background-color: black;
   color: $white;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; // ESTO DEBERÍA DE CAMBIARSE EN LA FUENTE GENERAL DE BOOTSTRAP
+  font-family: $font-family-calibri; // ESTO DEBERÍA DE CAMBIARSE EN LA FUENTE GENERAL DE BOOTSTRAP
 }
 
 // ESTO PRESUNTAMENTE VA EN ALGO DE BOOTSTRAP PERO xd

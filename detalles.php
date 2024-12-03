@@ -37,12 +37,9 @@
                     <div class="row">
                         <div class="col py-3">
                             <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores voluptatem consequuntur iure reiciendis debitis, minus ducimus, vitae, autem blanditiis earum quaerat animi. At soluta impedit amet quod necessitatibus cumque eius.
-                            Perspiciatis commodi modi molestiae totam nostrum saepe tempore rem consequatur, corrupti a ratione vitae est asperiores nemo quod porro, ab rerum distinctio neque debitis voluptates nesciunt, maxime itaque! Qui, mollitia!
-                            Obcaecati quaerat iure temporibus facere adipisci eum necessitatibus ea rerum quae porro iusto quidem ut nesciunt reprehenderit ex at quibusdam nihil deserunt quos, dolorem aliquid, iste deleniti, error veritatis! Similique?
-                            Mollitia alias similique expedita sed. Magni, repellendus deleniti rem non vel sit dolores explicabo magnam velit adipisci ipsa quo fugit aperiam illo ad soluta voluptatem architecto. Harum neque aperiam voluptatem.
-                            Enim, ad amet quis in, laboriosam et, nam excepturi vel iure alias quia dicta? Veniam, dolorem at officia magni aliquid fugit, saepe ea nesciunt voluptatibus quidem alias animi hic minima!
+                            Un misterioso hombre conocido como «el Profesor» ha pasado toda su vida planeando el mayor de los atracos de la historia: entrar en la Fábrica Nacional de Moneda y Timbre e imprimir 2400 millones de euros. Para llevar a cabo este ambicioso plan, el Profesor recluta a un equipo de ocho personas con ciertas habilidades y que no tienen nada que perder. Estos, junto al Profesor, planean cada paso del atraco durante cinco meses. Este equipo, con nombres de diferentes ciudades del mundo, requiere de 11 días de reclusión en la Fábrica, durante los cuales tiene que lidiar con las fuerzas de élite de la policía y 67 rehenes.
                             </p>
+                            <a href="https://es.wikipedia.org/wiki/La_casa_de_papel">Fuente: Wikipedia</a>
                         </div>
                     </div>
                     <div class="row">
@@ -53,12 +50,12 @@
                 </div>
             </div>
             <div class="row my-5">
-            <div class="col-lg-3 order-lg-1 d-flex align-items-center justify-content-center flex-column">
+                <div class="col-lg-3 order-lg-1 d-flex align-items-center justify-content-center flex-column">
                     <h3>DIRECTOR</h3>
                     <img src="https://placehold.co/1920x1080" alt="imagen" class="img-fluid py-2">
                     <h1 class="pb-5">Nombre</h1>
-               </div>
-               <div class="col-lg-9">
+                </div>
+                <div class="col-lg-9">
                     <div class="row">
                         <div class="col text-start">
                             <h2>Reparto</h2>
@@ -116,8 +113,8 @@
                             </div>
                         </div>
                     </div>
-               </div>
-               
+                </div>
+
             </div>
         </div>
     </main>
