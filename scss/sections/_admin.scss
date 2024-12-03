@@ -38,7 +38,7 @@
     }
   
     .color-trash {
-      color: red;/*CF2: No se pueden poner valores absolutos de colores, hay que usar variables*/
+      color: $red;
   
       @include media-breakpoint-up(lg) {
         margin-left: 1rem;
@@ -46,6 +46,6 @@
     }
   
     .table > :not(caption) > * > * {
-      background-color: black; /*CF2: No se pueden poner valores absolutos de colores, hay que usar variables*/
+      background-color: $black; 
     }
 }
