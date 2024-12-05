@@ -57,7 +57,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-7 bordeGenero  align-items-center my-auto">
+                        <div class="col-7 bordeGenero align-items-center my-auto">
                             <h2 class="m-0">ACCION</h2>
                         </div>
                         <div class="col-5 bordeNota d-flex justify-content-end d-lg-none align-items-center my-auto">
