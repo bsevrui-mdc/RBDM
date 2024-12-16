@@ -5,6 +5,17 @@
     text-transform: uppercase;
   }
   
+  h3 {
+    font-family: $font-family-oxanium;
+    font-size: $font-family-oxanium-size-h3;
+  }
+
+  ul li {
+    font-family: $font-family-calibri;
+    font-size: $font-family-calibri-size-p;
+    text-align: justify;
+  }
+
   @include media-breakpoint-up(lg) {
     background-color: $divTransparency;
     border-radius: 15px;
