@@ -59,8 +59,8 @@
             <div class="row my-5">
                 <div class="col-lg-3 order-lg-1 d-flex align-items-center justify-content-center flex-column">
                     <h3>DIRECTOR</h3>
-                    <img src="https://placehold.co/1920x1080" alt="imagen" class="img-fluid py-2">
-                    <h1 class="pb-5">Nombre</h1>
+                    <img src="./assets/img/reparto/Alex_Pina.jpg" alt="imagen" class="img-fluid py-2">
+                    <h1 class="pb-5">Alex Pina</h1>
                 </div>
                 <div class="col-lg-9">
                     <div class="row">
@@ -71,7 +71,7 @@
                     <div class="row">
                         <div class="col-lg-4 px-3 py-5">
                             <div class="card rounded-4">
-                                <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
+                                <img src="./assets/img/reparto/Alvaro_Morte.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
                                     Alvaro morte
                                 </div>
@@ -79,17 +79,17 @@
                         </div>
                         <div class="col-lg-4 px-3 py-5">
                             <div class="card rounded-4">
-                                <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
+                                <img src="./assets/img/reparto/Ursula_Corbero.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
-                                    Alvaro morte
+                                    Úrsula Corbero
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 px-3 py-5">
                             <div class="card rounded-4">
-                                <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
+                                <img src="./assets/img/reparto/Pedro_Alonso.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
-                                    Alvaro morte
+                                    Pedro Alonso
                                 </div>
                             </div>
                         </div>
@@ -97,25 +97,25 @@
                     <div class="row">
                         <div class="col-lg-4 px-3 py-5">
                             <div class="card rounded-4">
-                                <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
+                                <img src="./assets/img/reparto/Jaime_Lorente.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
-                                    Alvaro morte
+                                    Jaime Lorente
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 px-3 py-5">
                             <div class="card">
-                                <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
+                                <img src="./assets/img/reparto/Itziar_Ituño.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
-                                    Alvaro morte
+                                    Itziar Ituño
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 px-3 py-5">
                             <div class="card">
-                                <img src="https://placehold.co/600x600" class="img-fluid card-img-top rounded-4" alt="imagen">
+                                <img src="./assets/img/reparto/Miguel_Herran.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
-                                    Alvaro morte
+                                    Miguel Herrán
                                 </div>
                             </div>
                         </div>
