@@ -6,7 +6,7 @@
     <?php include("includes/head-tags.php"); ?>
 </head>
 
-<body class="fondoImagen">
+<body class="detalles">
     <?php include("includes/navbar.php"); ?>
     <main>
         <div class="container transparente my-5 rounded-4">
@@ -37,7 +37,7 @@
                     <div class="row">
                         <div class="col py-3">
                             <p>
-                            Un misterioso hombre conocido como «el Profesor» ha pasado toda su vida planeando el mayor de los atracos de la historia: entrar en la Fábrica Nacional de Moneda y Timbre e imprimir 2400 millones de euros. Para llevar a cabo este ambicioso plan, el Profesor recluta a un equipo de ocho personas con ciertas habilidades y que no tienen nada que perder. Estos, junto al Profesor, planean cada paso del atraco durante cinco meses. Este equipo, con nombres de diferentes ciudades del mundo, requiere de 11 días de reclusión en la Fábrica, durante los cuales tiene que lidiar con las fuerzas de élite de la policía y 67 rehenes.
+                                Un misterioso hombre conocido como «el Profesor» ha pasado toda su vida planeando el mayor de los atracos de la historia: entrar en la Fábrica Nacional de Moneda y Timbre e imprimir 2400 millones de euros. Para llevar a cabo este ambicioso plan, el Profesor recluta a un equipo de ocho personas con ciertas habilidades y que no tienen nada que perder. Estos, junto al Profesor, planean cada paso del atraco durante cinco meses. Este equipo, con nombres de diferentes ciudades del mundo, requiere de 11 días de reclusión en la Fábrica, durante los cuales tiene que lidiar con las fuerzas de élite de la policía y 67 rehenes.
                             </p>
                             <a href="https://es.wikipedia.org/wiki/La_casa_de_papel">Fuente: Wikipedia</a>
                         </div>
@@ -60,7 +60,7 @@
                 <div class="col-lg-3 order-lg-1 d-flex align-items-center justify-content-center flex-column">
                     <h3>DIRECTOR</h3>
                     <img src="./assets/img/reparto/Alex_Pina.jpg" alt="imagen" class="img-fluid py-2">
-                    <h1 class="pb-5">Alex Pina</h1>
+                    <h1 class="pb-5 text-center">Alex Pina</h1>
                 </div>
                 <div class="col-lg-9">
                     <div class="row">
@@ -69,31 +69,31 @@
                         </div>
                     </div>
                     <div class="row align-items-stretch">
-    <div class="col-lg-4 px-3 py-5">
-        <div class="card rounded-4 h-100">
-            <img src="./assets/img/reparto/Alvaro_Morte.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
-            <div class="card-body">
-                Alvaro Morte
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4 px-3 py-5">
-        <div class="card rounded-4 h-100">
-            <img src="./assets/img/reparto/Ursula_Corbero.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
-            <div class="card-body">
-                Úrsula Corbero
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4 px-3 py-5">
-        <div class="card rounded-4 h-100">
-            <img src="./assets/img/reparto/Pedro_Alonso.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
-            <div class="card-body">
-                Pedro Alonso
-            </div>
-        </div>
-    </div>
-</div>
+                        <div class="col-lg-4 px-3 py-5">
+                            <div class="card rounded-4 h-100">
+                                <img src="./assets/img/reparto/Alvaro_Morte.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
+                                <div class="card-body">
+                                    Alvaro Morte
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 px-3 py-5">
+                            <div class="card rounded-4 h-100">
+                                <img src="./assets/img/reparto/Ursula_Corbero.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
+                                <div class="card-body">
+                                    Úrsula Corbero
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 px-3 py-5">
+                            <div class="card rounded-4 h-100">
+                                <img src="./assets/img/reparto/Pedro_Alonso.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
+                                <div class="card-body">
+                                    Pedro Alonso
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                     <div class="row">

@@ -41,3 +41,12 @@ a {
 a:hover {
   color: $primary;
 }
+
+.card {
+  background-color: black !important;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-family: $font-family-julius;
+  font-size: $font-family-julius-size-h1;
+}

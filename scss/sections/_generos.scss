@@ -1,0 +1,10 @@
+.contenedorGeneros a {
+  font-size: $font-family-julius-size-h1;
+  font-family: $font-family-julius;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $white;
+  }
+}

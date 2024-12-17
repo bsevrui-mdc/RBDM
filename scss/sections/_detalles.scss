@@ -1,49 +1,32 @@
-.fondoImagen {
-  background-image: url("../assets/img/image.png");
+.detalles {
+  background-image: url("../assets/img/imagen.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding: 0px;
   margin: 0;
-}
 
-.card {
-  background-color: black !important;
-  color: white;
-  text-align: center;
-  padding: 5px;
-  font-family: $font-family-julius;
-  font-size: $font-family-julius-size-h1;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-.card-body {
-  flex-grow: 1; /* El cuerpo de la tarjeta crece para ocupar el espacio restante */
-}
-
-.transparente {
-  background-color: $divConFondoOscuro !important;
-  padding: 20px;
-  width: 75%;
-
-  @include media-breakpoint-down(lg) {
-    width: 90%;
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
-}
+  .card-body {
+    flex-grow: 1; /* El cuerpo de la tarjeta crece para ocupar el espacio restante */
+  }
 
-.transparente .calificacion {
-  font-family: $font-family-oxanium;
-  font-size: $font-family-oxanium-size;
-}
+  .transparente {
+    background-color: $divConFondoOscuro !important;
+    padding: 20px;
+    width: 75%;
 
-.contenedorGeneros a {
-  font-size: $font-family-julius-size-h1;
-  font-family: $font-family-julius;
-  text-decoration: none;
+    @include media-breakpoint-down(lg) {
+      width: 90%;
+    }
+  }
 
-  &:hover {
-    text-decoration: none;
-    color: $white;
+  .transparente .calificacion {
+    font-family: $font-family-oxanium;
+    font-size: $font-family-oxanium-size;
   }
 }
