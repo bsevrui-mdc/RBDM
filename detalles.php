@@ -68,32 +68,34 @@
                             <h2>Reparto</h2>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4 px-3 py-5">
-                            <div class="card rounded-4">
-                                <img src="./assets/img/reparto/Alvaro_Morte.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
-                                <div class="card-body">
-                                    Alvaro morte
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 px-3 py-5">
-                            <div class="card rounded-4">
-                                <img src="./assets/img/reparto/Ursula_Corbero.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
-                                <div class="card-body">
-                                    Úrsula Corbero
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 px-3 py-5">
-                            <div class="card rounded-4">
-                                <img src="./assets/img/reparto/Pedro_Alonso.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
-                                <div class="card-body">
-                                    Pedro Alonso
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="row align-items-stretch">
+    <div class="col-lg-4 px-3 py-5">
+        <div class="card rounded-4 h-100">
+            <img src="./assets/img/reparto/Alvaro_Morte.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
+            <div class="card-body">
+                Alvaro Morte
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 px-3 py-5">
+        <div class="card rounded-4 h-100">
+            <img src="./assets/img/reparto/Ursula_Corbero.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
+            <div class="card-body">
+                Úrsula Corbero
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 px-3 py-5">
+        <div class="card rounded-4 h-100">
+            <img src="./assets/img/reparto/Pedro_Alonso.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
+            <div class="card-body">
+                Pedro Alonso
+            </div>
+        </div>
+    </div>
+</div>
+
+
                     <div class="row">
                         <div class="col-lg-4 px-3 py-5">
                             <div class="card rounded-4">

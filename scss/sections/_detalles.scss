@@ -1,43 +1,49 @@
 .fondoImagen {
-    background-image: url("../assets/img/image.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 0px;
-    margin: 0;
+  background-image: url("../assets/img/image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0px;
+  margin: 0;
+}
+
+.card {
+  background-color: black !important;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-family: $font-family-julius;
+  font-size: $font-family-julius-size-h1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.card-body {
+  flex-grow: 1; /* El cuerpo de la tarjeta crece para ocupar el espacio restante */
+}
+
+.transparente {
+  background-color: $divConFondoOscuro !important;
+  padding: 20px;
+  width: 75%;
+
+  @include media-breakpoint-down(lg) {
+    width: 90%;
   }
-  
-  .card {
-    background-color: black !important;
-    color: white;
-    text-align: center;
-    padding: 5px;
-    font-family: $font-family-julius;
-    font-size: $font-family-julius-size-h1;
-  }
-  
-  .transparente {
-    background-color: $divConFondoOscuro !important;
-    padding: 20px;
-    width: 75%;
-  
-    @include media-breakpoint-down(lg) {
-      width: 90%;
-    }
-  }
-  
-  .transparente .calificacion {
-    font-family: $font-family-oxanium;
-    font-size: $font-family-oxanium-size;
-  }
-  
-  .contenedorGeneros a {
-    font-size: $font-family-julius-size-h1;
-    font-family: $font-family-julius;
+}
+
+.transparente .calificacion {
+  font-family: $font-family-oxanium;
+  font-size: $font-family-oxanium-size;
+}
+
+.contenedorGeneros a {
+  font-size: $font-family-julius-size-h1;
+  font-family: $font-family-julius;
+  text-decoration: none;
+
+  &:hover {
     text-decoration: none;
-  
-    &:hover { 
-      text-decoration: none;
-      color: $white;
-    }
+    color: $white;
   }
+}
