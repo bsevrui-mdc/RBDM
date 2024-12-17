@@ -31,6 +31,7 @@
                 <div class="col-lg-9 px-5">
                     <div class="row">
                         <div class="col text-start py-2 px-2">
+                            
                             <h2>sinopsis</h2>
                         </div>
                     </div>
