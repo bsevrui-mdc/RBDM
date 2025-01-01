@@ -194,18 +194,18 @@
                                     <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>Imagenes (todas)</td>
+                                    <td>index.php</td>
+                                    <td>Roldan Luque, Mariano Jesus</td>
+                                    <td>Búsqueda en Google</td>
+                                    <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
                                 </tr>
                                 <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>Imagenes (todas)</td>
+                                    <td>usuario.php</td>
+                                    <td>Roldan Luque, Mariano Jesus</td>
+                                    <td>Búsqueda en Google</td>
+                                    <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
                                 </tr>
                             </tbody>
                         </table>

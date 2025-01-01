@@ -80,12 +80,12 @@
             <div class="row d-lg-none movil">
                 <div class="col-12">
                     <div class="row d-flex flex-grow-1 my-2">
-                        <div class="col-4">
-                            <img src="https://placehold.co/500" class="img-fluid">
+                        <div class="col-4 text-center">
+                            <img src="assets/img/peliculas/avatar.jpg" class="img-fluid">
                         </div>
                         <div class="col-8 align-content-center">
                             <div class="text-clamp">
-                                <h2>Aventuratydyjhdyjtrhdjydyyjttntjntjmt6mt6k6tmtjmthrengbwejhvfhevkewhbiewghkrehvvbthghkjervbiu4
+                                <h2>Avatar
                                 </h2>
                             </div>
 
@@ -94,12 +94,12 @@
                 </div>
                 <div class="col-12">
                     <div class="row d-flex flex-grow-1 my-2">
-                        <div class="col-4">
-                            <img src="https://placehold.co/500" class="img-fluid">
+                        <div class="col-4 text-center">
+                            <img src="assets/img/peliculas/coco.jpg" class="img-fluid">
                         </div>
                         <div class="col-8 align-content-center">
                             <div class="text-clamp">
-                                <h2>Aventuratydyjhdyjtrhdjydyyjttntjntjmt6mt6k6tmtjmthrengbwejhvfhevkewhbiewghkrehvvbthghkjervbiu4
+                                <h2>Coco
                                 </h2>
                             </div>
                         </div>
@@ -107,12 +107,12 @@
                 </div>
                 <div class="col-12">
                     <div class="row d-flex flex-grow-1 my-2">
-                        <div class="col-4">
-                            <img src="https://placehold.co/500" class="img-fluid">
+                        <div class="col-4 text-center">
+                            <img src="assets/img/peliculas/ironman.jpg" class="img-fluid">
                         </div>
                         <div class="col-8 align-content-center">
                             <div class="text-clamp">
-                                <h2>Aventuratydyjhdyjtrhdjydyyjttntjntjmt6mt6k6tmtjmthrengbwejhvfhevkewhbiewghkrehvvbthghkjervbiu4
+                                <h2>Iron Man
                                 </h2>
                             </div>
                         </div>
@@ -135,12 +135,12 @@
             <div class="row d-lg-none movil">
                 <div class="col-12">
                     <div class="row d-flex flex-grow-1 my-2">
-                        <div class="col-4">
-                            <img src="https://placehold.co/500" class="img-fluid">
+                        <div class="col-4 text-center">
+                            <img src="assets/img/Series/elite.jpg" class="img-fluid">
                         </div>
                         <div class="col-8 align-content-center">
                             <div class="text-clamp">
-                                <h2>Aventuratydyjhdyjtrhdjydyyjttntjntjmt6mt6k6tmtjmthrengbwejhvfhevkewhbiewghkrehvvbthghkjervbiu4
+                                <h2>Elite
                                 </h2>
                             </div>
                         </div>
@@ -148,12 +148,12 @@
                 </div>
                 <div class="col-12">
                     <div class="row d-flex flex-grow-1 my-2">
-                        <div class="col-4">
-                            <img src="https://placehold.co/500" class="img-fluid">
+                        <div class="col-4 text-center">
+                            <img src="assets/img/Series/from_netflix.jpg" class="img-fluid">
                         </div>
                         <div class="col-8 align-content-center">
                             <div class="text-clamp">
-                                <h2>Aventuratydyjhdyjtrhdjydyyjttntjntjmt6mt6k6tmtjmthrengbwejhvfhevkewhbiewghkrehvvbthghkjervbiu4
+                                <h2>From
                                 </h2>
                             </div>
                         </div>
@@ -161,12 +161,12 @@
                 </div>
                 <div class="col-12">
                     <div class="row d-flex flex-grow-1 my-2">
-                        <div class="col-4">
-                            <img src="https://placehold.co/500" class="img-fluid">
+                        <div class="col-4 text-center">
+                            <img src="assets/img/Series/mrRobot.jpg" class="img-fluid">
                         </div>
                         <div class="col-8 align-content-center">
                             <div class="text-clamp">
-                                <h2>Aventuratydyjhdyjtrhdjydyyjttntjntjmt6mt6k6tmtjmthrengbwejhvfhevkewhbiewghkrehvvbthghkjervbiu4
+                                <h2>Mr Robot
                                 </h2>
                             </div>
                         </div>
