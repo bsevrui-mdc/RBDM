@@ -2,74 +2,74 @@
     <div class="carousel-inner">
         <div class="carousel-item multiple-item">
             <div class="position-relative">
-                <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                <img src="../assets/img/peliculas/avatar.jpg" class="img-fluid" alt="Imagen">
                 <h2 class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
-                    Pelicula
+                    Avatar
                 </h2>
             </div>
         </div>
 
         <div class="carousel-item multiple-item">
             <div class="position-relative">
-                <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                <img src="../assets/img/peliculas/chucky.jpg" class="img-fluid" alt="Imagen">
                 <h2 class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
-                    Pelicula
+                    Chuky
                 </h2>
             </div>
         </div>
         <div class="carousel-item multiple-item">
             <div class="position-relative">
-                <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                <img src="../assets/img/peliculas/coco.jpg" class="img-fluid" alt="Imagen">
                 <h2 class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
-                    Pelicula
+                    Coco
                 </h2>
             </div>
         </div>
         <div class="carousel-item multiple-item">
             <div class="position-relative">
-                <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                <img src="../assets/img/peliculas/descarrilados.png" class="img-fluid" alt="Imagen">
                 <h2 class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
-                    Pelicula
+                    Descarrilados
                 </h2>
             </div>
         </div>
         <div class="carousel-item multiple-item">
             <div class="position-relative">
-                <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                <img src="../assets/img/peliculas/interstellar.jpg" class="img-fluid" alt="Imagen">
                 <h2 class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
-                    Pelicula
+                    Interstellar
                 </h2>
             </div>
         </div>
         <div class="carousel-item multiple-item">
             <div class="position-relative">
-                <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                <img src="../assets/img/peliculas/ironman.jpg" class="img-fluid" alt="Imagen">
                 <h2 class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
-                    Pelicula
+                    Iron Man
                 </h2>
             </div>
         </div>
         <div class="carousel-item multiple-item">
             <div class="position-relative">
-                <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                <img src="../assets/img/peliculas/padre.jpg" class="img-fluid" alt="Imagen">
                 <h2 class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
-                    Pelicula
+                    Padre no hay mas que uno
                 </h2>
             </div>
         </div>
         <div class="carousel-item multiple-item">
             <div class="position-relative">
-                <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                <img src="../assets/img/peliculas/sonic.jpg" class="img-fluid" alt="Imagen">
                 <h2 class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
-                    Pelicula
+                    Sonic
                 </h2>
             </div>
         </div>
         <div class="carousel-item multiple-item">
             <div class="position-relative">
-                <img src="https://placehold.co/1920x1080" class="img-fluid" alt="Imagen">
+                <img src="../assets/img/peliculas/titanic.jpg" class="img-fluid" alt="Imagen">
                 <h2 class="overlay-text position-absolute bottom-0 w-100 text-center text-white p-3">
-                    Pelicula
+                    Titanic
                 </h2>
             </div>
         </div>

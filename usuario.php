@@ -19,8 +19,8 @@
 
         <div class="container-fluid p-5 datos-usuario">
             <div class="row bg-info p-lg-5 rounded-3">
-                <div class="col-lg-4 foto-perfil align-content-center mx-auto">
-                    <img src="https://placehold.co/320x320" class="img-fluid rounded-3">
+                <div class="col-lg-4 foto-perfil align-content-center mx-auto text-center">
+                    <img src="assets/img/usuario.jpg" class="img-fluid rounded-3 text-center">
                 </div>
                 <!--CF2: el col-12 no es necesario.  -->
                 <div class="col-12 col-lg align-content-center">
@@ -59,77 +59,77 @@
                 </div>
             </div>
             <div class="row top">
-                <div class="col-lg-2 contenedorImagen"><img src="https://placehold.co/1920x1200" alt="imagen" class="img-fluid"></div>
+                <div class="col-lg-2 contenedorImagen"><img src="assets/img/Series/breaking-bad.jpg" alt="imagen" class="img-fluid"></div>
                 <div class="col-lg d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
                         <div class="col text-center text-lg-start py-2 py-lg-0">
-                            <a href="detalles.php">título de serie 2</a>
+                            <a href="detalles.php">Breaking Bad</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-7 bordeGenero  align-items-center my-auto">
-                            <h3 class="m-0">COMEDIA</h3>
+                            <h3 class="m-0">Drama</h3>
                         </div>
                         <div class="col-5 bordeNota d-flex justify-content-end d-lg-none align-items-center my-auto">
-                            <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.35</div>
+                            <div class="nota"><i class="fa-solid fa-star text-primary"></i>10</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 justify-content-center align-items-center border-start d-lg-flex d-none">
-                    <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.35</div>
+                    <div class="nota"><i class="fa-solid fa-star text-primary"></i>10</div>
                 </div>
             </div>
 
             <div class="row top">
-                <div class="col-lg-2 contenedorImagen"><img src="https://placehold.co/1920x1200" alt="imagen" class="img-fluid"></div>
+                <div class="col-lg-2 contenedorImagen"><img src="assets/img/Series/from_netflix.jpg" alt="imagen" class="img-fluid"></div>
                 <div class="col-lg d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
                         <div class="col text-center text-lg-start py-2 py-lg-0">
-                            <a href="detalles.php">título de serie 2</a>
+                            <a href="detalles.php">From</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-7 bordeGenero  align-items-center my-auto">
-                            <h3 class="m-0">COMEDIA</h3>
+                            <h3 class="m-0">TERROR</h3>
                         </div>
                         <div class="col-5 bordeNota d-flex justify-content-end d-lg-none align-items-center my-auto">
-                            <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.35</div>
+                            <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.50</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 justify-content-center align-items-center border-start d-lg-flex d-none">
-                    <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.35</div>
+                    <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.50</div>
                 </div>
             </div>
 
             <div class="row top">
-                <div class="col-lg-2 contenedorImagen"><img src="https://placehold.co/1920x1200" alt="imagen" class="img-fluid"></div>
+                <div class="col-lg-2 contenedorImagen"><img src="assets/img/Series/la_casa_de_papel.jpg" alt="imagen" class="img-fluid"></div>
                 <div class="col-lg d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
                         <div class="col text-center text-lg-start py-2 py-lg-0">
-                            <a href="detalles.php">título de serie 2</a>
+                            <a href="detalles.php">La casa de papel</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-7 bordeGenero align-items-center my-auto">
-                            <h3 class="m-0">COMEDIA</h3>
+                            <h3 class="m-0">Accion</h3>
                         </div>
                         <div class="col-5 bordeNota d-flex justify-content-end d-lg-none align-items-center my-auto">
-                            <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.35</div>
+                            <div class="nota"><i class="fa-solid fa-star text-primary"></i>9</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 justify-content-center align-items-center border-start d-lg-flex d-none">
-                    <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.35</div>
+                    <div class="nota"><i class="fa-solid fa-star text-primary"></i>9</div>
                 </div>
             </div>
 
             <div class="row top">
-                <div class="col-lg-2 contenedorImagen"><img src="https://placehold.co/1920x1200" alt="imagen" class="img-fluid"></div>
+                <div class="col-lg-2 contenedorImagen"><img src="assets/img/Series/Lqsa.jpg" alt="imagen" class="img-fluid"></div>
                 <div class="col-lg d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
                         <div class="col text-center text-lg-start py-2 py-lg-0">
-                            <a href="detalles.php">título de serie 2</a>
+                            <a href="detalles.php">La que se avecina</a>
                         </div>
                     </div>
                     <div class="row">
@@ -137,12 +137,12 @@
                             <h3 class="m-0">COMEDIA</h3>
                         </div>
                         <div class="col-5 bordeNota d-flex justify-content-end d-lg-none align-items-center my-auto">
-                            <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.35</div>
+                            <div class="nota"><i class="fa-solid fa-star text-primary"></i>8.75</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 justify-content-center align-items-center border-start d-lg-flex d-none">
-                    <div class="nota"><i class="fa-solid fa-star text-primary"></i>9.35</div>
+                    <div class="nota"><i class="fa-solid fa-star text-primary"></i>8.75</div>
                 </div>
             </div>
         </div>

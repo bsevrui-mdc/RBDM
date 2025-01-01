@@ -1,7 +1,12 @@
 .carrusel-normal {
-    h1 {
-      font-family: $font-family-oxanium;
-      font-size: $font-family-oxanium-size;
-      text-transform: uppercase;
-    }
+  h1 {
+    font-family: $font-family-oxanium;
+    font-size: $font-family-oxanium-size;
+    text-transform: uppercase;
   }
+
+  img {
+    width: 1920px;
+    height: 1080px;
+  }
+}

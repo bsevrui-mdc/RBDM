@@ -14,7 +14,7 @@
                 <div class="col-lg-3">
                     <div class="row py-3">
                         <div class="col d-flex justify-content-center">
-                            <img src="https://placehold.co/1920x1080" alt="imagenPelicula" class="img-fluid">
+                            <img src="assets/img/Series/la_casa_de_papel.jpg" alt="imagenPelicula" class="img-fluid">
                         </div>
                     </div>
                     <div class="row py-3">

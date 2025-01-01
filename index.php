@@ -22,15 +22,27 @@
                 <div class="col-lg-8">
                     <?php include("includes/carrusel-normal.php"); ?>
                 </div>
-                <div class="col-4 d-none d-lg-block">
+                <div class="col-4 d-none d-lg-block top3">
                     <div class="d-flex flex-grow-1 flex-column h-100 topGenero justify-content-around">
                         <div class="row">
                             <div class="col-4 align-content-center">
-                                <img src="https://placehold.co/500" class="img-fluid">
+                                <img src="assets/img/peliculas/chucky.jpg" class="img-fluid">
                             </div>
                             <div class="col-8 align-content-center ">
                                 <div class="text-clamp">
-                                    <h2>Aventura avsgrn trnt rnrv</h2>
+                                    <h2>Chuky</h2>
+                                </div>
+
+                                <div class="genero">Género: Terror</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 align-content-center">
+                                <img src="assets/img/Series/breaking-bad.jpg" class="img-fluid">
+                            </div>
+                            <div class="col-8 align-content-center ">
+                                <div class="text-clamp">
+                                    <h2>Breaking bad</h2>
                                 </div>
 
                                 <div class="genero">Género: Drama</div>
@@ -38,26 +50,14 @@
                         </div>
                         <div class="row">
                             <div class="col-4 align-content-center">
-                                <img src="https://placehold.co/500" class="img-fluid">
+                                <img src="assets/img/Series/Lqsa.jpg" class="img-fluid">
                             </div>
                             <div class="col-8 align-content-center ">
                                 <div class="text-clamp">
-                                    <h2>Aventura avsgrn trnt rnrv</h2>
+                                    <h2>la que se avecina</h2>
                                 </div>
 
-                                <div class="genero">Género: Drama</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-4 align-content-center">
-                                <img src="https://placehold.co/500" class="img-fluid">
-                            </div>
-                            <div class="col-8 align-content-center ">
-                                <div class="text-clamp">
-                                    <h2>Aventura avsgrn trnt rnrv</h2>
-                                </div>
-
-                                <div class="genero">Género: Drama</div>
+                                <div class="genero">Género: Comedia</div>
                             </div>
                         </div>
                     </div>
