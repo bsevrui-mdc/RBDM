@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego de Estrellas</title>
+    <script src="https://unpkg.com/konva@9.2.3/konva.min.js"></script>
+    <style>
+        
+    </style>
+  </head>
+  <body>
+    <div id="juego">
+      <div id="container"></div>
+      <button id="btncomenzar" onclick="cargaJuego();">Comenzar</button>
+      <div id="vidas">Vidas: 3</div>
+    </div>
+
+    <script>
+      let stage, layer, jugador, puntuacion;
+      let estrellas = []; 
+      let izquierda = false;
+      let derecha = false;
+      let vidas = 3;
+
+      function cargaJuego() {
+        // Crear el escenario
+        stage = new Konva.Stage({
+          container: "container",
+          width: 800,
+          height: 600,
+          
+        });
+
+        // Crear la capa
+        layer = new Konva.Layer();
+        stage.add(layer);
+
+        puntuacion = 0;
+
+        // Crear jugador
+        jugador = new Konva.Rect({
+          x: stage.width() / 2 - 50,
+          y: stage.height() - 50,
+          width: 100,
+          height: 20,
+          fill: "red",
+          
+        });
+        layer.add(jugador);
+
+        window.addEventListener("keydown", manejarTeclas);
+        window.addEventListener("keyup", manejarTeclas);
+
+        // Generar estrellas cada segundo
+        setInterval(generarEstrella, 3000);
+
+        // Comenzar animación principal
+        requestAnimationFrame(animarJuego);
+
+        // Dibujar capa inicial
+        layer.draw();
+      }
+
+      function generarEstrella() {
+        const estrella = new Konva.Star({
+          x: Math.random() * stage.width(),
+          y: 0,
+          numPoints: 5,
+          innerRadius: 10,
+          outerRadius: 20,
+          fill: "blue",
+          stroke: "black",
+          strokeWidth: 1,
+          velocidad: Math.random() * 3 + 1, 
+        });
+
+        estrellas.push(estrella); // Agregar estrella al array
+        layer.add(estrella); // Agregar estrella a la capa
+      }
+
+      function animarJuego() {
+
+        if (izquierda && jugador.x() > 0) {
+          jugador.x(jugador.x() - 10);
+        }
+        if (
+          derecha &&
+          jugador.x() + jugador.width() < stage.width()
+        ) {
+          jugador.x(jugador.x() + 10);
+        }
+        
+        estrellas.forEach((estrella, index) => {
+          
+          estrella.y(estrella.y() + estrella.getAttr("velocidad"));
+
+          
+          if (estrella.y() > stage.height()) {
+            estrella.destroy(); 
+            estrellas.splice(index, 1);
+            vidas--;
+            document.getElementById("vidas").textContent = "Vidas: "+ vidas; 
+          }
+
+          
+          if (
+            estrella.x() + estrella.getAttr("outerRadius") > jugador.x() &&
+            estrella.x() - estrella.getAttr("outerRadius") < jugador.x() + jugador.width() &&
+            estrella.y() + estrella.getAttr("outerRadius") > jugador.y()
+          ) {
+            estrella.destroy(); 
+            estrellas.splice(index, 1); 
+            actualizarPuntuacion(); 
+          }
+        });
+
+        
+        layer.batchDraw();
+
+        
+        requestAnimationFrame(animarJuego);
+      }
+
+      function manejarTeclas(event) {
+        if (event.type === "keydown") {
+          if (event.key === "ArrowLeft") izquierda = true;
+          if (event.key === "ArrowRight") derecha = true;
+        } else if (event.type === "keyup") {
+          if (event.key === "ArrowLeft") izquierda = false;
+          if (event.key === "ArrowRight") derecha = false;
+        }
+      }
+
+      function actualizarPuntuacion() {
+        puntuacion += 1;
+        document.title = `Puntuación: ${puntuacion}`; 
+      }
+    </script>
+  </body>
+</html>
+
