@@ -24,7 +24,7 @@
       let vidas = 3;
 
       function cargaJuego() {
-        // Crear el escenario
+        
         stage = new Konva.Stage({
           container: "container",
           width: 800,
@@ -32,13 +32,13 @@
           
         });
 
-        // Crear la capa
+        
         layer = new Konva.Layer();
         stage.add(layer);
 
         puntuacion = 0;
 
-        // Crear jugador
+        
         jugador = new Konva.Rect({
           x: stage.width() / 2 - 50,
           y: stage.height() - 50,
@@ -52,13 +52,13 @@
         window.addEventListener("keydown", manejarTeclas);
         window.addEventListener("keyup", manejarTeclas);
 
-        // Generar estrellas cada segundo
+        
         setInterval(generarEstrella, 3000);
 
-        // Comenzar animación principal
+        
         requestAnimationFrame(animarJuego);
 
-        // Dibujar capa inicial
+        
         layer.draw();
       }
 
@@ -75,8 +75,8 @@
           velocidad: Math.random() * 3 + 1, 
         });
 
-        estrellas.push(estrella); // Agregar estrella al array
-        layer.add(estrella); // Agregar estrella a la capa
+        estrellas.push(estrella); 
+        layer.add(estrella); 
       }
 
       function animarJuego() {
