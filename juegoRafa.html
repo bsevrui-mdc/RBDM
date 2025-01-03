@@ -146,7 +146,7 @@
         estrellas.forEach((estrella, index) => {
           estrella.y(estrella.y() + estrella.getAttr("velocidad"));
 
-          // Si la estrella sale de la pantalla
+          
           if (estrella.y() > stage.height()) {
             estrella.destroy();
             estrellas.splice(index, 1);
@@ -154,9 +154,9 @@
             document.getElementById("vidas").textContent = "Vidas: " + vidas;
           }
 
-          // Colisión con el jugador
+          
           if (
-            estrella.x() + estrella.width() > jugador.x() && // Bordes de la estrella
+            estrella.x() + estrella.width() > jugador.x() && 
             estrella.x() < jugador.x() + jugador.width() &&
             estrella.y() + estrella.height() > jugador.y()
           ) {
