@@ -6,119 +6,168 @@
     <title>Juego de Estrellas</title>
     <script src="https://unpkg.com/konva@9.2.3/konva.min.js"></script>
     <style>
-        
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
     <div id="juego">
       <div id="container"></div>
-      <button id="btncomenzar" onclick="cargaJuego();">Comenzar</button>
+      <br /><br />
+      <button id="btncomenzar" onclick="cargaJuego();">Comenzar</button
+      ><br /><br />
       <div id="vidas">Vidas: 3</div>
     </div>
 
     <script>
       let stage, layer, jugador, puntuacion;
-      let estrellas = []; 
+      let estrellas = [];
+      let circulos = [];
       let izquierda = false;
       let derecha = false;
       let vidas = 3;
 
       function cargaJuego() {
-        
         stage = new Konva.Stage({
           container: "container",
           width: 800,
           height: 600,
-          
         });
 
-        
         layer = new Konva.Layer();
         stage.add(layer);
 
         puntuacion = 0;
 
-        
+        const fondo = new Konva.Rect({
+          x: 0,
+          y: 0,
+          width: stage.width(),
+          height: stage.height(),
+          fillLinearGradientStartPoint: { x: 0, y: 0 },
+          fillLinearGradientEndPoint: { x: 0, y: stage.height() },
+          fillLinearGradientColorStops: [0, "cyan", 1, "green"],
+        });
+        layer.add(fondo);
+
         jugador = new Konva.Rect({
           x: stage.width() / 2 - 50,
           y: stage.height() - 50,
           width: 100,
           height: 20,
           fill: "red",
-          
         });
         layer.add(jugador);
 
         window.addEventListener("keydown", manejarTeclas);
         window.addEventListener("keyup", manejarTeclas);
 
-        
-        setInterval(generarEstrella, 3000);
+        setInterval(generarEstrella, 2000);
+        setInterval(generarCirculos, 4000);
 
-        
         requestAnimationFrame(animarJuego);
 
-        
         layer.draw();
       }
 
-      function generarEstrella() {
-        const estrella = new Konva.Star({
+      function generarCirculos() {
+
+        const imageObj = new Image();
+        imageObj.src = "./assets/img/mina.png";
+
+        imageObj.onload = function (){
+          const circulo = new Konva.Image({
           x: Math.random() * stage.width(),
           y: 0,
-          numPoints: 5,
-          innerRadius: 10,
-          outerRadius: 20,
-          fill: "blue",
-          stroke: "black",
-          strokeWidth: 1,
-          velocidad: Math.random() * 3 + 1, 
+          image: imageObj,
+          radius: 10,
+          width: 40,
+          height: 40,
+          velocidad: Math.random() * 3 + 1,
         });
 
-        estrellas.push(estrella); 
-        layer.add(estrella); 
+        circulos.push(circulo);
+        layer.add(circulo);
+        }
+
+        
+      }
+
+      function generarEstrella() {
+        const imageObj = new Image();
+        imageObj.src = "./assets/img/estrellita.png";
+
+        imageObj.onload = function () {
+          const estrella = new Konva.Image({
+            x: Math.random() * stage.width(),
+            y: 0,
+            image: imageObj,
+            width: 40, 
+            height: 40,
+            velocidad: Math.random() * 3 + 1, 
+          });
+
+          estrellas.push(estrella);
+          layer.add(estrella);
+        };
       }
 
       function animarJuego() {
-
         if (izquierda && jugador.x() > 0) {
           jugador.x(jugador.x() - 10);
         }
-        if (
-          derecha &&
-          jugador.x() + jugador.width() < stage.width()
-        ) {
+        if (derecha && jugador.x() + jugador.width() < stage.width()) {
           jugador.x(jugador.x() + 10);
         }
-        
-        estrellas.forEach((estrella, index) => {
-          
-          estrella.y(estrella.y() + estrella.getAttr("velocidad"));
 
-          
-          if (estrella.y() > stage.height()) {
-            estrella.destroy(); 
-            estrellas.splice(index, 1);
-            vidas--;
-            document.getElementById("vidas").textContent = "Vidas: "+ vidas; 
+        circulos.forEach((circulo, index) => {
+          circulo.y(circulo.y() + circulo.getAttr("velocidad"));
+          if (circulo.y() > stage.height()) {
+            circulo.destroy();
+            circulos.splice(index, 1);
           }
 
-          
           if (
-            estrella.x() + estrella.getAttr("outerRadius") > jugador.x() &&
-            estrella.x() - estrella.getAttr("outerRadius") < jugador.x() + jugador.width() &&
-            estrella.y() + estrella.getAttr("outerRadius") > jugador.y()
+            circulo.x() + circulo.getAttr("radius") > jugador.x() &&
+            circulo.x() - circulo.getAttr("radius") <
+              jugador.x() + jugador.width() &&
+            circulo.y() + circulo.getAttr("radius") > jugador.y()
           ) {
-            estrella.destroy(); 
-            estrellas.splice(index, 1); 
-            actualizarPuntuacion(); 
+            circulo.destroy();
+            circulos.splice(index, 1);
+            vidas--;
+            document.getElementById("vidas").textContent = "Vidas: " + vidas;
           }
         });
 
-        
+        estrellas.forEach((estrella, index) => {
+          estrella.y(estrella.y() + estrella.getAttr("velocidad"));
+
+          // Si la estrella sale de la pantalla
+          if (estrella.y() > stage.height()) {
+            estrella.destroy();
+            estrellas.splice(index, 1);
+            vidas--;
+            document.getElementById("vidas").textContent = "Vidas: " + vidas;
+          }
+
+          // Colisión con el jugador
+          if (
+            estrella.x() + estrella.width() > jugador.x() && // Bordes de la estrella
+            estrella.x() < jugador.x() + jugador.width() &&
+            estrella.y() + estrella.height() > jugador.y()
+          ) {
+            estrella.destroy();
+            estrellas.splice(index, 1);
+            actualizarPuntuacion();
+          }
+        });
+
         layer.batchDraw();
 
-        
         requestAnimationFrame(animarJuego);
       }
 
@@ -134,9 +183,8 @@
 
       function actualizarPuntuacion() {
         puntuacion += 1;
-        document.title = `Puntuación: ${puntuacion}`; 
+        document.title = `Puntuación: ${puntuacion}`;
       }
     </script>
   </body>
 </html>
-
