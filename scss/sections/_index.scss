@@ -1,47 +1,86 @@
 .index {
-    .topGenero {
-      h2 {
-        font-family: $font-family-julius;
-        font-weight: $font-family-julius-weight;
-        font-size: 30px !important;
-  
-        @include media-breakpoint-up(lg) {
-          font-size: $font-family-julius-size-h2-mobile !important;
-        }
-  
-        word-wrap: break-word;
+  .topGenero {
+    h2 {
+      font-family: $font-family-julius;
+      font-weight: $font-family-julius-weight;
+      font-size: 30px !important;
+
+      @include media-breakpoint-up(lg) {
+        font-size: $font-family-julius-size-h2-mobile !important;
       }
-      .genero {
-        font-family: $font-family-calibri;
-        font-size: $font-family-calibri-size-p;
+
+      word-wrap: break-word;
+    }
+    .genero {
+      font-family: $font-family-calibri;
+      font-size: $font-family-calibri-size-p;
+    }
+  }
+  .top3 {
+    img {
+      width: 500px;
+    }
+  }
+
+  .movil {
+    h2 {
+      font-family: $font-family-julius;
+      font-weight: $font-family-julius-weight;
+      font-size: $font-family-julius-size-h1;
+      word-wrap: break-word;
+      @include media-breakpoint-down(lg) {
+        font-size: $font-family-julius-size-h2-mobile;
       }
     }
-    .top3 {
-      img {
-        width: 500px;
-      }
+    img {
+      height: 200px;
     }
-  
-    .movil {
-      h2 {
-        font-family: $font-family-julius;
-        font-weight: $font-family-julius-weight;
-        font-size: $font-family-julius-size-h1;
-        word-wrap: break-word;
-        @include media-breakpoint-down(lg){
-          font-size: $font-family-julius-size-h2-mobile;
-        }
-      }
-      img {
-        height: 200px;
-      }
+  }
+
+  .text-clamp {
+    display: -webkit-box; /* Define un contenedor flex para el recorte */
+    -webkit-box-orient: vertical; /* Define la orientación vertical de la caja */
+    overflow: hidden; /* Oculta el contenido desbordado */
+    -webkit-line-clamp: 2; /* Limita a 2 líneas */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos */
+  }
+
+  #juego {
+    padding: 20px;
+    border: 2px solid white;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .encabezado {
+      min-width: 300px;
+      width: 70%;
+      padding: 10px;
+    }
+
+    .pregunta {
+      padding: 10px;
+    }
+    .imagen {
+      height: 200px;
+      width: 100%;
+    }
+    .btn {
+      background-color: $secondary;
+      width: 80%;
+      display: block;
+      padding: 10px;
+      margin: 5px;
+      transition: all 0.3s;
+    }
+
+
+    .btn:hover {
+      background-color: $primary !important;
+      transform: scale(1.10);
     }
     
-    .text-clamp {
-      display: -webkit-box; /* Define un contenedor flex para el recorte */
-      -webkit-box-orient: vertical; /* Define la orientación vertical de la caja */
-      overflow: hidden; /* Oculta el contenido desbordado */
-      -webkit-line-clamp: 2; /* Limita a 2 líneas */
-      text-overflow: ellipsis; /* Agrega puntos suspensivos */
-    }
+  }
 }

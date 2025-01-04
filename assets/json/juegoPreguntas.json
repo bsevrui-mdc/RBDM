@@ -1,0 +1,194 @@
+[
+    {
+        "imagen": "../assets/img/peliculas/avatar.jpg",
+        "pregunta": "¿Qué película es?",
+        "respuesta": "Avatar",
+        "incorrecta1": "Titanic",
+        "incorrecta2": "Interstellar",
+        "incorrecta3": "Sonic"
+    },
+    {
+        "imagen": "../assets/img/peliculas/chucky.jpg",
+        "pregunta": "¿Qué película es?",
+        "respuesta": "Chucky",
+        "incorrecta1": "Coco",
+        "incorrecta2": "Descarrilados",
+        "incorrecta3": "Iron Man"
+    },
+    {
+        "imagen": "../assets/img/peliculas/coco.jpg",
+        "pregunta": "¿Qué película es?",
+        "respuesta": "Coco",
+        "incorrecta1": "Avatar",
+        "incorrecta2": "Sonic",
+        "incorrecta3": "Chucky"
+    },
+    {
+        "imagen": "../assets/img/peliculas/descarrilados.png",
+        "pregunta": "¿Qué película es?",
+        "respuesta": "Descarrilados",
+        "incorrecta1": "Titanic",
+        "incorrecta2": "Coco",
+        "incorrecta3": "Avatar"
+    },
+    {
+        "imagen": "../assets/img/peliculas/interstellar.jpg",
+        "pregunta": "¿Qué película es?",
+        "respuesta": "Interstellar",
+        "incorrecta1": "Titanic",
+        "incorrecta2": "Sonic",
+        "incorrecta3": "Avatar"
+    },
+    {
+        "imagen": "../assets/img/peliculas/ironman.jpg",
+        "pregunta": "¿Qué película es?",
+        "respuesta": "Iron Man",
+        "incorrecta1": "Coco",
+        "incorrecta2": "Avatar",
+        "incorrecta3": "Descarrilados"
+    },
+    {
+        "imagen": "../assets/img/peliculas/sonic.jpg",
+        "pregunta": "¿Qué película es?",
+        "respuesta": "Sonic",
+        "incorrecta1": "Titanic",
+        "incorrecta2": "Avatar",
+        "incorrecta3": "Chucky"
+    },
+    {
+        "imagen": "../assets/img/peliculas/titanic.jpg",
+        "pregunta": "¿Qué película es?",
+        "respuesta": "Titanic",
+        "incorrecta1": "Sonic",
+        "incorrecta2": "Iron Man",
+        "incorrecta3": "Interstellar"
+    },
+    {
+        "imagen": "../assets/img/Series/aqui_no_hay_quien_viva.jpg",
+        "pregunta": "¿Qué serie es?",
+        "respuesta": "Aquí no hay quien viva",
+        "incorrecta1": "La Casa de Papel",
+        "incorrecta2": "Elite",
+        "incorrecta3": "Breaking Bad"
+    },
+    {
+        "imagen": "../assets/img/Series/breaking-bad.jpg",
+        "pregunta": "¿Qué serie es?",
+        "respuesta": "Breaking Bad",
+        "incorrecta1": "La Casa de Papel",
+        "incorrecta2": "Elite",
+        "incorrecta3": "Stranger Things"
+    },
+    {
+        "imagen": "../assets/img/Series/elite.jpg",
+        "pregunta": "¿Qué serie es?",
+        "respuesta": "Elite",
+        "incorrecta1": "Breaking Bad",
+        "incorrecta2": "La Casa de Papel",
+        "incorrecta3": "Stranger Things"
+    },
+    {
+        "imagen": "../assets/img/Series/from_netflix.jpg",
+        "pregunta": "¿Qué serie es?",
+        "respuesta": "From Netflix",
+        "incorrecta1": "Breaking Bad",
+        "incorrecta2": "Stranger Things",
+        "incorrecta3": "La Casa de Papel"
+    },
+    {
+        "imagen": "../assets/img/Series/la_casa_de_papel.jpg",
+        "pregunta": "¿Qué serie es?",
+        "respuesta": "La Casa de Papel",
+        "incorrecta1": "Breaking Bad",
+        "incorrecta2": "Elite",
+        "incorrecta3": "Stranger Things"
+    },
+    {
+        "imagen": "../assets/img/Series/lqsa.jpg",
+        "pregunta": "¿Qué serie es?",
+        "respuesta": "La que se avecina",
+        "incorrecta1": "Stranger Things",
+        "incorrecta2": "Breaking Bad",
+        "incorrecta3": "Elite"
+    },
+    {
+        "imagen": "../assets/img/Series/mrRobot.jpg",
+        "pregunta": "¿Qué serie es?",
+        "respuesta": "Mr. Robot",
+        "incorrecta1": "La Casa de Papel",
+        "incorrecta2": "Elite",
+        "incorrecta3": "Stranger Things"
+    },
+    {
+        "imagen": "../assets/img/Series/pokemon.jpg",
+        "pregunta": "¿Qué serie es?",
+        "respuesta": "Pokémon",
+        "incorrecta1": "Breaking Bad",
+        "incorrecta2": "Elite",
+        "incorrecta3": "Stranger Things"
+    },
+    {
+        "imagen": "../assets/img/Series/stranger-things.jpg",
+        "pregunta": "¿Qué serie es?",
+        "respuesta": "Stranger Things",
+        "incorrecta1": "Breaking Bad",
+        "incorrecta2": "La Casa de Papel",
+        "incorrecta3": "Elite"
+    },
+    {
+        "imagen": "../assets/img/reparto/Alex_Pina.jpg",
+        "pregunta": "¿Qué actor es?",
+        "respuesta": "Álex Pina",
+        "incorrecta1": "Álvaro Morte",
+        "incorrecta2": "Miguel Herrán",
+        "incorrecta3": "Itziar Ituño"
+    },
+    {
+        "imagen": "../assets/img/reparto/Alvaro_Morte.jpg",
+        "pregunta": "¿Qué actor es?",
+        "respuesta": "Álvaro Morte",
+        "incorrecta1": "Pedro Alonso",
+        "incorrecta2": "Jaime Lorente",
+        "incorrecta3": "Ursula Corbero"
+    },
+    {
+        "imagen": "../assets/img/reparto/Itziar_Ituño.jpg",
+        "pregunta": "¿Qué actor es?",
+        "respuesta": "Itziar Ituño",
+        "incorrecta1": "Álex Pina",
+        "incorrecta2": "Miguel Herrán",
+        "incorrecta3": "Pedro Alonso"
+    },
+    {
+        "imagen": "../assets/img/reparto/Jaime_Lorente.jpg",
+        "pregunta": "¿Qué actor es?",
+        "respuesta": "Jaime Lorente",
+        "incorrecta1": "Miguel Herrán",
+        "incorrecta2": "Álvaro Morte",
+        "incorrecta3": "Ursula Corbero"
+    },
+    {
+        "imagen": "../assets/img/reparto/Miguel_Herran.jpg",
+        "pregunta": "¿Qué actor es?",
+        "respuesta": "Miguel Herrán",
+        "incorrecta1": "Jaime Lorente",
+        "incorrecta2": "Pedro Alonso",
+        "incorrecta3": "Álex Pina"
+    },
+    {
+        "imagen": "../assets/img/reparto/Pedro_Alonso.jpg",
+        "pregunta": "¿Qué actor es?",
+        "respuesta": "Pedro Alonso",
+        "incorrecta1": "Miguel Herrán",
+        "incorrecta2": "Álvaro Morte",
+        "incorrecta3": "Itziar Ituño"
+    },
+    {
+        "imagen": "../assets/img/reparto/Ursula_Corbero.jpg",
+        "pregunta": "¿Qué actor es?",
+        "respuesta": "Úrsula Corberó",
+        "incorrecta1": "Jaime Lorente",
+        "incorrecta2": "Pedro Alonso",
+        "incorrecta3": "Álex Pina"
+    }
+]

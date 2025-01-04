@@ -174,9 +174,43 @@
                 </div>
             </div>
 
+
+
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-center">
+                    <div id="juego">
+                        <div class="contadorPreguntas" id="contadorPreguntas">
+                            Pregunta: 1/10
+                        </div>
+                        <div class="encabezado bg-info">
+                            <img src="" class="imagen" id="imagen">
+                            <div class="pregunta" id="pregunta">
+                                ¿Que pelicula es?
+                            </div>
+                        </div>
+                        <div class="btn" id="btn1" onclick="boton(0)">
+                            Opcion 1
+                        </div>
+                        <div class="btn" id="btn2" onclick="boton(1)">
+                            Opcion 2
+                        </div>
+                        <div class="btn" id="btn3" onclick="boton(2)">
+                            Opcion 3
+                        </div>
+                        <div class="btn" id="btn4" onclick="boton(3)">
+                            Opcion 4
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </main>
     <?php include("includes/footer.php"); ?>
+
+    <script src="js/game.js"></script>
 </body>
 
 </html>
