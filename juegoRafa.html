@@ -53,14 +53,43 @@
         });
         layer.add(fondo);
 
-        jugador = new Konva.Rect({
-          x: stage.width() / 2 - 50,
-          y: stage.height() - 50,
-          width: 100,
-          height: 20,
-          fill: "red",
-        });
-        layer.add(jugador);
+        const imageObj = new Image();
+        imageObj.src =
+        "https://opengameart.org/sites/default/files/styles/medium/public/cat_3.png";
+
+        imageObj.onload = function () {
+          jugador = new Konva.Sprite({
+            x: stage.width() / 2 - 50,
+            y: stage.height() - 100,
+            image: imageObj,
+            width: 64, 
+            height: 64, 
+            animation: "idle",
+            animations: {
+              quieto: [
+                 0, 200, 50, 50
+              ],
+              movimientoDerecha: [
+                0, 0, 50, 50, 
+                50, 0, 50, 50, 
+                100, 0, 50, 50,
+                150, 0, 50, 50 
+              ],
+              movimientoIzquierda:[
+                0, 50, 50, 50, 
+                50, 50, 50, 50, 
+                100, 50, 50, 50,
+                150, 50, 50, 50 
+              ]
+            },
+            frameRate: 10,
+            frameIndex: 0,
+          });
+
+          layer.add(jugador);
+          jugador.start();
+          jugador.animation("quieto"); 
+        };
 
         window.addEventListener("keydown", manejarTeclas);
         window.addEventListener("keyup", manejarTeclas);
@@ -74,26 +103,23 @@
       }
 
       function generarCirculos() {
-
         const imageObj = new Image();
         imageObj.src = "./assets/img/mina.png";
 
-        imageObj.onload = function (){
+        imageObj.onload = function () {
           const circulo = new Konva.Image({
-          x: Math.random() * stage.width(),
-          y: 0,
-          image: imageObj,
-          radius: 10,
-          width: 40,
-          height: 40,
-          velocidad: Math.random() * 3 + 1,
-        });
+            x: Math.random() * stage.width(),
+            y: 0,
+            image: imageObj,
+            radius: 10,
+            width: 40,
+            height: 40,
+            velocidad: Math.random() * 3 + 1,
+          });
 
-        circulos.push(circulo);
-        layer.add(circulo);
-        }
-
-        
+          circulos.push(circulo);
+          layer.add(circulo);
+        };
       }
 
       function generarEstrella() {
@@ -105,9 +131,9 @@
             x: Math.random() * stage.width(),
             y: 0,
             image: imageObj,
-            width: 40, 
+            width: 40,
             height: 40,
-            velocidad: Math.random() * 3 + 1, 
+            velocidad: Math.random() * 3 + 1,
           });
 
           estrellas.push(estrella);
@@ -116,6 +142,7 @@
       }
 
       function animarJuego() {
+        
         if (izquierda && jugador.x() > 0) {
           jugador.x(jugador.x() - 10);
         }
@@ -123,6 +150,7 @@
           jugador.x(jugador.x() + 10);
         }
 
+        
         circulos.forEach((circulo, index) => {
           circulo.y(circulo.y() + circulo.getAttr("velocidad"));
           if (circulo.y() > stage.height()) {
@@ -140,23 +168,29 @@
             circulos.splice(index, 1);
             vidas--;
             document.getElementById("vidas").textContent = "Vidas: " + vidas;
+            if(vidas == 0){
+              alert("Juego terminado");
+              
+            }
           }
         });
 
+       
         estrellas.forEach((estrella, index) => {
           estrella.y(estrella.y() + estrella.getAttr("velocidad"));
 
-          
           if (estrella.y() > stage.height()) {
             estrella.destroy();
             estrellas.splice(index, 1);
             vidas--;
             document.getElementById("vidas").textContent = "Vidas: " + vidas;
+            if(vidas == 0){
+              alert("Juego terminado");
+            }
           }
 
-          
           if (
-            estrella.x() + estrella.width() > jugador.x() && 
+            estrella.x() + estrella.width() > jugador.x() &&
             estrella.x() < jugador.x() + jugador.width() &&
             estrella.y() + estrella.height() > jugador.y()
           ) {
@@ -173,11 +207,29 @@
 
       function manejarTeclas(event) {
         if (event.type === "keydown") {
-          if (event.key === "ArrowLeft") izquierda = true;
-          if (event.key === "ArrowRight") derecha = true;
+          if (event.key === "ArrowLeft") {
+            izquierda = true;
+            if (jugador.animation() !== "movimientoIzquierda") {
+              jugador.animation("movimientoIzquierda"); 
+              jugador.start(); 
+            }
+          }
+          if (event.key === "ArrowRight") {
+            derecha = true;
+            if (jugador.animation() !== "movimientoDerecha") {
+              jugador.animation("movimientoDerecha"); 
+              jugador.start(); 
+            }
+          }
         } else if (event.type === "keyup") {
           if (event.key === "ArrowLeft") izquierda = false;
           if (event.key === "ArrowRight") derecha = false;
+
+          // Cambiar a animación "idle" si no se presiona ninguna tecla
+          if (!izquierda && !derecha && jugador.animation() !== "quieto") {
+            jugador.animation("quieto"); // Cambia a "idle"
+            jugador.start(); // Inicia la animación "idle"
+          }
         }
       }
 
