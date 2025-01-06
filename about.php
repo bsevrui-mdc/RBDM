@@ -180,11 +180,11 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Imagenes de muestra para los géneros</td>
-                                    <td>eleccionGenero.php</td>
-                                    <td>Roldán Campos, Rafael</td>
-                                    <td>Generadas con IA</td>
-                                    <td>Generadas con IA</td>
+                                    <td></td>
+                                    <td>admin.php</td>
+                                    <td>Castillo Miranda, Darío J.</td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Fotografías del reparto</td>
@@ -194,19 +194,84 @@
                                     <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
                                 </tr>
                                 <tr>
+                                    <td>Trailer</td>
+                                    <td>detalles.php</td>
+                                    <td>Roldán Campos, Rafael</td>
+                                    <td>Búsqueda en YouTube</td>
+                                    <td><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="text-decoration-none">CC BY-NC-SA 4.0</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Imagenes para las películas (exceptuando Descarrilados)</td>
+                                    <td>topPeliculas.php</td>
+                                    <td>Roldán Campos, Rafael</td>
+                                    <td>Búsqueda en Google</td>
+                                    <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Imagen usada para Descarrilados</td>
+                                    <td>topPeliculas.php</td>
+                                    <td>Roldán Campos, Rafael</td>
+                                    <td>Generada con IA</td>
+                                    <td>Generada con IA</td>
+                                </tr>
+                                <tr>
+                                    <td>Imagenes para las series (exceptuando FROM)</td>
+                                    <td>topSeries.php</td>
+                                    <td>Roldán Campos, Rafael</td>
+                                    <td>Búsqueda en Google</td>
+                                    <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Imagen usada para FROM</td>
+                                    <td>topSeries.php</td>
+                                    <td>Roldán Campos, Rafael</td>
+                                    <td>Generada con IA</td>
+                                    <td>Generada con IA</td>
+                                </tr>
+                                <tr>
+                                    <td>Imagenes para las series/peliculas</td>
+                                    <td>topGenero.php</td>
+                                    <td>Roldán Campos, Rafael</td>
+                                    <td>Generadas con IA</td>
+                                    <td>Generadas con IA</td>
+                                </tr>
+                                <tr>
+                                    <td>Imagenes de muestra para los géneros</td>
+                                    <td>eleccionGenero.php</td>
+                                    <td>Roldán Campos, Rafael</td>
+                                    <td>Generadas con IA</td>
+                                    <td>Generadas con IA</td>
+                                </tr>
+                                <tr>
                                     <td>Imagenes (todas)</td>
                                     <td>index.php</td>
-                                    <td>Roldan Luque, Mariano Jesus</td>
+                                    <td>Roldan Luque, Mariano Jesús</td>
                                     <td>Búsqueda en Google</td>
                                     <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
                                 </tr>
                                 <tr>
                                     <td>Imagenes (todas)</td>
                                     <td>usuario.php</td>
-                                    <td>Roldan Luque, Mariano Jesus</td>
+                                    <td>Roldan Luque, Mariano Jesús</td>
                                     <td>Búsqueda en Google</td>
                                     <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
                                 </tr>
+                                <tr>
+                                    <td>Imagenes usadas en el juego de memoria</td>
+                                    <td>juegoMemoria.html</td>
+                                    <td>Sevilla Ruiz, Borja</td>
+                                    <td>Búsqueda en Google</td>
+                                    <td><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="text-decoration-none">CC BY-SA 4.0</a></td>
+                                </tr>
+                                <!--
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                -->
                             </tbody>
                         </table>
                     </div>
