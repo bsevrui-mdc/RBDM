@@ -31,6 +31,8 @@
                 .carta {
                     cursor: pointer;
                     position: relative;
+                    perspective: 800px;
+                    transform-style: preserve-3d;
                     height: calc(100% / 4 - 10px);
                     width: calc(100% / 4 - 10px);
 
@@ -40,6 +42,8 @@
                         position: absolute;
                         background-color: $divTransparency;
                         border-radius: 7px;
+                        backface-visibility: hidden;
+                        transition: transform 0.25s linear;
                     }
 
                     .front-view span {
@@ -53,6 +57,10 @@
                             max-width: 45px;
                         }
                     }
+                }
+
+                .carta:hover .front-view {
+                    transform: rotateY(180deg);
                 }
 
                 .carta:hover .back-view {
