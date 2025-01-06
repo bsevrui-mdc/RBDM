@@ -57,7 +57,7 @@
                             <a class="text-decoration-none miembros" href="./juegoRafa.html">Roldán Campos, Rafael</a>
                         </div>
                         <div class="d-flex justify-content-center py-2">
-                            <a class="text-decoration-none miembros" href="">Roldán Luque, Mariano Jesús</a>
+                            <a class="text-decoration-none miembros" href="./juegoMariano.html">Roldán Luque, Mariano Jesús</a>
                         </div>
                         <div class="d-flex justify-content-center py-2">
                             <a class="text-decoration-none miembros" href="./juegoMemoria.html">Sevilla Ruiz, Borja</a>
