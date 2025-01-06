@@ -273,13 +273,6 @@
                                 <td>Generadas con IA</td>
                             </tr>
                             <tr>
-                                <td>Imagenes usadas en el juego de memoria</td>
-                                <td>juegoMemoria.html</td>
-                                <td>Sevilla Ruiz, Borja</td>
-                                <td>Búsqueda en Google</td>
-                                <td><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="text-decoration-none">CC BY-SA 4.0</a></td>
-                            </tr>
-                            <tr>
                                 <td>Imagenes usadas en el juego de preguntas (todas excepto from_netflix.jpg y descarrilados.png)</td>
                                 <td>juegoMariano.html</td>
                                 <td>Roldan Luque, Mariano Jesús</td>
@@ -293,15 +286,22 @@
                                 <td>Generadas con IA</td>
                                 <td>Generadas con IA</td>
                             </tr>
+                            <tr>
+                                <td>Imagenes usadas en el juego de memoria</td>
+                                <td>juegoMemoria.html</td>
+                                <td>Sevilla Ruiz, Borja</td>
+                                <td>Búsqueda en Google</td>
+                                <td><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="text-decoration-none">CC BY-SA 4.0</a></td>
+                            </tr>
                             <!--
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                -->
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            -->
                         </tbody>
                     </table>
                 </div>
