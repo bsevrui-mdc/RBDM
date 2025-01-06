@@ -10,8 +10,8 @@
         min-height: 100vh;
 
         .wrapper {
-            height: 400px;
-            width: 400px;
+            height: 600px;
+            width: 600px;
             background-color: $divTransparency;
             border-radius: 10px;
             padding: 25px !important;
@@ -39,6 +39,8 @@
                     .view {
                         width: 100%;
                         height: 100%;
+                        user-select: none;
+                        pointer-events: none;
                         position: absolute;
                         background-color: $divTransparency;
                         border-radius: 7px;
@@ -59,12 +61,40 @@
                     }
                 }
 
-                .carta:hover .front-view {
-                    transform: rotateY(180deg);
+                .carta.flip {
+                    .front-view {
+                        transform: rotateY(180deg);
+                    }
+
+                    .back-view {
+                        transform: rotateY(0);
+                    }
                 }
 
-                .carta:hover .back-view {
-                    transform: rotateY(0);
+                .carta.shake {
+                    animation: shake 0.35s ease-in-out;
+                }
+
+                @keyframes shake {
+                    0%, 100% {
+                        transform: translateX(0);
+                    }
+
+                    20% {
+                        transform: translateX(-13px);
+                    }
+
+                    40% {
+                        transform: translateX(13px);
+                    }
+
+                    60% {
+                        transform: translateX(-8px);
+                    }
+
+                    80% {
+                        transform: translateX(8px);
+                    }
                 }
             }
         }
