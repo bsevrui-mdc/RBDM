@@ -47,7 +47,11 @@
 		case "/detalles.php":
 			$CURRENT_PAGE = "details";
 			$PAGE_TITLE = "Detalles - RBDM";
-			break;	
+			break;
+		case "/juegoMemoria.php":
+			$CURRENT_PAGE = "juegoMemoria";
+			$PAGE_TITLE = "Juego Memoria - RBDM";
+			break;
 		default:
 			$CURRENT_PAGE = "index";
 			$PAGE_TITLE = "GCM - RBDM";
