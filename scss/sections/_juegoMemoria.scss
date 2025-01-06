@@ -10,8 +10,8 @@
         min-height: 100vh;
 
         .wrapper {
-            height: 600px;
-            width: 600px;
+            height: 400px;
+            width: 400px;
             background-color: $divTransparency;
             border-radius: 10px;
             padding: 25px !important;
@@ -30,12 +30,14 @@
 
                 .carta {
                     cursor: pointer;
+                    position: relative;
                     height: calc(100% / 4 - 10px);
                     width: calc(100% / 4 - 10px);
 
                     .view {
                         width: 100%;
                         height: 100%;
+                        position: absolute;
                         background-color: $divTransparency;
                         border-radius: 7px;
                     }
@@ -45,12 +47,16 @@
                     }
 
                     .back-view {
-                        display: none;
+                        transform: rotateY(-180deg);
 
                         img {
                             max-width: 45px;
                         }
                     }
+                }
+
+                .carta:hover .back-view {
+                    transform: rotateY(0);
                 }
             }
         }
