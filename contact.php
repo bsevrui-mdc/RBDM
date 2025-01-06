@@ -51,7 +51,7 @@
                     <div class="my-3 content">
                         <h3 class="text-center pt-lg-4">Miembros del equipo</h3>
                         <div class="d-flex justify-content-center py-2">
-                            <a class="text-decoration-none miembros" href="">Castillo Miranda, Darío J.</a>
+                            <a class="text-decoration-none miembros" href="./juegoDario.html">Castillo Miranda, Darío J.</a>
                         </div>
                         <div class="d-flex justify-content-center py-2">
                             <a class="text-decoration-none miembros" href="./juegoRafa.html">Roldán Campos, Rafael</a>
