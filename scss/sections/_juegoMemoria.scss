@@ -1,100 +1,101 @@
-* {
+.juegoMemoria > * {
     margin: 0 !important;
     padding: 0 !important;
     box-sizing: border-box !important;
+}
 
-    body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
+.juegoMemoria body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 
-        .wrapper {
-            height: 600px;
-            width: 600px;
-            background-color: $divTransparency;
-            border-radius: 10px;
-            padding: 25px !important;
+    .wrapper {
+        height: 600px;
+        width: 600px;
+        background-color: $divTransparency;
+        border-radius: 10px;
+        padding: 25px !important;
 
-            .cards, .carta, .view {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+        .cards, .carta, .view {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cards {
+            padding-left: 0 !important;
+            height: 100%;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .carta {
+                cursor: pointer;
+                position: relative;
+                perspective: 800px;
+                transform-style: preserve-3d;
+                height: calc(100% / 4 - 10px);
+                width: calc(100% / 4 - 10px);
+
+                .view {
+                    width: 100%;
+                    height: 100%;
+                    user-select: none;
+                    pointer-events: none;
+                    position: absolute;
+                    background-color: $divTransparency;
+                    border-radius: 7px;
+                    backface-visibility: hidden;
+                    transition: transform 0.25s linear;
+                }
+
+                .front-view span {
+                    font-size: $font-family-calibri-size-juegoMemoria;
+                }
+
+                .back-view {
+                    transform: rotateY(-180deg);
+
+                    img {
+                        max-width: 45px;
+                    }
+                }
             }
 
-            .cards {
-                height: 100%;
-                width: 100%;
-                flex-wrap: wrap;
-                justify-content: space-between;
-
-                .carta {
-                    cursor: pointer;
-                    position: relative;
-                    perspective: 800px;
-                    transform-style: preserve-3d;
-                    height: calc(100% / 4 - 10px);
-                    width: calc(100% / 4 - 10px);
-
-                    .view {
-                        width: 100%;
-                        height: 100%;
-                        user-select: none;
-                        pointer-events: none;
-                        position: absolute;
-                        background-color: $divTransparency;
-                        border-radius: 7px;
-                        backface-visibility: hidden;
-                        transition: transform 0.25s linear;
-                    }
-
-                    .front-view span {
-                        font-size: $font-family-calibri-size-juegoMemoria;
-                    }
-
-                    .back-view {
-                        transform: rotateY(-180deg);
-
-                        img {
-                            max-width: 45px;
-                        }
-                    }
+            .carta.flip {
+                .front-view {
+                    transform: rotateY(180deg);
                 }
 
-                .carta.flip {
-                    .front-view {
-                        transform: rotateY(180deg);
-                    }
+                .back-view {
+                    transform: rotateY(0);
+                }
+            }
 
-                    .back-view {
-                        transform: rotateY(0);
-                    }
+            .carta.shake {
+                animation: shake 0.35s ease-in-out;
+            }
+
+            @keyframes shake {
+                0%, 100% {
+                    transform: translateX(0);
                 }
 
-                .carta.shake {
-                    animation: shake 0.35s ease-in-out;
+                20% {
+                    transform: translateX(-13px);
                 }
 
-                @keyframes shake {
-                    0%, 100% {
-                        transform: translateX(0);
-                    }
+                40% {
+                    transform: translateX(13px);
+                }
 
-                    20% {
-                        transform: translateX(-13px);
-                    }
+                60% {
+                    transform: translateX(-8px);
+                }
 
-                    40% {
-                        transform: translateX(13px);
-                    }
-
-                    60% {
-                        transform: translateX(-8px);
-                    }
-
-                    80% {
-                        transform: translateX(8px);
-                    }
+                80% {
+                    transform: translateX(8px);
                 }
             }
         }
