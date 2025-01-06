@@ -8,7 +8,7 @@
         <?php include("includes/navbar.php"); ?>
         <main class="container-fluid contact">
             <div class="row">
-                <div id="enlacesContacto" class="col-lg-6">
+                <div id="enlacesContacto" class="col-lg-6 mt-3">
                     <div class="my-3 content">
                         <h3 class="text-center pt-lg-4">Encuéntranos en Redes Sociales</h3>
                         <div class="d-flex justify-content-center py-3">
@@ -28,7 +28,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="formularioContacto" class="col-lg-6 mt-2 mt-lg-0">
+                <div id="formularioContacto" class="col-lg-6 mt-3">
                     <div class="my-3 content">
                         <h3 class="text-center pt-lg-4">¿Necesitas contacto más directo?</h3>
                         <h3 class="text-center pb-lg-3">Mándanos un Email</h3>
@@ -45,6 +45,23 @@
                                 <button type="submit" class="btn btn-primary">Enviar</button>
                             </div>
                         </form>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="my-3 content">
+                        <h3 class="text-center pt-lg-4">Miembros del equipo</h3>
+                        <div class="d-flex justify-content-center py-2">
+                            <a class="text-decoration-none miembros" href="">Castillo Miranda, Darío J.</a>
+                        </div>
+                        <div class="d-flex justify-content-center py-2">
+                            <a class="text-decoration-none miembros" href="./juegoRafa.html">Roldán Campos, Rafael</a>
+                        </div>
+                        <div class="d-flex justify-content-center py-2">
+                            <a class="text-decoration-none miembros" href="">Roldán Luque, Mariano Jesús</a>
+                        </div>
+                        <div class="d-flex justify-content-center py-2">
+                            <a class="text-decoration-none miembros" href="./juegoMemoria.html">Sevilla Ruiz, Borja</a>
+                        </div>
                     </div>
                 </div>
             </div>
