@@ -7,7 +7,7 @@
   
     .imgAdmin {
       border-radius: 50%;
-  
+      
       @include media-breakpoint-down(lg) {
         width: 100px;
         height: auto;
@@ -35,6 +35,11 @@
   
     .imgFilms {
       width: 10%;
+    }
+    
+    .imgTable{
+      width: auto;
+      height: 100px;
     }
   
     .color-trash {

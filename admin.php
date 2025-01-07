@@ -12,7 +12,7 @@
                 <div class="col-lg-2">
                     <div class="row text-center">
                         <div class="col-3 col-lg-12">
-                            <img src="https://placehold.co/150x150" alt="" class="imgAdmin">
+                            <img src="../assets/img/admin.jpg" alt="" class="imgAdmin">
                         </div>
                         <div class="col-9 d-lg-none d-block align-content-center">
                             <div class="row justify-content-around">
@@ -23,9 +23,9 @@
                         </div>
                         <div class="col d-none d-lg-block">
                             <div class="display-3 nameAdmin">admin</div>
-                            <p>nombre</p>
-                            <p>apll1</p>
-                            <p>apll2</p>
+                            <p>Masias</p>
+                            <p>Pajas</p>
+                            <p>Agusto</p>
                         </div>
                         <div class="col d-none d-lg-block">
                             <form action="" method="post" class="d-flex flex-column">
@@ -57,12 +57,12 @@
                         <div class="col">
                             <?php include("includes/table.php"); ?>
                             <div class="row d-lg-none mb-3">
-                                <div class="col-4">
-                                    <img src="https://placehold.co/500" class="img-fluid">
+                                <div class="col-4 text-center">
+                                    <img src="../assets/img/peliculas/avatar.jpg" class="img-fluid imgTable">
                                 </div>
                                 <div class="col-6 d-flex flex-column justify-content-center text-center">
-                                    <p>Fallguys</p>
-                                    <p>Infantil</p>
+                                    <p>Avatar</p>
+                                    <p>Aventura</p>
                                 </div>
                                 <div class="col d-flex flex-column justify-content-around align-items-center">
                                     <i class="fa-solid fa-pen"></i>
@@ -71,10 +71,23 @@
                             </div>
                             <div class="row d-lg-none mb-3">
                                 <div class="col-4">
-                                    <img src="https://placehold.co/500" class="img-fluid">
+                                    <img src="../assets/img/peliculas/chucky.jpg" class="img-fluid imgTable">
                                 </div>
                                 <div class="col-6 d-flex flex-column justify-content-center text-center">
-                                    <p>Fallguys</p>
+                                    <p>Chucky</p>
+                                    <p>Terror</p>
+                                </div>
+                                <div class="col d-flex flex-column justify-content-around align-items-center">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <i class="fa-solid fa-trash-can color-trash "></i>
+                                </div>
+                            </div>
+                            <div class="row d-lg-none mb-3">
+                                <div class="col-4">
+                                    <img src="../assets/img/peliculas/coco.jpg" class="img-fluid imgTable">
+                                </div>
+                                <div class="col-6 d-flex flex-column justify-content-center text-center">
+                                    <p>Coco</p>
                                     <p>Infantil</p>
                                 </div>
                                 <div class="col d-flex flex-column justify-content-around align-items-center">
@@ -84,24 +97,11 @@
                             </div>
                             <div class="row d-lg-none mb-3">
                                 <div class="col-4">
-                                    <img src="https://placehold.co/500" class="img-fluid">
+                                    <img src="../assets/img/peliculas/descarrilados.png" class="img-fluid imgTable">
                                 </div>
                                 <div class="col-6 d-flex flex-column justify-content-center text-center">
-                                    <p>Fallguys</p>
-                                    <p>Infantil</p>
-                                </div>
-                                <div class="col d-flex flex-column justify-content-around align-items-center">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i class="fa-solid fa-trash-can color-trash "></i>
-                                </div>
-                            </div>
-                            <div class="row d-lg-none mb-3">
-                                <div class="col-4">
-                                    <img src="https://placehold.co/500" class="img-fluid">
-                                </div>
-                                <div class="col-6 d-flex flex-column justify-content-center text-center">
-                                    <p>Fallguys</p>
-                                    <p>Infantil</p>
+                                    <p>Descarrilados</p>
+                                    <p>Comedia</p>
                                 </div>
                                 <div class="col d-flex flex-column justify-content-around align-items-center">
                                     <i class="fa-solid fa-pen"></i>
