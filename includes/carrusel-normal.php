@@ -9,30 +9,18 @@
             <img src="../assets/img/peliculas/ironman.jpg" class="img-fluid">
             <div class="carousel-caption">
                 <h1>Iron Man</h1>
-                <p class="d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Iure, rerum? Adipisci ut
-                    laboriosam ipsam repellendus maiores enim velit nostrum tenetur? Facilis
-                    quibusdam, delectus odit tenetur laudantium molestiae accusamus quisquam at.</p>
             </div>
         </div>
         <div class="carousel-item">
             <img src="../assets/img/Series/la_casa_de_papel.jpg" class="img-fluid">
             <div class="carousel-caption">
                 <h1>La casa de papel</h1>
-                <p class="d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Iure, rerum? Adipisci ut
-                    laboriosam ipsam repellendus maiores enim velit nostrum tenetur? Facilis
-                    quibusdam, delectus odit tenetur laudantium molestiae accusamus quisquam at.</p>
             </div>
         </div>
         <div class="carousel-item">
             <img src="../assets/img/Series/from_netflix.jpg" class="img-fluid">
             <div class="carousel-caption">
                 <h1>From</h1>
-                <p class="d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Iure, rerum? Adipisci ut
-                    laboriosam ipsam repellendus maiores enim velit nostrum tenetur? Facilis
-                    quibusdam, delectus odit tenetur laudantium molestiae accusamus quisquam at.</p>
             </div>
         </div>
     </div>
