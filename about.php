@@ -261,49 +261,49 @@
                             <tr>
                                 <td>bombita.jpg y estrellita.jpg</td>
                                 <td>juegoMariano.html</td>
-                                <td>Roldan Campos, Rafael</td>
+                                <td>Roldán Campos, Rafael</td>
                                 <td>Búsqueda en Google</td>
                                 <td><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="text-decoration-none">CC BY-SA 4.0</a></td>
                             </tr>
                             <tr>
                                 <td>Imagenes (todas excepto from_netflix.jpg y descarrilados.png)</td>
                                 <td>index.php</td>
-                                <td>Roldan Luque, Mariano Jesús</td>
+                                <td>Roldán Luque, Mariano Jesús</td>
                                 <td>Búsqueda en Google</td>
                                 <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
                             </tr>
                             <tr>
                                 <td>from_netflix.jpg y descarrilados.png</td>
                                 <td>index.php</td>
-                                <td>Roldan Luque, Mariano Jesús</td>
+                                <td>Roldán Luque, Mariano Jesús</td>
                                 <td>Generadas con IA</td>
                                 <td>Generadas con IA</td>
                             </tr>
                             <tr>
                                 <td>Imagenes (todas excepto from_netflix.jpg y descarrilados.png)</td>
                                 <td>usuario.php</td>
-                                <td>Roldan Luque, Mariano Jesús</td>
+                                <td>Roldán Luque, Mariano Jesús</td>
                                 <td>Búsqueda en Google</td>
                                 <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
                             </tr>
                             <tr>
                                 <td>from_netflix.jpg</td>
                                 <td>usuario.php</td>
-                                <td>Roldan Luque, Mariano Jesús</td>
+                                <td>Roldán Luque, Mariano Jesús</td>
                                 <td>Generadas con IA</td>
                                 <td>Generadas con IA</td>
                             </tr>
                             <tr>
                                 <td>Imagenes usadas en el juego de preguntas (todas excepto from_netflix.jpg y descarrilados.png)</td>
                                 <td>juegoMariano.html</td>
-                                <td>Roldan Luque, Mariano Jesús</td>
+                                <td>Roldán Luque, Mariano Jesús</td>
                                 <td>Búsqueda en Google</td>
                                 <td><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="text-decoration-none">CC BY-SA 4.0</a></td>
                             </tr>
                             <tr>
                                 <td>Imagenes usadas en el juego de preguntas (from_netflix.jpg y descarrilados.png)</td>
                                 <td>juegoMariano.html</td>
-                                <td>Roldan Luque, Mariano Jesús</td>
+                                <td>Roldán Luque, Mariano Jesús</td>
                                 <td>Generadas con IA</td>
                                 <td>Generadas con IA</td>
                             </tr>
