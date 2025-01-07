@@ -261,7 +261,7 @@
                             <tr>
                                 <td>bombita.jpg y estrellita.jpg</td>
                                 <td>juegoMariano.html</td>
-                                <td>Roldan Luque, Mariano Jesús</td>
+                                <td>Roldan Campos, Rafael</td>
                                 <td>Búsqueda en Google</td>
                                 <td><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="text-decoration-none">CC BY-SA 4.0</a></td>
                             </tr>
