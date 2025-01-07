@@ -260,7 +260,7 @@
                             </tr>
                             <tr>
                                 <td>bombita.jpg y estrellita.jpg</td>
-                                <td>juegoMariano.html</td>
+                                <td>juegoRafa.html</td>
                                 <td>Roldán Campos, Rafael</td>
                                 <td>Búsqueda en Google</td>
                                 <td><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="text-decoration-none">CC BY-SA 4.0</a></td>
