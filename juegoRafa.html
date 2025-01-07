@@ -104,7 +104,7 @@
 
       function generarCirculos() {
         const imageObj = new Image();
-        imageObj.src = "./assets/img/mina.png";
+        imageObj.src = "./assets/img/bombita.png";
 
         imageObj.onload = function () {
           const circulo = new Konva.Image({
@@ -225,10 +225,10 @@
           if (event.key === "ArrowLeft") izquierda = false;
           if (event.key === "ArrowRight") derecha = false;
 
-          // Cambiar a animación "idle" si no se presiona ninguna tecla
+          
           if (!izquierda && !derecha && jugador.animation() !== "quieto") {
-            jugador.animation("quieto"); // Cambia a "idle"
-            jugador.start(); // Inicia la animación "idle"
+            jugador.animation("quieto"); 
+            jugador.start(); 
           }
         }
       }
