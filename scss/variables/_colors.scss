@@ -4,6 +4,8 @@ $white: #FFFFFF;
 $red: #FF0000;
 $black: #000000;
 $info: #3D3D3D;
+$lightGrey: #ccc;
+$lightGrey2: #999;
 
 $divTransparency: rgba(255, 255, 255, 0.1);
 $divConFondoOscuro: rgba(0,0,0,0.8);
@@ -13,3 +15,5 @@ $statusCurrentlyWatching: #1565C0;
 $statusDropped: #FF0000;
 $statusPlanToWatch: #BEBEBE;
 $statusCompleted: #00FF00;
+
+$grey: $statusPlanToWatch;

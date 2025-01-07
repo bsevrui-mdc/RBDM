@@ -1,0 +1,78 @@
+.videoplayer {
+  position: relative;
+  display: block;
+  video {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .controls {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    bottom: 0;
+    background-color: $white; // Default background-color
+    .progress {
+      background-color: $info; // Default background-color
+      .progress-bar {
+        transition: none !important;
+        background-color: $grey; // Default background-color
+      }
+    }
+    &.controls-dark {
+      background-color: $black; // Default background-color
+      .fa-solid {
+        color: $secondary;
+      }
+      .progress {
+        background-color: $lightGrey; // Default background-color
+        .progress-bar {
+          background-color: $lightGrey2; // Default background-color
+        }
+      }
+    }
+    &.auto-hide {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      transition-delay: 0.5s;
+    }
+    button > *,
+    .btn > * {
+      pointer-events: none !important;
+    }
+  }
+  .overlay {
+    position: absolute;
+    z-index: 300;
+    top: 0;
+    left: 0;
+    .title {
+      font-size: inherit;
+      color: white;
+      padding: 0.5rem;
+      font-weight: bold;
+    }
+  }
+  .dropup-volume {
+    position: absolute !important;
+    bottom: calc(100% + 5px) !important;
+    padding: 0.75rem 1rem;
+    transform: none !important;
+    min-width: inherit;
+    .form-range {
+      -webkit-appearance: slider-vertical;
+      width: 1rem !important;
+      height: 200px !important;
+    }
+  }
+  &:hover {
+    .controls.auto-hide {
+      opacity: 1;
+    }
+  }
+}
+
+.tooltip {
+  z-index: 1400;
+}

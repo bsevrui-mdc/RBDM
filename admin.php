@@ -23,8 +23,8 @@
                         </div>
                         <div class="col d-none d-lg-block">
                             <div class="display-3 nameAdmin">admin</div>
-                            <p>Masias</p>
-                            <p>Pajas</p>
+                            <p>Josep Maria</p>
+                            <p>Gonzales</p>
                             <p>Agusto</p>
                         </div>
                         <div class="col d-none d-lg-block">

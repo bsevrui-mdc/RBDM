@@ -31,7 +31,7 @@
                 <div class="col-lg-9 px-5">
                     <div class="row">
                         <div class="col text-start py-2 px-2">
-                            
+
                             <h2>sinopsis</h2>
                         </div>
                     </div>
@@ -52,8 +52,28 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <div class="ratio ratio-16x9">
-                        <video src="./assets/video/trailer.mp4"></video>
+                    <div class="videoplayer" id="player-1">
+                        <div class="ratio ratio-16x9 bg-dark">
+                            <video class="video" src="assets/video/video.mp4"></video>
+                            <!--La barra de progreso de reproducción funciona solo cuando el video proviene de un enlace y no de un fichero local-->
+                            <!--<video class="video" src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"></video>-->
+                        </div>
+                        <div class="controls controls-dark bg-primary">
+                            <button class="btn btn-lg btn-video-playpause" data-bs-toggle="tooltip" title="Play Video"
+                                type="button"><i class="fa-solid fa-play"></i><i class="fa-solid fa-pause d-none"></i></button>
+                            <div class="px-1 w-100">
+                                <div class="progress w-100">
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                            <button class="btn btn-lg btn-video-fullscreen"><i class="fa-solid fa-maximize"></i></button>
+                            <div class="dropup">
+                                <button class="btn btn-lg btn-video-volume" data-bs-toggle="dropdown" title="Volume"><i class="fa-solid fa-volume-low"></i></button>
+                                <div class="dropdown-menu dropdown-menu-end dropup-volume dropdown-menu-dark bg-primary">
+                                    <input class="form-range form-range-volume" type="range">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -129,6 +149,8 @@
         </div>
     </main>
     <?php include("includes/footer.php"); ?>
+    <script src="./js/videoplayer.js"></script>
+    <script src="./js/controlVideos.js"></script>
 </body>
 
 </html>
