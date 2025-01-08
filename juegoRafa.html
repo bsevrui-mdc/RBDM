@@ -20,6 +20,10 @@
       <button id="btncomenzar" onclick="cargaJuego();">Comenzar</button
       ><br /><br />
       <div id="vidas">Vidas: 3</div>
+      <p>
+        Perderás vidas al tocar una bomba o al dejar caer una estrella hasta el
+        fondo. Si consigues 20 puntos ganas
+      </p>
     </div>
 
     <script>
@@ -55,32 +59,24 @@
 
         const imageObj = new Image();
         imageObj.src =
-        "https://opengameart.org/sites/default/files/styles/medium/public/cat_3.png";
+          "https://opengameart.org/sites/default/files/styles/medium/public/cat_3.png";
 
         imageObj.onload = function () {
           jugador = new Konva.Sprite({
             x: stage.width() / 2 - 50,
             y: stage.height() - 100,
             image: imageObj,
-            width: 64, 
-            height: 64, 
+            width: 64,
+            height: 64,
             animation: "idle",
             animations: {
-              quieto: [
-                 0, 200, 50, 50
-              ],
+              quieto: [0, 200, 50, 50],
               movimientoDerecha: [
-                0, 0, 50, 50, 
-                50, 0, 50, 50, 
-                100, 0, 50, 50,
-                150, 0, 50, 50 
+                0, 0, 50, 50, 50, 0, 50, 50, 100, 0, 50, 50, 150, 0, 50, 50,
               ],
-              movimientoIzquierda:[
-                0, 50, 50, 50, 
-                50, 50, 50, 50, 
-                100, 50, 50, 50,
-                150, 50, 50, 50 
-              ]
+              movimientoIzquierda: [
+                0, 50, 50, 50, 50, 50, 50, 50, 100, 50, 50, 50, 150, 50, 50, 50,
+              ],
             },
             frameRate: 10,
             frameIndex: 0,
@@ -88,7 +84,7 @@
 
           layer.add(jugador);
           jugador.start();
-          jugador.animation("quieto"); 
+          jugador.animation("quieto");
         };
 
         window.addEventListener("keydown", manejarTeclas);
@@ -142,7 +138,6 @@
       }
 
       function animarJuego() {
-        
         if (izquierda && jugador.x() > 0) {
           jugador.x(jugador.x() - 10);
         }
@@ -150,7 +145,6 @@
           jugador.x(jugador.x() + 10);
         }
 
-        
         circulos.forEach((circulo, index) => {
           circulo.y(circulo.y() + circulo.getAttr("velocidad"));
           if (circulo.y() > stage.height()) {
@@ -168,14 +162,13 @@
             circulos.splice(index, 1);
             vidas--;
             document.getElementById("vidas").textContent = "Vidas: " + vidas;
-            if(vidas == 0){
+            if (vidas == 0) {
               alert("Juego terminado");
-              
+              location.reload();
             }
           }
         });
 
-       
         estrellas.forEach((estrella, index) => {
           estrella.y(estrella.y() + estrella.getAttr("velocidad"));
 
@@ -184,8 +177,9 @@
             estrellas.splice(index, 1);
             vidas--;
             document.getElementById("vidas").textContent = "Vidas: " + vidas;
-            if(vidas == 0){
+            if (vidas == 0) {
               alert("Juego terminado");
+              location.reload();
             }
           }
 
@@ -197,6 +191,10 @@
             estrella.destroy();
             estrellas.splice(index, 1);
             actualizarPuntuacion();
+            if (puntuacion >= 20) {
+              alert("Has ganado");
+              location.reload();
+            }
           }
         });
 
@@ -210,25 +208,24 @@
           if (event.key === "ArrowLeft") {
             izquierda = true;
             if (jugador.animation() !== "movimientoIzquierda") {
-              jugador.animation("movimientoIzquierda"); 
-              jugador.start(); 
+              jugador.animation("movimientoIzquierda");
+              jugador.start();
             }
           }
           if (event.key === "ArrowRight") {
             derecha = true;
             if (jugador.animation() !== "movimientoDerecha") {
-              jugador.animation("movimientoDerecha"); 
-              jugador.start(); 
+              jugador.animation("movimientoDerecha");
+              jugador.start();
             }
           }
         } else if (event.type === "keyup") {
           if (event.key === "ArrowLeft") izquierda = false;
           if (event.key === "ArrowRight") derecha = false;
 
-          
           if (!izquierda && !derecha && jugador.animation() !== "quieto") {
-            jugador.animation("quieto"); 
-            jugador.start(); 
+            jugador.animation("quieto");
+            jugador.start();
           }
         }
       }
