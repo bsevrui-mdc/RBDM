@@ -167,7 +167,7 @@
                     <p>Esta Política de Privacidad fue actualizada para adaptarse al Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos (RGPD) y a la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales.</p>
                     <p>Este documento de Política de Privacidad de un sitio web ha sido creado mediante el generador de plantilla de política de privacidad web gratis online el día 03/12/2024.</p>
                     <h1 class="text-center">Términos de Licencia del Sitio Web</h1>
-                    <p>El Sitio Web (GCM - RBDM) usa como licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="text-decoration-none">Creative Commons BY-NC-SA 4.0</a> que establece tres parámetros principales Attribution (BY), Non-Commercial (NC) y Share-Alike (SA).</p>
+                    <p>El Sitio Web (GCM - RBDM) usa como licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="text-decoration-none">Creative Commons BY-NC-SA 4.0</a> que establece tres parámetros principales Attribution (BY), Non-Commercial (NC) y Share-Alike (SA).</p>
                     <h1 class="text-center">Términos de Licencia de los recuros multimedia</h1>
                     <div class="table-responsive">
                         <table class="table table-dark table-striped align-middle">
@@ -193,28 +193,28 @@
                                     <td>footer.php</td>
                                     <td>Castilla Miranda, Darío J.</td>
                                     <td>Búsqueda en Google</td>
-                                    <td><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="text-decoration-none">CC BY-NC-SA 4.0</a></td>
+                                    <td><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="text-decoration-none">CC BY-NC-SA 4.0</a></td>
                                 </tr>
                                 <tr>
                                     <td>Fotografías del reparto</td>
                                     <td>detalles.php</td>
                                     <td>Roldán Campos, Rafael</td>
                                     <td>Búsqueda en Google</td>
-                                    <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
+                                    <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" target="_blank" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
                                 </tr>
                                 <tr>
                                     <td>Trailer</td>
                                     <td>detalles.php</td>
                                     <td>Roldán Campos, Rafael</td>
                                     <td>Búsqueda en YouTube</td>
-                                    <td><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="text-decoration-none">CC BY-NC-SA 4.0</a></td>
+                                    <td><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="text-decoration-none">CC BY-NC-SA 4.0</a></td>
                                 </tr>
                                 <tr>
                                     <td>Imagenes para las películas (exceptuando Descarrilados)</td>
                                     <td>topPeliculas.php</td>
                                     <td>Roldán Campos, Rafael</td>
                                     <td>Búsqueda en Google</td>
-                                    <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
+                                    <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" target="_blank" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
                                 </tr>
                                 <tr>
                                     <td>Imagen usada para Descarrilados</td>
@@ -228,7 +228,7 @@
                                     <td>topSeries.php</td>
                                     <td>Roldán Campos, Rafael</td>
                                     <td>Búsqueda en Google</td>
-                                    <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
+                                    <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" target="_blank" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
                                 </tr>
                                 <tr>
                                     <td>Imagen usada para FROM</td>
@@ -263,14 +263,14 @@
                                     <td>juegoRafa.html</td>
                                     <td>Roldán Campos, Rafael</td>
                                     <td>Búsqueda en Google</td>
-                                    <td><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="text-decoration-none">CC BY-SA 4.0</a></td>
+                                    <td><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" class="text-decoration-none">CC BY-SA 4.0</a></td>
                                 </tr>
                                 <tr>
                                     <td>Imagenes (todas excepto from_netflix.jpg y descarrilados.png)</td>
                                     <td>index.php</td>
                                     <td>Roldán Luque, Mariano Jesús</td>
                                     <td>Búsqueda en Google</td>
-                                    <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
+                                    <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" target="_blank" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
                                 </tr>
                                 <tr>
                                     <td>from_netflix.jpg y descarrilados.png</td>
@@ -284,7 +284,7 @@
                                     <td>usuario.php</td>
                                     <td>Roldán Luque, Mariano Jesús</td>
                                     <td>Búsqueda en Google</td>
-                                    <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
+                                    <td><a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.en" target="_blank" class="text-decoration-none">CC BY-NC-ND 3.0</a></td>
                                 </tr>
                                 <tr>
                                     <td>from_netflix.jpg</td>
@@ -298,7 +298,7 @@
                                     <td>juegoMariano.html</td>
                                     <td>Roldán Luque, Mariano Jesús</td>
                                     <td>Búsqueda en Google</td>
-                                    <td><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="text-decoration-none">CC BY-SA 4.0</a></td>
+                                    <td><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" class="text-decoration-none">CC BY-SA 4.0</a></td>
                                 </tr>
                                 <tr>
                                     <td>Imagenes usadas en el juego de preguntas (from_netflix.jpg y descarrilados.png)</td>
@@ -312,7 +312,7 @@
                                     <td>juegoMemoria.html</td>
                                     <td>Sevilla Ruiz, Borja</td>
                                     <td>Búsqueda en Google</td>
-                                    <td><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="text-decoration-none">CC BY-SA 4.0</a></td>
+                                    <td><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" class="text-decoration-none">CC BY-SA 4.0</a></td>
                                 </tr>
                             </tbody>
                         </table>
