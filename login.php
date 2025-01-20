@@ -22,6 +22,9 @@
                         <div class="mb-3 d-flex justify-content-center">
                             <button type="submit" class="btn btn-primary">Iniciar</button>
                         </div>
+                        <div class="mb-3 d-flex justify-content-center">
+                            <button type="" class="btn btn-light"><i class="fa-brands fa-google me-2"></i>Continuar con Google</button>
+                        </div>
                     </form>
                     <div class="text-center pt-1">
                         <a href="" class="text-decoration-none pt-1">¿Has olvidado tu contraseña?</a>

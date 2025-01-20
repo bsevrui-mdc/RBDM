@@ -9,7 +9,7 @@
         <main class="container-fluid contact">
             <div class="row">
                 <div id="enlacesContacto" class="col-lg-6 mt-3">
-                    <div class="my-3 content">
+                    <div class="my-2 content">
                         <h3 class="text-center pt-lg-4">Encuéntranos en Redes Sociales</h3>
                         <div class="d-flex justify-content-center py-3">
                             <a class="text-decoration-none enlaces" href=""><i class="fa-brands fa-tiktok fa-3x mx-4"></i>@rbdm_gcm_TT</a>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div id="formularioContacto" class="col-lg-6 mt-3">
-                    <div class="my-3 content">
+                    <div class="my-2 content">
                         <h3 class="text-center pt-lg-4">¿Necesitas contacto más directo?</h3>
                         <h3 class="text-center pb-lg-3">Mándanos un Email</h3>
                         <form action="" method="POST" class="px-lg-4">
@@ -47,7 +47,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col mb-2">
                     <div class="my-3 content">
                         <h3 class="text-center pt-lg-4">Miembros del equipo</h3>
                         <div class="d-flex justify-content-center py-2">
