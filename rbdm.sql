@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-01-2025 a las 11:09:37
+-- Tiempo de generación: 21-01-2025 a las 21:11:35
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -95,14 +95,14 @@ INSERT INTO `lista` (`id_contenido`, `id_usuario`, `nota`, `estado`) VALUES
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
   `correo` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
+  `clave` varchar(255) NOT NULL,
   `nombre` varchar(255) NOT NULL,
   `apellidos` varchar(255) NOT NULL,
   `fecha` date NOT NULL,
   `pais` varchar(100) NOT NULL,
   `codigo_postal` varchar(5) NOT NULL,
   `telefono` varchar(20) NOT NULL,
-  `tipo` varchar(100) NOT NULL,
+  `tipo` varchar(100) NOT NULL DEFAULT 'cliente',
   `imagen` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -110,9 +110,10 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `correo`, `password`, `nombre`, `apellidos`, `fecha`, `pais`, `codigo_postal`, `telefono`, `tipo`, `imagen`) VALUES
+INSERT INTO `usuario` (`id`, `correo`, `clave`, `nombre`, `apellidos`, `fecha`, `pais`, `codigo_postal`, `telefono`, `tipo`, `imagen`) VALUES
 (1, 'admin@gmail.com', '$2y$10$0FvvHAVZHMgh0jXmL0vmPeaJ8yPdy7pSzhrvuIqphHDeXCa2PxWAW', 'Administrador', 'Velez Campos', '2005-01-06', 'España', '14900', '+34 600000000', 'admin', ''),
-(2, 'prueba@gmail.com', '$2y$10$0FvvHAVZHMgh0jXmL0vmPeaJ8yPdy7pSzhrvuIqphHDeXCa2PxWAW', 'Manolo', 'Perez Quintana', '2015-01-13', 'España', '14900', '+34 600000001', 'invitado', '');
+(2, 'prueba@gmail.com', '$2y$10$0FvvHAVZHMgh0jXmL0vmPeaJ8yPdy7pSzhrvuIqphHDeXCa2PxWAW', 'Manolo', 'Perez Quintana', '2015-01-13', 'España', '14900', '+34 600000001', 'cliente', ''),
+(4, 'prueba@prueba.com', '$2y$10$Z.56eeNbgzkh82OU9iSiM.nZGjzS7W3mVYBQXdQRuv7jdly/9uICm', 'prueba', 'registro', '2025-01-21', 'Spain', '14900', '623451789', 'cliente', './assets/img/profilePictures1737490237-usuario.jpg');
 
 --
 -- Índices para tablas volcadas
@@ -165,7 +166,7 @@ ALTER TABLE `contenido`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas
