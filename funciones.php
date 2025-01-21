@@ -27,11 +27,4 @@
             echo $ex->getCode()."<br>".$ex->getMessage();
         }
     }
-
-    function cerrarSesion() {
-        session_destroy();
-        session_unset();
-        setcookie("PHPSESSID", "", time()-3600, "/");
-        header("Location: login.php");
-    }
 ?>
