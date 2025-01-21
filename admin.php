@@ -57,7 +57,7 @@
                         <div class="col">
                             <?php include("includes/table.php"); ?>
                             <div class="row d-lg-none mb-3">
-                                <div class="col-4 text-center">
+                                <div class="col-4">
                                     <img src="../assets/img/peliculas/avatar.jpg" class="img-fluid imgTable">
                                 </div>
                                 <div class="col-6 d-flex flex-column justify-content-center text-center">
