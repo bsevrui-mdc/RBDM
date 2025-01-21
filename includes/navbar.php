@@ -33,10 +33,26 @@
       <div class="dropdown">
         <a href="#" class="d-inline-block text-white" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i></a>
         <ul class="dropdown-menu bg-secondary dropdown-menu-end menuDropdown">
-          <li><a class="dropdown-item" href="usuario.php">Perfil</a></li>
-          <li><a class="dropdown-item" href="admin.php">Administracion</a></li>
-          <hr>
-          <li><a class="dropdown-item" href="login.php">Log Out <i class="fa-solid fa-arrow-right-from-bracket icono-Log-Out"></i></a></li>
+          <?php
+            if (isset($_SESSION['usuario'])) {
+              ?>
+              <li><a class="dropdown-item" href="usuario.php">Perfil</a></li>
+              <?php
+                if ($_SESSION['usuario']->tipo == "admin") {
+                  ?>
+                  <li><a class="dropdown-item" href="admin.php">Administracion</a></li>
+                  <?php
+                }
+              ?>
+              <hr>
+              <li><a class="dropdown-item" href="cerrarSesion.php">Cerrar Sesión <i class="fa-solid fa-arrow-right-from-bracket icono-Log-Out"></i></a></li>
+              <?php
+            } else {
+              ?>
+              <li><a class="dropdown-item" href="login.php">Iniciar Sesión</a></li>
+              <?php
+            }
+          ?>
         </ul>
       </div>
     </div>

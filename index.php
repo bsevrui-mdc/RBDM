@@ -1,4 +1,9 @@
-<?php include("includes/a_config.php"); ?>
+<?php
+    include("includes/a_config.php");
+    
+    date_default_timezone_set("Europe/Madrid");
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
