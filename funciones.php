@@ -12,11 +12,11 @@
         $conex = conectarConBBDD();
         try {
             $result = $conex->prepare("SELECT * FROM usuario WHERE correo=?");
-            $result->bindParam(1, $_POST['email']);
+            $result->bindParam(1, $correo);
             $result->execute();
             if ($result->rowCount()) {
                 $user = $result->fetchObject();
-                if (password_verify($_POST['password'], $user->password)) {
+                if (password_verify($password, $user->password)) {
                     $_SESSION['usuario'] = $user;
                     return true;
                 } else {
