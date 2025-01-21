@@ -1,4 +1,5 @@
 <?php
+    require("funciones.php");
     include("includes/a_config.php");
 
     date_default_timezone_set("Europe/Madrid");
@@ -50,9 +51,16 @@
             $errorTelf = true;
         }
         if (is_uploaded_file($_FILES['img']['tmp_name'])) {
-            $ruta = "./assets/img/profilePictures".time()."-".$_FIlES['img']['name'];
+            $ruta = "./assets/img/profilePictures".time()."-".$_FILES['img']['name'];
         } else {
             $errorIMG = true;
+        }
+        if (!$errorEmail && !$errorContrasena && !$errorNombre && !$errorApellidos && !$errorFecha && !$errorPais && !$errorCP && !$errorTelf && !$errorIMG) {
+            if (registro($_POST['email'], $_POST['password'], $_POST['nombre'], $_POST['apellidos'], $_POST['fecha'], $_POST['pais'], $_POST['cp'], $_POST['telf'], $ruta)) {
+                header("Location: index.php");
+            } else {
+                $errorRegistro = true;
+            }
         }
     }
 ?>
@@ -136,7 +144,7 @@
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">País:</label>
-                            <input type="text" name="pais" class="form-control" placeholder="España" value="<?php if (isset($_POST['pais']) && !$errorPais) { echo $_POST['pais']; } ?>" required>
+                            <input type="text" name="pais" class="form-control" placeholder="Spain" value="<?php if (isset($_POST['pais']) && !$errorPais) { echo $_POST['pais']; } ?>" required>
                             <?php
                                 if ($errorPais) {
                                     ?>
