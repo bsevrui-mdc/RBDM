@@ -50,6 +50,7 @@
             } else {
               ?>
               <li><a class="dropdown-item" href="login.php">Iniciar Sesión</a></li>
+              <li><a class="dropdown-item" href="signup.php">Registrarse</a></li>
               <?php
             }
           ?>
