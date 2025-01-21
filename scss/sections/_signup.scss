@@ -5,6 +5,11 @@
     text-transform: uppercase;
   }
   
+  p.error {
+    color: $red;
+    text-align: center;
+  }
+
   @include media-breakpoint-up(lg) {
     background-color: $divTransparency;
     border-radius: 15px;
