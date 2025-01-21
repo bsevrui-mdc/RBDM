@@ -11,7 +11,7 @@
         </thead>
         <tbody>
             <tr>
-                <td class="imgFilms "><img src="../assets/img/peliculas/avatar.jpg" alt="" class="img-fluid imgTable"></td>
+                <td class="imgFilms"><img src="../assets/img/peliculas/avatar.jpg" alt="" class="img-fluid "></td>
                 <td>Avatar</td>
                 <td>Aventura</td>
                 <td>18-11-2010</td>
