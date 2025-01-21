@@ -4,7 +4,12 @@
     font-size: $font-family-oxanium-size;
     text-transform: uppercase;
   }
-  
+
+  .error {
+    color: $red;
+    text-align: center;
+  }
+
   @include media-breakpoint-up(lg) {
     background-color: $divTransparency;
     border-radius: 15px;

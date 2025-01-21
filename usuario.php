@@ -1,4 +1,13 @@
-<?php include("includes/a_config.php"); ?>
+<?php
+    include("includes/a_config.php");
+
+    date_default_timezone_set("Europe/Madrid");
+    session_start();
+
+    if (!isset($_SESSION['usuario'])) {
+        header("Location: login.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -31,7 +40,9 @@
                         </div>
                         <div class="col-12 bg-secondary campo p-lg-2 rounded-3 ">
                             <div class="fw-bold d-inline">Nombre:</div>
-                            <div class="d-inline">Ángeles Ruiz Siendones</div>
+                            <div class="d-inline">
+                                <?php echo $_SESSION['usuario']->nombre." ".$_SESSION['usuario']->apellidos; ?>
+                            </div>
                         </div>
                         <div class="col-12 bg-secondary campo p-lg-2 rounded-3">
                             <div class="fw-bold d-inline">Fecha de unión:</div>
