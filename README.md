@@ -1,6 +1,7 @@
 # Comandos a utilizar
 ## Instalación
-`npm install` para instalar los modulos necesarios
+`npm install` para instalar los modulos de node.js necesarios
+`composer install` para instalar los modulos de composer necesarios
 ## Uso
 `sass -w scss:css` tiene que estar siempre ejecutandose en una terminal, es para compilar el sass
 
