@@ -5,9 +5,12 @@
     text-transform: uppercase;
   }
   
-  p.error {
+  .noError {
+    display: none;
+  }
+
+  .error {
     color: $red;
-    text-align: center;
   }
 
   @include media-breakpoint-up(lg) {
