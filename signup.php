@@ -9,11 +9,11 @@
         header("Location: usuario.php");
     }
 
-    
     $pattern1 = '/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,6}$/';
     $pattern2 = '/^[a-zA-Z\s]+$/';
     $pattern3 = '/^[a-zA-Z0-9]*$/';
     $pattern4 = '/^(?:\+34|34)?[67]\d{8}$|^(?:\+34|34)?9[1-9]\d{7}$/';
+
     $errorEmail = false;
     $errorContrasena = false;
     $errorNombre = false;
