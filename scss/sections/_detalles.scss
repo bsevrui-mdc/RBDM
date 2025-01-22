@@ -3,7 +3,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 0px ;
+  padding: 0px;
   margin: 0;
 
   .card {
@@ -28,5 +28,9 @@
   .transparente .calificacion {
     font-family: $font-family-oxanium;
     font-size: $font-family-oxanium-size;
+  }
+  textarea {
+    resize: none;
+    width: 100%;
   }
 }
