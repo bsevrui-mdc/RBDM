@@ -3,8 +3,7 @@ require('funciones.php');
 include("includes/a_config.php");
 
 date_default_timezone_set("Europe/Madrid");
-
-if (isset($_SESSION['usuario']) || isset($_SESSION['access_token'])) {
+if (isset($_SESSION['usuario'])) {
     header("Location: index.php");
 }
 
@@ -45,7 +44,8 @@ if (isset($_POST['login'])) {
                 <form action="login.php" method="POST" class="px-3 px-lg-5">
                     <div class="mb-3 text-center">
                         <label class="form-label">Correo Electrónico:</label>
-                        <input type="email" name="email" class="form-control" placeholder="ejemplo@ejemplo.com" required>
+                        <input type="email" name="email" class="form-control" placeholder="ejemplo@ejemplo.com"
+                            required>
                     </div>
                     <div class="mb-3 text-center">
                         <label class="form-label">Contraseña:</label>

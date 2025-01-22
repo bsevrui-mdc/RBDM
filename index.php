@@ -3,7 +3,7 @@ include("includes/a_config.php");
 include("funciones.php");
 $conn = conectarConBBDD();
 
-include("includes/googleconnect.php");
+include("googleconnect.php");
 
 date_default_timezone_set("Europe/Madrid");
 
@@ -23,11 +23,7 @@ date_default_timezone_set("Europe/Madrid");
 <body class="index">
     <?php include("includes/navbar.php"); ?>
     <main class="my-3">
-        <?php
-        if (($login_button == '') && (!isset($_SESSION['iduser']))) {
-            include("includes/registermodal.php");
-        }
-        ?>
+
 
         <div class="container-fluid">
             <div class="row d-md-none d-block">
@@ -195,6 +191,18 @@ date_default_timezone_set("Europe/Madrid");
 
         </div>
     </main>
+    <?php
+    if ((!isset($_SESSION['iduser']) && isset($_SESSION['access_token']))) {
+        include("registermodal.php");
+
+    ?>
+        <script>
+            document.getElementById('id01').style.display = 'block';
+        </script>
+    <?php
+
+    }
+    ?>
     <?php include("includes/footer.php"); ?>
 </body>
 

@@ -62,7 +62,7 @@ if (isset($_GET["code"])) {
       exit;
     } else {
       if ($resultado->rowCount() > 0) {
-        $usuario = $resultado->fetch_assoc();
+        $usuario = $resultado->fetch(PDO::FETCH_ASSOC);
         $_SESSION['iduser'] = $usuario['iduser'];
       }
     }
