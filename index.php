@@ -1,8 +1,14 @@
 <?php
-    include("includes/a_config.php");
-    
-    date_default_timezone_set("Europe/Madrid");
-    // session_start();
+include("includes/a_config.php");
+include("funciones.php");
+$conn = conectarConBBDD();
+
+include("includes/googleconnect.php");
+
+date_default_timezone_set("Europe/Madrid");
+
+
+// session_start();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -17,9 +23,15 @@
 <body class="index">
     <?php include("includes/navbar.php"); ?>
     <main class="my-3">
+        <?php
+        if (($login_button == '') && (!isset($_SESSION['iduser']))) {
+            include("includes/registermodal.php");
+        }
+        ?>
+
         <div class="container-fluid">
             <div class="row d-md-none d-block">
-                <div class="col text-center">
+                <div class="text-center col">
                     <h1 class="text-primary">Estrenos</h1>
                 </div>
             </div>
@@ -71,7 +83,7 @@
             </div>
 
             <div class="row">
-                <div class="col text-center my-4">
+                <div class="my-4 text-center col">
                     <h1 class="text-primary">Peliculas destacadas</h1>
                 </div>
             </div>
@@ -84,8 +96,8 @@
 
             <div class="row d-lg-none movil">
                 <div class="col-12">
-                    <div class="row d-flex flex-grow-1 my-2">
-                        <div class="col-4 text-center">
+                    <div class="my-2 row d-flex flex-grow-1">
+                        <div class="text-center col-4">
                             <img src="assets/img/peliculas/avatar.jpg" class="img-fluid">
                         </div>
                         <div class="col-8 align-content-center">
@@ -98,8 +110,8 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="row d-flex flex-grow-1 my-2">
-                        <div class="col-4 text-center">
+                    <div class="my-2 row d-flex flex-grow-1">
+                        <div class="text-center col-4">
                             <img src="assets/img/peliculas/coco.jpg" class="img-fluid">
                         </div>
                         <div class="col-8 align-content-center">
@@ -111,8 +123,8 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="row d-flex flex-grow-1 my-2">
-                        <div class="col-4 text-center">
+                    <div class="my-2 row d-flex flex-grow-1">
+                        <div class="text-center col-4">
                             <img src="assets/img/peliculas/ironman.jpg" class="img-fluid">
                         </div>
                         <div class="col-8 align-content-center">
@@ -127,7 +139,7 @@
 
 
             <div class="row">
-                <div class="col text-center my-4">
+                <div class="my-4 text-center col">
                     <h1 class="text-primary">Series destacadas</h1>
                 </div>
             </div>
@@ -139,8 +151,8 @@
 
             <div class="row d-lg-none movil">
                 <div class="col-12">
-                    <div class="row d-flex flex-grow-1 my-2">
-                        <div class="col-4 text-center">
+                    <div class="my-2 row d-flex flex-grow-1">
+                        <div class="text-center col-4">
                             <img src="assets/img/Series/elite.jpg" class="img-fluid">
                         </div>
                         <div class="col-8 align-content-center">
@@ -152,8 +164,8 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="row d-flex flex-grow-1 my-2">
-                        <div class="col-4 text-center">
+                    <div class="my-2 row d-flex flex-grow-1">
+                        <div class="text-center col-4">
                             <img src="assets/img/Series/from_netflix.jpg" class="img-fluid">
                         </div>
                         <div class="col-8 align-content-center">
@@ -165,8 +177,8 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="row d-flex flex-grow-1 my-2">
-                        <div class="col-4 text-center">
+                    <div class="my-2 row d-flex flex-grow-1">
+                        <div class="text-center col-4">
                             <img src="assets/img/Series/mrRobot.jpg" class="img-fluid">
                         </div>
                         <div class="col-8 align-content-center">
