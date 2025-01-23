@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-01-2025 a las 21:11:35
+-- Tiempo de generación: 23-01-2025 a las 18:56:23
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -64,7 +64,14 @@ CREATE TABLE `contenido` (
 --
 
 INSERT INTO `contenido` (`id`, `nombre`, `tipo`, `genero`, `nota`, `sinopsis`, `imagen`, `video`, `reparto`) VALUES
-(1, 'La Casa de Papel', 'Serie', 'Accion ', 10, 'Un misterioso hombre conocido como «el Profesor» ha pasado toda su vida planeando el mayor de los atracos de la historia: entrar en la Fábrica Nacional de Moneda y Timbre e imprimir 2400 millones de euros. Para llevar a cabo este ambicioso plan, el Profesor recluta a un equipo de ocho personas con ciertas habilidades y que no tienen nada que perder. Estos, junto al Profesor, planean cada paso del atraco durante cinco meses. Este equipo, con nombres de diferentes ciudades del mundo, requiere de 11 días de reclusión en la Fábrica, durante los cuales tiene que lidiar con las fuerzas de élite de la policía y 67 rehenes.', 'assets/img/Series/la_casa_de_papel.jpg', 'assets/video/video.mp4', 'Alvaro Morte-Ursula Corbero-Pedro Alonso-Jaime Lorente-Itziar Ituño-Miguel Herran-Alex Pina');
+(1, 'La Casa de Papel', 'Serie', 'Accion ', 10, 'Un misterioso hombre conocido como «el Profesor» ha pasado toda su vida planeando el mayor de los atracos de la historia: entrar en la Fábrica Nacional de Moneda y Timbre e imprimir 2400 millones de euros. Para llevar a cabo este ambicioso plan, el Profesor recluta a un equipo de ocho personas con ciertas habilidades y que no tienen nada que perder. Estos, junto al Profesor, planean cada paso del atraco durante cinco meses. Este equipo, con nombres de diferentes ciudades del mundo, requiere de 11 días de reclusión en la Fábrica, durante los cuales tiene que lidiar con las fuerzas de élite de la policía y 67 rehenes.', 'assets/img/Series/la_casa_de_papel.jpg', 'assets/video/video.mp4', 'Alvaro Morte-Ursula Corbero-Pedro Alonso-Jaime Lorente-Itziar Ituño-Miguel Herran-Alex Pina'),
+(2, 'Descarrilados', 'Pelicula', 'Comedia', 9.75, 'Un misterioso hombre conocido como «el Profesor» ha pasado toda su vida planeando el mayor de los atracos de la historia: entrar en la Fábrica Nacional de Moneda y Timbre e imprimir 2400 millones de euros. Para llevar a cabo este ambicioso plan, el Profesor recluta a un equipo de ocho personas con ciertas habilidades y que no tienen nada que perder. Estos, junto al Profesor, planean cada paso del atraco durante cinco meses. Este equipo, con nombres de diferentes ciudades del mundo, requiere de 11 días de reclusión en la Fábrica, durante los cuales tiene que lidiar con las fuerzas de élite de la policía y 67 rehenes.', 'assets/img/peliculas/descarrilados.png', 'assets/video/video.mp4', 'Alvaro Morte-Ursula Corbero-Pedro Alonso-Jaime Lorente-Itziar Ituño-Miguel Herran-Alex Pina'),
+(3, 'Interstellar', 'Pelicula', 'Accion', 9.45, 'Un misterioso hombre conocido como «el Profesor» ha pasado toda su vida planeando el mayor de los atracos de la historia: entrar en la Fábrica Nacional de Moneda y Timbre e imprimir 2400 millones de euros. Para llevar a cabo este ambicioso plan, el Profesor recluta a un equipo de ocho personas con ciertas habilidades y que no tienen nada que perder. Estos, junto al Profesor, planean cada paso del atraco durante cinco meses. Este equipo, con nombres de diferentes ciudades del mundo, requiere de 11 días de reclusión en la Fábrica, durante los cuales tiene que lidiar con las fuerzas de élite de la policía y 67 rehenes.', 'assets/img/peliculas/interstellar.jpg', 'assets/video/video.mp4', 'Alvaro Morte-Ursula Corbero-Pedro Alonso-Jaime Lorente-Itziar Ituño-Miguel Herran-Alex Pina'),
+(4, 'Chucky', 'Pelicula', 'Terror', 9.1, 'Un misterioso hombre conocido como «el Profesor» ha pasado toda su vida planeando el mayor de los atracos de la historia: entrar en la Fábrica Nacional de Moneda y Timbre e imprimir 2400 millones de euros. Para llevar a cabo este ambicioso plan, el Profesor recluta a un equipo de ocho personas con ciertas habilidades y que no tienen nada que perder. Estos, junto al Profesor, planean cada paso del atraco durante cinco meses. Este equipo, con nombres de diferentes ciudades del mundo, requiere de 11 días de reclusión en la Fábrica, durante los cuales tiene que lidiar con las fuerzas de élite de la policía y 67 rehenes.', 'assets/img/peliculas/chucky.jpg', 'assets/video/video.mp4', 'Alvaro Morte-Ursula Corbero-Pedro Alonso-Jaime Lorente-Itziar Ituño-Miguel Herran-Alex Pina'),
+(5, 'Padre no hay mas que uno', 'Pelicula', 'Comedia', 9, 'Un misterioso hombre conocido como «el Profesor» ha pasado toda su vida planeando el mayor de los atracos de la historia: entrar en la Fábrica Nacional de Moneda y Timbre e imprimir 2400 millones de euros. Para llevar a cabo este ambicioso plan, el Profesor recluta a un equipo de ocho personas con ciertas habilidades y que no tienen nada que perder. Estos, junto al Profesor, planean cada paso del atraco durante cinco meses. Este equipo, con nombres de diferentes ciudades del mundo, requiere de 11 días de reclusión en la Fábrica, durante los cuales tiene que lidiar con las fuerzas de élite de la policía y 67 rehenes.', 'assets/img/peliculas/padre.jpg', 'assets/video/video.mp4', 'Alvaro Morte-Ursula Corbero-Pedro Alonso-Jaime Lorente-Itziar Ituño-Miguel Herran-Alex Pina'),
+(6, 'Breaking Bad', 'Serie', 'Accion', 9.6, 'Un misterioso hombre conocido como «el Profesor» ha pasado toda su vida planeando el mayor de los atracos de la historia: entrar en la Fábrica Nacional de Moneda y Timbre e imprimir 2400 millones de euros. Para llevar a cabo este ambicioso plan, el Profesor recluta a un equipo de ocho personas con ciertas habilidades y que no tienen nada que perder. Estos, junto al Profesor, planean cada paso del atraco durante cinco meses. Este equipo, con nombres de diferentes ciudades del mundo, requiere de 11 días de reclusión en la Fábrica, durante los cuales tiene que lidiar con las fuerzas de élite de la policía y 67 rehenes.', 'assets/img/Series/breaking-bad.jpg', 'assets/video/video.mp4', 'Alvaro Morte-Ursula Corbero-Pedro Alonso-Jaime Lorente-Itziar Ituño-Miguel Herran-Alex Pina'),
+(7, 'From', 'Serie', 'Terror', 9.3, 'Un misterioso hombre conocido como «el Profesor» ha pasado toda su vida planeando el mayor de los atracos de la historia: entrar en la Fábrica Nacional de Moneda y Timbre e imprimir 2400 millones de euros. Para llevar a cabo este ambicioso plan, el Profesor recluta a un equipo de ocho personas con ciertas habilidades y que no tienen nada que perder. Estos, junto al Profesor, planean cada paso del atraco durante cinco meses. Este equipo, con nombres de diferentes ciudades del mundo, requiere de 11 días de reclusión en la Fábrica, durante los cuales tiene que lidiar con las fuerzas de élite de la policía y 67 rehenes.', 'assets/img/Series/from_netflix.jpg', 'assets/video/video.mp4', 'Alvaro Morte-Ursula Corbero-Pedro Alonso-Jaime Lorente-Itziar Ituño-Miguel Herran-Alex Pina'),
+(8, 'La que se avecina', 'Serie', 'Comedia', 9, 'Un misterioso hombre conocido como «el Profesor» ha pasado toda su vida planeando el mayor de los atracos de la historia: entrar en la Fábrica Nacional de Moneda y Timbre e imprimir 2400 millones de euros. Para llevar a cabo este ambicioso plan, el Profesor recluta a un equipo de ocho personas con ciertas habilidades y que no tienen nada que perder. Estos, junto al Profesor, planean cada paso del atraco durante cinco meses. Este equipo, con nombres de diferentes ciudades del mundo, requiere de 11 días de reclusión en la Fábrica, durante los cuales tiene que lidiar con las fuerzas de élite de la policía y 67 rehenes.', 'assets/img/Series/Lqsa.jpg', 'assets/video/video.mp4', 'Alvaro Morte-Ursula Corbero-Pedro Alonso-Jaime Lorente-Itziar Ituño-Miguel Herran-Alex Pina');
 
 -- --------------------------------------------------------
 
@@ -84,7 +91,15 @@ CREATE TABLE `lista` (
 --
 
 INSERT INTO `lista` (`id_contenido`, `id_usuario`, `nota`, `estado`) VALUES
-(1, 1, 10, 'completed');
+(1, 1, 10, 'completed'),
+(1, 9, 10, 'completed'),
+(2, 9, 9.31, 'completed'),
+(3, 9, 8.12, 'completed'),
+(4, 9, 9.32, 'completed'),
+(5, 9, 10, 'completed'),
+(6, 9, 9.21, 'completed'),
+(7, 9, 8.43, 'completed'),
+(8, 9, 10, 'completed');
 
 -- --------------------------------------------------------
 
@@ -113,7 +128,8 @@ CREATE TABLE `usuario` (
 INSERT INTO `usuario` (`id`, `correo`, `clave`, `nombre`, `apellidos`, `fecha`, `pais`, `codigo_postal`, `telefono`, `tipo`, `imagen`) VALUES
 (1, 'admin@gmail.com', '$2y$10$0FvvHAVZHMgh0jXmL0vmPeaJ8yPdy7pSzhrvuIqphHDeXCa2PxWAW', 'Administrador', 'Velez Campos', '2005-01-06', 'España', '14900', '+34 600000000', 'admin', ''),
 (2, 'prueba@gmail.com', '$2y$10$0FvvHAVZHMgh0jXmL0vmPeaJ8yPdy7pSzhrvuIqphHDeXCa2PxWAW', 'Manolo', 'Perez Quintana', '2015-01-13', 'España', '14900', '+34 600000001', 'cliente', ''),
-(4, 'prueba@prueba.com', '$2y$10$Z.56eeNbgzkh82OU9iSiM.nZGjzS7W3mVYBQXdQRuv7jdly/9uICm', 'prueba', 'registro', '2025-01-21', 'Spain', '14900', '623451789', 'cliente', './assets/img/profilePictures1737490237-usuario.jpg');
+(8, 'prueba@prueba.com', '$2y$10$7Y9dcPJwf6gor5Nr8QBd5u6eqv2Og.wHK8Qzg7vVKR5AZeUGeDd7u', 'Prueba', 'Registro', '2025-01-10', 'Pakistan', '14960', '64536583', 'cliente', './assets/img/profilePictures/1737624190-bomba.jpg'),
+(9, 'roldancamposrafael@gmail.com', '$2y$10$A7vOjgLezLIz6uvtfVZk1e/1Be0gbKZwJhsHU.Vo20fl80N9FhgZ2', 'Rafa', 'Roldan Campos', '2025-01-08', 'Mb', '16565', '657576767', 'cliente', 'https://lh3.googleusercontent.com/a/ACg8ocLrHaiLYKNeWFB7u1PA1Qpe7TPkPGZc73qbYAkuYQPzih7L6Q=s96-c');
 
 --
 -- Índices para tablas volcadas
@@ -160,13 +176,13 @@ ALTER TABLE `comentario`
 -- AUTO_INCREMENT de la tabla `contenido`
 --
 ALTER TABLE `contenido`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas
