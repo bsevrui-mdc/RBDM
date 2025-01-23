@@ -1,8 +1,8 @@
 <header>
   <nav class="px-3 container-fluid navbar navbar-expand-lg bg-primary text-uppercase" id="mainNav">
     <a class="navbar-brand" href="index.php">
-      <img src="/assets/img/logo.png" alt="logo" height="60">
-      <!--CF2: la propiedad height está prohibidísima aqui!!! Hay que ponerla en los estilos-->
+      <img src="/assets/img/logo.png" alt="logo">
+
     </a>
     <!-- Navbar <lg -->
     <div class="me-0 d-flex d-lg-none justify-content-center align-items-center">
@@ -35,22 +35,31 @@
       <input class="me-2" type="text" placeholder="Buscar..." name="buscador">
       <a href="" class="ms-3 me-4"><i class="fa-solid fa-magnifying-glass"></i></a>
       <div class="dropdown">
-        <a href="#" class="text-white d-inline-block" data-bs-toggle="dropdown" aria-expanded="false"><i
-            class="fa-solid fa-user"></i></a>
+        <?php
+        if (!isset($_SESSION["usuario"]->imagen)) { ?>
+          <a href="#" class="text-white d-inline-block" data-bs-toggle="dropdown" aria-expanded="false"><i
+              class="fa-solid fa-user"></i></a>
+        <?php
+        } else {
+        ?>
+          <img src="<?php echo $_SESSION['usuario']->imagen ?>" data-bs-toggle="dropdown" class="rounded-circle">
+        <?php
+        }
+        ?>
         <ul class="dropdown-menu bg-secondary dropdown-menu-end menuDropdown">
           <?php
-          if (isset($_SESSION['user_nombre'])) {
+          if (isset($_SESSION['usuario'])) {
           ?>
             <li><a class="dropdown-item" href="usuario.php">Perfil</a></li>
             <?php
-            if ($_SESSION['user_nombre']->tipo == "admin") {
+            if ($_SESSION['usuario']->tipo == "admin") {
             ?>
               <li><a class="dropdown-item" href="admin.php">Administracion</a></li>
             <?php
             }
             ?>
             <hr>
-            <li><a class="dropdown-item" href="cerrarSesion.php">Cerrar Sesión <i
+            <li><a class="dropdown-item" href="logout.php">Cerrar Sesión <i
                   class="fa-solid fa-arrow-right-from-bracket icono-Log-Out"></i></a></li>
           <?php
           } else {
