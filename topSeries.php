@@ -22,6 +22,9 @@
         $id = $_SESSION["usuario"]->id;
         try {
             $datosPelicula = $conn->query("SELECT c.id as id, c.nombre as nombre, c.nota as nota, c.genero as genero, c.imagen as imagen, l.nota as notaUsuario from contenido c, lista l where c.tipo = 'Serie' and l.id_usuario='$id' and l.id_contenido = c.id order by c.nota desc LIMIT 4");
+            if (!$datosPelicula->rowCount()) {
+                $datosPelicula = $conn->query("SELECT c.id as id, c.nombre as nombre, c.nota as nota, c.genero as genero, c.imagen as imagen from contenido c where c.tipo = 'Serie' order by c.nota desc LIMIT 4");
+            }
         } catch (PDOException $ex) {
             echo $ex->getMessage();
         }
