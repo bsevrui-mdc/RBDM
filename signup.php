@@ -19,8 +19,8 @@
         if (empty($_POST['email']) || !preg_match($pattern1, $_POST['email']) || empty($_POST['password']) || empty($_POST['password2']) || $_POST['password'] != $_POST['password2'] || empty($_POST['nombre']) || !preg_match($pattern2, $_POST['nombre']) || empty($_POST['apellidos']) || !preg_match($pattern2, $_POST['apellidos']) || empty($_POST['fecha']) || empty($_POST['pais']) || !preg_match($pattern2, $_POST['pais']) || empty($_POST['cp']) || !preg_match($pattern3, $_POST['cp']) || empty($_POST['telf']) || !preg_match($pattern4, $_POST['telf']) || !is_uploaded_file($_FILES['img']['tmp_name'])) {
             $error = true;
         } else {
-            $ruta = "./assets/img/profilePictures".time()."-".$_FILES['img']['name'];
-            move_uploaded_file($_FILES['tarjeta']['tmp_name'], $ruta);
+            $ruta = "./assets/img/profilePictures/".time()."-".$_FILES['img']['name'];
+            move_uploaded_file($_FILES['img']['tmp_name'], $ruta);
         }
 
         if (!$error) {
@@ -43,6 +43,13 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 my-lg-4 content">
                     <h1 class="text-center mt-3">Registro</h1>
+                    <?php
+                        if ($error) {
+                            ?>
+                            <span class="error">Algo ha salido mal :(</span>
+                            <?php
+                        }
+                    ?>
                     <form action="signup.php" method="POST" enctype="multipart/form-data" class="px-3 px-lg-5">
                         <div class="mb-3 text-center">
                             <label class="form-label">Correo Electrónico:</label>
