@@ -1,6 +1,6 @@
 <?php
 //Cuando el index.php es llamado desde Google tras la autenticación
-//nos pasa el parámetro "code" mediante una petición get.    
+//nos pasa el parámetro "code" mediante una petición get.
 if (isset($_GET["code"])) {
   //Obtenemos el objeto token
   $token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
@@ -8,7 +8,9 @@ if (isset($_GET["code"])) {
   //Si ha habido algún error en la autenticación, el array asociativo $token 
   //contendrá la variable "error", en caso contrario hay éxito y 
   //ya podemos recuperar los datos del perfil del usuario
+
   if (!isset($token['error'])) {
+
     //Set the access token used for requests
     $google_client->setAccessToken($token['access_token']);
 
@@ -22,17 +24,21 @@ if (isset($_GET["code"])) {
     //Get user profile data from google
     $data = $google_service->userinfo->get();
 
+    if (!isset($_SESSION['usuario']) || !is_object($_SESSION['usuario'])) {
+      $_SESSION['usuario'] = new stdClass(); // Crear un objeto vacío si no existe
+    }
+
     //Below you can find Get profile data and store into $_SESSION variable
     if (!empty($data['given_name'])) {
-      $_SESSION['user_first_name'] = $data['given_name'];
+      $_SESSION['usuario']->nombre = $data['given_name'];
     }
 
     if (!empty($data['family_name'])) {
-      $_SESSION['user_last_name'] = $data['family_name'];
+      $_SESSION['usuario']->apellidos = $data['family_name'];
     }
 
     if (!empty($data['email'])) {
-      $_SESSION['user_email_address'] = $data['email'];
+      $_SESSION['usuario']->correo = $data['email'];
     }
 
     if (!empty($data['gender'])) {
@@ -40,7 +46,7 @@ if (isset($_GET["code"])) {
     }
 
     if (!empty($data['picture'])) {
-      $_SESSION['user_image'] = $data['picture'];
+      $_SESSION['usuario']->imagen = $data['picture'];
     }
     $email = $data['email'];
 
@@ -63,7 +69,7 @@ if (isset($_GET["code"])) {
     } else {
       if ($resultado->rowCount() > 0) {
         $usuario = $resultado->fetch(PDO::FETCH_ASSOC);
-        $_SESSION['iduser'] = $usuario['iduser'];
+        $_SESSION["iduser"] = $usuario['id'];
       }
     }
   }

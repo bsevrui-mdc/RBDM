@@ -37,7 +37,7 @@ if (isset($_POST['login'])) {
                 <?php
                 if ($errorLogin) {
                 ?>
-                    <p class="error">Correo o Contraseña Incorrectos</p>
+                <p class="error">Correo o Contraseña Incorrectos</p>
                 <?php
                 }
                 ?>

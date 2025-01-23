@@ -1,12 +1,11 @@
 <?php
-    include("includes/a_config.php");
+include("includes/a_config.php");
 
-    date_default_timezone_set("Europe/Madrid");
-    session_start();
+date_default_timezone_set("Europe/Madrid");
 
-    if (!isset($_SESSION['usuario'])) {
-        header("Location: login.php");
-    }
+if (!isset($_SESSION['usuario'])) {
+    header("Location: login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -41,7 +40,7 @@
                         <div class="col-12 bg-secondary campo p-lg-2 rounded-3 ">
                             <div class="fw-bold d-inline">Nombre:</div>
                             <div class="d-inline">
-                                <?php echo $_SESSION['usuario']->nombre." ".$_SESSION['usuario']->apellidos; ?>
+                                <?php echo $_SESSION['usuario']->nombre . " " . $_SESSION['usuario']->apellidos; ?>
                             </div>
                         </div>
                         <div class="col-12 bg-secondary campo p-lg-2 rounded-3">
@@ -70,7 +69,8 @@
                 </div>
             </div>
             <div class="row top">
-                <div class="col-lg-2 contenedorImagen"><img src="assets/img/Series/breaking-bad.jpg" alt="imagen" class="img-fluid"></div>
+                <div class="col-lg-2 contenedorImagen"><img src="assets/img/Series/breaking-bad.jpg" alt="imagen"
+                        class="img-fluid"></div>
                 <div class="col-lg d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
                         <div class="col text-center text-lg-start py-2 py-lg-0">
@@ -92,7 +92,8 @@
             </div>
 
             <div class="row top">
-                <div class="col-lg-2 contenedorImagen"><img src="assets/img/Series/from_netflix.jpg" alt="imagen" class="img-fluid"></div>
+                <div class="col-lg-2 contenedorImagen"><img src="assets/img/Series/from_netflix.jpg" alt="imagen"
+                        class="img-fluid"></div>
                 <div class="col-lg d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
                         <div class="col text-center text-lg-start py-2 py-lg-0">
@@ -114,7 +115,8 @@
             </div>
 
             <div class="row top">
-                <div class="col-lg-2 contenedorImagen"><img src="assets/img/Series/la_casa_de_papel.jpg" alt="imagen" class="img-fluid"></div>
+                <div class="col-lg-2 contenedorImagen"><img src="assets/img/Series/la_casa_de_papel.jpg" alt="imagen"
+                        class="img-fluid"></div>
                 <div class="col-lg d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
                         <div class="col text-center text-lg-start py-2 py-lg-0">
@@ -136,7 +138,8 @@
             </div>
 
             <div class="row top">
-                <div class="col-lg-2 contenedorImagen"><img src="assets/img/Series/Lqsa.jpg" alt="imagen" class="img-fluid"></div>
+                <div class="col-lg-2 contenedorImagen"><img src="assets/img/Series/Lqsa.jpg" alt="imagen"
+                        class="img-fluid"></div>
                 <div class="col-lg d-flex flex-column">
                     <div class="row d-flex align-items-center h-75">
                         <div class="col text-center text-lg-start py-2 py-lg-0">

@@ -192,7 +192,7 @@ date_default_timezone_set("Europe/Madrid");
         </div>
     </main>
     <?php
-    if ((!isset($_SESSION['iduser']) && isset($_SESSION['access_token']))) {
+    if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
         include("registermodal.php");
 
     ?>
