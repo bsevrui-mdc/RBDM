@@ -21,11 +21,25 @@
             aria-expanded="false">Usuario</a>
           <ul class="dropdown-menu bg-secondary dropdown-menu-end menuDropdown"
             aria-labelledby="usuarioDropdown">
-            <li><a class="dropdown-item item" href="usuario.php">Perfil</a></li>
-            <li><a class="dropdown-item item" href="admin.php">Administración</a></li>
-            <hr>
-            <li><a class="dropdown-item item" href="login.php">Log Out <i
-                  class="fa-solid fa-arrow-right-from-bracket icono-Log-Out"></i></a></li>
+            <?php
+            if (isset($_SESSION['usuario'])) {
+              if ($_SESSION['usuario']->tipo == 'admin') {
+            ?>
+                <li><a class="dropdown-item item" href="admin.php">Administracion</a></li>
+              <?php } ?>
+              <li><a class="dropdown-item item" href="usuario.php">Perfil</a></li>
+              <hr>
+              <li><a class="dropdown-item item" href="logout.php">Log Out <i
+                    class="fa-solid fa-arrow-right-from-bracket icono-Log-Out"></i></a></li>
+            <?php
+
+            } else {
+            ?>
+              <li><a class="dropdown-item item" href="login.php">Iniciar sesion</a></li>
+              <li><a class="dropdown-item item" href="login.php">Registrarse</a></li>
+
+            <?php } ?>
+
           </ul>
         </li>
       </ul>
