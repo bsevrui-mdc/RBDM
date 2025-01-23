@@ -53,7 +53,7 @@ if (isset($_GET["code"])) {
     //A continuación recuperamos el usuario de la base de datos
     //Su id quedará almacenado en la sesión para uso posterior.
 
-    $sql = "SELECT id FROM usuario WHERE correo = '$email'";
+    $sql = "SELECT * FROM usuario WHERE correo = '$email'";
 
     if (!$resultado = $conn->query($sql)) {
       // ¡Oh, no! La consulta falló. 
@@ -68,8 +68,10 @@ if (isset($_GET["code"])) {
       exit;
     } else {
       if ($resultado->rowCount() > 0) {
-        $usuario = $resultado->fetch(PDO::FETCH_ASSOC);
-        $_SESSION["iduser"] = $usuario['id'];
+        $usuario = $resultado->fetchObject();
+        $_SESSION["usuario"] = $usuario;
+        header("Location:index.php");
+        exit;
       }
     }
   }
