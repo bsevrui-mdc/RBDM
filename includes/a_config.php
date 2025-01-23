@@ -58,14 +58,15 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 //Include Google Client Library for PHP autoload file
 require_once 'vendor/autoload.php';
 
+
 //Make object of Google API Client for call Google API
 $google_client = new Google_Client();
 
 //Set the OAuth 2.0 Client ID
-$google_client->setClientId(getenv('GOOGLE_CLIENT_ID'));
+$google_client->setClientId('999902092373-6fccppu8sv83g1414561qr382dncqv33.apps.googleusercontent.com');
 
 //Set the OAuth 2.0 Client Secret key
-$google_client->setClientSecret(getenv('GOOGLE_CLIENT_SECRET'));
+$google_client->setClientSecret('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');
 
 
 //Set the OAuth 2.0 Redirect URI
