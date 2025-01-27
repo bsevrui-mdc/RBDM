@@ -127,7 +127,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `correo`, `clave`, `nombre`, `apellidos`, `fecha`, `pais`, `codigo_postal`, `telefono`, `tipo`, `imagen`) VALUES
-(1, 'admin@gmail.com', '$2y$10$0FvvHAVZHMgh0jXmL0vmPeaJ8yPdy7pSzhrvuIqphHDeXCa2PxWAW', 'Administrador', 'Velez Campos', '2005-01-06', 'España', '14900', '+34 600000000', 'admin', './assets/img/admin.jpg'),
+(1, 'admin@gmail.com', '$2y$10$0FvvHAVZHMgh0jXmL0vmPeaJ8yPdy7pSzhrvuIqphHDeXCa2PxWAW', 'Administrador', 'Velez Campos', '2005-01-06', 'España', '14900', '+34 600000000', 'admin', './assets/img/profilePictures/admin.jpg'),
 (2, 'prueba@gmail.com', '$2y$10$0FvvHAVZHMgh0jXmL0vmPeaJ8yPdy7pSzhrvuIqphHDeXCa2PxWAW', 'Manolo', 'Perez Quintana', '2015-01-13', 'España', '14900', '+34 600000001', 'cliente', ''),
 (8, 'prueba@prueba.com', '$2y$10$7Y9dcPJwf6gor5Nr8QBd5u6eqv2Og.wHK8Qzg7vVKR5AZeUGeDd7u', 'Prueba', 'Registro', '2025-01-10', 'Pakistan', '14960', '64536583', 'cliente', './assets/img/profilePictures/1737624190-bomba.jpg'),
 (9, 'roldancamposrafael@gmail.com', '$2y$10$A7vOjgLezLIz6uvtfVZk1e/1Be0gbKZwJhsHU.Vo20fl80N9FhgZ2', 'Rafa', 'Roldan Campos', '2025-01-08', 'Mb', '16565', '657576767', 'cliente', 'https://lh3.googleusercontent.com/a/ACg8ocLrHaiLYKNeWFB7u1PA1Qpe7TPkPGZc73qbYAkuYQPzih7L6Q=s96-c');
