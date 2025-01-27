@@ -8,6 +8,25 @@
 
 <body class="detalles">
     <?php include("includes/navbar.php"); ?>
+    <?php
+    require_once 'funciones.php';
+    $conn = conectarConBBDD();
+    try {
+        $comentarios = $conn->query("select u.imagen as imagen, c.texto as texto from comentario c, usuario u where c.id_contenido = '$_GET[peli]' and c.id_usuario = u.id");
+    } catch (PDOException $ex) {
+        echo $ex->getMessage();
+    }
+
+    if (isset($_POST['comentar'])) {
+        try {
+            $stmt = $conn->prepare("INSERT INTO comentario(id_usuario,id_contenido,texto) VALUES (?, ?, ?)");
+            $stmt->execute([$_SESSION['usuario']->id, $_GET['peli'], $_POST['comentarioUsuario']]);
+            header("Location:detalles.php?peli=$_GET[peli]");
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
+        }
+    }
+    ?>
     <main>
         <div class="container my-5 transparente rounded-4">
             <div class="row">
@@ -149,19 +168,47 @@
             <div class="row">
                 <h2>comentarios</h2>
             </div>
-            <form action="" method="post">
-                <div class="row">
-                    <div class="col">
-                        <textarea class="rounded" rows="10" placeholder="Escribe un comentario aqui..."></textarea>
+            <?php
+            if (isset($_SESSION['usuario'])) {
+            ?>
+                <form action="" method="post">
+                    <div class="row">
+                        <div class="col">
+                            <textarea class="rounded" rows="10" placeholder="Escribe un comentario aqui..." name="comentarioUsuario"></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col text-end">
-                        <input type="submit" name="comentar" value="Comentar" class="btn btn-primary" />
+                    <div class="row">
+                        <div class="col text-end">
+                            <input type="submit" name="comentar" value="Comentar" class="btn btn-primary" />
 
+                        </div>
+                    </div>
+                </form>
+            <?php
+            }
+            ?>
+            <?php
+            while ($fila = $comentarios->fetchObject()) {
+            ?>
+                <div class="py-3 row">
+                    <div class="col-lg-1">
+                        <img src="<?php echo $fila->imagen ?>" class="img-fluid">
+                    </div>
+                    <div class="col-lg-10">
+                        <textarea name="comentario" class="h-100"><?php echo $fila->texto ?></textarea>
+                    </div>
+                    <div class="col-lg-1 d-flex flex-column justify-content-between">
+                        <button class=" btn-primary btn" type="submit">
+                            <i class="fa-solid fa-trash icono-Log-Out"></i>
+                        </button>
+                        <button class="btn-primary btn" type="submit">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
                     </div>
                 </div>
-            </form>
+            <?php
+            }
+            ?>
         </div>
     </main>
     <?php include("includes/footer.php"); ?>
