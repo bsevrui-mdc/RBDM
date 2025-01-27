@@ -59,6 +59,14 @@
 
   color: black;
 
+  .noError {
+    display: none;
+  }
+
+  .error {
+    color: $red;
+  }
+
   /* Full-width input fields */
 
   input:not([type]),

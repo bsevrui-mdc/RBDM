@@ -6,9 +6,16 @@ $conn = conectarConBBDD();
 include("googleconnect.php");
 
 date_default_timezone_set("Europe/Madrid");
+if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
+    include("registermodal.php");
 
+?>
+    <script>
+        document.getElementById('id01').style.display = 'block';
+    </script>
+<?php
 
-// session_start();
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -191,18 +198,7 @@ date_default_timezone_set("Europe/Madrid");
 
         </div>
     </main>
-    <?php
-    if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
-        include("registermodal.php");
 
-    ?>
-        <script>
-            document.getElementById('id01').style.display = 'block';
-        </script>
-    <?php
-
-    }
-    ?>
     <?php include("includes/footer.php"); ?>
 </body>
 

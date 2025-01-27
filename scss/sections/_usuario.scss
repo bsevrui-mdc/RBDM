@@ -31,7 +31,9 @@
       width: 320px;
       height: 320px;
       img {
-        border-radius: 10%; /*CF2: El radio debe debe estar en variables sass */
+        border-radius: 10%;
+        min-width: 200px;
+        min-height: 250px;
       }
     }
 
