@@ -58,11 +58,13 @@
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">Contraseña:</label>
-                            <input type="password" name="password" class="form-control" required>
+                            <input type="password" id="password" name="password" class="form-control" required>
+                            <span id="errorPass" class="noError">El contraseña debe superar los 8 carácteres y contener mayúsuculas, mínusculas, números y alfanuméricos</span>
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">Repetir Contraseña:</label>
-                            <input type="password" name="password2" class="form-control" required>
+                            <input type="password" id="password2" name="password2" class="form-control" required>
+                            <span id="errorPass2" class="noError">Las contraseñas deben de coincidir</span>
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">Nombre:</label>

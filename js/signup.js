@@ -2,8 +2,13 @@ const PATTERN1 = /^[A-Za-z\s]*$/; // Nombre, Apellidos, País
 const PATTERN2 = /^[a-zA-Z0-9]+$/; // CP
 const PATTERN3 = /^[6-9]\d{0,8}$/; // Telefono
 const PATTERN4 = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Email
+const PATTERN5 = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,}$/; // Contraseña
 var inputEmail = document.getElementById("email");
 var errorEmail = document.getElementById("errorEmail");
+var inputPass = document.getElementById("password");
+var errorPass = document.getElementById("errorPass");
+var inputPass2 = document.getElementById("password2");
+var errorPass2 = document.getElementById("errorPass2");
 var inputNombre = document.getElementById("nombre");
 var errorNombre = document.getElementById("errorNombre");
 var inputApellidos = document.getElementById("apellidos");
@@ -28,6 +33,32 @@ if (inputEmail != null) {
     }
   });
 }
+
+inputPass.addEventListener("change", function(e){
+    let valor = e.target.value;
+    if (!PATTERN5.test(valor)) {
+        e.target.value = null;
+        inputPass2.value = null;
+        errorPass.classList.remove("noError");
+        errorPass.classList.add("error");
+    } else {
+        errorPass.classList.remove("error");
+        errorPass.classList.add("noError");
+    }
+});
+
+inputPass2.addEventListener("change", function(e){
+    let valor = e.target.value;
+    if (valor != inputPass.value) {
+        e.target.value = null;
+        inputPass.value = null;
+        errorPass2.classList.remove("noError");
+        errorPass2.classList.add("error");
+    } else {
+        errorPass2.classList.remove("error");
+        errorPass2.classList.add("noError");
+    }
+});
 
 if (inputNombre != null) {
   inputNombre.addEventListener("input", function (e) {
