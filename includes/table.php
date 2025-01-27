@@ -1,95 +1,39 @@
+
 <div class="table-responsive d-none d-lg-block">
     <table class="table table-dark table-borderless">
         <thead>
             <tr>
                 <th></th>
-                <th>Nombre</th>
-                <th>Genero</th>
-                <th>Fecha</th>
+                <?php foreach($titulos as $key => $titulo): ?>
+                <th><?php echo $titulo; ?></th>
+                <?php endforeach?>
                 <th></th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td class="imgFilms"><img src="../assets/img/peliculas/avatar.jpg" alt="" class="img-fluid imgTable"></td>
-                <td>Avatar</td>
-                <td>Aventura</td>
-                <td>18-11-2010</td>
-                <td>
-                    <i class="fa-solid fa-pen"></i>
-                    <i class="fa-solid fa-trash-can color-trash"></i>
-                </td>
-            </tr>
-            <tr>
-                <td class="imgFilms"><img src="../assets/img/peliculas/chucky.jpg" alt="" class="img-fluid imgTable"></td>
-                <td>Chucky</td>
-                <td>Terror</td>
-                <td>1-1-1991</td>
-                <td>
-                    <i class="fa-solid fa-pen"></i>
-                    <i class="fa-solid fa-trash-can color-trash"></i>
-                </td>
-            </tr>
-            <tr>
-                <td class="imgFilms"><img src="../assets/img/peliculas/coco.jpg" alt="" class="img-fluid imgTable"></td>
-                <td>Coco</td>
-                <td>Infantil</td>
-                <td>8-11-2019</td>
-                <td>
-                    <i class="fa-solid fa-pen"></i>
-                    <i class="fa-solid fa-trash-can color-trash"></i>
-                </td>
-            </tr>
-            <tr>
-                <td class="imgFilms"><img src="../assets/img/peliculas/descarrilados.png" alt="" class="img-fluid imgTable"></td>
-                <td>Descarrilados</td>
-                <td>Comedia</td>
-                <td>5-11-2023</td>
-                <td>
-                    <i class="fa-solid fa-pen"></i>
-                    <i class="fa-solid fa-trash-can color-trash"></i>
-                </td>
-            </tr>
-            <tr>
-                <td class="imgFilms"><img src="../assets/img/peliculas/expedeienteWarren.jpg" alt="" class="img-fluid imgTable"></td>
-                <td>The conjuring</td>
-                <td>Terror</td>
-                <td>18-1-2011</td>
-                <td>
-                    <i class="fa-solid fa-pen"></i>
-                    <i class="fa-solid fa-trash-can color-trash"></i>
-                </td>
-            </tr>
-            <tr>
-                <td class="imgFilms"><img src="../assets/img/peliculas/interstellar.jpg" alt="" class="img-fluid imgTable"></td>
-                <td>Interstellar</td>
-                <td>Aventura</td>
-                <td>18-11-2015</td>
-                <td>
-                    <i class="fa-solid fa-pen"></i>
-                    <i class="fa-solid fa-trash-can color-trash"></i>
-                </td>
-            </tr>
-            <tr>
-                <td class="imgFilms"><img src="../assets/img/peliculas/ironman.jpg" alt="" class="img-fluid imgTable"></td>
-                <td>Iron man</td>
-                <td>Accion</td>
-                <td>18-11-2012</td>
-                <td>
-                    <i class="fa-solid fa-pen"></i>
-                    <i class="fa-solid fa-trash-can color-trash"></i>
-                </td>
-            </tr>
-            <tr>
-                <td class="imgFilms"><img src="../assets/img/peliculas/sonic.jpg" alt="" class="img-fluid imgTable"></td>
-                <td>Sonic</td>
-                <td>Infantil</td>
-                <td>18-11-2020</td>
-                <td>
-                    <i class="fa-solid fa-pen"></i>
-                    <i class="fa-solid fa-trash-can color-trash"></i>
-                </td>
-            </tr>
+        <?php foreach ($p as $value): ?>
+                <tr>
+                    <td class="imgFilms">
+                        <img src="<?php echo ($value->imagen); ?>" alt="" class="img-fluid imgTable">
+                    </td>
+                    <?php
+                // Verificamos el tipo de contenido y mostramos las columnas correspondientes
+                if ($l == 'pelicula' || $l == 'serie'): ?>
+                    <td><?php echo ($value->nombre); ?></td>
+                    <td><?php echo ($value->genero); ?></td>
+                    <td><?php echo ($value->nota); ?></td>
+                <?php elseif ($l == 'usuario'): ?>
+                    <!-- Si es usuario, muestra los datos relevantes -->
+                    <td><?php echo ($value->nombre); ?></td>
+                    <td><?php echo ($value->apellidos); ?></td>
+                    <td><?php echo ($value->correo); ?></td>
+                <?php endif; ?>
+                    <td>
+                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-solid fa-trash-can color-trash"></i>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
 </div>

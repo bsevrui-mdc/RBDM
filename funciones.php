@@ -54,4 +54,35 @@
             echo $ex->getCode()."<br>".$ex->getMessage();
         }
     }
+
+    function obtenerTodo($tipo, $tabla) {
+        $conex = conectarConBBDD();
+        try {
+            if ($tabla === 'contenido') {
+                // Consulta para la tabla "contenido" con filtro por tipo
+                $query = "SELECT * FROM contenido WHERE tipo = :tipo";
+                $stmt = $conex->prepare($query);
+                $stmt->bindParam(':tipo', $tipo, PDO::PARAM_STR);
+            } else {
+                // Consulta para otras tablas sin filtro por tipo
+                $query = "SELECT * FROM $tabla";
+                $stmt = $conex->prepare($query);
+            }
+    
+            $stmt->execute();
+    
+            if ($stmt->rowCount()) {
+                // Recuperar los datos como array de objetos
+                while ($fila = $stmt->fetchObject()) {
+                    $datos[] = $fila;
+                }
+                return $datos;
+            } else {
+                return false; // No hay resultados
+            }
+        } catch (PDOException $ex) {
+            die("Error al obtener los datos: " . $ex->getMessage());
+        }
+    }
+    
 ?>

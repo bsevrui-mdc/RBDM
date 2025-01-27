@@ -1,4 +1,40 @@
-<?php include("includes/a_config.php"); ?>
+<?php 
+include("includes/a_config.php"); 
+include("funciones.php"); 
+
+$titulosPS = [
+    'nombre'=>'Nombre',
+    'genero'=>'Genero',
+    'fecha'=>'Fecha',
+    ];
+    $titulosUsu=[
+        'nombre'=>'Nombre',
+        'apellidos'=>'Apellidos',
+        'correo'=>'Email'
+    ];
+$titulos=$titulosPS;//valor predeterminado
+$l='pelicula';//valor predeterminado
+$tabla='contenido';//tabla por defecto
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    if (isset($_POST['peli'])) {
+        $l = 'pelicula';
+        $tabla ='contenido';
+        $titulos=$titulosPS;
+       
+    } elseif (isset($_POST['serie'])) {
+        $l = 'serie';
+        $tabla ='contenido';
+        $titulos=$titulosPS;
+       
+    } elseif (isset($_POST['usu'])) {
+        $l = 'usuario';
+        $tabla ='usuario';
+        $titulos=$titulosUsu;
+        
+    }
+}
+$p=obtenerTodo($l,$tabla);//Obtenemos datos 
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -29,9 +65,9 @@
                         </div>
                         <div class="col d-none d-lg-block">
                             <form action="" method="post" class="d-flex flex-column">
-                                <input type="submit" class="btn btn-primary mb-2 rounded-pill" value="Peliculas">
-                                <input type="submit" class="btn btn-primary mb-2 rounded-pill" value="Series">
-                                <input type="submit" class="btn btn-primary mb-2 rounded-pill" value="Usuarios">
+                                <input type="submit" class="btn btn-primary mb-2 rounded-pill" name="peli" value="Peliculas">
+                                <input type="submit" class="btn btn-primary mb-2 rounded-pill" name="serie" value="Series">
+                                <input type="submit" class="btn btn-primary mb-2 rounded-pill" name="usu" value="Usuarios">
                             </form>
                         </div>
                     </div>
@@ -49,7 +85,17 @@
                     </div>
                     <div class="row py-2">
                         <div class="col textList">
-                            <h1>Lista de Peliculas</h1>
+                            
+                            <h1><?php
+                            if($l === 'pelicula'){
+                                echo "lista de películas";
+                            }else if($l==='serie'){
+                                echo 'lista de series';
+                            }else if($l=='usuario'){
+                                echo 'lista de usuarios';
+                            }
+                            ?>
+                            </h1>
                             <input type="button" class="btn btn-primary w-25" value="Añadir">
                         </div>
                     </div>
