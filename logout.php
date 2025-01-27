@@ -1,14 +1,14 @@
 <?php
+    include('includes/a_config.php');
 
-//logout.php
+    //Reset OAuth access token
+    $google_client->revokeToken();
 
-include('includes/a_config.php');
+    //Destroy entire session data.
+    session_destroy();
+    session_unset();
+    setcookie("PHPSESSID", "", time()-3600, "/");
 
-//Reset OAuth access token
-$google_client->revokeToken();
-
-//Destroy entire session data.
-session_destroy();
-
-//redirect page to index.php
-header('location:index.php');
+    //redirect page to index.php
+    header('location:index.php');
+?>
