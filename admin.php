@@ -2,6 +2,10 @@
 include("includes/a_config.php"); 
 include("funciones.php"); 
 
+if ($_SESSION['usuario']->tipo != 'admin') {
+    header("Location: index.php");
+}
+
 $titulosPS = [
     'nombre'=>'Nombre',
     'genero'=>'Genero',
@@ -48,7 +52,7 @@ $p=obtenerTodo($l,$tabla);//Obtenemos datos
                 <div class="col-lg-2">
                     <div class="row text-center">
                         <div class="col-3 col-lg-12">
-                            <img src="../assets/img/admin.jpg" alt="" class="imgAdmin">
+                            <img src="../assets/img/profilePictures/admin.jpg" alt="" class="imgAdmin">
                         </div>
                         <div class="col-9 d-lg-none d-block align-content-center">
                             <div class="row justify-content-around">

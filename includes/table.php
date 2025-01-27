@@ -21,7 +21,7 @@
                 if ($l == 'pelicula' || $l == 'serie'): ?>
                     <td><?php echo ($value->nombre); ?></td>
                     <td><?php echo ($value->genero); ?></td>
-                    <td><?php echo ($value->nota); ?></td>
+                    <td><?php echo ($value->fecha); ?></td>
                 <?php elseif ($l == 'usuario'): ?>
                     <!-- Si es usuario, muestra los datos relevantes -->
                     <td><?php echo ($value->nombre); ?></td>
