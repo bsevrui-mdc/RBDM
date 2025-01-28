@@ -54,6 +54,7 @@ $p=obtenerTodo($l,$tabla);//Obtenemos datos
                         <div class="col-3 col-lg-12">
                             <img src="../assets/img/profilePictures/admin.jpg" alt="" class="imgAdmin">
                         </div>
+                        <!--aparecen los iconos al minimizar la pantalla -->
                         <div class="col-9 d-lg-none d-block align-content-center">
                             <div class="row justify-content-around">
                                 <div class="col"><i class="fa-solid fa-film"></i></div>
@@ -63,9 +64,9 @@ $p=obtenerTodo($l,$tabla);//Obtenemos datos
                         </div>
                         <div class="col d-none d-lg-block">
                             <div class="display-3 nameAdmin">admin</div>
-                            <p>Josep Maria</p>
-                            <p>Gonzales</p>
-                            <p>Agusto</p>
+                            <p><?php echo $_SESSION['usuario']->nombre ?></p>
+                            <p><?php echo $_SESSION['usuario']->apellidos ?></p>
+                            
                         </div>
                         <div class="col d-none d-lg-block">
                             <form action="" method="post" class="d-flex flex-column">
@@ -106,58 +107,21 @@ $p=obtenerTodo($l,$tabla);//Obtenemos datos
                     <div class="row">
                         <div class="col">
                             <?php include("includes/table.php"); ?>
+                            <?php foreach ($p as $value): ?>
                             <div class="row d-lg-none mb-3">
                                 <div class="col-4">
-                                    <img src="../assets/img/peliculas/avatar.jpg" class="img-fluid imgTable">
+                                    <img src="<?php echo $value->imagen ?>" class="img-fluid imgTable">
                                 </div>
                                 <div class="col-6 d-flex flex-column justify-content-center text-center">
-                                    <p>Avatar</p>
-                                    <p>Aventura</p>
+                                    <p><?php echo $value->nombre ?></p>
+                                    <p><?php echo $value->genero ?></p>
                                 </div>
                                 <div class="col d-flex flex-column justify-content-around align-items-center">
                                     <i class="fa-solid fa-pen"></i>
                                     <i class="fa-solid fa-trash-can color-trash"></i>
-                                </div>
+                                </div>    
                             </div>
-                            <div class="row d-lg-none mb-3">
-                                <div class="col-4">
-                                    <img src="../assets/img/peliculas/chucky.jpg" class="img-fluid imgTable">
-                                </div>
-                                <div class="col-6 d-flex flex-column justify-content-center text-center">
-                                    <p>Chucky</p>
-                                    <p>Terror</p>
-                                </div>
-                                <div class="col d-flex flex-column justify-content-around align-items-center">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i class="fa-solid fa-trash-can color-trash "></i>
-                                </div>
-                            </div>
-                            <div class="row d-lg-none mb-3">
-                                <div class="col-4">
-                                    <img src="../assets/img/peliculas/coco.jpg" class="img-fluid imgTable">
-                                </div>
-                                <div class="col-6 d-flex flex-column justify-content-center text-center">
-                                    <p>Coco</p>
-                                    <p>Infantil</p>
-                                </div>
-                                <div class="col d-flex flex-column justify-content-around align-items-center">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i class="fa-solid fa-trash-can color-trash "></i>
-                                </div>
-                            </div>
-                            <div class="row d-lg-none mb-3">
-                                <div class="col-4">
-                                    <img src="../assets/img/peliculas/descarrilados.png" class="img-fluid imgTable">
-                                </div>
-                                <div class="col-6 d-flex flex-column justify-content-center text-center">
-                                    <p>Descarrilados</p>
-                                    <p>Comedia</p>
-                                </div>
-                                <div class="col d-flex flex-column justify-content-around align-items-center">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i class="fa-solid fa-trash-can color-trash "></i>
-                                </div>
-                            </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
