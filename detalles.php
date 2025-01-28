@@ -12,7 +12,7 @@
     require_once 'funciones.php';
     $conn = conectarConBBDD();
     try {
-        $comentarios = $conn->query("select u.imagen as imagen, c.texto as texto from comentario c, usuario u where c.id_contenido = '$_GET[peli]' and c.id_usuario = u.id");
+        $comentarios = $conn->query("select u.imagen as imagen, c.texto as texto , u.id as idUsuario from comentario c, usuario u where c.id_contenido = '$_GET[peli]' and c.id_usuario = u.id");
     } catch (PDOException $ex) {
         echo $ex->getMessage();
     }
@@ -198,12 +198,21 @@
                         <textarea name="comentario" class="h-100"><?php echo $fila->texto ?></textarea>
                     </div>
                     <div class="col-lg-1 d-flex flex-column justify-content-between">
-                        <button class=" btn-primary btn" type="submit">
-                            <i class="fa-solid fa-trash icono-Log-Out"></i>
-                        </button>
-                        <button class="btn-primary btn" type="submit">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                        </button>
+                        <?php
+                        if ($fila->idUsuario == $_SESSION['usuario']->id) {
+                        ?>
+                            <form method="post" action="" class="justify-content-between">
+                                <button class=" btn-primary btn" type="submit" name="eliminar">
+                                    <i class="fa-solid fa-trash icono-Log-Out"></i>
+                                </button>
+                                <button class="btn-primary btn" type="submit" name="actualizar">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                            </form>
+
+                        <?php
+                        }
+                        ?>
                     </div>
                 </div>
             <?php
