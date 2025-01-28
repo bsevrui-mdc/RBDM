@@ -1,3 +1,52 @@
+<?php
+require_once 'funciones.php';
+$conn = conectarConBBDD();
+try {
+    $result = $conn->query("select * from contenido where id=$_GET[peli]");
+    if ($result->rowCount()) {
+        $pelicula = $result->fetchObject();
+    } else {
+        header("Location:index.php");
+    }
+} catch (PDOException $ex) {
+    echo $ex->getMessage();
+}
+
+try {
+    $comentarios = $conn->query("select u.imagen as imagen, c.texto as texto , c.id as idComentario, u.id as idUsuario from comentario c, usuario u where c.id_contenido = '$_GET[peli]' and c.id_usuario = u.id");
+} catch (PDOException $ex) {
+    echo $ex->getMessage();
+}
+
+if (isset($_POST['comentar'])) {
+    try {
+        $stmt = $conn->prepare("INSERT INTO comentario(id_usuario,id_contenido,texto) VALUES (?, ?, ?)");
+        $stmt->execute([$_SESSION['usuario']->id, $_GET['peli'], $_POST['comentarioUsuario']]);
+        header("Location:detalles.php?peli=$_GET[peli]");
+    } catch (PDOException $ex) {
+        echo $ex->getMessage();
+    }
+}
+
+if (isset($_POST['eliminar'])) {
+    try {
+        $conn->exec("delete from comentario where id = $_POST[idComentario]");
+        header("Location:detalles.php?peli=$_GET[peli]");
+    } catch (PDOException $ex) {
+        echo $ex->getMessage();
+    }
+}
+
+if (isset($_POST['actualizar'])) {
+    try {
+        $conn->exec("update comentario set texto = '$_POST[comentario]' where id = $_POST[idComentario]");
+        header("Location:detalles.php?peli=$_GET[peli]");
+    } catch (PDOException $ex) {
+        echo $ex->getMessage();
+    }
+}
+?>
+
 <?php include("includes/a_config.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -6,44 +55,25 @@
     <?php include("includes/head-tags.php"); ?>
 </head>
 
-<body class="detalles">
+<body class="detalles" style="background-image: url(<?php echo $pelicula->imagen ?>);">
     <?php include("includes/navbar.php"); ?>
-    <?php
-    require_once 'funciones.php';
-    $conn = conectarConBBDD();
-    try {
-        $comentarios = $conn->query("select u.imagen as imagen, c.texto as texto , u.id as idUsuario from comentario c, usuario u where c.id_contenido = '$_GET[peli]' and c.id_usuario = u.id");
-    } catch (PDOException $ex) {
-        echo $ex->getMessage();
-    }
-
-    if (isset($_POST['comentar'])) {
-        try {
-            $stmt = $conn->prepare("INSERT INTO comentario(id_usuario,id_contenido,texto) VALUES (?, ?, ?)");
-            $stmt->execute([$_SESSION['usuario']->id, $_GET['peli'], $_POST['comentarioUsuario']]);
-            header("Location:detalles.php?peli=$_GET[peli]");
-        } catch (PDOException $ex) {
-            echo $ex->getMessage();
-        }
-    }
-    ?>
     <main>
         <div class="container my-5 transparente rounded-4">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="py-3 row">
                         <div class="col d-flex justify-content-center">
-                            <img src="assets/img/Series/la_casa_de_papel.jpg" alt="imagenPelicula" class="img-fluid">
+                            <img src="<?php echo $pelicula->imagen ?>" alt="imagenPelicula" class="img-fluid">
                         </div>
                     </div>
                     <div class="py-3 row">
                         <div class="text-center col">
-                            <h1>La casa de papel</h1>
+                            <h1 class="text-break"><?php echo $pelicula->nombre ?></h1>
                         </div>
                     </div>
                     <div class="row">
                         <div class="py-4 text-center col">
-                            <div class="calificacion"><i class="px-2 fa-solid fa-star text-primary"></i>9.83</div>
+                            <div class="calificacion"><i class="px-2 fa-solid fa-star text-primary"></i><?php echo $pelicula->nota ?></div>
                         </div>
                     </div>
                 </div>
@@ -57,14 +87,14 @@
                     <div class="row">
                         <div class="py-3 col">
                             <p>
-                                Un misterioso hombre conocido como «el Profesor» ha pasado toda su vida planeando el mayor de los atracos de la historia: entrar en la Fábrica Nacional de Moneda y Timbre e imprimir 2400 millones de euros. Para llevar a cabo este ambicioso plan, el Profesor recluta a un equipo de ocho personas con ciertas habilidades y que no tienen nada que perder. Estos, junto al Profesor, planean cada paso del atraco durante cinco meses. Este equipo, con nombres de diferentes ciudades del mundo, requiere de 11 días de reclusión en la Fábrica, durante los cuales tiene que lidiar con las fuerzas de élite de la policía y 67 rehenes.
+                                <?php echo $pelicula->sinopsis ?>
                             </p>
                             <a href="https://es.wikipedia.org/wiki/La_casa_de_papel" target="_blank">Fuente: Wikipedia</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="px-2 py-3 col">
-                            <h3>Fecha publicacion: 01-01-2020</h3>
+                            <h3><?php echo $pelicula->fecha ?></h3>
                         </div>
                     </div>
                 </div>
@@ -73,7 +103,7 @@
                 <div class="col">
                     <div class="videoplayer" id="player-1">
                         <div class="ratio ratio-16x9 bg-dark">
-                            <video class="video" src="assets/video/video.mp4"></video>
+                            <video class="video" src="<?php echo $pelicula->video ?>"></video>
                         </div>
                         <div class="controls controls-dark bg-primary">
                             <button class="btn btn-lg btn-video-playpause" data-bs-toggle="tooltip" title="Play Video"
@@ -190,31 +220,29 @@
             <?php
             while ($fila = $comentarios->fetchObject()) {
             ?>
-                <div class="py-3 row">
-                    <div class="col-lg-1">
-                        <img src="<?php echo $fila->imagen ?>" class="img-fluid">
-                    </div>
-                    <div class="col-lg-10">
-                        <textarea name="comentario" class="h-100"><?php echo $fila->texto ?></textarea>
-                    </div>
-                    <div class="col-lg-1 d-flex flex-column justify-content-between">
-                        <?php
-                        if ($fila->idUsuario == $_SESSION['usuario']->id) {
-                        ?>
-                            <form method="post" action="" class="justify-content-between">
-                                <button class=" btn-primary btn" type="submit" name="eliminar">
+                <form method="post" action="">
+                    <div class="py-3 row">
+                        <div class="col-lg-1">
+                            <img src="<?php echo $fila->imagen ?>" class="img-fluid">
+                        </div>
+
+                        <div class="col-lg-10">
+                            <input type="hidden" name="idComentario" value="<?php echo $fila->idComentario ?>">
+                            <textarea name="comentario" class="form-control h-100"><?php echo $fila->texto ?></textarea>
+                        </div>
+                        <div class="col-lg-1 d-flex align-items-center">
+                            <?php if (isset($_SESSION['usuario']) && $fila->idUsuario == $_SESSION['usuario']->id) { ?>
+                                <button class="mx-1 btn btn-primary" type="submit" name="eliminar">
                                     <i class="fa-solid fa-trash icono-Log-Out"></i>
                                 </button>
-                                <button class="btn-primary btn" type="submit" name="actualizar">
+                                <button class="mx-1 btn btn-primary" type="submit" name="actualizar">
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </button>
-                            </form>
+                            <?php } ?>
+                        </div>
 
-                        <?php
-                        }
-                        ?>
                     </div>
-                </div>
+                </form>
             <?php
             }
             ?>
