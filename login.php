@@ -37,7 +37,7 @@ if (isset($_POST['login'])) {
                 <?php
                 if ($errorLogin) {
                 ?>
-                <p class="error">Correo o Contraseña Incorrectos</p>
+                    <p class="error">Correo o Contraseña Incorrectos</p>
                 <?php
                 }
                 ?>
@@ -55,13 +55,14 @@ if (isset($_POST['login'])) {
                         <button type="submit" class="btn btn-primary" name="login">Iniciar</button>
                     </div>
 
+
                 </form>
                 <div class="mb-3 d-flex justify-content-center">
                     <?php
                     if (!isset($_SESSION['access_token'])) {
                         echo '<a href="' . $google_client->createAuthUrl() . '">
-                                    <img src="assets/img/sign-in-with-google.png" class="googlebtn" alt="Sign in with Google"/>
-                                  </a>';
+                        <button class="btn btn-light"><i class="fa-brands fa-google me-2 googlebtn"></i>Continuar con Google</button>
+                    </a>';
                     }
                     ?>
                 </div>
