@@ -1,15 +1,21 @@
 <?php
 require_once 'funciones.php';
 $conn = conectarConBBDD();
-try {
-    $result = $conn->query("select * from contenido where id=$_GET[peli]");
-    if ($result->rowCount()) {
-        $pelicula = $result->fetchObject();
-    } else {
-        header("Location:index.php");
+$notaUsuario = '';
+if (isset($_GET['peli']) && is_numeric($_GET['peli'])) {
+    try {
+        $result = $conn->query("select * from contenido where id=$_GET[peli]");
+        if ($result->rowCount()) {
+            $pelicula = $result->fetchObject();
+        } else {
+            header("Location:index.php");
+        }
+    } catch (PDOException $ex) {
+
+        echo $ex->getMessage();
     }
-} catch (PDOException $ex) {
-    echo $ex->getMessage();
+} else {
+    header("Location:index.php");
 }
 
 try {
@@ -17,6 +23,7 @@ try {
 } catch (PDOException $ex) {
     echo $ex->getMessage();
 }
+
 
 if (isset($_POST['comentar'])) {
     try {
@@ -45,6 +52,8 @@ if (isset($_POST['actualizar'])) {
         echo $ex->getMessage();
     }
 }
+
+
 ?>
 
 <?php include("includes/a_config.php"); ?>
@@ -54,6 +63,35 @@ if (isset($_POST['actualizar'])) {
 <head>
     <?php include("includes/head-tags.php"); ?>
 </head>
+<?php
+if (isset($_POST["cambiarValoracion"])) {
+    try {
+        $idUser = $_SESSION['usuario']->id;
+        $conn->exec("update lista set nota = $_POST[nuevaNotaUsuario] where id_contenido = $_GET[peli] and id_usuario=$idUser");
+        header("Location:detalles.php?peli=$_GET[peli]");
+    } catch (PDOException $ex) {
+        echo $ex->getMessage();
+    }
+}
+
+if (isset($_SESSION['usuario'])) {
+    try {
+        $idUser = $_SESSION['usuario']->id;
+        $resultado = $conn->query("select nota from lista where id_contenido=$_GET[peli] and id_usuario=$idUser");
+        if ($resultado->rowCount()) {
+            $fila = $resultado->fetchObject();
+            $notaUsuario = $fila->nota;
+        } else {
+            $notaUsuario = 'Sin valorar';
+        }
+    } catch (PDOException $ex) {
+        $notaUsuario = 'Sin valorar';
+        echo $ex->getMessage();
+    }
+}
+
+
+?>
 
 <body class="detalles" style="background-image: url(<?php echo $pelicula->imagen ?>);">
     <?php include("includes/navbar.php"); ?>
@@ -73,7 +111,23 @@ if (isset($_POST['actualizar'])) {
                     </div>
                     <div class="row">
                         <div class="py-4 text-center col">
-                            <div class="calificacion"><i class="px-2 fa-solid fa-star text-primary"></i><?php echo $pelicula->nota ?></div>
+                            <div class="calificacion">Nota: <i class="px-2 fa-solid fa-star text-primary"></i><?php echo $pelicula->nota ?></div>
+                            <?php
+                            if (isset($_SESSION['usuario'])) { ?>
+                                <div class="calificacion">Nota Usuario: <i class="px-2 fa-solid fa-star text-primary"></i><?php echo $notaUsuario ?></div>
+                                <form method="post" action="">
+                                    <select name="nuevaNotaUsuario" class="my-4">
+                                        <?php
+                                        for ($i = 0; $i <= 10; $i = $i + 0.25) {
+                                            echo "<option value=$i>$i</option>";
+                                        }
+                                        ?>
+                                    </select>
+                                    <button class="btn btn-primary" type="submit" name="cambiarValoracion">Cambiar nota</button>
+                                </form>
+                            <?php
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
