@@ -21,14 +21,6 @@ if (!isset($_SESSION['usuario'])) {
 <body>
     <?php include("includes/navbar.php"); ?>
     <main class="usuario">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="p-2 pelicula-favorita text-end">
-                    <i class="fa-solid fa-star text-primary"></i>
-                </div>
-            </div>
-        </div>
-
         <div class="p-5 container-fluid datos-usuario">
             <div class="row bg-info p-lg-5 rounded-3">
                 <div class="mx-auto text-center col-lg-4 foto-perfil align-content-center">
@@ -63,6 +55,17 @@ if (!isset($_SESSION['usuario'])) {
                     <h1>Lista Personal</h1>
                 </div>
             </div>
+            <div class="row datos-usuario">
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                    </div>
+                </div>
+            </div>
             <div class="row d-none d-lg-flex">
                 <div class="text-center col-2">
                     <h2>Imagen</h2>
@@ -81,7 +84,25 @@ if (!isset($_SESSION['usuario'])) {
                 foreach ($listaUsuario as $value) {
             ?>
                     <a href="detalles.php?peli=<?php echo $value->id; ?>">
-                        <div class="row top">
+                        <div class="row top <?php
+                                            switch ($value->estado) {
+                                                case 'on-hold':
+                                                    echo "statusOnHold";
+                                                    break;
+                                                case 'dropped':
+                                                    echo "statusDropped";
+                                                    break;
+                                                case 'watching':
+                                                    echo "statusCurrentlyWatching";
+                                                    break;
+                                                case 'completed':
+                                                    echo "statusCompleted";
+                                                    break;
+                                                default:
+                                                    echo "statusPlanToWatch";
+                                                    break;
+                                            }
+                                            ?>">
                             <div class="col-lg-2 contenedorImagen"><img src="<?php echo $value->imagen; ?>" alt="imagen"
                                     class="img-fluid"></div>
                             <div class="col-lg d-flex flex-column">
@@ -92,7 +113,7 @@ if (!isset($_SESSION['usuario'])) {
                                 </div>
                                 <div class="row">
                                     <div class="my-auto col-7 bordeGenero align-items-center">
-                                        <h3 class="m-0"><?php echo $value->genero; ?></h3>
+                                        <h2 class="m-0"><?php echo $value->genero; ?></h2>
                                     </div>
                                     <div class="my-auto col-5 bordeNota d-flex justify-content-end d-lg-none align-items-center">
                                         <div class="nota"><i class="fa-solid fa-star text-primary"></i><?php echo $value->nota; ?></div>
