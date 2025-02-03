@@ -11,7 +11,7 @@ if (isset($_GET['peli']) && is_numeric($_GET['peli'])) {
 $comentarios = obtenerComentarios($conn, $_GET['peli']);
 
 if (isset($_POST['eliminar'])) {
-    eliminarComentario($conn, $_POST['idcomentario'], $_GET['peli']);
+    eliminarComentario($conn, $_POST['idComentario'], $_GET['peli']);
 }
 
 if (isset($_POST['actualizar'])) {
