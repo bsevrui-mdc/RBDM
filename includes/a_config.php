@@ -48,6 +48,10 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 		$CURRENT_PAGE = "details";
 		$PAGE_TITLE = "Detalles - RBDM";
 		break;
+	case "/editar.php":
+		$CURRENT_PAGE = "editar";
+		$PAGE_TITLE = "Editar - RBDM";
+		break;
 	default:
 		$CURRENT_PAGE = "index";
 		$PAGE_TITLE = "GCM - RBDM";

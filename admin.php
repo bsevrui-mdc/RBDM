@@ -37,7 +37,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         
     }
 }
-$p=obtenerTodo($l,$tabla);//Obtenemos datos 
+$p=obtenerTodo($l,$tabla);//Obtenemos todos los datos 
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -52,14 +52,22 @@ $p=obtenerTodo($l,$tabla);//Obtenemos datos
                 <div class="col-lg-2">
                     <div class="row text-center">
                         <div class="col-3 col-lg-12">
-                            <img src="../assets/img/profilePictures/admin.jpg" alt="" class="imgAdmin">
+                            <img src="<?php echo $_SESSION['usuario']->imagen ?>" alt="" class="imgAdmin">
                         </div>
                         <!--aparecen los iconos al minimizar la pantalla -->
                         <div class="col-9 d-lg-none d-block align-content-center">
-                            <div class="row justify-content-around">
-                                <div class="col"><i class="fa-solid fa-film"></i></div>
-                                <div class="col"><i class="fa-solid fa-tv"></i></div>
-                                <div class="col"><i class="fa-solid fa-user"></i></div>
+                            <div class="row">
+                                <div class="d-flex flex-row gap-3 justify-content-around">
+                                    <form method="post">
+                                        <button type="submit" name="peli" class="btn-icon"><i class="fa-solid fa-film"></i></button>
+                                    </form>
+                                    <form method="post">
+                                        <button type="submit" name="serie" class="btn-icon"><i class="fa-solid fa-tv"></i></button>
+                                    </form>
+                                    <form method="post">
+                                        <button type="submit" name="usu" class="btn-icon"><i class="fa-solid fa-user"></i></button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                         <div class="col d-none d-lg-block">
@@ -88,6 +96,7 @@ $p=obtenerTodo($l,$tabla);//Obtenemos datos
                             </div>
                         </div>
                     </div>
+                    <form action="editar.php" method="post">
                     <div class="row py-2">
                         <div class="col textList">
                             
@@ -101,9 +110,10 @@ $p=obtenerTodo($l,$tabla);//Obtenemos datos
                             }
                             ?>
                             </h1>
-                            <input type="button" class="btn btn-primary w-25" value="Añadir">
+                            <button type="submit" class="btn btn-primary w-25" value="Añadir">Añadir</button>
                         </div>
                     </div>
+                    </form>
                     <div class="row">
                         <div class="col">
                             <?php include("includes/table.php"); ?>
@@ -114,14 +124,24 @@ $p=obtenerTodo($l,$tabla);//Obtenemos datos
                                 </div>
                                 <div class="col-6 d-flex flex-column justify-content-center text-center">
                                     <p><?php echo $value->nombre ?></p>
-                                    <p><?php echo $value->genero ?></p>
+                                    <?php if ($l === 'usuario'): ?>
+                                        <p><?php echo $value->apellidos ?></p>
+                                    <?php else: ?>
+                                        <p><?php echo $value->genero ?></p>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="col d-flex flex-column justify-content-around align-items-center">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i class="fa-solid fa-trash-can color-trash"></i>
+                                    <form  action="editar.php" method="post">
+                                        <input type="hidden" name="id" value="<?php echo $value->id; ?>">
+                                        <input type="hidden" name="tipo" value="<?php echo $tabla; ?>">
+                                        <button name="editar" class="btn-icon"><i class="fa-solid fa-pen"></i></button>
+                                    </form>
+                                    <form method="post">
+                                        <button name="borrar" class="btn-icon2"><i class="fa-solid fa-trash-can color-trash"></i></button>
+                                    </form>
                                 </div>    
                             </div>
-                            <?php endforeach; ?>
+                        <?php endforeach; ?>
                         </div>
                     </div>
                 </div>

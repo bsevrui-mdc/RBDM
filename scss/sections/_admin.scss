@@ -1,56 +1,91 @@
 .admin {
-    th,
-    td {
-      align-content: center;
-      text-align: center;
-    }
-  
-    .imgAdmin {
-      border-radius: 50%;
-      
-      @include media-breakpoint-down(lg) {
-        width: 100px;
-        height: auto;
-        display: flex;
-      }
-    }
-  
-    .textList {
+
+  th,
+  td {
+    align-content: center;
+    text-align: center;
+  }
+
+  .imgAdmin {
+    border-radius: 50%;
+
+    @include media-breakpoint-down(lg) {
+      width: 100px;
+      height: auto;
       display: flex;
-      justify-content: space-between;
-  
-      @include media-breakpoint-down(lg) {
-        display: flex;
-        justify-content: end;
-  
-        h1 {
-          display: none;
-        }
+    }
+  }
+
+  .textList {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(lg) {
+      display: flex;
+      justify-content: end;
+
+      h1 {
+        display: none;
       }
     }
-  
-    .nameAdmin {
-      font-family: $font-family-julius;
+  }
+
+  .nameAdmin {
+    font-family: $font-family-julius;
+  }
+
+  .imgFilms {
+    width: 10%;
+  }
+
+  .imgTable {
+    width: auto;
+    height: 100px;
+  }
+
+  .color-trash {
+    color: $red;
+
+    @include media-breakpoint-up(lg) {
+      margin-left: 1rem;
     }
-  
-    .imgFilms {
-      width: 10%;
-    }
-    
-    .imgTable{
-      width: auto;
-      height: 100px;
-    }
-  
-    .color-trash {
-      color: $red;
-  
-      @include media-breakpoint-up(lg) {
-        margin-left: 1rem;
-      }
-    }
-  
-    .table > :not(caption) > * > * {
-      background-color: $black; 
-    }
+  }
+
+  .table> :not(caption)>*>* {
+    background-color: $black;
+  }
+
+  .btn-icon {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .btn-icon:hover {
+    background-color: $info;
+    /* Un gris oscuro al pasar el mouse */
+  }
+
+  .btn-icon i {
+    color: $white;
+    /* Asegura que el icono sea blanco */
+  }
+
+  .btn-icon2 {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .btn-icon2 i {
+    color: $red;/* Asegura que el icono de basura sea rojo */
+  }
 }

@@ -109,3 +109,20 @@ function obtenerListaUsuario(int $id_usuario)
         echo $ex->getCode() . "<br>" . $ex->getMessage();
     }
 }
+
+function obtenerUno($id,$tabla){
+    $conex = conectarConBBDD();
+    try {
+        $query = "SELECT * FROM  $tabla where id = :id";
+    $stmt = $conex->prepare($query);
+    $stmt->bindParam(':id',$id,PDO::PARAM_STR);
+    $stmt->execute();
+    if ($stmt->rowCount() > 0) {
+        return $stmt->fetchObject();
+    } 
+    return false;
+    } catch (PDOException $ex) {
+        error_log("Error en obtenerUno: " . $ex->getMessage());
+        return false;
+    }
+}

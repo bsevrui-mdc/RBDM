@@ -29,8 +29,15 @@
                     <td><?php echo ($value->correo); ?></td>
                 <?php endif; ?>
                     <td>
-                        <i class="fa-solid fa-pen"></i>
-                        <i class="fa-solid fa-trash-can color-trash"></i>
+                        <form action="editar.php" method="post">
+                            <input type="hidden" name="id" value="<?php echo $value->id; ?>">
+                            <input type="hidden" name="tipo" value="<?php echo $tabla; ?>">
+                            <button name="editar" class="btn-icon"><i class="fa-solid fa-pen"></i></button>
+                        </form>
+                        <form method="post">
+                            <button name="borrar" class="btn-icon2"><i class="fa-solid fa-trash-can color-trash"></i></button>
+                        </form>
+                        
                     </td>
                 </tr>
             <?php endforeach; ?>
