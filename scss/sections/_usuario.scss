@@ -1,31 +1,4 @@
 .usuario {
-  .pelicula-favorita {
-    height: 500px;
-    width: 100%;
-    background-position: center;
-    background-image: url(../../assets/img/Series/breaking-bad.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @include media-breakpoint-down(lg) {
-      height: 450px;
-    }
-
-    i {
-      font-size: 70px; /*CF2: El tamaño de la fuente debe estar en variables sass */
-
-      @include media-breakpoint-down(lg) {
-        font-size: 30px; /*CF2:El tamaño de la fuente debe estar en variables sass */
-      }
-    }
-  }
-
-  h2 {
-    font-family: $font-family-oxanium;
-    font-size: $font-family-oxanium-size;
-    text-transform: uppercase;
-  }
-
   .datos-usuario {
     .foto-perfil {
       width: 320px;
@@ -44,16 +17,20 @@
           font-size: $font-family-calibri-size-p;
         }
 
-        border: 3px solid $black; /*CF2: de nuevo olvidas las variables*/
+        border: 3px solid $black;
         box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
       }
     }
   }
   .lista-usuario {
     .top {
-      border-left: 5px solid $statusCurrentlyWatching;
-
       width: 100%;
+
+      h1 {
+        font-family: $font-family-julius;
+        font-size: $font-family-julius-size-h2-mobile;
+        text-transform: uppercase;
+      }
     }
     width: 85%;
   }

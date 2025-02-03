@@ -3,57 +3,20 @@ require_once 'funciones.php';
 $conn = conectarConBBDD();
 $notaUsuario = '';
 if (isset($_GET['peli']) && is_numeric($_GET['peli'])) {
-    try {
-        $result = $conn->query("select * from contenido where id=$_GET[peli]");
-        if ($result->rowCount()) {
-            $pelicula = $result->fetchObject();
-        } else {
-            header("Location:index.php");
-        }
-    } catch (PDOException $ex) {
-
-        echo $ex->getMessage();
-    }
+    $pelicula = obtenerDatosPelicula($conn, $_GET['peli']);
 } else {
     header("Location:index.php");
 }
 
-try {
-    $comentarios = $conn->query("select u.imagen as imagen, c.texto as texto , c.id as idComentario, u.id as idUsuario from comentario c, usuario u where c.id_contenido = '$_GET[peli]' and c.id_usuario = u.id");
-} catch (PDOException $ex) {
-    echo $ex->getMessage();
-}
-
-
-if (isset($_POST['comentar'])) {
-    try {
-        $stmt = $conn->prepare("INSERT INTO comentario(id_usuario,id_contenido,texto) VALUES (?, ?, ?)");
-        $stmt->execute([$_SESSION['usuario']->id, $_GET['peli'], $_POST['comentarioUsuario']]);
-        header("Location:detalles.php?peli=$_GET[peli]");
-    } catch (PDOException $ex) {
-        echo $ex->getMessage();
-    }
-}
+$comentarios = obtenerComentarios($conn, $_GET['peli']);
 
 if (isset($_POST['eliminar'])) {
-    try {
-        $conn->exec("delete from comentario where id = $_POST[idComentario]");
-        header("Location:detalles.php?peli=$_GET[peli]");
-    } catch (PDOException $ex) {
-        echo $ex->getMessage();
-    }
+    eliminarComentario($conn, $_POST['idComentario'], $_GET['peli']);
 }
 
 if (isset($_POST['actualizar'])) {
-    try {
-        $conn->exec("update comentario set texto = '$_POST[comentario]' where id = $_POST[idComentario]");
-        header("Location:detalles.php?peli=$_GET[peli]");
-    } catch (PDOException $ex) {
-        echo $ex->getMessage();
-    }
+    actualizarComentario($conn, $_POST['comentario'], $_POST['idComentario'], $_GET['peli']);
 }
-
-
 ?>
 
 <?php include("includes/a_config.php"); ?>
@@ -64,31 +27,18 @@ if (isset($_POST['actualizar'])) {
     <?php include("includes/head-tags.php"); ?>
 </head>
 <?php
+if (isset($_POST['comentar'])) {
+    comentar($conn, $_SESSION['usuario']->id, $_GET['peli'], $_POST['comentarioUsuario']);
+}
+
 if (isset($_POST["cambiarValoracion"])) {
-    try {
-        $idUser = $_SESSION['usuario']->id;
-        $conn->exec("update lista set nota = $_POST[nuevaNotaUsuario] where id_contenido = $_GET[peli] and id_usuario=$idUser");
-        header("Location:detalles.php?peli=$_GET[peli]");
-    } catch (PDOException $ex) {
-        echo $ex->getMessage();
-    }
+    cambiarValoracion($conn, $_SESSION['usuario']->id, $_GET['peli'], $_POST['nuevaNotaUsuario']);
 }
 
 if (isset($_SESSION['usuario'])) {
-    try {
-        $idUser = $_SESSION['usuario']->id;
-        $resultado = $conn->query("select nota from lista where id_contenido=$_GET[peli] and id_usuario=$idUser");
-        if ($resultado->rowCount()) {
-            $fila = $resultado->fetchObject();
-            $notaUsuario = $fila->nota;
-        } else {
-            $notaUsuario = 'Sin valorar';
-        }
-    } catch (PDOException $ex) {
-        $notaUsuario = 'Sin valorar';
-        echo $ex->getMessage();
-    }
+    $notaUsuario = obtenerNotaUsuario($conn, $_SESSION['usuario']->id, $_GET['peli']);
 }
+
 
 
 ?>

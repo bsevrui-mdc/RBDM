@@ -35,7 +35,7 @@ a {
   }
 
   h2 {
-    font-size: $font-family-oxanium-size;
+    font-size: 1em;
     font-family: $font-family-oxanium;
   }
   h1 {
@@ -80,10 +80,14 @@ a {
     width: 100%;
     padding: 0;
   }
+
+  img {
+    height: 100px;
+  }
 }
 
 .nota {
-  font-size: $font-family-julius-size-h2;
+  font-size: $font-family-julius-size-h2-mobile;
   font-family: $font-family-julius;
   @include media-breakpoint-down(lg) {
     font-size: $font-family-calibri-size-p;
