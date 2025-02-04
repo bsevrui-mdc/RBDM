@@ -106,7 +106,7 @@
                 </div>
             </div>
         </main>
-        <script src="./js/signup.js" type="text/javascript"></script>
         <?php include("includes/footer.php"); ?>
+        <script src="./js/signup.js" type="text/javascript"></script>
     </body>
 </html>

@@ -49,8 +49,8 @@
                             <input type="password" name="password" class="form-control" required>
                         </div>
                         <div class="mb-3 text-center">
-                            <label for="captcha" class="form-label">Introduzca el texto mostrado</label>
-                            <img src="./includes/captcha.php" alt="CAPTCHA" class="captcha-image"><i class="fas fa-redo refresh-captcha"></i><br>
+                            <img id="captchaImage" src="./includes/captcha.php" alt="CAPTCHA" class="mb-3">
+                            <i id="refreshCaptcha" class="fas fa-redo"></i>
                             <input type="text" id="captcha" name="captcha" class="form-control" pattern="[A-Za-z1-9]{6}">
                         </div>
                         <div class="mb-3 d-flex justify-content-center">
@@ -74,5 +74,6 @@
             </div>
         </main>
         <?php include("includes/footer.php"); ?>
+        <script src="./js/captcha.js"></script>
     </body>
 </html>
