@@ -35,7 +35,9 @@
     $white = imagecolorallocate($image, 0, 0, 0);
     $textColors = [$black, $white];
     $fonts = ['../assets/fonts/Acme.ttf', '../assets/fonts/Merriweather.ttf', '../assets/fonts/Ubuntu.ttf'];
-    $captchaString = generateString($chars, 6);
+    $captchaString = generateString($chars);
+
+    setcookie("captchaString", $captchaString, time()+3600, '/');
 
     for ($i=0;$i<6;$i++) {
         $letterSpace = 170/6;
