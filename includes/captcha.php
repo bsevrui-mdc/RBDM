@@ -1,8 +1,7 @@
 <?php
-    // Cadena
     $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
-    function generateString($input, $strength = 5) {
+    function generateString($input, $strength = 6) {
         $string = '';
         for ($i=0;$i<$strength;$i++) {
             $randomChar = $input[mt_rand(0, strlen($input)-1)];
@@ -13,13 +12,12 @@
 
     // IMG
     $image = imagecreatetruecolor(200, 50);
-
-    imageantialias($image, true);
-
     $colors = [];
     $red = rand(125, 175);
     $green = rand(125, 175);
     $blue = rand(125, 175);
+
+    imageantialias($image, true);
 
     for ($i=0;$i<5;$i++) {
         $colors[] = imagecolorallocate($image, $red-(20*$i), $green-(20*$i), $blue-(20*$i));
@@ -33,7 +31,6 @@
         imagerectangle($image, rand(-10, 190), rand(-10, 10), rand(-10, 190), rand(40, 60), $rectColor);
     }
 
-    // CAPTCHA
     $black = imagecolorallocate($image, 0, 0, 0);
     $white = imagecolorallocate($image, 0, 0, 0);
     $textColors = [$black, $white];
