@@ -14,7 +14,7 @@
         if ($_POST['captcha'] != $_COOKIE['captchaString']) {
             $errorCaptcha = true;
         } else {
-            setcookie("captchaString", $captchaString, time()-3600, '/');
+            setcookie("captchaString", "", time()-3600, '/');
             if (empty($_POST['email']) || empty($_POST['password'])) {
                 $errorLogin = true;
             } else {
@@ -62,7 +62,7 @@
                         <div class="mb-3 text-center">
                             <img id="captchaImage" src="./includes/captcha.php" alt="CAPTCHA" class="mb-3">
                             <i id="refreshCaptcha" class="fas fa-redo"></i>
-                            <input type="text" id="captcha" name="captcha" class="form-control">
+                            <input type="text" id="captcha" name="captcha" class="form-control" placeholder="Introduzca el CAPTCHA mostrado arriba">
                         </div>
                         <div class="mb-3 d-flex justify-content-center">
                             <button type="submit" class="btn btn-primary" name="login">Iniciar</button>
