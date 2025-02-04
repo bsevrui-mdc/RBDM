@@ -3,28 +3,39 @@ document.addEventListener("DOMContentLoaded", function () {
   var acceptCookies = document.querySelector("#btn-aceptar-cookies");
   var rejectCookies = document.querySelector("#btn-rechazar-cookies");
   var bloqueoCookies = document.querySelector("#bloqueo-cookies");
+  var modal = document.getElementById("modal");
+  var aceptarmodal = document.getElementById("aceptarmodal");
 
   if (!cookieAlert || !bloqueoCookies) {
     return;
   }
 
   if (!getCookie("rbdmCookie")) {
-    // Mostrar el aviso de cookies y el fondo de bloqueo
     cookieAlert.classList.remove("oculto");
     bloqueoCookies.classList.remove("oculto");
     document.body.style.overflow = "hidden"; // Bloquear el scroll mientras se ve el aviso
   } else {
     ocultarAvisoCookies();
+    if (!getCookie("novedades")) {
+      modal.style.display = "block";
+    }
   }
 
   acceptCookies.addEventListener("click", function () {
     setCookie("rbdmCookie", "accepted", 365);
     ocultarAvisoCookies();
+    if (!getCookie("novedades")) {
+      modal.style.display = "block";
+    }
+  });
+
+  aceptarmodal.addEventListener("click", function () {
+    setCookie("novedades", "accepted", 30);
+    modal.style.display = "none";
   });
 
   rejectCookies.addEventListener("click", function () {
-    setCookie("rbdmCookie", "rejected", 365);
-    ocultarAvisoCookies();
+    location.href = "https://google.com";
   });
 
   function ocultarAvisoCookies() {
