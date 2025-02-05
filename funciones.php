@@ -110,19 +110,103 @@ function obtenerListaUsuario(int $id_usuario)
     }
 }
 
-function obtenerUno($id,$tabla){
+function obtenerUno($id, $tabla)
+{
     $conex = conectarConBBDD();
     try {
         $query = "SELECT * FROM  $tabla where id = :id";
-    $stmt = $conex->prepare($query);
-    $stmt->bindParam(':id',$id,PDO::PARAM_STR);
-    $stmt->execute();
-    if ($stmt->rowCount() > 0) {
-        return $stmt->fetchObject();
-    } 
-    return false;
+        $stmt = $conex->prepare($query);
+        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+        $stmt->execute();
+        if ($stmt->rowCount() > 0) {
+            return $stmt->fetchObject();
+        }
+        return false;
     } catch (PDOException $ex) {
         error_log("Error en obtenerUno: " . $ex->getMessage());
         return false;
     }
+}
+
+function obtenerDatosPelicula($conn, $idPeli)
+{
+    try {
+        $result = $conn->query("select * from contenido where id=$idPeli");
+        if ($result->rowCount()) {
+            $pelicula = $result->fetchObject();
+        } else {
+            header("Location:index.php");
+        }
+        return $pelicula;
+    } catch (PDOException $ex) {
+        echo $ex->getMessage();
+    }
+}
+
+function obtenerComentarios($conn, $idPeli)
+{
+    try {
+        $comentarios = $conn->query("select u.imagen as imagen, c.texto as texto , c.id as idComentario, u.id as idUsuario from comentario c, usuario u where c.id_contenido = $idPeli and c.id_usuario = u.id");
+        return $comentarios;
+    } catch (PDOException $ex) {
+        echo $ex->getMessage();
+    }
+}
+
+function eliminarComentario($conn, $idComentario, $idPelicula)
+{
+    try {
+        $conn->exec("delete from comentario where id = $idComentario");
+        header("Location:detalles.php?peli=$idPelicula");
+    } catch (PDOException $ex) {
+        echo $ex->getMessage();
+    }
+}
+
+function actualizarComentario($conn, $comentario, $idComentario, $idPeli)
+{
+    try {
+        $conn->exec("update comentario set texto = '$comentario' where id = $idComentario");
+        header("Location:detalles.php?peli=$idPeli");
+    } catch (PDOException $ex) {
+        echo $ex->getMessage();
+    }
+}
+
+function comentar($conn, $idUsuario, $idPeli, $textoComentario)
+{
+    try {
+        $stmt = $conn->prepare("INSERT INTO comentario(id_usuario,id_contenido,texto) VALUES (?, ?, ?)");
+        $stmt->execute([$idUsuario, $idPeli, $textoComentario]);
+        header("Location:detalles.php?peli=$idPeli");
+    } catch (PDOException $ex) {
+        echo $ex->getMessage();
+    }
+}
+
+function cambiarValoracion($conn, $idUsuario, $idPeli, $nuevaNota)
+{
+    try {
+        $conn->exec("update lista set nota = $nuevaNota where id_contenido = $idPeli and id_usuario=$idUsuario");
+        header("Location:detalles.php?peli=$idPeli");
+    } catch (PDOException $ex) {
+        echo $ex->getMessage();
+    }
+}
+
+function obtenerNotaUsuario($conn, $idUsuario, $idPeli)
+{
+    try {
+        $resultado = $conn->query("select nota from lista where id_contenido=$idPeli and id_usuario=$idUsuario");
+        if ($resultado->rowCount()) {
+            $fila = $resultado->fetchObject();
+            $notaUsuario = $fila->nota;
+        } else {
+            $notaUsuario = 'Sin valorar';
+        }
+    } catch (PDOException $ex) {
+        $notaUsuario = 'Sin valorar';
+        echo $ex->getMessage();
+    }
+    return $notaUsuario;
 }

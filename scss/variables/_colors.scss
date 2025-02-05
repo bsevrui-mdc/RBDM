@@ -1,19 +1,35 @@
-$primary: #1565C0;
-$secondary: #BBDEFB;
-$white: #FFFFFF;
-$red: #FF0000;
+$primary: #1565c0;
+$secondary: #bbdefb;
+$white: #ffffff;
+$red: #ff0000;
 $black: #000000;
-$info: #3D3D3D;
+$info: #3d3d3d;
 $lightGrey: #ccc;
 $lightGrey2: #999;
 
 $divTransparency: rgba(255, 255, 255, 0.1);
-$divConFondoOscuro: rgba(0,0,0,0.8);
+$divConFondoOscuro: rgba(0, 0, 0, 0.8);
 
-$statusOnHold: #FFFF00;
-$statusCurrentlyWatching: #1565C0;
-$statusDropped: #FF0000;
-$statusPlanToWatch: #BEBEBE;
-$statusCompleted: #00FF00;
+$statusOnHold: #ffff00;
+$statusCurrentlyWatching: #1565c0;
+$statusDropped: #ff0000;
+$statusPlanToWatch: #bebebe;
+$statusCompleted: #00ff00;
 
 $grey: $statusPlanToWatch;
+
+.statusCurrentlyWatching {
+  border-left: 5px solid $statusCurrentlyWatching; // watching
+}
+.statusOnHold {
+  border-left: 5px solid $statusOnHold; // on-hold
+}
+.statusDropped {
+  border-left: 5px solid $statusDropped; // dropped
+}
+.statusPlanToWatch {
+  border-left: 5px solid $statusPlanToWatch; // ptw
+}
+.statusCompleted {
+  border-left: 5px solid $statusCompleted; // completed
+}

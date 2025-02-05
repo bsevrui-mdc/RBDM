@@ -16,15 +16,16 @@ if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
 <?php
 
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <?php include("includes/head-tags.php"); ?>
-
+    <?php include("includes/modal.php"); ?>
     <script src="./js/scripts.js"></script>
-
+    <script src="./js/cookies.js"></script>
 </head>
 
 <body class="index">
@@ -197,9 +198,21 @@ if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
 
 
         </div>
-    </main>
 
-    <?php include("includes/footer.php"); ?>
+        <div id="bloqueo-cookies"></div>
+        <div class="aviso-cookies" id="aviso-cookies">
+            <img class="galleta" src="./assets/img/cookie.svg" alt="Galleta">
+            <h3 class="titulo">Cookies</h3>
+            <p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios. Acepte las cookies para recibir información y novedades</p>
+            <button class="btn btn-primary" id="btn-aceptar-cookies">Aceptar cookies</button>
+            <button class="btn btn-primary" id="btn-rechazar-cookies">Rechazar cookies</button>
+            <a class="enlace" href="#">Aviso de Cookies</a>
+        </div>
+
+        <?php include("includes/footer.php"); ?>
+
+
 </body>
+
 
 </html>
