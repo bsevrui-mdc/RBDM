@@ -14,7 +14,7 @@
 
     if (!isset($_SESSION['usuario'])) {
         try {
-            $datosPelicula = $conn->query("SELECT c.id as id, c.nombre as nombre, c.nota as nota, c.genero as genero, c.imagen as imagen from contenido c where c.tipo = 'Pelicula' order by c.nota desc LIMIT 4");
+            $datosPelicula = $conn->query("SELECT c.id as id, c.nombre as nombre, c.nota as nota, c.genero as genero, c.imagen as imagen from contenido c where c.tipo = 'Pelicula' order by c.nota desc LIMIT 10");
         } catch (PDOException $ex) {
             echo $ex->getMessage();
         }
