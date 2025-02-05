@@ -10,20 +10,24 @@ $pattern2 = '/^[a-zA-Z\s]+$/'; // Nombre, Apellidos, Pais
 $pattern3 = '/^[a-zA-Z0-9]*$/'; // CP
 $pattern4 = '/^[6-9]\d{0,8}$/'; // Telf
 
-$error = false;
+$errorCaptcha = false;
+$errorRegistro = false;
 
 if (isset($_POST['signup'])) {
-  if (empty($_POST['email']) || !preg_match($pattern1, $_POST['email']) || empty($_POST['pass']) || empty($_POST['confirmPass']) || $_POST['pass'] != $_POST['confirmPass'] || empty($_POST['firstname']) || empty($_POST['lastname'])  || empty($_POST['birthdate']) || empty($_POST['pais']) || !preg_match($pattern2, $_POST['pais']) || empty($_POST['postalcode']) || !preg_match($pattern3, $_POST['postalcode']) || empty($_POST['telefono']) || !preg_match($pattern4, $_POST['telefono'])) {
-    $error = true;
-  }
+  if ($_POST['captcha'] != $_COOKIE['captchaString']) {
+    $errorCaptcha = true;
+  } else {
+    setcookie("captchaString", "", time() - 3600, '/');
 
-  if (!$error) {
-    if (registro($_POST['email'], $_POST['pass'], $_POST['firstname'], $_POST['lastname'], $_POST['birthdate'], $_POST['pais'], $_POST['postalcode'], $_POST['telefono'],  $_POST['imagen'])) {
-      header("Location:index.php");
-      exit;
+    if (empty($_POST['email']) || !preg_match($pattern1, $_POST['email']) || empty($_POST['pass']) || empty($_POST['confirmPass']) || $_POST['pass'] != $_POST['confirmPass'] || empty($_POST['firstname']) || empty($_POST['lastname'])  || empty($_POST['birthdate']) || empty($_POST['pais']) || !preg_match($pattern2, $_POST['pais']) || empty($_POST['postalcode']) || !preg_match($pattern3, $_POST['postalcode']) || empty($_POST['telefono']) || !preg_match($pattern4, $_POST['telefono'])) {
+      $errorRegistro = true;
     } else {
-
-      $error = true;
+      if (registro($_POST['email'], $_POST['pass'], $_POST['firstname'], $_POST['lastname'], $_POST['birthdate'], $_POST['pais'], $_POST['postalcode'], $_POST['telefono'],  $_POST['imagen'])) {
+        header("Location:index.php");
+        exit;
+      } else {
+        $errorRegistro = true;
+      }
     }
   }
 }
@@ -39,7 +43,7 @@ if (isset($_POST['signup'])) {
       <p>Please fill in this form to create an account.</p>
       <hr>
       <?php
-      if ($error) {
+      if ($errorRegistro) {
         echo "<span class='error'>Algo ha salido mal :(</span>";
       }
       ?>
@@ -72,6 +76,12 @@ if (isset($_POST['signup'])) {
           <label for="pais"><b>Pais</b></label>
           <input type="text" id="pais" name="pais" required>
           <span id="errorPais" class="noError">El pais solo puede estar compuesto por letras y espacios (no se admiten acentos, tampoco ñ/ç/similares)</span>
+
+          <div class="mb-3 text-center">
+            <img id="captchaImage" src="./includes/captcha.php" alt="CAPTCHA" class="mb-3">
+            <i id="refreshCaptcha" class="fas fa-redo"></i>
+            <input type="text" id="captcha" name="captcha" class="form-control" placeholder="Introduzca el CAPTCHA mostrado arriba">
+          </div>
         </div>
       </div>
       <label>
@@ -88,4 +98,5 @@ if (isset($_POST['signup'])) {
   </form>
 
   <script src="/js/signup.js"></script>
+  <script src="./js/captcha.js"></script>
 </div>
