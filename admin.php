@@ -9,12 +9,13 @@ if ($_SESSION['usuario']->tipo != 'admin') {
 $titulosPS = [
     'nombre'=>'Nombre',
     'genero'=>'Genero',
-    'fecha'=>'Fecha',
+    'fecha'=>'Nota',
     ];
     $titulosUsu=[
         'nombre'=>'Nombre',
         'apellidos'=>'Apellidos',
-        'correo'=>'Email'
+        'correo'=>'Email',
+        'tipo'=>'Tipo',
     ];
 $titulos=$titulosPS;//valor predeterminado
 $l='pelicula';//valor predeterminado
@@ -51,11 +52,13 @@ $p=obtenerTodo($l,$tabla);//Obtenemos todos los datos
                 <!--Parte izquierda-->
                 <div class="col-lg-2">
                     <div class="row text-center">
+                        <!--
                         <div class="col-3 col-lg-12">
                             <img src="<?php echo $_SESSION['usuario']->imagen ?>" alt="" class="imgAdmin">
                         </div>
+                        -->
                         <!--aparecen los iconos al minimizar la pantalla -->
-                        <div class="col-9 d-lg-none d-block align-content-center">
+                        <div class="col d-lg-none d-block align-content-center">
                             <div class="row">
                                 <div class="d-flex flex-row gap-3 justify-content-around">
                                     <form method="post">
@@ -110,7 +113,26 @@ $p=obtenerTodo($l,$tabla);//Obtenemos todos los datos
                             }
                             ?>
                             </h1>
-                            <button type="submit" class="btn btn-primary w-25" value="Añadir">Añadir</button>
+                            <!-- Dropdown de Bootstrap -->
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Añadir
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li>
+                                        <form action="editar.php" method="post">
+                                            <input type="hidden" name="tipo" value="cliente">
+                                            <button type="submit" name="user" class="dropdown-item">Añadir Usuario</button>
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <form action="editar.php" method="post">
+                                            <input type="hidden" name="tipo" value="contenido">
+                                            <button type="submit" name="media" class="dropdown-item">Añadir Película/Serie</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     </form>
@@ -119,18 +141,22 @@ $p=obtenerTodo($l,$tabla);//Obtenemos todos los datos
                             <?php include("includes/table.php"); ?>
                             <?php foreach ($p as $value): ?>
                             <div class="row d-lg-none mb-3">
+                                <!--
                                 <div class="col-4">
-                                    <img src="<?php echo $value->imagen ?>" class="img-fluid imgTable">
+                                   <img src="<?php echo $value->imagen ?>" class="img-fluid imgTable"> 
                                 </div>
+                                -->
                                 <div class="col-6 d-flex flex-column justify-content-center text-center">
-                                    <p><?php echo $value->nombre ?></p>
+                                    <p class="titulo"><?php echo $value->nombre ?></p>
                                     <?php if ($l === 'usuario'): ?>
                                         <p><?php echo $value->apellidos ?></p>
+                                        <p><?php echo $value->tipo ?></p>
                                     <?php else: ?>
                                         <p><?php echo $value->genero ?></p>
+                                        <p><?php echo $value->nota ?></p>
                                     <?php endif; ?>
                                 </div>
-                                <div class="col d-flex flex-column justify-content-around align-items-center">
+                                <div class="col d-flex justify-content-around align-items-center">
                                     <form  action="editar.php" method="post">
                                         <input type="hidden" name="id" value="<?php echo $value->id; ?>">
                                         <input type="hidden" name="tipo" value="<?php echo $tabla; ?>">

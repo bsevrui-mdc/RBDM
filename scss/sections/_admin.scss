@@ -3,9 +3,13 @@
   th,
   td {
     align-content: center;
-    text-align: center;
+    text-align: start;
+    font-family: $font-family-calibri;
+    font-size: $font-family-calibri-size-p;
   }
-
+  .titulo{
+    font-size: $font-family-calibri-size-p;
+  }
   .imgAdmin {
     border-radius: 50%;
 
@@ -19,6 +23,9 @@
   .textList {
     display: flex;
     justify-content: space-between;
+    width: auto;
+    padding: 5px 20px;
+    height: 50px;
 
     @include media-breakpoint-down(lg) {
       display: flex;
