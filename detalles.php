@@ -34,9 +34,30 @@ if (isset($_POST['comentar'])) {
 if (isset($_POST["cambiarValoracion"])) {
     cambiarValoracion($conn, $_SESSION['usuario']->id, $_GET['peli'], $_POST['nuevaNotaUsuario']);
 }
+if (isset($_POST["cambiarEstado"])) {
+    try {
+        $idUser = $_SESSION['usuario']->id;
+        $conn->exec("update lista set estado='$_POST[estadoContenido]' where id_contenido = $_GET[peli] and id_usuario=$idUser");
+        header("Location:detalles.php?peli=$_GET[peli]");
+    } catch (PDOException $ex) {
+        echo $ex->getMessage();
+    }
+}
 
 if (isset($_SESSION['usuario'])) {
     $notaUsuario = obtenerNotaUsuario($conn, $_SESSION['usuario']->id, $_GET['peli']);
+    try {
+        $idUser = $_SESSION['usuario']->id;
+        $result = $conn->query("select estado from lista where id_contenido = $_GET[peli] and id_usuario=$idUser");
+        if ($result->rowCount()) {
+            $fila = $result->fetchObject();
+            $estado = $fila->estado;
+        } else {
+            $estado = '';
+        }
+    } catch (PDOException $ex) {
+        echo $ex->getMessage();
+    }
 }
 
 
@@ -74,6 +95,22 @@ if (isset($_SESSION['usuario'])) {
                                         ?>
                                     </select>
                                     <button class="btn btn-primary" type="submit" name="cambiarValoracion">Cambiar nota</button>
+                                </form>
+                            <?php
+                            }
+                            ?>
+                            <?php
+                            if (isset($_SESSION['usuario'])) { ?>
+                                Estado del contenido: <?php echo $estado; ?>
+                                <form method="post" action="">
+                                    <select name="estadoContenido" class="my-4">
+                                        <option value="ptw" <?php if ($estado == "ptw") echo 'selected' ?>>Planeo verla</option>
+                                        <option value="watching" <?php if ($estado == "watching") echo 'selected' ?>>Viendo</option>
+                                        <option value="dropped" <?php if ($estado == "dropped") echo 'selected' ?>>Abandonada</option>
+                                        <option value="on-hold" <?php if ($estado == "on-hold") echo 'selected' ?>>En pausa</option>
+                                        <option value="completed" <?php if ($estado == "completed") echo 'selected' ?>>Completada</option>
+                                    </select>
+                                    <button class="btn btn-primary" type="submit" name="cambiarEstado">Cambiar estado</button>
                                 </form>
                             <?php
                             }

@@ -33,3 +33,19 @@ $grey: $statusPlanToWatch;
 .statusCompleted {
   border-left: 5px solid $statusCompleted; // completed
 }
+
+.statusCurrentlyWatchingBg {
+  background-color: $statusCurrentlyWatching; // watching
+}
+.statusOnHoldBg {
+  background-color: $statusOnHold; // on-hold
+}
+.statusDroppedBg {
+  background-color: $statusDropped; // dropped
+}
+.statusPlanToWatchBg {
+  background-color: $statusPlanToWatch; // ptw
+}
+.statusCompletedBg {
+  background-color: $statusCompleted; // completed
+}

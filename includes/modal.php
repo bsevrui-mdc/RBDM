@@ -20,9 +20,9 @@ try {
                 ?>
                     <div class="row">
                         <div class="col">
-                            Titulo: <?php echo $fila->nombre ?>
-                            Genero: <?php echo $fila->genero ?>
-                            Fecha de publicacion: <?php echo $fila->fecha ?>
+                            Titulo: <?php echo $fila->nombre ?><br>
+                            Genero: <?php echo $fila->genero ?><br>
+                            Fecha de publicacion: <?php echo $fila->fecha ?><br>
                         </div>
                     </div>
                 <?php
