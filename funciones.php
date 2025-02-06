@@ -227,13 +227,6 @@ function insertarUsuario($correo, $contrasena, $nombre, $apellidos, $tipo, $fech
     }
 }
 
-function borrar($id,$tabla){
-    $conex = conectarConBBDD();
-    try {
-        $conex->exec("DELETE FROM $tabla WHERE id = $id ");
-    } catch (PDOException $ex) {
-        echo $ex->getCode() . "<br>" . $ex->getMessage();
-    }
-}
+
 
 
