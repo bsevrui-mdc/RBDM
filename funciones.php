@@ -184,10 +184,16 @@ function comentar($conn, $idUsuario, $idPeli, $textoComentario)
     }
 }
 
-function cambiarValoracion($conn, $idUsuario, $idPeli, $nuevaNota)
+function cambiarValoracion($conn, $idUsuario, $idPeli, $nuevaNota, $estado)
 {
     try {
-        $conn->exec("update lista set nota = $nuevaNota where id_contenido = $idPeli and id_usuario=$idUsuario");
+        $result = $conn->query("select * from lista where id_contenido = $idPeli and id_usuario=$idUsuario");
+        if ($result->rowCount()) {
+            $conn->exec("update lista set nota = $nuevaNota, estado = $estado where id_contenido = $idPeli and id_usuario=$idUsuario");
+        } else {
+            $conn->exec("insert into lista values($idPeli,$idUsuario,$nuevaNota,'$estado')");
+        }
+
         header("Location:detalles.php?peli=$idPeli");
     } catch (PDOException $ex) {
         echo $ex->getMessage();
@@ -226,7 +232,3 @@ function insertarUsuario($correo, $contrasena, $nombre, $apellidos, $tipo, $fech
         echo $ex->getCode() . "<br>" . $ex->getMessage();
     }
 }
-
-
-
-

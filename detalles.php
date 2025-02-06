@@ -32,17 +32,9 @@ if (isset($_POST['comentar'])) {
 }
 
 if (isset($_POST["cambiarValoracion"])) {
-    cambiarValoracion($conn, $_SESSION['usuario']->id, $_GET['peli'], $_POST['nuevaNotaUsuario']);
+    cambiarValoracion($conn, $_SESSION['usuario']->id, $_GET['peli'], $_POST['nuevaNotaUsuario'], $_POST['estadoContenido']);
 }
-if (isset($_POST["cambiarEstado"])) {
-    try {
-        $idUser = $_SESSION['usuario']->id;
-        $conn->exec("update lista set estado='$_POST[estadoContenido]' where id_contenido = $_GET[peli] and id_usuario=$idUser");
-        header("Location:detalles.php?peli=$_GET[peli]");
-    } catch (PDOException $ex) {
-        echo $ex->getMessage();
-    }
-}
+
 
 if (isset($_SESSION['usuario'])) {
     $notaUsuario = obtenerNotaUsuario($conn, $_SESSION['usuario']->id, $_GET['peli']);
@@ -89,20 +81,14 @@ if (isset($_SESSION['usuario'])) {
                                 <form method="post" action="">
                                     <select name="nuevaNotaUsuario" class="my-4">
                                         <?php
-                                        for ($i = 0; $i <= 10; $i = $i + 0.25) {
-                                            echo "<option value=$i>$i</option>";
+                                        for ($i = 0; $i <= 10; $i++) {
+                                            echo "<option value=$i";
+                                            if ($i == $notaUsuario) echo 'selected';
+                                            echo ">$i</option>";
                                         }
                                         ?>
                                     </select>
-                                    <button class="btn btn-primary" type="submit" name="cambiarValoracion">Cambiar nota</button>
-                                </form>
-                            <?php
-                            }
-                            ?>
-                            <?php
-                            if (isset($_SESSION['usuario'])) { ?>
-                                Estado del contenido: <?php echo $estado; ?>
-                                <form method="post" action="">
+
                                     <select name="estadoContenido" class="my-4">
                                         <option value="ptw" <?php if ($estado == "ptw") echo 'selected' ?>>Planeo verla</option>
                                         <option value="watching" <?php if ($estado == "watching") echo 'selected' ?>>Viendo</option>
@@ -110,11 +96,12 @@ if (isset($_SESSION['usuario'])) {
                                         <option value="on-hold" <?php if ($estado == "on-hold") echo 'selected' ?>>En pausa</option>
                                         <option value="completed" <?php if ($estado == "completed") echo 'selected' ?>>Completada</option>
                                     </select>
-                                    <button class="btn btn-primary" type="submit" name="cambiarEstado">Cambiar estado</button>
+                                    <button class="btn btn-primary" type="submit" name="cambiarValoracion">Cambiar nota y estado</button>
                                 </form>
                             <?php
                             }
                             ?>
+
                         </div>
                     </div>
                 </div>
