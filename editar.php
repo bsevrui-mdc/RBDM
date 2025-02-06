@@ -9,7 +9,11 @@ if ($_SESSION['usuario']->tipo != "admin") {
     header("Location: index.php");
     exit();
 }
-
+if(isset($_POST['borrar'])) {
+    var_dump($_POST['idD'],$_POST['tipoD']);
+    
+    header('Location:admin.php');
+}
 // Inicializar variables
 $obj = null;
 $tipoSeleccionado = isset($_POST['tipo']) ? $_POST['tipo'] : null;
@@ -22,6 +26,20 @@ if (isset($_POST['editar']) || isset($_POST['media']) || isset($_POST['user'])) 
     }
 }
 
+if(isset($_POST['insert'])){
+    //var_dump($_POST);
+    //var_dump($_FILES);
+    //exit();
+    if(is_uploaded_file($_FILES['img']['tmp_name'])){
+        $ruta = "./assets/img/profilePictures/".time()."-".$_FILES['img']['name'];
+        move_uploaded_file($_FILES['img']['tmp_name'], $ruta);
+
+        insertarUsuario($_POST['email'],$_POST['pass'],$_POST['nombre'],$_POST['apellidos'],$_POST['tipo'],$_POST['fecha'],$_POST['pais'],$_POST['codigo_postal'],$_POST['telefono'],$ruta);
+        header('Location: admin.php');
+    }else{
+        echo 'error';
+    }
+} 
 ?>
 
 <!DOCTYPE html>
@@ -38,13 +56,6 @@ if (isset($_POST['editar']) || isset($_POST['media']) || isset($_POST['user'])) 
 
                 <form action="" method="POST" class="px-3 px-lg-5" enctype="multipart/form-data">
                     <div class="mb-3">
-                        <label class="form-label">Nombre:</label>
-                        <input type="text" name="nombre" class="form-control"
-                               value="<?php echo isset($obj) ? htmlspecialchars($obj->nombre) : ''; ?>"
-                               placeholder="Insertar nombre" required>
-                    </div>
-
-                    <div class="mb-3">
                         <label class="form-label">Tipo:</label>
                         <select name="tipo" class="form-select" onchange="this.form.submit()">
                             <?php if($tipoSeleccionado=='cliente'||$tipoSeleccionado=='admin'): ?>
@@ -56,6 +67,13 @@ if (isset($_POST['editar']) || isset($_POST['media']) || isset($_POST['user'])) 
                             <?php endif; ?>
                         </select>
                     </div>
+                
+                    <div class="mb-3">
+                        <label class="form-label">Nombre:</label>
+                        <input type="text" name="nombre" class="form-control"
+                               value="<?php echo isset($obj) ? htmlspecialchars($obj->nombre) : ''; ?>"
+                               placeholder="Insertar nombre" required>
+                    </div>
 
                     <?php if ($tipoSeleccionado == 'cliente' || $tipoSeleccionado == 'admin'): ?>
                         <!-- FORMULARIO PARA USUARIOS -->
@@ -64,6 +82,12 @@ if (isset($_POST['editar']) || isset($_POST['media']) || isset($_POST['user'])) 
                             <input type="text" name="apellidos" class="form-control"
                                    value="<?php echo isset($obj) ? htmlspecialchars($obj->apellidos) : ''; ?>"
                                    placeholder="Insertar apellidos" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password:</label>
+                            <input type="text" name="pass" class="form-control"
+                                   value="<?php echo isset($obj) ? htmlspecialchars($obj->clave) : ''; ?>"
+                                    required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Fecha de nacimiento:</label>
@@ -94,6 +118,10 @@ if (isset($_POST['editar']) || isset($_POST['media']) || isset($_POST['user'])) 
                                    value="<?php echo isset($obj) ? htmlspecialchars($obj->correo) : ''; ?>"
                                    placeholder="example@example.com" required>
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label">Imagen:</label>
+                            <input type="file" name="img" class="form-control">
+                        </div>
 
                     <?php else: ?>
                         <!-- FORMULARIO PARA PELÍCULAS Y SERIES -->
@@ -123,21 +151,22 @@ if (isset($_POST['editar']) || isset($_POST['media']) || isset($_POST['user'])) 
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Imagen:</label>
-                            <input type="file" name="imagen" class="form-control">
+                            <input type="file" name="img" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Video:</label>
                             <input type="file" name="video" class="form-control">
                         </div>
                     <?php endif; ?>
-
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-primary" name="update"><?php echo isset($obj) ? 'Actualizar' : 'Añadir'; ?></button>
-                    </div>
+                    <button type="submit" class="btn btn-primary" 
+                        name="<?php echo isset($obj) ? 'update' : 'insert'; ?>">
+                        <?php echo isset($obj) ? 'Actualizar' : 'Añadir'; ?>
+                    </button>
                 </form>
             </div>
         </div>
     </main>
     <?php include("includes/footer.php"); ?>
+    <script src="./js/signup.js" type="text/javascript"></script>
 </body>
 </html>

@@ -20,6 +20,7 @@ $titulosPS = [
 $titulos=$titulosPS;//valor predeterminado
 $l='pelicula';//valor predeterminado
 $tabla='contenido';//tabla por defecto
+
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     if (isset($_POST['peli'])) {
         $l = 'pelicula';
@@ -38,7 +39,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         
     }
 }
-$p=obtenerTodo($l,$tabla);//Obtenemos todos los datos 
+$p = obtenerTodo($l,$tabla);//Obtenemos todos los datos 
+
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -162,7 +165,9 @@ $p=obtenerTodo($l,$tabla);//Obtenemos todos los datos
                                         <input type="hidden" name="tipo" value="<?php echo $tabla; ?>">
                                         <button name="editar" class="btn-icon"><i class="fa-solid fa-pen"></i></button>
                                     </form>
-                                    <form method="post">
+                                    <form method="post" action="editar.php">
+                                        <input type="hidden" name="idD" value="<?php echo $value->id; ?>">
+                                        <input type="hidden" name="tipoD" value="<?php echo $tabla; ?>">
                                         <button name="borrar" class="btn-icon2"><i class="fa-solid fa-trash-can color-trash"></i></button>
                                     </form>
                                 </div>    

@@ -210,3 +210,30 @@ function obtenerNotaUsuario($conn, $idUsuario, $idPeli)
     }
     return $notaUsuario;
 }
+
+function insertarUsuario($correo, $contrasena, $nombre, $apellidos, $tipo, $fecha, $pais, $cp, $telf, $img)
+{
+    $conex = conectarConBBDD();
+    try {
+        $contrasenaCifrada = password_hash($contrasena, PASSWORD_DEFAULT);
+        $op = $conex->exec("INSERT INTO usuario (correo, clave, nombre, apellidos, fecha, pais, codigo_postal, telefono, tipo, imagen) VALUES ('$correo', '$contrasenaCifrada', '$nombre', '$apellidos', '$fecha', '$pais', '$cp', '$telf','$tipo', '$img')");
+        if ($op) {
+            return true;
+        } else {
+            return false;
+        }
+    } catch (PDOException $ex) {
+        echo $ex->getCode() . "<br>" . $ex->getMessage();
+    }
+}
+
+function borrar($id,$tabla){
+    $conex = conectarConBBDD();
+    try {
+        $conex->exec("DELETE FROM $tabla WHERE id = $id ");
+    } catch (PDOException $ex) {
+        echo $ex->getCode() . "<br>" . $ex->getMessage();
+    }
+}
+
+
