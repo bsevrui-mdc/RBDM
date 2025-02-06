@@ -1,0 +1,26 @@
+.lista-usuario {
+  h2 {
+    font-family: $font-family-julius;
+    font-size: $font-family-julius-size-h2-mobile;
+  }
+  .top {
+    width: 100%;
+
+    h1 {
+      font-family: $font-family-julius;
+      font-size: $font-family-julius-size-h2-mobile;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-family: $font-family-julius;
+      font-size: 1em;
+    }
+  }
+  width: 85%;
+  .leyenda {
+    display: inline-block;
+    width: 20px; /* Ancho del cuadrado */
+    height: 20px; /* Alto del cuadrado */
+    margin-right: 5px; /* Espacio entre el cuadrado y el texto */
+  }
+}

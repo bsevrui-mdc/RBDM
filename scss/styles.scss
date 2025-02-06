@@ -1,4 +1,3 @@
-
 // Import custom variables and override default Bootstrap variables
 @import "./variables.scss";
 
@@ -22,15 +21,14 @@
 @import "./sections/detalles.scss";
 @import "./sections/juegoMemoria.scss";
 @import "./sections/juegoPreguntas.scss";
-
-
+@import "./sections/listaUsuario.scss";
 
 // Components
 @import "./components/buttons.scss";
 @import "./components/navbar.scss";
 @import "./components/footer.scss";
 @import "./components/carrusel-normal.scss";
-@import "./components/carrusel-multiple.scss" ;
+@import "./components/carrusel-multiple.scss";
 @import "./components/form.scss";
 @import "./components/video-player.scss";
 @import "./components/cookies.scss";
