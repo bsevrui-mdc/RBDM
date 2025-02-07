@@ -40,7 +40,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     }
 }
 $p = obtenerTodo($l,$tabla);//Obtenemos todos los datos 
-
+if(isset($_POST['borrar'])) {
+    borrar($_POST['idD'],$_POST['tipoD']); 
+    header('location:admin.php');
+}
 
 ?>
 <!DOCTYPE html>
@@ -165,7 +168,7 @@ $p = obtenerTodo($l,$tabla);//Obtenemos todos los datos
                                         <input type="hidden" name="tipo" value="<?php echo $tabla; ?>">
                                         <button name="editar" class="btn-icon"><i class="fa-solid fa-pen"></i></button>
                                     </form>
-                                    <form method="post" action="editar.php">
+                                    <form  action="" method="post">
                                         <input type="hidden" name="idD" value="<?php echo $value->id; ?>">
                                         <input type="hidden" name="tipoD" value="<?php echo $tabla; ?>">
                                         <button name="borrar" class="btn-icon2"><i class="fa-solid fa-trash-can color-trash"></i></button>

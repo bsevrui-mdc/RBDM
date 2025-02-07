@@ -35,7 +35,9 @@
                                 <input type="hidden" name="tipo" value="<?php echo $tabla; ?>">
                                 <button name="editar" class="btn-icon"><i class="fa-solid fa-pen"></i></button>
                             </form>
-                            <form method="post">
+                            <form action="" method="post">
+                                <input type="hidden" name="idD" value="<?php echo $value->id; ?>">
+                                <input type="hidden" name="tipoD" value="<?php echo $tabla; ?>">
                                 <button name="borrar" class="btn-icon2"><i class="fa-solid fa-trash-can color-trash"></i></button>
                             </form>
                         </div>

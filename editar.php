@@ -9,11 +9,7 @@ if ($_SESSION['usuario']->tipo != "admin") {
     header("Location: index.php");
     exit();
 }
-if(isset($_POST['borrar'])) {
-    var_dump($_POST['idD'],$_POST['tipoD']);
-    
-    header('Location:admin.php');
-}
+
 // Inicializar variables
 $obj = null;
 $tipoSeleccionado = isset($_POST['tipo']) ? $_POST['tipo'] : null;
@@ -27,18 +23,97 @@ if (isset($_POST['editar']) || isset($_POST['media']) || isset($_POST['user'])) 
 }
 
 if(isset($_POST['insert'])){
-    //var_dump($_POST);
-    //var_dump($_FILES);
-    //exit();
-    if(is_uploaded_file($_FILES['img']['tmp_name'])){
+    if($tipoSeleccionado=='cliente'|| $tipoSeleccionado=='admin'){
+        if(is_uploaded_file($_FILES['img']['tmp_name'])){
+            $ruta = "./assets/img/profilePictures/".time()."-".$_FILES['img']['name'];
+            move_uploaded_file($_FILES['img']['tmp_name'], $ruta);
+    
+            insertarUsuario($_POST['email'],$_POST['pass'],$_POST['nombre'],$_POST['apellidos'],$_POST['tipo'],$_POST['fecha'],$_POST['pais'],$_POST['codigo_postal'],$_POST['telefono'],$ruta);
+            header('Location: admin.php');
+        }
+    }
+    else 
+    if ($tipoSeleccionado == 'Pelicula' || $tipoSeleccionado == 'Serie') {
+        // Definir la ruta base según el tipo de contenido
+        $rutaBaseImg = ($tipoSeleccionado == 'Pelicula') 
+            ? "./assets/img/peliculas/" 
+            : "./assets/img/Series/";
+
+        // Construir la ruta completa para la imagen
+        $rutaImg = $rutaBaseImg . time() . "-" . $_FILES['img']['name'];
+
+        // Mover la imagen al directorio correspondiente
+        if (is_uploaded_file($_FILES['img']['tmp_name'])) {
+            move_uploaded_file($_FILES['img']['tmp_name'], $rutaImg);
+        } else {
+            die("Error al subir la imagen.");
+        }
+        // Construir la ruta para el video 
+        $rutaVideo = "./assets/video/" . time() . "-" . $_FILES['video']['name'];
+        if (is_uploaded_file($_FILES['video']['tmp_name'])) {
+            move_uploaded_file($_FILES['video']['tmp_name'], $rutaVideo);
+        } else {
+            die("Error al subir el video.");
+        }
+        if(insertarMultimedia($_POST['nombre'],$_POST['tipo'],$_POST['genero'],$_POST['nota'],$_POST['sinopsis'],$rutaImg,$rutaVideo,$_POST['reparto'],$_POST['fecha_lanzamiento'])){
+            header('Location: admin.php');
+        }else{
+            echo 'Error al insertar la Serie/Peliculaelicula';
+        }
+    }
+    
+}
+//var_dump($_POST['id']);
+if(isset($_POST['update'])){
+    if($tipoSeleccionado=='cliente'||$tipoSeleccionado=='admin'){
         $ruta = "./assets/img/profilePictures/".time()."-".$_FILES['img']['name'];
         move_uploaded_file($_FILES['img']['tmp_name'], $ruta);
-
-        insertarUsuario($_POST['email'],$_POST['pass'],$_POST['nombre'],$_POST['apellidos'],$_POST['tipo'],$_POST['fecha'],$_POST['pais'],$_POST['codigo_postal'],$_POST['telefono'],$ruta);
+        actualizarUsuario($_POST['id'],$_POST['email'],$_POST['pass'],$_POST['nombre'],$_POST['apellidos'],$_POST['tipo'],$_POST['fecha'],$_POST['pais'],$_POST['codigo_postal'],$_POST['telefono'],$ruta);
         header('Location: admin.php');
-    }else{
-        echo 'error';
     }
+    if ($tipoSeleccionado == 'Pelicula' || $tipoSeleccionado == 'Serie') {
+        // Verificar si se subió una nueva imagen
+        if (!is_uploaded_file($_FILES['img']['tmp_name'])) {
+            $rutaImg = $_POST['imagen_actual'];
+            
+        } else {
+            $rutaImg = "./assets/img/peliculas/" . time() . "-" . $_FILES['img']['name'];
+            move_uploaded_file($_FILES['img']['tmp_name'], $rutaImg);
+            
+        }
+
+        // Verificar si se subió un nuevo video
+        if (!is_uploaded_file($_FILES['video']['tmp_name'])) {
+            $rutaVideo = $_POST['video_actual'];
+            
+        } else {
+            $rutaVideo = "./assets/video/" . time() . "-" . $_FILES['video']['name'];
+            move_uploaded_file($_FILES['video']['tmp_name'], $rutaVideo);
+            
+        }
+
+        // Llamar a la función para actualizar el contenido multimedia
+        if (actualizarMultimedia(
+            $_POST['id'],
+            $_POST['nombre'],
+            $_POST['tipo'],
+            $_POST['genero'],
+            $_POST['nota'],
+            $_POST['sinopsis'],
+            $rutaImg,
+            $rutaVideo,
+            $_POST['reparto'],
+            $_POST['fecha']
+        )) {
+            // Redirigir después de la actualización
+            header('Location: admin.php');
+        } else {
+
+            echo 'Error al actualizar';
+            var_dump($_POST);
+        }
+    }
+   
 } 
 ?>
 
@@ -57,7 +132,7 @@ if(isset($_POST['insert'])){
                 <form action="" method="POST" class="px-3 px-lg-5" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label class="form-label">Tipo:</label>
-                        <select name="tipo" class="form-select" onchange="this.form.submit()">
+                        <select name="tipo" class="form-select" >
                             <?php if($tipoSeleccionado=='cliente'||$tipoSeleccionado=='admin'): ?>
                             <option value="cliente" <?php echo ($tipoSeleccionado == 'cliente') ? 'selected' : ''; ?>>Usuario</option>
                             <option value="admin" <?php echo ($tipoSeleccionado == 'admin') ? 'selected' : ''; ?>>Administrador</option>
@@ -145,19 +220,34 @@ if(isset($_POST['insert'])){
                             <textarea name="reparto" class="form-control" rows="4"><?php echo isset($obj) ? htmlspecialchars($obj->reparto) : ''; ?></textarea>
                         </div>
                         <div class="mb-3">
+                            <label class="form-label">Nota:</label>
+                            <select name="nota" class="form-select">
+                                <?php
+                                $notas = [1,2,3,4,5,6,7,8,9,10];
+                                foreach ($notas as $nota) {
+                                    echo "<option value='$nota' " . (isset($obj) && trim($obj->nota) == $nota ? 'selected' : '') . ">$nota</option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="mb-3">
                             <label class="form-label">Fecha de lanzamiento:</label>
-                            <input type="date" name="fecha_lanzamiento" class="form-control"
+                            <input type="date" name="fecha" class="form-control"
                                    value="<?php echo isset($obj) ? $obj->fecha : ''; ?>" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Imagen:</label>
                             <input type="file" name="img" class="form-control">
+                            <input type="hidden" name="imagen_actual" value="<?php echo isset($obj) ? $obj->imagen : ''; ?>">
+
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Video:</label>
                             <input type="file" name="video" class="form-control">
+                            <input type="hidden" name="video_actual" value="<?php echo isset($obj) ? $obj->video : ''; ?>">
                         </div>
                     <?php endif; ?>
+                    <input type="hidden" name="id" value="<?php echo isset($obj->id) ? $obj->id : ''; ?>">
                     <button type="submit" class="btn btn-primary" 
                         name="<?php echo isset($obj) ? 'update' : 'insert'; ?>">
                         <?php echo isset($obj) ? 'Actualizar' : 'Añadir'; ?>

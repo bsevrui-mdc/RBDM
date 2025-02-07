@@ -232,3 +232,174 @@ function insertarUsuario($correo, $contrasena, $nombre, $apellidos, $tipo, $fech
         echo $ex->getCode() . "<br>" . $ex->getMessage();
     }
 }
+function borrar($id,$tabla){
+    $conex = conectarConBBDD();
+    try {
+        $stmt=$conex->exec("DELETE FROM $tabla WHERE id = $id");
+    } catch (PDOException $ex) {
+        echo $ex->getCode() . "<br>" . $ex->getMessage();
+    }
+}
+
+function insertarMultimedia($nombre, $tipo, $genero, $nota, $sinopsis, $imagen, $video, $reparto, $fecha)
+{
+    $conex = conectarConBBDD();
+    try {
+
+
+        // Consulta preparada
+        $sql = "INSERT INTO contenido (nombre, tipo, genero, nota, sinopsis, imagen, video, reparto, fecha) 
+                VALUES (:nombre, :tipo, :genero, :nota, :sinopsis, :imagen, :video, :reparto, :fecha)";
+        $stmt = $conex->prepare($sql);
+
+        // Asignar valores a los parámetros
+        $stmt->bindParam(':nombre', $nombre, PDO::PARAM_STR);
+        $stmt->bindParam(':tipo', $tipo, PDO::PARAM_STR);
+        $stmt->bindParam(':genero', $genero, PDO::PARAM_STR);
+        $stmt->bindParam(':nota', $nota, PDO::PARAM_STR);
+        $stmt->bindParam(':sinopsis', $sinopsis, PDO::PARAM_STR);
+        $stmt->bindParam(':imagen', $imagen, PDO::PARAM_STR);
+        $stmt->bindParam(':video', $video, PDO::PARAM_STR);
+        $stmt->bindParam(':reparto', $reparto, PDO::PARAM_STR);
+        $stmt->bindParam(':fecha', $fecha, PDO::PARAM_STR);
+
+        // Ejecutar la consulta
+        if ($stmt->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    } catch (PDOException $ex) {
+        error_log("Error en insertarMultimedia: " . $ex->getMessage());
+        return false;
+    }
+}
+
+
+function actualizarUsuario($id, $correo, $contrasena, $nombre, $apellidos, $tipo, $fecha, $pais, $cp, $telf, $img)
+{
+    $conex = conectarConBBDD();
+    try {
+        // Obtener la contraseña actual si no se proporciona una nueva
+        if (empty($contrasena)) {
+            $stmt = $conex->prepare("SELECT clave FROM usuario WHERE id = :id");
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            $stmt->execute();
+            $contrasenaCifrada = $stmt->fetchColumn(); // Usar la contraseña actual
+        } else {
+            $contrasenaCifrada = password_hash($contrasena, PASSWORD_DEFAULT);
+        }
+
+        // Construir la consulta
+        $sql = "UPDATE usuario SET 
+                    correo = :correo, 
+                    clave = :clave, 
+                    nombre = :nombre, 
+                    apellidos = :apellidos, 
+                    fecha = :fecha, 
+                    pais = :pais, 
+                    codigo_postal = :cp, 
+                    telefono = :telf, 
+                    tipo = :tipo";
+        
+        // Solo actualizar la imagen si se proporciona una nueva
+        if (!empty($img)) {
+            $sql .= ", imagen = :img";
+        }
+
+        $sql .= " WHERE id = :id";
+
+        $stmt = $conex->prepare($sql);
+        $stmt->bindParam(':correo', $correo);
+        $stmt->bindParam(':clave', $contrasenaCifrada);
+        $stmt->bindParam(':nombre', $nombre);
+        $stmt->bindParam(':apellidos', $apellidos);
+        $stmt->bindParam(':fecha', $fecha);
+        $stmt->bindParam(':pais', $pais);
+        $stmt->bindParam(':cp', $cp);
+        $stmt->bindParam(':telf', $telf);
+        $stmt->bindParam(':tipo', $tipo);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
+        // Solo enlazar la imagen si se proporciona una nueva
+        if (!empty($img)) {
+            $stmt->bindParam(':img', $img);
+        }
+
+        return $stmt->execute();
+    } catch (PDOException $ex) {
+        echo $ex->getCode() . "<br>" . $ex->getMessage();
+        return false;
+    }
+}
+
+function actualizarMultimedia($id, $nombre, $tipo, $genero, $nota, $sinopsis, $imagen, $video, $reparto, $fecha)
+{
+    $conex = conectarConBBDD();
+    try {
+        // Validar parámetros obligatorios
+        if (empty($id) || empty($nombre) || empty($tipo) || empty($genero) || empty($nota) || empty($sinopsis) || empty($reparto) || empty($fecha)) {
+            throw new Exception("Todos los campos obligatorios deben tener un valor.");
+        }
+
+        // Construir la consulta SQL
+        $sql = "UPDATE contenido SET 
+                nombre = :nombre, 
+                tipo = :tipo, 
+                genero = :genero, 
+                nota = :nota, 
+                sinopsis = :sinopsis, 
+                reparto = :reparto, 
+                fecha = :fecha";
+
+        // Agregar campos de imagen y video solo si se proporcionan
+        if (!empty($imagen)) {
+            $sql .= ", imagen = :imagen";
+        }
+        if (!empty($video)) {
+            $sql .= ", video = :video";
+        }
+
+        $sql .= " WHERE id = :id";
+
+        // Depuración: Mostrar la consulta SQL y los valores
+        echo "Consulta SQL: $sql<br>";
+        var_dump($nombre, $tipo, $genero, $nota, $sinopsis, $reparto, $fecha, $imagen, $video);
+
+        // Preparar la consulta
+        $stmt = $conex->prepare($sql);
+
+        // Asignar valores a los parámetros
+        $stmt->bindValue(':nombre', $nombre, PDO::PARAM_STR);
+        $stmt->bindValue(':tipo', $tipo, PDO::PARAM_STR);
+        $stmt->bindValue(':genero', $genero, PDO::PARAM_STR);
+        $stmt->bindValue(':nota', $nota, PDO::PARAM_STR);
+        $stmt->bindValue(':sinopsis', $sinopsis, PDO::PARAM_STR);
+        $stmt->bindValue(':reparto', $reparto, PDO::PARAM_STR);
+        $stmt->bindValue(':fecha', $fecha, PDO::PARAM_STR);
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+
+        if (!empty($imagen)) {
+            $stmt->bindValue(':imagen', $imagen, PDO::PARAM_STR);
+        }
+        if (!empty($video)) {
+            $stmt->bindValue(':video', $video, PDO::PARAM_STR);
+        }
+
+        // Ejecutar la consulta
+        if ($stmt->execute()) {
+            return true;
+        } else {
+            // Retornar mensaje de error si la ejecución falla
+            return "Error al ejecutar la consulta: " . $stmt->errorInfo()[2];
+        }
+    } catch (PDOException $ex) {
+        // Registrar el error y retornar un mensaje
+        error_log("Error en actualizarMultimedia: " . $ex->getMessage());
+        return "Error en la base de datos: " . $ex->getMessage();
+    } catch (Exception $ex) {
+        // Registrar el error y retornar un mensaje
+        error_log("Error en actualizarMultimedia: " . $ex->getMessage());
+        return $ex->getMessage();
+    }
+}
