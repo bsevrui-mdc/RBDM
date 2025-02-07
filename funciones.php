@@ -390,16 +390,11 @@ function actualizarMultimedia($id, $nombre, $tipo, $genero, $nota, $sinopsis, $i
         if ($stmt->execute()) {
             return true;
         } else {
-            // Retornar mensaje de error si la ejecución falla
-            return "Error al ejecutar la consulta: " . $stmt->errorInfo()[2];
+           return false;
         }
     } catch (PDOException $ex) {
         // Registrar el error y retornar un mensaje
         error_log("Error en actualizarMultimedia: " . $ex->getMessage());
         return "Error en la base de datos: " . $ex->getMessage();
-    } catch (Exception $ex) {
-        // Registrar el error y retornar un mensaje
-        error_log("Error en actualizarMultimedia: " . $ex->getMessage());
-        return $ex->getMessage();
-    }
+    } 
 }
