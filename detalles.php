@@ -25,6 +25,20 @@ if (isset($_POST['actualizar'])) {
 
 <head>
     <?php include("includes/head-tags.php"); ?>
+
+    <head>
+
+
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+
+
+        <script defer src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+    </head>
+
+
 </head>
 <?php
 if (isset($_POST['comentar'])) {
@@ -229,12 +243,60 @@ if (isset($_SESSION['usuario'])) {
             <?php
             if (isset($_SESSION['usuario'])) {
             ?>
-                <form action="" method="post">
+                <form action="" method="post" id="formulario">
                     <div class="row">
                         <div class="col">
-                            <textarea class="rounded" rows="10" placeholder="Escribe un comentario aqui..." name="comentarioUsuario"></textarea>
+                            <div id="standalone-container" style="background-color: white; color: black;"><!--Aqui esta el estiilo en linea-->
+                                <div id="toolbar-container">
+                                    <span class="ql-formats">
+                                        <select class="ql-font"></select>
+                                        <select class="ql-size"></select>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-bold"></button>
+                                        <button class="ql-italic"></button>
+                                        <button class="ql-underline"></button>
+                                        <button class="ql-strike"></button>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <select class="ql-color"></select>
+                                        <select class="ql-background"></select>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-script" value="sub"></button>
+                                        <button class="ql-script" value="super"></button>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-header" value="1"></button>
+                                        <button class="ql-header" value="2"></button>
+                                        <button class="ql-blockquote"></button>
+                                        <button class="ql-code-block"></button>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-list" value="ordered"></button>
+                                        <button class="ql-list" value="bullet"></button>
+                                        <button class="ql-indent" value="-1"></button>
+                                        <button class="ql-indent" value="+1"></button>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-direction" value="rtl"></button>
+                                        <select class="ql-align"></select>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-link"></button>
+                                        <button class="ql-image"></button>
+                                        <button class="ql-video"></button>
+                                        <button class="ql-formula"></button>
+                                    </span>
+                                    <span class="ql-formats">
+                                        <button class="ql-clean"></button>
+                                    </span>
+                                </div>
+                                <div id="editor-container"></div>
+                            </div>
                         </div>
                     </div>
+                    <input type="hidden" name="comentarioUsuario" id="comentarioUsuario">
                     <div class="row">
                         <div class="col text-end">
                             <input type="submit" name="comentar" value="Comentar" class="btn btn-primary" />
@@ -279,6 +341,27 @@ if (isset($_SESSION['usuario'])) {
     <?php include("includes/footer.php"); ?>
     <script src="./js/videoplayer.js"></script>
     <script src="./js/controlVideos.js"></script>
+    <script src="/js/quill.js"></script>
+
+    <script>
+        window.onload = function() {
+            var quill = new Quill('#editor-container', {
+                modules: {
+                    formula: true, // Asegúrate de que el módulo 'formula' esté habilitado
+                    syntax: true,
+                    toolbar: '#toolbar-container'
+                },
+                placeholder: 'Escribe un comentario...',
+                theme: 'snow'
+            });
+
+            document.getElementById('formulario').addEventListener('submit', function() {
+                console.log(quill.root.innerHTML);
+                var contenido = quill.root.innerHTML;
+                document.getElementById('comentarioUsuario').value = contenido;
+            });
+        };
+    </script>
 </body>
 
 </html>
