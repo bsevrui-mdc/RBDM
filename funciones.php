@@ -58,6 +58,42 @@ function registro($correo, $contrasena, $nombre, $apellidos, $fecha, $pais, $cp,
     }
 }
 
+function obtenerUltimosTres($tabla, $tipo = '0')
+{
+    $conex = conectarConBBDD();
+    try {
+        if ($tabla === 'contenido') {
+            // Consulta para la tabla "contenido" con filtro por tipo
+            if ($tipo != '0') {
+                $aniadir = "WHERE tipo = :tipo ";
+            } else {
+                $aniadir = '';
+            }
+            $query = "SELECT * FROM contenido " . $aniadir . "order by fecha limit 3";
+            $stmt = $conex->prepare($query);
+            $stmt->bindParam(':tipo', $tipo, PDO::PARAM_STR);
+        } else {
+            // Consulta para otras tablas sin filtro por tipo
+            $query = "SELECT * FROM $tabla order by fecha limit 3";
+            $stmt = $conex->prepare($query);
+        }
+
+        $stmt->execute();
+
+        if ($stmt->rowCount()) {
+            // Recuperar los datos como array de objetos
+            while ($fila = $stmt->fetchObject()) {
+                $datos[] = $fila;
+            }
+            return $datos;
+        } else {
+            return false; // No hay resultados
+        }
+    } catch (PDOException $ex) {
+        die("Error al obtener los datos: " . $ex->getMessage());
+    }
+}
+
 function obtenerTodo($tipo, $tabla)
 {
     $conex = conectarConBBDD();
@@ -154,6 +190,27 @@ function actualizarSesionUsuario($id)
 
     return false;
 }
+function borrarPeliculaDeLista($id_usuario, $id_contenido)
+{
+    $conex = conectarConBBDD();
+    try {
+        $stmt = $conex->prepare("DELETE FROM lista WHERE id_contenido = :id_contenido AND id_usuario = :id_usuario");
+
+        $stmt->bindParam(':id_contenido', $id_contenido, PDO::PARAM_INT);
+        $stmt->bindParam(':id_usuario', $id_usuario, PDO::PARAM_INT);
+
+        $stmt->execute();
+
+        if ($stmt->rowCount() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    } catch (PDOException $ex) {
+        error_log("Error al borrar película de la lista: " . $ex->getMessage());
+        return false;
+    }
+}
 
 function obtenerComentarios($conn, $idPeli)
 {
@@ -244,6 +301,7 @@ function insertarUsuario($correo, $contrasena, $nombre, $apellidos, $tipo, $fech
         echo $ex->getCode() . "<br>" . $ex->getMessage();
     }
 }
+
 function borrar($id, $tabla)
 {
     $conex = conectarConBBDD();

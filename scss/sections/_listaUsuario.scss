@@ -1,4 +1,9 @@
 .lista-usuario {
+  .delete {
+    font-size: 1.5em;
+    padding: 10px;
+  }
+
   h2 {
     font-family: $font-family-julius;
     font-size: $font-family-julius-size-h2-mobile;
@@ -12,7 +17,7 @@
       text-transform: uppercase;
     }
     h2 {
-      font-family: $font-family-julius;
+      font-family: $font-family-oxanium;
       font-size: 1em;
     }
   }

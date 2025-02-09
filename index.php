@@ -1,7 +1,29 @@
 <?php
-include("includes/a_config.php");
-include("funciones.php");
+
+
+
+include_once("funciones.php");
 $conn = conectarConBBDD();
+
+try {
+    $peliculas = $conn->query("select * from contenido where tipo='Pelicula' order by fecha desc limit 3");
+} catch (PDOException $ex) {
+    echo $ex->getMessage();
+}
+
+try {
+    $series = $conn->query("select * from contenido where tipo='Serie' order by fecha desc limit 3");
+} catch (PDOException $ex) {
+    echo $ex->getMessage();
+}
+
+?>
+<?php
+include("includes/a_config.php");
+
+include("includes/carrusel-normal.php");
+
+include("includes/carrusel-multiple.php");
 
 include("googleconnect.php");
 
@@ -10,14 +32,16 @@ if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
     include("registermodal.php");
 
 ?>
-    <script>
-        document.getElementById('id01').style.display = 'block';
-    </script>
+<script>
+document.getElementById('id01').style.display = 'block';
+</script>
 <?php
 
 }
-
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -41,46 +65,35 @@ if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
             </div>
             <div class="row">
                 <div class="col-lg-8">
-                    <?php include("includes/carrusel-normal.php"); ?>
+                    <?php
+                    $ultimas3Pelis = obtenerUltimosTres('contenido', 'Pelicula');
+                    $ultimas3Series = obtenerUltimosTres('contenido', 'Serie');
+                    renderCarruselNormal($ultimas3Pelis); ?>
                 </div>
                 <div class="col-4 d-none d-lg-block top3">
                     <div class="d-flex flex-grow-1 flex-column h-100 topGenero justify-content-around">
-                        <div class="row">
-                            <div class="col-4 align-content-center">
-                                <img src="assets/img/peliculas/chucky.jpg" class="img-fluid">
-                            </div>
-                            <div class="col-8 align-content-center ">
-                                <div class="text-clamp">
-                                    <h2>Chuky</h2>
+                        <?php
+                        foreach ($ultimas3Series as $key => $peli) {
+                        ?>
+                        <a href="detalles.php?peli=<?= $peli->id ?>" class="d-inline">
+                            <div class="row">
+
+                                <div class="col-4 align-content-center">
+                                    <img src="<?= $peli->imagen ?>" class="img-fluid">
+                                </div>
+                                <div class="col-8 align-content-center ">
+                                    <div class="text-clamp">
+                                        <h2><?= $peli->nombre ?></h2>
+                                    </div>
+
+                                    <div class="genero">Género: <?= $peli->genero ?></div>
                                 </div>
 
-                                <div class="genero">Género: Terror</div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-4 align-content-center">
-                                <img src="assets/img/Series/breaking-bad.jpg" class="img-fluid">
-                            </div>
-                            <div class="col-8 align-content-center ">
-                                <div class="text-clamp">
-                                    <h2>Breaking bad</h2>
-                                </div>
-
-                                <div class="genero">Género: Drama</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-4 align-content-center">
-                                <img src="assets/img/Series/Lqsa.jpg" class="img-fluid">
-                            </div>
-                            <div class="col-8 align-content-center ">
-                                <div class="text-clamp">
-                                    <h2>la que se avecina</h2>
-                                </div>
-
-                                <div class="genero">Género: Comedia</div>
-                            </div>
-                        </div>
+                        </a>
+                        <?php
+                        }
+                        ?>
                     </div>
 
                 </div>
@@ -88,13 +101,13 @@ if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
 
             <div class="row">
                 <div class="my-4 text-center col">
-                    <h1 class="text-primary">Peliculas destacadas</h1>
+                    <h1 class="text-primary">Peliculas</h1>
                 </div>
             </div>
 
             <div class="row d-none d-lg-block">
                 <div class="col-12">
-                    <?php include("includes/carrusel-multiple.php"); ?>
+                    <?php renderCarruselMultiple(obtenerTodo('Pelicula', 'contenido')); ?>
                 </div>
             </div>
 
@@ -144,12 +157,15 @@ if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
 
             <div class="row">
                 <div class="my-4 text-center col">
-                    <h1 class="text-primary">Series destacadas</h1>
+                    <h1 class="text-primary">Series</h1>
                 </div>
             </div>
             <div class="row d-none d-lg-block">
                 <div class="col-12">
-                    <?php include("includes/carrusel-multiple.php"); ?>
+                    <?php
+                    renderCarruselMultiple(obtenerTodo('Serie', 'contenido'));
+                    ?>
+
                 </div>
             </div>
 
@@ -203,7 +219,9 @@ if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
         <div class="aviso-cookies" id="aviso-cookies">
             <img class="galleta" src="./assets/img/cookie.svg" alt="Galleta">
             <h3 class="titulo">Cookies</h3>
-            <p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios. Acepte las cookies para recibir información y novedades</p>
+            <p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.
+                Acepte las
+                cookies para recibir información y novedades</p>
             <button class="btn btn-primary" id="btn-aceptar-cookies">Aceptar cookies</button>
             <button class="btn btn-primary" id="btn-rechazar-cookies">Rechazar cookies</button>
             <a class="enlace" href="#">Aviso de Cookies</a>
