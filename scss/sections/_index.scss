@@ -1,7 +1,4 @@
 .index {
-  a:hover {
-    color: $secondary;
-  }
   .topGenero {
     h2 {
       font-family: $font-family-julius;
@@ -22,6 +19,9 @@
   .top3 {
     img {
       width: 500px;
+    }
+    a:hover {
+      color: $secondary;
     }
   }
 
