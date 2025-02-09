@@ -9,7 +9,28 @@
         min-height: 250px;
       }
     }
+    width: 75% !important;
 
+    .btn {
+      font-size: $font-family-oxanium-size-h3;
+    }
+    @include media-breakpoint-down(lg) {
+      width: 100% !important;
+    }
+
+    .noError {
+      display: none;
+    }
+
+    .error {
+      color: $red;
+      text-align: center;
+    }
+
+    .edit {
+      font-size: 2em;
+      display: inline-block;
+    }
     .campos {
       .campo {
         div {

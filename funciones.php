@@ -143,6 +143,18 @@ function obtenerDatosPelicula($conn, $idPeli)
     }
 }
 
+function actualizarSesionUsuario($id)
+{
+    $usuario = obtenerUno($id, "usuario");
+
+    if ($usuario) {
+        $_SESSION['usuario'] = $usuario;
+        return true;
+    }
+
+    return false;
+}
+
 function obtenerComentarios($conn, $idPeli)
 {
     try {
@@ -232,10 +244,11 @@ function insertarUsuario($correo, $contrasena, $nombre, $apellidos, $tipo, $fech
         echo $ex->getCode() . "<br>" . $ex->getMessage();
     }
 }
-function borrar($id,$tabla){
+function borrar($id, $tabla)
+{
     $conex = conectarConBBDD();
     try {
-        $stmt=$conex->exec("DELETE FROM $tabla WHERE id = $id");
+        $stmt = $conex->exec("DELETE FROM $tabla WHERE id = $id");
     } catch (PDOException $ex) {
         echo $ex->getCode() . "<br>" . $ex->getMessage();
     }
@@ -290,6 +303,8 @@ function actualizarUsuario($id, $correo, $contrasena, $nombre, $apellidos, $tipo
             $contrasenaCifrada = password_hash($contrasena, PASSWORD_DEFAULT);
         }
 
+
+
         // Construir la consulta
         $sql = "UPDATE usuario SET 
                     correo = :correo, 
@@ -299,10 +314,12 @@ function actualizarUsuario($id, $correo, $contrasena, $nombre, $apellidos, $tipo
                     fecha = :fecha, 
                     pais = :pais, 
                     codigo_postal = :cp, 
-                    telefono = :telf, 
-                    tipo = :tipo";
-        
+                    telefono = :telf";
+
         // Solo actualizar la imagen si se proporciona una nueva
+        if (!empty($tipo)) {
+            $sql .= ", tipo = :tipo";
+        }
         if (!empty($img)) {
             $sql .= ", imagen = :img";
         }
@@ -318,8 +335,11 @@ function actualizarUsuario($id, $correo, $contrasena, $nombre, $apellidos, $tipo
         $stmt->bindParam(':pais', $pais);
         $stmt->bindParam(':cp', $cp);
         $stmt->bindParam(':telf', $telf);
-        $stmt->bindParam(':tipo', $tipo);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
+        if (!empty($tipo)) {
+            $stmt->bindParam(':tipo', $tipo);
+        }
 
         // Solo enlazar la imagen si se proporciona una nueva
         if (!empty($img)) {
@@ -390,11 +410,11 @@ function actualizarMultimedia($id, $nombre, $tipo, $genero, $nota, $sinopsis, $i
         if ($stmt->execute()) {
             return true;
         } else {
-           return false;
+            return false;
         }
     } catch (PDOException $ex) {
         // Registrar el error y retornar un mensaje
         error_log("Error en actualizarMultimedia: " . $ex->getMessage());
         return "Error en la base de datos: " . $ex->getMessage();
-    } 
+    }
 }
