@@ -32,9 +32,9 @@ if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
     include("registermodal.php");
 
 ?>
-<script>
-document.getElementById('id01').style.display = 'block';
-</script>
+    <script>
+        document.getElementById('id01').style.display = 'block';
+    </script>
 <?php
 
 }
@@ -75,22 +75,22 @@ document.getElementById('id01').style.display = 'block';
                         <?php
                         foreach ($ultimas3Series as $key => $peli) {
                         ?>
-                        <a href="detalles.php?peli=<?= $peli->id ?>" class="d-inline">
-                            <div class="row">
+                            <a href="detalles.php?peli=<?= $peli->id ?>" class="d-inline">
+                                <div class="row">
 
-                                <div class="col-4 align-content-center">
-                                    <img src="<?= $peli->imagen ?>" class="img-fluid">
-                                </div>
-                                <div class="col-8 align-content-center ">
-                                    <div class="text-clamp">
-                                        <h2><?= $peli->nombre ?></h2>
+                                    <div class="col-4 align-content-center">
+                                        <img src="<?= $peli->imagen ?>" class="img-fluid">
+                                    </div>
+                                    <div class="col-8 align-content-center ">
+                                        <div class="text-clamp">
+                                            <h2><?= $peli->nombre ?></h2>
+                                        </div>
+
+                                        <div class="genero">Género: <?= $peli->genero ?></div>
                                     </div>
 
-                                    <div class="genero">Género: <?= $peli->genero ?></div>
                                 </div>
-
-                            </div>
-                        </a>
+                            </a>
                         <?php
                         }
                         ?>
@@ -112,46 +112,28 @@ document.getElementById('id01').style.display = 'block';
             </div>
 
             <div class="row d-lg-none movil">
-                <div class="col-12">
-                    <div class="my-2 row d-flex flex-grow-1">
-                        <div class="text-center col-4">
-                            <img src="assets/img/peliculas/avatar.jpg" class="img-fluid">
-                        </div>
-                        <div class="col-8 align-content-center">
-                            <div class="text-clamp">
-                                <h2>Avatar
-                                </h2>
-                            </div>
+                <?php
+                foreach ($ultimas3Pelis as $key => $peli) {
+                ?>
+                    <a href="detalles.php?peli=<?= $peli->id ?>" class="d-inline">
+                        <div class="col-12">
+                            <div class="my-2 row d-flex flex-grow-1">
+                                <div class="text-center col-4">
+                                    <img src="<?= $peli->imagen ?>" class="img-fluid">
+                                </div>
+                                <div class="col-8 align-content-center">
+                                    <div class="text-clamp">
+                                        <h2><?= $peli->nombre ?>
+                                        </h2>
+                                    </div>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="my-2 row d-flex flex-grow-1">
-                        <div class="text-center col-4">
-                            <img src="assets/img/peliculas/coco.jpg" class="img-fluid">
-                        </div>
-                        <div class="col-8 align-content-center">
-                            <div class="text-clamp">
-                                <h2>Coco
-                                </h2>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="my-2 row d-flex flex-grow-1">
-                        <div class="text-center col-4">
-                            <img src="assets/img/peliculas/ironman.jpg" class="img-fluid">
-                        </div>
-                        <div class="col-8 align-content-center">
-                            <div class="text-clamp">
-                                <h2>Iron Man
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </a>
+                <?php
+                }
+                ?>
             </div>
 
 
@@ -170,45 +152,28 @@ document.getElementById('id01').style.display = 'block';
             </div>
 
             <div class="row d-lg-none movil">
-                <div class="col-12">
-                    <div class="my-2 row d-flex flex-grow-1">
-                        <div class="text-center col-4">
-                            <img src="assets/img/Series/elite.jpg" class="img-fluid">
-                        </div>
-                        <div class="col-8 align-content-center">
-                            <div class="text-clamp">
-                                <h2>Elite
-                                </h2>
+                <?php
+                foreach ($ultimas3Series as $key => $peli) {
+                ?>
+                    <a href="detalles.php?peli=<?= $peli->id ?>" class="d-inline">
+                        <div class="col-12">
+                            <div class="my-2 row d-flex flex-grow-1">
+                                <div class="text-center col-4">
+                                    <img src="<?= $peli->imagen ?>" class="img-fluid">
+                                </div>
+                                <div class="col-8 align-content-center">
+                                    <div class="text-clamp">
+                                        <h2><?= $peli->nombre ?>
+                                        </h2>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="my-2 row d-flex flex-grow-1">
-                        <div class="text-center col-4">
-                            <img src="assets/img/Series/from_netflix.jpg" class="img-fluid">
-                        </div>
-                        <div class="col-8 align-content-center">
-                            <div class="text-clamp">
-                                <h2>From
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="my-2 row d-flex flex-grow-1">
-                        <div class="text-center col-4">
-                            <img src="assets/img/Series/mrRobot.jpg" class="img-fluid">
-                        </div>
-                        <div class="col-8 align-content-center">
-                            <div class="text-clamp">
-                                <h2>Mr Robot
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </a>
+                <?php
+                }
+                ?>
             </div>
 
 
@@ -226,8 +191,9 @@ document.getElementById('id01').style.display = 'block';
             <button class="btn btn-primary" id="btn-rechazar-cookies">Rechazar cookies</button>
             <a class="enlace" href="#">Aviso de Cookies</a>
         </div>
+    </main>
 
-        <?php include("includes/footer.php"); ?>
+    <?php include("includes/footer.php"); ?>
 
 
 </body>

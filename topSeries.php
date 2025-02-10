@@ -14,7 +14,7 @@
 
     if (!isset($_SESSION['usuario'])) {
         try {
-            $datosPelicula = $conn->query("SELECT c.id as id, c.nombre as nombre, c.nota as nota, c.genero as genero, c.imagen as imagen from contenido c where c.tipo = 'Serie' order by c.nota desc LIMIT 4");
+            $datosPelicula = $conn->query("SELECT c.id as id, c.nombre as nombre, c.nota as nota, c.genero as genero, c.imagen as imagen from contenido c where c.tipo = 'Serie' order by c.nota desc LIMIT 10");
         } catch (PDOException $ex) {
             echo $ex->getMessage();
         }
@@ -30,7 +30,7 @@
                 ON c.id = l.id_contenido AND l.id_usuario = '$id'
                 WHERE c.tipo = 'Serie' 
                 ORDER BY c.nota DESC 
-                LIMIT 4
+                LIMIT 10
             ");
         } catch (PDOException $ex) {
             echo $ex->getMessage();
@@ -60,7 +60,7 @@
                         <div class="col-lg-2 align-items-center justify-content-center d-none d-lg-flex">
                             <div class="nota"><?php echo $contador ?></div>
                         </div>
-                        <div class="col-lg-2 contenedorImagen"><img src="<?php echo $fila->imagen ?>" alt="imagen" class="img-fluid w-100 h-100"></div>
+                        <div class="col-lg-2 contenedorImagen"><img src="<?php echo $fila->imagen ?>" alt="imagen" class="img-fluid"></div>
                         <div class="col-lg-4 d-flex flex-column">
                             <div class="row d-flex align-items-center h-lg-75">
                                 <div class="py-2 text-center col text-lg-start">

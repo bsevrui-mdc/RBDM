@@ -39,7 +39,7 @@ a {
     font-family: $font-family-oxanium;
   }
   h1 {
-    font-size: $font-family-julius-size-h1;
+    font-size: $font-family-julius-size-h2-mobile;
     font-family: $font-family-julius;
     font-weight: $font-family-julius-weight;
   }
@@ -63,6 +63,7 @@ a {
     border-right: 5px solid $primary;
     height: 100%;
   }
+  text-transform: uppercase;
 }
 
 .bordeNota {
