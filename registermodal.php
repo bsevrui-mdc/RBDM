@@ -32,71 +32,76 @@ if (isset($_POST['signup'])) {
   }
 }
 ?>
-<div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none';location.href='logout.php'" class="close"
-    title="Close Modal">&times;</span>
-  <form class="modal-content" action="" method="POST">
-    <div class="container">
-      <img src="<?php echo $_SESSION['usuario']->imagen ?>">
-      <input type="hidden" name="imagen" value="<?php echo $_SESSION['usuario']->imagen ?>">
-      <h1 class="modal-title">Sign Up</h1>
-      <p>Please fill in this form to create an account.</p>
-      <hr>
-      <?php
+<div id="id01" class="registermodal modal">
+    <span onclick="document.getElementById('id01').style.display='none';location.href='logout.php'" class="close"
+        title="Close Modal">&times;</span>
+    <form class="modal-content" action="" method="POST">
+        <div class="container">
+            <img src="<?php echo $_SESSION['usuario']->imagen ?>">
+            <input type="hidden" name="imagen" value="<?php echo $_SESSION['usuario']->imagen ?>">
+            <h1 class="modal-title">Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <?php
       if ($errorRegistro) {
         echo "<span class='error'>Algo ha salido mal :(</span>";
       }
       ?>
-      <div class='row-form'>
-        <div class='column-form'>
-          <label for="email"><b>E-mail</b></label>
-          <input type="email" id="email" placeholder="Enter Email" name="email"
-            value="<?php echo $_SESSION['usuario']->correo; ?>" readonly>
-          <label for="firstname"><b>First Name</b></label>
-          <input type="text" name="firstname" value="<?php echo $_SESSION['usuario']->nombre; ?>" readonly>
-          <label for="lastname"><b>Last Name</b></label>
-          <input type="text" name="lastname" value="<?php echo $_SESSION['usuario']->apellidos; ?>" readonly>
-          <label for="pass"><b>Clave</b></label>
-          <input type="password" id="password" name="pass" required>
-          <span id="errorPass" class="noError">El contraseña debe superar los 8 carácteres y contener mayúsuculas, mínusculas, números y alfanuméricos</span>
-          <label for="confirmPass"><b>Confirmar Clave</b></label>
-          <input type="password" id="password2" name="confirmPass" required>
-          <span id="errorPass2" class="noError">Las contraseñas deben de coincidir</span>
+            <div class='row-form'>
+                <div class='column-form'>
+                    <label for="email"><b>E-mail</b></label>
+                    <input type="email" id="email" placeholder="Enter Email" name="email"
+                        value="<?php echo $_SESSION['usuario']->correo; ?>" readonly>
+                    <label for="firstname"><b>First Name</b></label>
+                    <input type="text" name="firstname" value="<?php echo $_SESSION['usuario']->nombre; ?>" readonly>
+                    <label for="lastname"><b>Last Name</b></label>
+                    <input type="text" name="lastname" value="<?php echo $_SESSION['usuario']->apellidos; ?>" readonly>
+                    <label for="pass"><b>Clave</b></label>
+                    <input type="password" id="password" name="pass" required>
+                    <span id="errorPass" class="noError">El contraseña debe superar los 8 carácteres y contener
+                        mayúsuculas, mínusculas, números y alfanuméricos</span>
+                    <label for="confirmPass"><b>Confirmar Clave</b></label>
+                    <input type="password" id="password2" name="confirmPass" required>
+                    <span id="errorPass2" class="noError">Las contraseñas deben de coincidir</span>
+                </div>
+                <div class='column-form'>
+                    <label for=" birthdate"><b>Birth date</b></label>
+                    <input type="date" name="birthdate" required>
+                    <label for="postalcode"><b>Postal Code</b></label>
+                    <input type="text" id="cp" placeholder="Enter six digit postal code" name="postalcode" required>
+                    <span id="errorCP" class="noError">El Código Postal solo acepta carácteres alfanuméricos (no se
+                        admiten acentos, tampoco ñ/ç/similares)</span>
+
+                    <label for="telefono"><b>Phone Number</b></label>
+                    <input type="tel" id="telf" name="telefono" required>
+                    <span id="errorTelf" class="noError">El teléfono debe de comenzar por 6, 7, 8 ó 9 y tener un máximo
+                        de 9 digitos</span>
+                    <label for="pais"><b>Pais</b></label>
+                    <input type="text" id="pais" name="pais" required>
+                    <span id="errorPais" class="noError">El pais solo puede estar compuesto por letras y espacios (no se
+                        admiten acentos, tampoco ñ/ç/similares)</span>
+
+                    <div class="mb-3 text-center">
+                        <img id="captchaImage" src="./includes/captcha.php" alt="CAPTCHA" class="mb-3">
+                        <i id="refreshCaptcha" class="fas fa-redo"></i>
+                        <input type="text" id="captcha" name="captcha" class="form-control"
+                            placeholder="Introduzca el CAPTCHA mostrado arriba">
+                    </div>
+                </div>
+            </div>
+            <label>
+                <input type="checkbox" required name="terms" style="margin-bottom:15px"> I've read and accept the <a
+                    href="about.php" style="color:dodgerblue" target="_blank">Terms & Privacy</a>.
+            </label>
+            <div class="clearfix">
+                <button type="button"
+                    onclick="document.getElementById('id01').style.display='none';location.href='logout.php'"
+                    class="cancelbtn btn-primary">Cancel</button>
+                <button type="submit" class="signupbtn btn-primary" name="signup">Sign Up</button>
+            </div>
         </div>
-        <div class='column-form'>
-          <label for=" birthdate"><b>Birth date</b></label>
-          <input type="date" name="birthdate" required>
-          <label for="postalcode"><b>Postal Code</b></label>
-          <input type="text" id="cp" placeholder="Enter six digit postal code" name="postalcode" required>
-          <span id="errorCP" class="noError">El Código Postal solo acepta carácteres alfanuméricos (no se admiten acentos, tampoco ñ/ç/similares)</span>
+    </form>
 
-          <label for="telefono"><b>Phone Number</b></label>
-          <input type="tel" id="telf" name="telefono" required>
-          <span id="errorTelf" class="noError">El teléfono debe de comenzar por 6, 7, 8 ó 9 y tener un máximo de 9 digitos</span>
-          <label for="pais"><b>Pais</b></label>
-          <input type="text" id="pais" name="pais" required>
-          <span id="errorPais" class="noError">El pais solo puede estar compuesto por letras y espacios (no se admiten acentos, tampoco ñ/ç/similares)</span>
-
-          <div class="mb-3 text-center">
-            <img id="captchaImage" src="./includes/captcha.php" alt="CAPTCHA" class="mb-3">
-            <i id="refreshCaptcha" class="fas fa-redo"></i>
-            <input type="text" id="captcha" name="captcha" class="form-control" placeholder="Introduzca el CAPTCHA mostrado arriba">
-          </div>
-        </div>
-      </div>
-      <label>
-        <input type="checkbox" required name="terms" style="margin-bottom:15px"> I've read and accept the <a
-          href="about.php" style="color:dodgerblue" target="_blank">Terms & Privacy</a>.
-      </label>
-      <div class="clearfix">
-        <button type="button"
-          onclick="document.getElementById('id01').style.display='none';location.href='logout.php'"
-          class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn" name="signup">Sign Up</button>
-      </div>
-    </div>
-  </form>
-
-  <script src="/js/signup.js"></script>
-  <script src="./js/captcha.js"></script>
+    <script src="/js/signup.js"></script>
+    <script src="./js/captcha.js"></script>
 </div>
