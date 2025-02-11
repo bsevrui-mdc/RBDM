@@ -258,7 +258,7 @@ function cambiarValoracion($conn, $idUsuario, $idPeli, $nuevaNota, $estado)
     try {
         $result = $conn->query("select * from lista where id_contenido = $idPeli and id_usuario=$idUsuario");
         if ($result->rowCount()) {
-            $conn->exec("update lista set nota = $nuevaNota, estado = $estado where id_contenido = $idPeli and id_usuario=$idUsuario");
+            $conn->exec("update lista set nota = $nuevaNota, estado = '$estado' where id_contenido = $idPeli and id_usuario=$idUsuario");
         } else {
             $conn->exec("insert into lista values($idPeli,$idUsuario,$nuevaNota,'$estado')");
         }

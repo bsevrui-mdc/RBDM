@@ -96,7 +96,7 @@ if (isset($_SESSION['usuario'])) {
                                     <select name="nuevaNotaUsuario" class="my-4">
                                         <?php
                                         for ($i = 0; $i <= 10; $i++) {
-                                            echo "<option value=$i";
+                                            echo "<option value='$i' ";
                                             if ($i == $notaUsuario) echo 'selected';
                                             echo ">$i</option>";
                                         }
