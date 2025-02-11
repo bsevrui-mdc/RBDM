@@ -244,9 +244,10 @@ if (isset($_SESSION['usuario'])) {
             if (isset($_SESSION['usuario'])) {
             ?>
                 <form action="" method="post" id="formulario">
+
                     <div class="row">
                         <div class="col">
-                            <div id="standalone-container" style="background-color: white; color: black;"><!--Aqui esta el estiilo en linea-->
+                            <div id="standalone-container" style="background-color: white; color: black;">
                                 <div id="toolbar-container">
                                     <span class="ql-formats">
                                         <select class="ql-font"></select>
@@ -338,6 +339,7 @@ if (isset($_SESSION['usuario'])) {
             ?>
         </div>
     </main>
+
     <?php include("includes/footer.php"); ?>
     <script src="./js/videoplayer.js"></script>
     <script src="./js/controlVideos.js"></script>
@@ -356,9 +358,11 @@ if (isset($_SESSION['usuario'])) {
             });
 
             document.getElementById('formulario').addEventListener('submit', function() {
-                console.log(quill.root.innerHTML);
-                var contenido = quill.root.innerHTML;
-                document.getElementById('comentarioUsuario').value = contenido;
+
+                var texto = quill.getText();
+
+
+                document.getElementById('comentarioUsuario').value = texto;
             });
         };
     </script>
