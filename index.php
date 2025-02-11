@@ -189,7 +189,7 @@ if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
                 cookies para recibir información y novedades</p>
             <button class="btn btn-primary" id="btn-aceptar-cookies">Aceptar cookies</button>
             <button class="btn btn-primary" id="btn-rechazar-cookies">Rechazar cookies</button>
-            <a class="enlace" href="#">Aviso de Cookies</a>
+            <a class="enlace" href="about.php#pcAbout">Aviso de Cookies</a>
         </div>
     </main>
 

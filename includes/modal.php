@@ -19,12 +19,15 @@ try {
                 while ($fila = $novedades->fetchObject()) {
                 ?>
                     <div class="row">
-                        <div class="col">
-                            Titulo: <?php echo $fila->nombre ?><br>
-                            Genero: <?php echo $fila->genero ?><br>
-                            Fecha de publicacion: <?php echo $fila->fecha ?><br>
+                        <div class="col-lg-4">
+                            <img src="<?php echo $fila->imagen ?>" alt="<?php echo $fila->imagen ?>" class="img-fluid h-100">
                         </div>
-                    </div>
+                        <div class="col-lg-8">
+                            Titulo:<div class="titulo"><?php echo $fila->nombre ?></div><br>
+                            Genero:<div class="genero"><?php echo $fila->genero ?></div> <br>
+                            Fecha de publicacion:<div class="fecha"><?php echo $fila->fecha ?></div> <br>
+                        </div>
+                    </div><br>
                 <?php
                 }
 

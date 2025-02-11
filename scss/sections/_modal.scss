@@ -3,4 +3,28 @@
   color: $white;
 }
 
+#modal button{
+  background-color: $primary;
+}
+
+#modal .modal-dialog {
+  max-width: 80%; 
+  width: 80%;
+}
+
+#modal .titulo{
+  font-family: $font-family-julius;
+  font-size: $font-family-julius-size-h2-mobile;
+}
+
+#modal .fecha{
+  font-family: $font-family-julius;
+  font-size: $font-family-julius-size-h2-mobile;
+}
+
+#modal .genero{
+  font-family: $font-family-julius;
+  font-size: $font-family-julius-size-h2-mobile;
+}
+
 

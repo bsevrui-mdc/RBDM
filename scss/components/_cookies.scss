@@ -7,7 +7,7 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5); 
     z-index: 99; 
-    display: none; /* Estaba en block, lo cambiamos a none por defecto */
+    display: none; 
 }
 
 .aviso-cookies {
@@ -26,9 +26,10 @@
     padding-top: 60px;
     box-shadow: 0px 2px 20px 10px rgba(222, 222, 222, .25);
     text-align: center;
+    color: $white;
 }
 
-/* Nueva clase para ocultar el aviso y el fondo */
+
 .oculto {
     display: none;
 }
