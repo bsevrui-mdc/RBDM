@@ -27,6 +27,7 @@
           if (isset($_SESSION['usuario'])) {
           ?>
             <li><a class="dropdown-item" href="usuario.php">Perfil</a></li>
+            <li><a class="dropdown-item" href="listaUsuario.php">Lista de usuario</a></li>
             <?php
             if ($_SESSION['usuario']->tipo == "admin") {
             ?>
@@ -77,6 +78,7 @@
           if (isset($_SESSION['usuario'])) {
           ?>
             <li><a class="dropdown-item" href="usuario.php">Perfil</a></li>
+            <li><a class="dropdown-item" href="listaUsuario.php">Lista de usuario</a></li>
             <?php
             if ($_SESSION['usuario']->tipo == "admin") {
             ?>
