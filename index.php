@@ -184,12 +184,12 @@ if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
         <div class="aviso-cookies" id="aviso-cookies">
             <img class="galleta" src="./assets/img/cookie.svg" alt="Galleta">
             <h3 class="titulo">Cookies</h3>
-            <p class="parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.
+            <p class="text-center parrafo">Utilizamos cookies propias y de terceros para mejorar nuestros servicios.
                 Acepte las
                 cookies para recibir información y novedades</p>
             <button class="btn btn-primary" id="btn-aceptar-cookies">Aceptar cookies</button>
-            <button class="btn btn-primary" id="btn-rechazar-cookies">Rechazar cookies</button>
-            <a class="enlace" href="about.php#pcAbout">Aviso de Cookies</a>
+            <button class="btn btn-primary" id="btn-rechazar-cookies">Rechazar cookies</button><br>
+            <div class="mt-3"><a class="enlace" href="about.php#pcAbout">Aviso de Cookies</a></div>
         </div>
     </main>
 
