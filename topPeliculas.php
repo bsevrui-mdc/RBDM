@@ -30,7 +30,7 @@
                 ON c.id = l.id_contenido AND l.id_usuario = '$id'
                 WHERE c.tipo = 'Pelicula' 
                 ORDER BY c.nota DESC 
-                LIMIT 4
+                LIMIT 10
             ");
         } catch (PDOException $ex) {
             echo $ex->getMessage();
