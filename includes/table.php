@@ -33,12 +33,12 @@
                             <form action="editar.php" method="post">
                                 <input type="hidden" name="id" value="<?php echo $value->id; ?>">
                                 <input type="hidden" name="tipo" value="<?php echo $tabla; ?>">
-                                <button name="editar" class="btn-icon"><i class="fa-solid fa-pen"></i></button>
+                                <button name="editar" class="btn-icon"><span class="visually-hidden">editar</span><i class="fa-solid fa-pen" aria-hidden="true"></i></button>
                             </form>
                             <form action="" method="post">
                                 <input type="hidden" name="idD" value="<?php echo $value->id; ?>">
                                 <input type="hidden" name="tipoD" value="<?php echo $tabla; ?>">
-                                <button name="borrar" class="btn-icon2"><i class="fa-solid fa-trash-can color-trash"></i></button>
+                                <button name="borrar" class="btn-icon2"><span class="visually-hidden">borrar</span><i class="fa-solid fa-trash-can color-trash"></i></button>
                             </form>
                         </div>
 

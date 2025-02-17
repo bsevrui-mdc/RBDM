@@ -68,13 +68,13 @@ if(isset($_POST['borrar'])) {
                             <div class="row">
                                 <div class="d-flex flex-row gap-3 justify-content-around">
                                     <form method="post">
-                                        <button type="submit" name="peli" class="btn-icon"><i class="fa-solid fa-film"></i></button>
+                                        <button type="submit" name="peli" class="btn-icon"><span class="visually-hidden">peliculas</span><i class="fa-solid fa-film"></i></button>
                                     </form>
                                     <form method="post">
-                                        <button type="submit" name="serie" class="btn-icon"><i class="fa-solid fa-tv"></i></button>
+                                        <button type="submit" name="serie" class="btn-icon"><span class="visually-hidden">series</span><i class="fa-solid fa-tv"></i></button>
                                     </form>
                                     <form method="post">
-                                        <button type="submit" name="usu" class="btn-icon"><i class="fa-solid fa-user"></i></button>
+                                        <button type="submit" name="usu" class="btn-icon"><span class="visually-hidden">usuarios</span><i class="fa-solid fa-user"></i></button>
                                     </form>
                                 </div>
                             </div>
@@ -98,11 +98,11 @@ if(isset($_POST['borrar'])) {
                 <div class="col-lg-10">
                     <div class="row py-3">
                         <div class="col-md-4 ms-auto d-none d-lg-block">
-                            <div class="input-group">
-                                <input class="form-control py-2 border-right-0 border" type="search" placeholder="Buscar"
-                                    id="example-search-input">
-                                <button class="btn bg-white border-0"><i class="fa fa-search"></i></button>
-                            </div>
+                            
+                            <div class="input-group"> 
+                                <input class="form-control py-2 border-right-0 border" id="search" aria-label="true" type="search" placeholder="Buscar"
+                                    id="example-search-input"></label>
+                                <button class="btn bg-white border-0"><i class="fa fa-search"><span class="visually-hidden">seach</span></i></button>  
                         </div>
                     </div>
                     <form action="editar.php" method="post">
@@ -166,12 +166,12 @@ if(isset($_POST['borrar'])) {
                                     <form  action="editar.php" method="post">
                                         <input type="hidden" name="id" value="<?php echo $value->id; ?>">
                                         <input type="hidden" name="tipo" value="<?php echo $tabla; ?>">
-                                        <button name="editar" class="btn-icon"><i class="fa-solid fa-pen"></i></button>
+                                        <button name="editar" class="btn-icon"><span class="visually-hidden">btn editar</span><i class="fa-solid fa-pen" aria-hidden="true"></i></button>
                                     </form>
                                     <form  action="" method="post">
                                         <input type="hidden" name="idD" value="<?php echo $value->id; ?>">
                                         <input type="hidden" name="tipoD" value="<?php echo $tabla; ?>">
-                                        <button name="borrar" class="btn-icon2"><i class="fa-solid fa-trash-can color-trash"></i></button>
+                                        <button name="borrar" class="btn-icon2"><span class="visually-hidden">borrar</span><i class="fa-solid fa-trash-can color-trash"></i></button>
                                     </form>
                                 </div>    
                             </div>
