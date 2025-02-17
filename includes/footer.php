@@ -43,12 +43,12 @@
             </div>
         </div>
         <div class="d-flex justify-content-center pb-4">
-            <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok fa-2x px-3"></i></a>
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2x px-3"></i></a>
-            <a href="https://x.com/"><i class="fa-brands fa-x-twitter fa-2x px-3"></i></a>
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-2x px-3"></i></a>
-            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-2x px-3"></i></a>
-            <a href="https://www.reddit.com/"><i class="fa-brands fa-reddit fa-2x px-3"></i></a>
+            <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok fa-2x px-3"><span class="visually-hidden">tiktok</span></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2x px-3"><span class="visually-hidden">instagram</span></i></a>
+            <a href="https://x.com/"><i class="fa-brands fa-x-twitter fa-2x px-3"><span class="visually-hidden">x/twitter</span></i></a>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-2x px-3"><span class="visually-hidden">facebook</span></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-2x px-3"><span class="visually-hidden">youtube</span></i></a>
+            <a href="https://www.reddit.com/"><i class="fa-brands fa-reddit fa-2x px-3"><span class="visually-hidden">reddit</span></i></a>
         </div>
         <p class="text-center">© 1990-2024&nbsp;by rbdm.com, Inc.</p>
     </div>
