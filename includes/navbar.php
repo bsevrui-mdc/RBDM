@@ -1,12 +1,12 @@
 <header>
   <nav class="px-3 container-fluid navbar navbar-expand-lg bg-primary text-uppercase" id="mainNav">
     <a class="navbar-brand" href="index.php">
-      <img src="/assets/img/logo.png" alt="logo">
+      <img src="/assets/img/logo.png" alt="logo de RBDM">
 
     </a>
     <!-- Navbar <lg -->
     <div class="me-0 d-flex d-lg-none justify-content-center align-items-center">
-      <a href="" class="mx-3"><i class="fa-solid fa-magnifying-glass"></i></a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
         <i class="fa-solid fa-bars "></i>
       </button>
@@ -59,8 +59,8 @@
     </div>
     <!-- Navbar >=lg -->
     <div class="d-none d-lg-flex me-5 align-items-center ms-auto iconos">
-      <input class="me-2" type="text" placeholder="Buscar..." name="buscador">
-      <a href="" class="ms-3 me-4"><i class="fa-solid fa-magnifying-glass"></i></a>
+
+
       <div class="dropdown">
         <?php
         if (!isset($_SESSION["usuario"]->imagen)) { ?>
@@ -69,7 +69,7 @@
         <?php
         } else {
         ?>
-          <img src="<?php echo $_SESSION['usuario']->imagen ?>" data-bs-toggle="dropdown" class="rounded-circle">
+          <img src="<?php echo $_SESSION['usuario']->imagen ?>" data-bs-toggle="dropdown" class="rounded-circle" alt="imagen de usuario">
         <?php
         }
         ?>
