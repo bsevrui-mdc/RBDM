@@ -155,7 +155,7 @@ if (isset($_SESSION['usuario'])) {
                                     <div class="progress-bar"></div>
                                 </div>
                             </div>
-                            <button class="btn btn-lg btn-video-fullscreen"><i class="fa-solid fa-maximize"></i></button>
+                            <button class="btn btn-lg btn-video-fullscreen"><span class="visually-hidden">Boton de aumentar pantalla</span><i class="fa-solid fa-maximize"></i></button>
                             <div class="dropup">
                                 <button class="btn btn-lg btn-video-volume" data-bs-toggle="dropdown" title="Volume"><i class="fa-solid fa-volume-low"></i></button>
                                 <div class="dropdown-menu dropdown-menu-end dropup-volume dropdown-menu-dark bg-primary">
@@ -314,12 +314,12 @@ if (isset($_SESSION['usuario'])) {
                 <form method="post" action="">
                     <div class="py-3 row">
                         <div class="col-lg-1">
-                            <img src="<?php echo $fila->imagen ?>" class="img-fluid">
+                            <img src="<?php echo $fila->imagen ?>" class="img-fluid" alt="foto de perfil">
                         </div>
 
                         <div class="col-lg-10">
                             <input type="hidden" name="idComentario" value="<?php echo $fila->idComentario ?>">
-                            <textarea name="comentario" class="form-control h-100"><?php echo $fila->texto ?></textarea>
+                            <textarea name="comentario" class="form-control h-100" aria-label="true"><?php echo $fila->texto ?></textarea>
                         </div>
                         <div class="col-lg-1 d-flex align-items-center">
                             <?php if (isset($_SESSION['usuario']) && $fila->idUsuario == $_SESSION['usuario']->id) { ?>
