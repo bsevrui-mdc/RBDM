@@ -62,51 +62,51 @@
                         }
                     ?>
                     <form action="signup.php" method="POST" enctype="multipart/form-data" class="px-3 px-lg-5">
-                        <div class="mb-3 text-center">
+                        <div class="mb-3">
                             <label class="form-label">Correo Electrónico:</label>
-                            <input type="email" id="email" name="email" class="form-control" placeholder="ejemplo@ejemplo.com" value="<?php if (isset($_POST['email']) && !empty($_POST['email']) && !$error) { echo $_POST['email']; } ?>" required>
+                            <input type="email" id="email" name="email" class="form-control" value="<?php if (isset($_POST['email']) && !empty($_POST['email']) && !$error) { echo $_POST['email']; } ?>" required>
                             <span id="errorEmail" class="noError">El correo debe de seguir el siguiente formato ejemplo@ejemplo.com</span>
                         </div>
-                        <div class="mb-3 text-center">
+                        <div class="mb-3">
                             <label class="form-label">Contraseña:</label>
                             <input type="password" id="password" name="password" class="form-control" value="<?php if (isset($_POST['password']) && !empty($_POST['password']) && !$error) { echo $_POST['password']; } ?>" required>
                             <span id="errorPass" class="noError">El contraseña debe superar los 8 carácteres y contener mayúsuculas, mínusculas, números y alfanuméricos</span>
                         </div>
-                        <div class="mb-3 text-center">
+                        <div class="mb-3">
                             <label class="form-label">Repetir Contraseña:</label>
                             <input type="password" id="password2" name="password2" class="form-control" value="<?php if (isset($_POST['password2']) && !empty($_POST['password2']) && !$error) { echo $_POST['password2']; } ?>" required>
                             <span id="errorPass2" class="noError">Las contraseñas deben de coincidir</span>
                         </div>
-                        <div class="mb-3 text-center">
+                        <div class="mb-3">
                             <label class="form-label">Nombre:</label>
                             <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Maria Carmen" value="<?php if (isset($_POST['nombre']) && !empty($_POST['nombre']) && !$error) { echo $_POST['nombre']; } ?>" required>
                             <span id="errorNombre" class="noError">El nombre solo puede estar compuesto por letras y espacios (no se admiten acentos, tampoco ñ/ç/similares)</span>
                         </div>
-                        <div class="mb-3 text-center">
+                        <div class="mb-3">
                             <label class="form-label">Apellidos:</label>
                             <input type="text" id="apellidos" name="apellidos" class="form-control" placeholder="Garcia Rodriguez" value="<?php if (isset($_POST['apellidos']) && !empty($_POST['apellidos']) && !$error) { echo $_POST['apellidos']; } ?>" required>
                             <span id="errorApellidos" class="noError">Los apellidos solo pueden estar compuestos por letras y espacios (no se admiten acentos, tampoco ñ/ç/similares)</span>
                         </div>
-                        <div class="mb-3 text-center">
+                        <div class="mb-3">
                             <label class="form-label">Fecha de Nacimiento:</label>
                             <input type="date" name="fecha" class="form-control" value="<?php if (isset($_POST['fecha']) && !empty($_POST['fecha']) && !$error) { echo $_POST['fecha']; } ?>" required>
                         </div>
-                        <div class="mb-3 text-center">
+                        <div class="mb-3">
                             <label class="form-label">País:</label>
                             <input type="text" id="pais" name="pais" class="form-control" placeholder="Spain" value="<?php if (isset($_POST['pais']) && !empty($_POST['pais']) && !$error) { echo $_POST['pais']; } ?>" required>
                             <span id="errorPais" class="noError">El pais solo puede estar compuesto por letras y espacios (no se admiten acentos, tampoco ñ/ç/similares)</span>
                         </div>
-                        <div class="mb-3 text-center">
+                        <div class="mb-3">
                             <label class="form-label">Código Postal:</label>
                             <input type="text" id="cp" name="cp" class="form-control" placeholder="14900" value="<?php if (isset($_POST['cp']) && !empty($_POST['cp']) && !$error) { echo $_POST['cp']; } ?>" required>
                             <span id="errorCP" class="noError">El Código Postal solo acepta carácteres alfanuméricos (no se admiten acentos, tampoco ñ/ç/similares)</span>
                         </div>
-                        <div class="mb-3 text-center">
+                        <div class="mb-3">
                             <label class="form-label">Teléfono:</label>
                             <input type="text" id="telf" name="telf" class="form-control" placeholder="623451789" value="<?php if (isset($_POST['telf']) && !empty($_POST['telf']) && !$error) { echo $_POST['telf']; } ?>" required>
                             <span id="errorTelf" class="noError">El teléfono debe de comenzar por 6, 7, 8 ó 9 y tener un máximo de 9 digitos</span>
                         </div>
-                        <div class="mb-3 text-center">
+                        <div class="mb-3">
                             <label class="form-label">Foto de Perfil:</label>
                             <input type="file" name="img" class="form-control" required>
                         </div>
