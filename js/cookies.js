@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!getCookie("rbdmCookie")) {
     cookieAlert.classList.remove("oculto");
     bloqueoCookies.classList.remove("oculto");
-    document.body.style.overflow = "hidden"; // Bloquear el scroll mientras se ve el aviso
+    document.body.style.overflow = "hidden";
   } else {
     ocultarAvisoCookies();
     if (!getCookie("novedades")) {
@@ -39,11 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function ocultarAvisoCookies() {
-    // Ocultar el aviso de cookies y el fondo de bloqueo usando clases
     cookieAlert.classList.add("oculto");
     bloqueoCookies.classList.add("oculto");
-    document.body.style.overflow = "auto"; // Restaurar el scroll
-    document.body.style.marginBottom = "0"; // Eliminar margen extra si existía
+    document.body.style.overflow = "auto";
+    document.body.style.marginBottom = "0";
   }
 
   function setCookie(cname, cvalue, exdays) {

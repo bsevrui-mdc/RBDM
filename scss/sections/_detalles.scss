@@ -12,7 +12,10 @@
     height: 100%;
   }
   .card-body {
-    flex-grow: 1; /* El cuerpo de la tarjeta crece para ocupar el espacio restante */
+    flex-grow: 1; 
+    a:hover{
+      text-decoration: underline;
+    }
   }
 
   .transparente {
