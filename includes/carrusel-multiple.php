@@ -25,14 +25,12 @@ function renderCarruselMultiple($movies)
             ?>
     </div>
     <button class="carousel-control-prev multiple-prev" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev">
+        data-bs-slide="prev" aria-label="Anterior">
         <span class="fa-solid fa-arrow-left" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next multiple-next" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="next">
+        data-bs-slide="next" aria-label="Siguiente">
         <span class="fa-solid fa-arrow-right" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
     </button>
 </div>
 <?php
