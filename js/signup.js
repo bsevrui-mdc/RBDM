@@ -89,20 +89,6 @@ if (inputApellidos != null) {
   });
 }
 
-/*
-inputPais.addEventListener("input", function (e) {
-  let valor = e.target.value;
-  if (!PATTERN1.test(valor)) {
-    e.target.value = valor.slice(0, -1);
-    errorPais.classList.remove("noError");
-    errorPais.classList.add("error");
-  } else {
-    errorPais.classList.remove("error");
-    errorPais.classList.add("noError");
-  }
-});
-*/
-
 inputCP.addEventListener("input", function (e) {
   let valor = e.target.value;
   if (!PATTERN2.test(valor)) {
