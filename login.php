@@ -66,9 +66,6 @@ if (isset($_POST['login'])) {
                     }
                     ?>
                 </div>
-                <div class="pt-1 text-center">
-                    <a href="" class="pt-1 ">¿Has olvidado tu contraseña?</a>
-                </div>
                 <div class="pb-3 text-center">
                     <a href="signup.php">¿No tienes una cuenta? Registrate</a>
                 </div>
