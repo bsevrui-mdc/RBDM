@@ -20,9 +20,9 @@ if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
     include("registermodal.php");
 
 ?>
-    <script>
-        document.getElementById('id01').style.display = 'block';
-    </script>
+<script>
+document.getElementById('id01').style.display = 'block';
+</script>
 <?php
 
 }
@@ -60,10 +60,10 @@ if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
                         renderCarruselNormal($ultimas3Pelis); ?>
                     </div>
                     <div class="col-4 d-none d-lg-block top3">
-                        <div class="d-flex flex-grow-1 flex-column h-100 topGenero justify-content-around">
+                            <ul class="d-flex flex-grow-1 flex-column h-100 topGenero justify-content-around">
                             <?php
-                            foreach ($ultimas3Series as $key => $peli) {
-                            ?>
+                                foreach ($ultimas3Series as $key => $peli) {
+                                ?>
                                 <li role="listitem" class="list-unstyled">
                                     <article>
                                         <a href="detalles.php?peli=<?= $peli->id ?>"
@@ -87,10 +87,10 @@ if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
                                         </a>
                                     </article>
                                 </li>
-                            <?php
-                            }
-                            ?>
-                        </div>
+                                <?php
+                                }
+                                ?>
+                            </ul>
 
                     </div>
                 </div>
@@ -110,28 +110,28 @@ if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
                     <?php
                     foreach ($ultimas3Pelis as $key => $peli) {
                     ?>
-                        <li role="listitem" class="list-unstyled">
-                            <article>
-                                <a href="detalles.php?peli=<?= $peli->id ?>"
-                                    aria-label="Redireccion hacia los detalles de <?= $peli->nombre ?>" class="d-inline">
-                                    <div class="col-12">
-                                        <div class="my-2 row d-flex flex-grow-1">
-                                            <div class="text-center col-4">
-                                                <img src="<?= $peli->imagen ?>" alt="<?php echo $peli->nombre ?>"
-                                                    class="img-fluid">
+                    <li role="listitem" class="list-unstyled">
+                        <article>
+                            <a href="detalles.php?peli=<?= $peli->id ?>"
+                                aria-label="Redireccion hacia los detalles de <?= $peli->nombre ?>" class="d-inline">
+                                <div class="col-12">
+                                    <div class="my-2 row d-flex flex-grow-1">
+                                        <div class="text-center col-4">
+                                            <img src="<?= $peli->imagen ?>" alt="<?php echo $peli->nombre ?>"
+                                                class="img-fluid">
+                                        </div>
+                                        <div class="col-8 align-content-center">
+                                            <div class="text-clamp">
+                                                <h2><?= $peli->nombre ?>
+                                                </h2>
                                             </div>
-                                            <div class="col-8 align-content-center">
-                                                <div class="text-clamp">
-                                                    <h2><?= $peli->nombre ?>
-                                                    </h2>
-                                                </div>
 
-                                            </div>
                                         </div>
                                     </div>
-                                </a>
-                            </article>
-                        </li>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
                     <?php
                     }
                     ?>
@@ -157,28 +157,28 @@ if ((!isset($_SESSION['usuario']->fecha)) && isset($_SESSION['access_token'])) {
                     <?php
                     foreach ($ultimas3Series as $key => $peli) {
                     ?>
-                        <li role="listitem" class="list-unstyled">
-                            <article>
-                                <a href="detalles.php?peli=<?= $peli->id ?>"
-                                    aria-label="Redireccion hacia los detalles de <?= $peli->nombre ?>" class="d-inline">
-                                    <div class="col-12">
-                                        <div class="my-2 row d-flex flex-grow-1">
-                                            <div class="text-center col-4">
-                                                <img src="<?= $peli->imagen ?>" alt="<?php echo $peli->nombre ?>"
-                                                    class="img-fluid">
+                    <li role="listitem" class="list-unstyled">
+                        <article>
+                            <a href="detalles.php?peli=<?= $peli->id ?>"
+                                aria-label="Redireccion hacia los detalles de <?= $peli->nombre ?>" class="d-inline">
+                                <div class="col-12">
+                                    <div class="my-2 row d-flex flex-grow-1">
+                                        <div class="text-center col-4">
+                                            <img src="<?= $peli->imagen ?>" alt="<?php echo $peli->nombre ?>"
+                                                class="img-fluid">
+                                        </div>
+                                        <div class="col-8 align-content-center">
+                                            <div class="text-clamp">
+                                                <h2><?= $peli->nombre ?>
+                                                </h2>
                                             </div>
-                                            <div class="col-8 align-content-center">
-                                                <div class="text-clamp">
-                                                    <h2><?= $peli->nombre ?>
-                                                    </h2>
-                                                </div>
 
-                                            </div>
                                         </div>
                                     </div>
-                                </a>
-                            </article>
-                        </li>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
                     <?php
                     }
                     ?>
