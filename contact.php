@@ -37,11 +37,11 @@
                     <form action="" method="POST" class="px-lg-4">
                         <div class="pb-3 text-center">
                             <label class="form-label">Correo Electrónico:</label>
-                            <input type="email" class="form-control" placeholder="ejemplo@ejemplo.com" id="">
+                            <input type="email" class="form-control" placeholder="ejemplo@ejemplo.com" aria-label="Correo Electrónico">
                         </div>
                         <div class="pb-3 text-center">
                             <label class="form-label">Tu Mensaje:</label>
-                            <textarea class="form-control" placeholder="Tu mensaje aquí"></textarea>
+                            <textarea class="form-control" placeholder="Tu mensaje aquí" aria-label="Tu mensaje"></textarea>
                         </div>
                         <div class="pb-3 d-flex justify-content-center">
                             <button type="submit" class="btn btn-primary">Enviar</button>
