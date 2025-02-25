@@ -7,7 +7,7 @@
     <!-- Navbar <lg -->
     <div class="me-0 d-flex d-lg-none justify-content-center align-items-center">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-label="Menu desplegable">
-        <i class="fa-solid fa-bars "></i>
+        <i class="fa-solid fa-bar s "></i>
       </button>
       <div class="ms-3 dropdown">
         <?php
@@ -61,41 +61,29 @@
 
 
       <div class="dropdown">
-        <?php
-        if (!isset($_SESSION["usuario"]->imagen)) { ?>
-          <a href="#" class="text-white d-inline-block" data-bs-toggle="dropdown" aria-expanded="false"><i
-              class="fa-solid fa-user"></i></a>
-        <?php
-        } else {
-        ?>
-          <img src="<?php echo $_SESSION['usuario']->imagen ?>" data-bs-toggle="dropdown" class="rounded-circle" alt="imagen de usuario">
-        <?php
-        }
-        ?>
+        <?php if (!isset($_SESSION["usuario"]->imagen)) { ?>
+          <a href="#" class="text-white d-inline-block" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-user"></i>
+          </a>
+        <?php } else { ?>
+          <button class="p-0 bg-transparent border-0" data-bs-toggle="dropdown" aria-expanded="false" tabindex="0">
+            <img src="<?php echo $_SESSION['usuario']->imagen ?>" class="rounded-circle" alt="imagen de usuario">
+          </button>
+        <?php } ?>
+
         <ul class="dropdown-menu bg-secondary dropdown-menu-end menuDropdown">
-          <?php
-          if (isset($_SESSION['usuario'])) {
-          ?>
+          <?php if (isset($_SESSION['usuario'])) { ?>
             <li><a class="dropdown-item" href="usuario.php">Perfil</a></li>
             <li><a class="dropdown-item" href="listaUsuario.php">Lista de usuario</a></li>
-            <?php
-            if ($_SESSION['usuario']->tipo == "admin") {
-            ?>
+            <?php if ($_SESSION['usuario']->tipo == "admin") { ?>
               <li><a class="dropdown-item" href="admin.php">Administracion</a></li>
-            <?php
-            }
-            ?>
+            <?php } ?>
             <hr>
-            <li><a class="dropdown-item" href="logout.php">Cerrar Sesión <i
-                  class="fa-solid fa-arrow-right-from-bracket icono-Log-Out"></i></a></li>
-          <?php
-          } else {
-          ?>
+            <li><a class="dropdown-item" href="logout.php">Cerrar Sesión <i class="fa-solid fa-arrow-right-from-bracket icono-Log-Out"></i></a></li>
+          <?php } else { ?>
             <li><a class="dropdown-item" href="login.php">Iniciar Sesión</a></li>
             <li><a class="dropdown-item" href="signup.php">Registrarse</a></li>
-          <?php
-          }
-          ?>
+          <?php } ?>
         </ul>
       </div>
     </div>
