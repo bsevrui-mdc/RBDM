@@ -164,6 +164,7 @@ if (isset($_SESSION['usuario'])) {
                             </div>
                         </div>
                     </div>
+                    <p class="text-center">El video muestra el trailer de la casa de papel (imagenes de la serie) con una canción francesa de fondo</p>
                 </div>
             </div>
             <div class="my-5 row">
