@@ -68,7 +68,7 @@
                         <div class="mb-3">
                             <label class="form-label">Correo Electrónico:</label>
                             <input type="email" aria-label="Correo Electrónico" id="email" name="email" class="form-control" value="<?php if (isset($_POST['email']) && !empty($_POST['email']) && !$errorCarga) { echo $_POST['email']; } ?>" required>
-                            <span id="errorEmail" class="noError">El correo debe de seguir el siguiente formato ejemplo@ejemplo.com, además no se admiten acentos ni carácteres especiales</span>
+                            <span id="errorEmail" class="noError">El correo debe de seguir el siguiente formato ejemplo@ejemplo.com, además no se admiten acentos ni carácteres especiales (esto debido a su carácter internacional)</span>
                         </div>
                         <div class="mb-3 row g-3">
                             <div class="col">
@@ -86,12 +86,12 @@
                             <div class="col">
                                 <label class="form-label">Nombre:</label>
                                 <input type="text" aria-label="Nombre" id="nombre" name="nombre" class="form-control" value="<?php if (isset($_POST['nombre']) && !empty($_POST['nombre']) && !$errorCarga) { echo $_POST['nombre']; } ?>" required>
-                                <span id="errorNombre" class="noError">El nombre solo puede estar compuesto por letras y espacios (no se admiten acentos, tampoco ñ/ç/similares)</span>
+                                <span id="errorNombre" class="noError">El nombre solo puede estar compuesto por letras y espacios</span>
                             </div>
                             <div class="col">
                                 <label class="form-label">Apellidos:</label>
                                 <input type="text" aria-label="Apellidos" id="apellidos" name="apellidos" class="form-control" value="<?php if (isset($_POST['apellidos']) && !empty($_POST['apellidos']) && !$errorCarga) { echo $_POST['apellidos']; } ?>" required>
-                                <span id="errorApellidos" class="noError">Los apellidos solo pueden estar compuestos por letras y espacios (no se admiten acentos, tampoco ñ/ç/similares)</span>
+                                <span id="errorApellidos" class="noError">Los apellidos solo pueden estar compuestos por letras y espacios</span>
                             </div>
                         </div>
                         <div class="mb-3">
@@ -116,7 +116,7 @@
                             <div class="col">
                                 <label class="form-label">Código Postal:</label>
                                 <input type="text" aria-label="Codigo Postal" id="cp" name="cp" class="form-control" value="<?php if (isset($_POST['cp']) && !empty($_POST['cp']) && !$errorCarga) { echo $_POST['cp']; } ?>" required>
-                                <span id="errorCP" class="noError">El Código Postal solo acepta carácteres alfanuméricos (no se admiten acentos, tampoco ñ/ç/similares)</span>
+                                <span id="errorCP" class="noError">El Código Postal solo acepta carácteres alfanuméricos, excluyendo acentos y carácteres especiales (esto debido a su carácter internacional)</span>
                             </div>
                         </div>
                         <div class="mb-3">
