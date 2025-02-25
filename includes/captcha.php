@@ -1,5 +1,5 @@
 <?php
-    $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
     function generateString($input, $strength = 6) {
         $string = '';
@@ -33,7 +33,7 @@
     $black = imagecolorallocate($image, 0, 0, 0);
     $white = imagecolorallocate($image, 0, 0, 0);
     $textColors = [$black, $white];
-    $fonts = ['../assets/fonts/FiraCode.ttf', '../assets/fonts/Ubuntu.ttf'];
+    $fonts = ['../assets/fonts/FiraCode.ttf', '../assets/fonts/RobotoMono.ttf'];
     $captchaString = generateString($chars);
 
     setcookie("captchaString", $captchaString, time()+3600, '/');
