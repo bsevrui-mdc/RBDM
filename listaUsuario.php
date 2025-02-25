@@ -125,7 +125,7 @@ if (isset($_POST["eliminar"])) {
                                 </div>
                                 <div class="col-1 justify-content-center align-items-center d-lg-flex d-none">
                                     <form action="" method="post" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta película?');">
-                                        <button type="submit" name="eliminar" class="text-white border-0 bg-danger rounded-1"
+                                        <button type="submit" aria-label="botón de eliminar" name="eliminar" class="text-white border-0 bg-danger rounded-1"
                                             value="<?= $value->id ?>"><i class=" fa-solid fa-trash-can delete"></i></button>
                                     </form>
                                 </div>

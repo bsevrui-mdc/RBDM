@@ -45,13 +45,13 @@ if (isset($_POST['login'])) {
                 <form action="login.php" method="POST" class="px-3 px-lg-5">
                     <div class="mb-3 text-center">
                         <label class="form-label">Correo Electrónico:</label>
-                        <input type="email" name="email" class="form-control" placeholder="ejemplo@ejemplo.com" value="<?php if (isset($_POST['email']) && !empty($_POST['email']) && !$errorLogin) {
+                        <input type="email" aria-label="Correo Electrónico" name="email" class="form-control" placeholder="ejemplo@ejemplo.com" value="<?php if (isset($_POST['email']) && !empty($_POST['email']) && !$errorLogin) {
                                                                                                                             echo $_POST['email'];
                                                                                                                         } ?>" required>
                     </div>
                     <div class="mb-3 text-center">
                         <label class="form-label">Contraseña:</label>
-                        <input type="password" name="password" class="form-control" value="<?php if (isset($_POST['password']) && !empty($_POST['password']) && !$errorLogin) {
+                        <input type="password" aria-label="Contraseña" name="password" class="form-control" value="<?php if (isset($_POST['password']) && !empty($_POST['password']) && !$errorLogin) {
                                                                                                 echo $_POST['password'];
                                                                                             } ?>" required>
                     </div>

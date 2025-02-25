@@ -28,7 +28,7 @@ if (isset($_POST['signup'])) {
 ?>
 <div id="id01" class="registermodal modal" role="dialog" aria-labelledby="titulo-modal">
   <span onclick="document.getElementById('id01').style.display='none';location.href='logout.php'" class="close"
-    title="Close Modal" aria-label="Cancelar registro">&times;</span>
+    title="Close Modal" aria-label="Cancelar registro" tabindex="0">&times;</span>
   <form class="modal-content" action="" method="POST">
     <div class="container">
       <img src="<?php echo $_SESSION['usuario']->imagen ?>" alt="Imagen del usuario">

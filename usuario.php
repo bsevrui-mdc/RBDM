@@ -64,7 +64,7 @@ if (isset($_POST['actualizar'])) {
             <div class="p-5 my-4 container-fluid datos-usuario bg-info p-lg-5 rounded-3">
                 <div class="row">
                     <div class="col text-end">
-                        <button type="submit" name="editar" class="text-white bg-transparent border-0"><i
+                        <button type="submit" aria-label="botón de editar" name="editar" class="text-white bg-transparent border-0"><i
                                 class="fa-solid fa-pen-to-square edit"></i></button>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ if (isset($_POST['actualizar'])) {
                 ?>
                 <div class="mx-auto text-center row foto-perfil align-content-center">
                     <div class="col">
-                        <img src="<?php echo $_SESSION['usuario']->imagen; ?>" class="text-center img-fluid rounded-3">
+                        <img src="<?php echo $_SESSION['usuario']->imagen; ?>" alt="Foto de perfil" class="text-center img-fluid rounded-3">
                     </div>
                 </div>
                 <div class="row">
