@@ -6,8 +6,7 @@
     </a>
     <!-- Navbar <lg -->
     <div class="me-0 d-flex d-lg-none justify-content-center align-items-center">
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-label="Menu desplegable">
         <i class="fa-solid fa-bars "></i>
       </button>
       <div class="ms-3 dropdown">
