@@ -36,12 +36,11 @@ function renderCarruselNormal($items)
             aria-label="Anterior">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next"
+        <button class=" carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next"
             aria-label="Siguiente">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </button>
     </div>
-
 <?php
 }
 ?>
