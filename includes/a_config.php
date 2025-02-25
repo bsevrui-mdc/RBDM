@@ -44,6 +44,10 @@ switch ($_SERVER["SCRIPT_NAME"]) {
 		$CURRENT_PAGE = "profile";
 		$PAGE_TITLE = "Perfil - RBDM";
 		break;
+	case "/listaUsuario.php":
+		$CURRENT_PAGE = "listaUsuario";
+		$PAGE_TITLE = "Lista Personal - RBDM";
+		break;
 	case "/detalles.php":
 		$CURRENT_PAGE = "details";
 		$PAGE_TITLE = "Detalles - RBDM";
