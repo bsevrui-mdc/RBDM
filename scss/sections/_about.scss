@@ -10,10 +10,23 @@
     font-size: $font-family-oxanium-size-h3;
   }
 
+  p {
+    text-align: left;
+  }
+
+  ol.lista {
+    font-family: $font-family-calibri;
+    font-size: $font-family-calibri-size-p;
+  }
+
+  ol.sublista {
+    list-style-type: upper-roman;
+  }
+
   ul li {
     font-family: $font-family-calibri;
     font-size: $font-family-calibri-size-p;
-    text-align: justify;
+    text-align: left;
   }
 
   @include media-breakpoint-up(lg) {
