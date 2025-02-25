@@ -79,12 +79,12 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Maria Carmen" value="<?php if (isset($_POST['nombre']) && !empty($_POST['nombre']) && !$error) { echo $_POST['nombre']; } ?>" required>
+                            <input type="text" id="nombre" name="nombre" class="form-control" value="<?php if (isset($_POST['nombre']) && !empty($_POST['nombre']) && !$error) { echo $_POST['nombre']; } ?>" required>
                             <span id="errorNombre" class="noError">El nombre solo puede estar compuesto por letras y espacios (no se admiten acentos, tampoco ñ/ç/similares)</span>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Apellidos:</label>
-                            <input type="text" id="apellidos" name="apellidos" class="form-control" placeholder="Garcia Rodriguez" value="<?php if (isset($_POST['apellidos']) && !empty($_POST['apellidos']) && !$error) { echo $_POST['apellidos']; } ?>" required>
+                            <input type="text" id="apellidos" name="apellidos" class="form-control" value="<?php if (isset($_POST['apellidos']) && !empty($_POST['apellidos']) && !$error) { echo $_POST['apellidos']; } ?>" required>
                             <span id="errorApellidos" class="noError">Los apellidos solo pueden estar compuestos por letras y espacios (no se admiten acentos, tampoco ñ/ç/similares)</span>
                         </div>
                         <div class="mb-3">
@@ -93,17 +93,17 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">País:</label>
-                            <input type="text" id="pais" name="pais" class="form-control" placeholder="Spain" value="<?php if (isset($_POST['pais']) && !empty($_POST['pais']) && !$error) { echo $_POST['pais']; } ?>" required>
+                            <input type="text" id="pais" name="pais" class="form-control" value="<?php if (isset($_POST['pais']) && !empty($_POST['pais']) && !$error) { echo $_POST['pais']; } ?>" required>
                             <span id="errorPais" class="noError">El pais solo puede estar compuesto por letras y espacios (no se admiten acentos, tampoco ñ/ç/similares)</span>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Código Postal:</label>
-                            <input type="text" id="cp" name="cp" class="form-control" placeholder="14900" value="<?php if (isset($_POST['cp']) && !empty($_POST['cp']) && !$error) { echo $_POST['cp']; } ?>" required>
+                            <input type="text" id="cp" name="cp" class="form-control" value="<?php if (isset($_POST['cp']) && !empty($_POST['cp']) && !$error) { echo $_POST['cp']; } ?>" required>
                             <span id="errorCP" class="noError">El Código Postal solo acepta carácteres alfanuméricos (no se admiten acentos, tampoco ñ/ç/similares)</span>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Teléfono:</label>
-                            <input type="text" id="telf" name="telf" class="form-control" placeholder="623451789" value="<?php if (isset($_POST['telf']) && !empty($_POST['telf']) && !$error) { echo $_POST['telf']; } ?>" required>
+                            <input type="text" id="telf" name="telf" class="form-control" value="<?php if (isset($_POST['telf']) && !empty($_POST['telf']) && !$error) { echo $_POST['telf']; } ?>" required>
                             <span id="errorTelf" class="noError">El teléfono debe de comenzar por 6, 7, 8 ó 9 y tener un máximo de 9 digitos</span>
                         </div>
                         <div class="mb-3">
@@ -113,7 +113,7 @@
                         <div class="mb-3 text-center">
                             <img id="captchaImage" src="./includes/captcha.php" alt="CAPTCHA" class="mb-3">
                             <i id="refreshCaptcha" class="fas fa-redo"></i>
-                            <input type="text" id="captcha" name="captcha" class="form-control" placeholder="Introduzca el CAPTCHA mostrado arriba">
+                            <input type="text" id="captcha" name="captcha" class="form-control">
                         </div>
                         <div class="mb-3 d-flex justify-content-center">
                             <button type="submit" name="signup" class="btn btn-primary">Registrarse</button>
