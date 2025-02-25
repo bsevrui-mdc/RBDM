@@ -11,18 +11,13 @@ $errorLogin = false;
 $errorCaptcha = false;
 
 if (isset($_POST['login'])) {
-    if ($_POST['captcha'] != $_COOKIE['captchaString']) {
-        $errorCaptcha = true;
+    if (empty($_POST['email']) || empty($_POST['password'])) {
+        $errorLogin = true;
     } else {
-        setcookie("captchaString", "", time() - 3600, '/');
-        if (empty($_POST['email']) || empty($_POST['password'])) {
-            $errorLogin = true;
+        if (iniciarSesion($_POST['email'], $_POST['password'])) {
+            header("Location: index.php");
         } else {
-            if (iniciarSesion($_POST['email'], $_POST['password'])) {
-                header("Location: index.php");
-            } else {
-                $errorLogin = true;
-            }
+            $errorLogin = true;
         }
     }
 }
@@ -41,11 +36,6 @@ if (isset($_POST['login'])) {
             <div class="col-lg-6 my-lg-4 content">
                 <h1 class="pt-4 pb-2 text-center pt-lg-3 pb-lg-1">Inicio de Sesión</h1>
                 <?php
-                if ($errorCaptcha) {
-                ?>
-                    <p class="error">El CAPTCHA introducido no era correcto</p>
-                <?php
-                }
                 if ($errorLogin) {
                 ?>
                     <p class="error">Correo o Contraseña Incorrectos</p>
@@ -64,11 +54,6 @@ if (isset($_POST['login'])) {
                         <input type="password" name="password" class="form-control" value="<?php if (isset($_POST['password']) && !empty($_POST['password']) && !$errorLogin) {
                                                                                                 echo $_POST['password'];
                                                                                             } ?>" required>
-                    </div>
-                    <div class="mb-3 text-center">
-                        <img id="captchaImage" src="./includes/captcha.php" alt="CAPTCHA" class="mb-3">
-                        <i id="refreshCaptcha" class="fas fa-redo"></i>
-                        <input type="text" id="captcha" name="captcha" class="form-control" placeholder="Introduzca el CAPTCHA mostrado arriba">
                     </div>
                     <div class="mb-3 d-flex justify-content-center">
                         <button type="submit" class="btn btn-primary" name="login">Iniciar</button>
