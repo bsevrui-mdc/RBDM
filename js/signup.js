@@ -1,8 +1,8 @@
-const PATTERN1 = /^[A-Za-z\s]*$/; // Nombre, Apellidos, País
+const PATTERN1 = /^[A-Za-záéíóúÁÉÍÓÚñÑçÇüÜ\s]*$/; // Nombre y Apellidos
 const PATTERN2 = /^[a-zA-Z0-9]+$/; // CP
 const PATTERN3 = /^[6-9]\d{0,8}$/; // Telefono
 const PATTERN4 = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Email
-const PATTERN5 = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,}$/; // Contraseña
+const PATTERN5 = /^(?=.*[a-záéíóúñçü])(?=.*[A-ZÁÉÍÓÚÑÇÜ])(?=.*\d)(?=.*[^\w\s]).{8,}$/; // Contraseña
 var inputEmail = document.getElementById("email");
 var errorEmail = document.getElementById("errorEmail");
 var inputPass = document.getElementById("password");
