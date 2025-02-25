@@ -10,7 +10,6 @@
         return $string;
     }
 
-    // IMG
     $image = imagecreatetruecolor(200, 50);
     $colors = [];
     $red = rand(125, 175);
