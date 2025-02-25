@@ -20,7 +20,7 @@
                 <?php
         } else {
         ?>
-                <img src="<?php echo $_SESSION['usuario']->imagen ?>" data-bs-toggle="dropdown" class="rounded-circle">
+                <img src="<?php echo $_SESSION['usuario']->imagen ?>" alt="Foto de perfil" data-bs-toggle="dropdown" class="rounded-circle">
                 <?php
         }
         
