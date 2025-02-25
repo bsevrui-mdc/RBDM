@@ -145,7 +145,7 @@ if(isset($_POST['update'])){
                 
                     <div class="mb-3 text-center">
                         <label class="form-label">Nombre:</label>
-                        <input type="text" name="nombre" class="form-control"
+                        <input type="text" aria-label="Nombre" name="nombre" class="form-control"
                                value="<?php echo isset($obj) ? htmlspecialchars($obj->nombre) : ''; ?>"
                                placeholder="Insertar nombre" required>
                     </div>
@@ -154,48 +154,48 @@ if(isset($_POST['update'])){
                         <!-- FORMULARIO PARA USUARIOS -->
                         <div class="mb-3 text-center">
                             <label class="form-label">Apellidos:</label>
-                            <input type="text" name="apellidos" class="form-control"
+                            <input type="text" aria-label="Apellidos" name="apellidos" class="form-control"
                                    value="<?php echo isset($obj) ? htmlspecialchars($obj->apellidos) : ''; ?>"
                                    placeholder="Insertar apellidos" required>
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">Password:</label>
-                            <input type="text" name="pass" class="form-control"
+                            <input type="text" aria-label="Contraseña" name="pass" class="form-control"
                                    value="<?php echo isset($obj) ? htmlspecialchars($obj->clave) : ''; ?>"
                                     required>
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">Fecha de nacimiento:</label>
-                            <input type="date" name="fecha" class="form-control"
+                            <input type="date" aria-label="fecha de nacimiento" name="fecha" class="form-control"
                                    value="<?php echo isset($obj) ? $obj->fecha : ''; ?>" required>
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">País:</label>
-                            <input type="text" name="pais" class="form-control"
+                            <input type="text" aria-label="pais" name="pais" class="form-control"
                                    value="<?php echo isset($obj) ? htmlspecialchars($obj->pais) : ''; ?>"
                                    placeholder="Insertar país" required>
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">Código Postal:</label>
-                            <input type="number" name="codigo_postal" class="form-control"
+                            <input type="number" aria-label="código postal" name="codigo_postal" class="form-control"
                                    value="<?php echo isset($obj) ? htmlspecialchars($obj->codigo_postal) : ''; ?>"
                                    placeholder="Insertar Código Postal" required>
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">Teléfono:</label>
-                            <input type="text" name="telefono" class="form-control"
+                            <input type="text" aria-label="telefono" name="telefono" class="form-control"
                                    value="<?php echo isset($obj) ? htmlspecialchars($obj->telefono) : ''; ?>"
                                    placeholder="Insertar teléfono" required>
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">Correo Electrónico:</label>
-                            <input type="email" name="email" class="form-control"
+                            <input type="email" aria-label="correo Electrónico" name="email" class="form-control"
                                    value="<?php echo isset($obj) ? htmlspecialchars($obj->correo) : ''; ?>"
                                    placeholder="example@example.com" required>
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">Imagen:</label>
-                            <input type="file" name="img" class="form-control">
+                            <input type="file" aria-label="Imagen" name="img" class="form-control">
                         </div>
 
                     <?php else: ?>
@@ -213,11 +213,11 @@ if(isset($_POST['update'])){
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">Sinopsis:</label>
-                            <textarea name="sinopsis" class="form-control" rows="4"><?php echo isset($obj) ? htmlspecialchars($obj->sinopsis) : ''; ?></textarea>
+                            <textarea name="sinopsis" aria-label="Sinopsis" class="form-control" rows="4"><?php echo isset($obj) ? htmlspecialchars($obj->sinopsis) : ''; ?></textarea>
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">Reparto:</label>
-                            <textarea name="reparto" class="form-control" rows="4"><?php echo isset($obj) ? htmlspecialchars($obj->reparto) : ''; ?></textarea>
+                            <textarea name="reparto" aria-label="reparto" class="form-control" rows="4"><?php echo isset($obj) ? htmlspecialchars($obj->reparto) : ''; ?></textarea>
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">Nota:</label>
@@ -232,18 +232,18 @@ if(isset($_POST['update'])){
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">Fecha de lanzamiento:</label>
-                            <input type="date" name="fecha" class="form-control"
+                            <input type="date" aria-label="fecha de lanzamiento" name="fecha" class="form-control"
                                    value="<?php echo isset($obj) ? $obj->fecha : ''; ?>" required>
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">Imagen:</label>
-                            <input type="file" name="img" class="form-control">
+                            <input type="file" aria-label="Imagen" name="img" class="form-control">
                             <input type="hidden" name="imagen_actual" value="<?php echo isset($obj) ? $obj->imagen : ''; ?>">
 
                         </div>
                         <div class="mb-3 text-center">
                             <label class="form-label">Video:</label>
-                            <input type="file" name="video" class="form-control">
+                            <input type="file" aria-label="video" name="video" class="form-control">
                             <input type="hidden" name="video_actual" value="<?php echo isset($obj) ? $obj->video : ''; ?>">
                         </div>
                     <?php endif; ?>
