@@ -8,13 +8,9 @@
         header("Location: usuario.php");
     }
 
-    $pattern1 = '/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,6}$/'; // Email
-    $pattern2 = '/^[a-zA-Z\s]+$/'; // Nombre, Apellidos, Pais
-    $pattern3 = '/^[a-zA-Z0-9]*$/'; // CP
-    $pattern4 = '/^[6-9]\d{0,8}$/'; // Telf
-
-    $error = false;
     $errorCaptcha = false;
+    $errorFoto = false;
+    $error = false;
 
     $paises = ["Argentina", "Brasil", "Chile", "México", "Colombia", "España", "Francia", "Italia", "Reino Unido", "Alemania", "Canadá", "Estados Unidos", "Japón", "Australia", "India", "China", "Sudáfrica", "Rusia", "Egipto", "Perú", "Pakistán"];
 
@@ -23,8 +19,8 @@
             $errorCaptcha = true;
         } else {
             setcookie("captchaString", "", time()-3600, '/');
-            if (empty($_POST['email']) || !preg_match($pattern1, $_POST['email']) || empty($_POST['password']) || empty($_POST['password2']) || $_POST['password'] != $_POST['password2'] || empty($_POST['nombre']) || !preg_match($pattern2, $_POST['nombre']) || empty($_POST['apellidos']) || !preg_match($pattern2, $_POST['apellidos']) || empty($_POST['fecha']) || empty($_POST['pais']) || !preg_match($pattern2, $_POST['pais']) || empty($_POST['cp']) || !preg_match($pattern3, $_POST['cp']) || empty($_POST['telf']) || !preg_match($pattern4, $_POST['telf']) || !is_uploaded_file($_FILES['img']['tmp_name'])) {
-                $error = true;
+            if (empty($_POST['email']) || empty($_POST['password']) || empty($_POST['password2']) || $_POST['password'] != $_POST['password2'] || empty($_POST['nombre']) || empty($_POST['apellidos']) || empty($_POST['fecha']) || empty($_POST['pais']) || empty($_POST['cp']) || empty($_POST['telf']) || !is_uploaded_file($_FILES['img']['tmp_name'])) {
+                $errorFoto = true;
             } else {
                 $ruta = "./assets/img/profilePictures/".time()."-".$_FILES['img']['name'];
                 move_uploaded_file($_FILES['img']['tmp_name'], $ruta);
@@ -57,9 +53,14 @@
                             <p class="error">El CAPTCHA introducido no era correcto</p>
                             <?php
                         }
+                        if ($errorFoto) {
+                            ?>
+                            <span class="error">Error al cargar la información :(</span>
+                            <?php
+                        }
                         if ($error) {
                             ?>
-                            <span class="error">Algo ha salido mal :(</span>
+                            <span class="error">Correo duplicado, si el error persiste intentelo más tarde</span>
                             <?php
                         }
                     ?>
