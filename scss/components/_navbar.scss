@@ -34,6 +34,18 @@ nav {
     }
 }
 
+/* Aseguramos que todos los enlaces en la navbar muestren el borde de foco */
+.navbar-nav .nav-link:focus {
+    outline: 2px solid white; /* O el color que prefieras */
+    outline-offset: 2px; /* Desplaza un poco el borde */
+  }
+  
+  /* Puedes personalizar este borde o agregar un color distinto */
+  .navbar-nav .nav-link:focus-visible {
+    outline: 3px solid white 
+                                               ; /* Color más visible */
+  }
+
 
 
 

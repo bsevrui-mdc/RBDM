@@ -4,7 +4,7 @@
   text-decoration: none;
 
   &:hover {
-    text-decoration: none;
-    color: $white;
+    text-decoration: underline;
+    color: $secondary;
   }
 }

@@ -51,9 +51,9 @@
     </div>
     <div class="collapse navbar-collapse" id="mynavbar">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link" href="topPeliculas.php">Películas</a></li>
-        <li class="nav-item"><a class="nav-link" href="topSeries.php">Series</a></li>
-        <li class="nav-item"><a class="nav-link" href="eleccionGenero.php">Géneros</a></li>
+        <li class="nav-item focus-visible"><a class="outline-none nav-link focus-visible" href="topPeliculas.php">Películas</a></li>
+        <li class="nav-item focus-visible"><a class="outline-none nav-link focus-visible" href="topSeries.php">Series</a></li>
+        <li class="nav-item focus-visible"><a class="outline-none nav-link focus-visible" href="eleccionGenero.php">Géneros</a></li>
 
       </ul>
     </div>

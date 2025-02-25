@@ -20,4 +20,8 @@
     background-color: $divTransparency;
     border-radius: 15px;
   }
+
+  a:hover{
+    text-decoration: underline !important;
+  }
 }
