@@ -89,6 +89,7 @@ if (inputApellidos != null) {
   });
 }
 
+/*
 inputPais.addEventListener("input", function (e) {
   let valor = e.target.value;
   if (!PATTERN1.test(valor)) {
@@ -100,6 +101,7 @@ inputPais.addEventListener("input", function (e) {
     errorPais.classList.add("noError");
   }
 });
+*/
 
 inputCP.addEventListener("input", function (e) {
   let valor = e.target.value;
