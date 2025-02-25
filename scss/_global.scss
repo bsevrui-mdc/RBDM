@@ -5,10 +5,9 @@ body {
   min-height: 100vh;
   background-color: black;
   color: $white;
-  font-family: $font-family-calibri; // ESTO DEBERÍA DE CAMBIARSE EN LA FUENTE GENERAL DE BOOTSTRAP
+  font-family: $font-family-calibri; 
 }
 
-// ESTO PRESUNTAMENTE VA EN ALGO DE BOOTSTRAP PERO xd
 
 h1 {
   font-family: $font-family-julius;
@@ -39,7 +38,8 @@ a {
 }
 
 a:hover {
-  color: $primary;
+  color: $secondary;
+  text-decoration: underline;
 }
 
 .card {
@@ -50,3 +50,4 @@ a:hover {
   font-family: $font-family-julius;
   font-size: $font-family-julius-size-h1;
 }
+
