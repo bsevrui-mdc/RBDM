@@ -77,9 +77,14 @@ if (isset($_POST["eliminar"])) {
                 <?php
                 $listaUsuario = obtenerListaUsuario($_SESSION['usuario']->id);
                 if ($listaUsuario != false) {
+                    echo '<ul>';
                     foreach ($listaUsuario as $value) {
+                        
                 ?>
-                        <a class="parImpar" href="detalles.php?peli=<?php echo $value->id; ?>">
+                <li class="list-unstyled">
+                    <article>
+                        <a class="parImpar" href="detalles.php?peli=<?php echo $value->id; ?>"
+                            aria-label="Detalles de <?= $value->nombre ?>">
                             <div class="row top <?php
                                                 switch ($value->estado) {
                                                     case 'on-hold':
@@ -99,8 +104,8 @@ if (isset($_POST["eliminar"])) {
                                                         break;
                                                 }
                                                 ?>">
-                                <div class="col-lg-2 contenedorImagen"><img src="<?php echo $value->imagen; ?>" alt="imagen"
-                                        class="img-fluid"></div>
+                                <div class="col-lg-2 contenedorImagen"><img src="<?php echo $value->imagen; ?>"
+                                        alt="imagen" class="img-fluid"></div>
                                 <div class="col-lg d-flex flex-column">
                                     <div class="row d-flex align-items-center h-75">
                                         <div class="py-2 text-center col text-lg-start py-lg-0">
@@ -119,21 +124,29 @@ if (isset($_POST["eliminar"])) {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 justify-content-center align-items-center border-start d-lg-flex d-none">
-                                    <div class="nota"><i class="fa-solid fa-star text-primary"></i><?php echo $value->nota; ?>
+                                <div
+                                    class="col-lg-3 justify-content-center align-items-center border-start d-lg-flex d-none">
+                                    <div class="nota"><i
+                                            class="fa-solid fa-star text-primary"></i><?php echo $value->nota; ?>
                                     </div>
                                 </div>
                                 <div class="col-1 justify-content-center align-items-center d-lg-flex d-none">
-                                    <form action="" method="post" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta película?');">
-                                        <button type="submit" aria-label="botón de eliminar" name="eliminar" class="text-white border-0 bg-danger rounded-1"
-                                            value="<?= $value->id ?>"><i class=" fa-solid fa-trash-can delete"></i></button>
+                                    <form action="" method="post"
+                                        onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta película?');">
+                                        <button type="submit" aria-label="Eliminar <?= $value->nombre ?>"
+                                            name="eliminar" class="text-white border-0 bg-danger rounded-1"
+                                            value="<?= $value->id ?>"><i
+                                                class=" fa-solid fa-trash-can delete"></i></button>
                                     </form>
                                 </div>
 
                             </div>
                         </a>
+                    </article>
+                </li>
                 <?php
                     }
+                    echo '</ul>';
                 } else {
                     echo "<div class='text-center row'>";
                     echo "<div class='p-5 col'>";

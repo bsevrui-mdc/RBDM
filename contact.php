@@ -14,19 +14,25 @@
                 <div class="my-2 content">
                     <h3 class="text-center pt-lg-4">Encuéntranos en Redes Sociales</h3>
                     <div class="py-3 d-flex justify-content-center">
-                        <a class="text-decoration-none enlaces" href=""><i class="mx-4 fa-brands fa-tiktok fa-3x"></i>@rbdm_gcm_TT</a>
+                        <a class="text-decoration-none enlaces" href="https://www.tiktok.com/"
+                            aria-label="Ir a Tiktok"><i class="mx-4 fa-brands fa-tiktok fa-3x"></i>@rbdm_gcm_TT</a>
                     </div>
                     <div class="py-3 d-flex justify-content-center">
-                        <a class="text-decoration-none enlaces" href=""><i class="mx-4 fa-brands fa-instagram fa-3x"></i>@rbdm_gcm_IG</a>
+                        <a class="text-decoration-none enlaces" href="https://www.instagram.com/"
+                            aria-label="Ir a Instagram">
+                            <i class="mx-4 fa-brands fa-instagram fa-3x"></i>@rbdm_gcm_IG</a>
                     </div>
                     <div class="py-3 d-flex justify-content-center">
-                        <a class="text-decoration-none enlaces" href=""><i class="mx-4 fa-brands fa-x-twitter fa-3x"></i>@rbdm_gcm_X</a>
+                        <a class="text-decoration-none enlaces" href="https://x.com/" aria-label="Ir a Twitter"><i
+                                class="mx-4 fa-brands fa-x-twitter fa-3x"></i>@rbdm_gcm_X</a>
                     </div>
                     <div class="py-3 d-flex justify-content-center">
-                        <a class="text-decoration-none enlaces" href=""><i class="mx-4 fa-brands fa-facebook fa-3x"></i>@rbdm_gcm_F</a>
+                        <a class="text-decoration-none enlaces" href="https://www.facebook.com/"
+                            aria-label="Ir a Facebook"><i class="mx-4 fa-brands fa-facebook fa-3x"></i>@rbdm_gcm_F</a>
                     </div>
                     <div class="py-3 d-flex justify-content-center">
-                        <a class="text-decoration-none enlaces" href=""><i class="mx-4 fa-brands fa-youtube fa-3x"></i>@rbdm_gcm_YT</a>
+                        <a class="text-decoration-none enlaces" href="https://www.youtube.com/"
+                            aria-label="Ir a YouTube"><i class="mx-4 fa-brands fa-youtube fa-3x"></i>@rbdm_gcm_YT</a>
                     </div>
                 </div>
             </div>
@@ -36,12 +42,12 @@
                     <h3 class="text-center pb-lg-3">Mándanos un Email</h3>
                     <form action="" method="POST" class="px-lg-4">
                         <div class="pb-3 text-center">
-                            <label class="form-label">Correo Electrónico:</label>
-                            <input type="email" class="form-control" placeholder="ejemplo@ejemplo.com" aria-label="Correo Electrónico">
+                            <label for="email" class="form-label">Correo Electrónico:</label>
+                            <input type="email" class="form-control" placeholder="ejemplo@ejemplo.com" id="email">
                         </div>
                         <div class="pb-3 text-center">
-                            <label class="form-label">Tu Mensaje:</label>
-                            <textarea class="form-control" placeholder="Tu mensaje aquí" aria-label="Tu mensaje"></textarea>
+                            <label for="mensaje" class="form-label">Tu Mensaje:</label>
+                            <textarea class="form-control" placeholder="Tu mensaje aquí" id="mensaje"></textarea>
                         </div>
                         <div class="pb-3 d-flex justify-content-center">
                             <button type="submit" class="btn btn-primary">Enviar</button>
@@ -53,16 +59,21 @@
                 <div class="my-3 content">
                     <h3 class="text-center pt-lg-4">Miembros del equipo</h3>
                     <div class="py-2 d-flex justify-content-center">
-                        <a class=" miembros" href="./juegoDario.html">Castillo Miranda, Darío J.</a>
+                        <a class=" miembros" href="./juegoDario.html"
+                            aria-label="Ir al juego de Castillo Miranda,Darío J.">
+                            Castillo Miranda, Darío J.</a>
                     </div>
                     <div class="py-2 d-flex justify-content-center">
-                        <a class="miembros" href="./juegoRafa.html">Roldán Campos, Rafael</a>
+                        <a class="miembros" href="./juegoRafa.html"
+                            aria-label="Ir al juego de Roldán Campos, Rafael">Roldán Campos, Rafael</a>
                     </div>
                     <div class="py-2 d-flex justify-content-center">
-                        <a class=" miembros" href="./juegoMariano.html">Roldán Luque, Mariano Jesús</a>
+                        <a class=" miembros" href="./juegoMariano.html"
+                            aria-label="Ir al juego de Roldán Luque, Mariano Jesús">Roldán Luque, Mariano Jesús</a>
                     </div>
                     <div class="py-2 d-flex justify-content-center">
-                        <a class=" miembros" href="./juegoMemoria.html">Sevilla Ruiz, Borja</a>
+                        <a class=" miembros" href="./juegoMemoria.html"
+                            aria-label="Ir al juego de Sevilla Ruiz, Borja">Sevilla Ruiz, Borja</a>
                     </div>
                 </div>
             </div>
