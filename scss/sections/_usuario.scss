@@ -42,5 +42,11 @@
         box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
       }
     }
+    input:focus {
+      outline: 2px solid $statusOnHold !important;
+      border-color: $statusOnHold !important;
+      box-shadow: 0 0 5px $statusOnHold !important;
   }
+  }
+  
 }

@@ -1,6 +1,11 @@
 .modal .modal-content {
   background-color: $black;
   color: $white;
+  input:focus, select:focus{
+    outline: 2px solid $statusOnHold !important;
+    border-color: $statusOnHold !important;
+    box-shadow: 0 0 5px $statusOnHold !important;
+  }
 }
 
 #modal button{
@@ -26,5 +31,7 @@
   font-family: $font-family-julius;
   font-size: $font-family-julius-size-h2-mobile;
 }
+
+
 
 

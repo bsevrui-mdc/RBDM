@@ -114,7 +114,26 @@ if (isset($_POST["eliminar"])) {
                                             </div>
                                             <div class="row">
                                                 <div class="my-auto col-7 bordeGenero d-flex align-items-center">
-                                                    <h2 class="m-0"><?php echo $value->genero; ?></h2>
+                                                    <h2 class="m-0"><?php echo $value->genero; ?><div>Estado: <?php
+                                                                                                                switch ($value->estado) {
+                                                                                                                    case 'on-hold':
+                                                                                                                        echo "En pausa";
+                                                                                                                        break;
+                                                                                                                    case 'dropped':
+                                                                                                                        echo "Abandonada";
+                                                                                                                        break;
+                                                                                                                    case 'watching':
+                                                                                                                        echo "Viendo";
+                                                                                                                        break;
+                                                                                                                    case 'completed':
+                                                                                                                        echo "Completada";
+                                                                                                                        break;
+                                                                                                                    default:
+                                                                                                                        echo "Planeo verla";
+                                                                                                                        break;
+                                                                                                                }
+                                                                                                                ?></div>
+                                                    </h2>
 
                                                 </div>
                                                 <div
