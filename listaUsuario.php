@@ -79,71 +79,72 @@ if (isset($_POST["eliminar"])) {
                 if ($listaUsuario != false) {
                     echo '<ul>';
                     foreach ($listaUsuario as $value) {
-                        
+
                 ?>
-                <li class="list-unstyled">
-                    <article>
-                        <a class="parImpar" href="detalles.php?peli=<?php echo $value->id; ?>"
-                            aria-label="Detalles de <?= $value->nombre ?>">
-                            <div class="row top <?php
-                                                switch ($value->estado) {
-                                                    case 'on-hold':
-                                                        echo "statusOnHold";
-                                                        break;
-                                                    case 'dropped':
-                                                        echo "statusDropped";
-                                                        break;
-                                                    case 'watching':
-                                                        echo "statusCurrentlyWatching";
-                                                        break;
-                                                    case 'completed':
-                                                        echo "statusCompleted";
-                                                        break;
-                                                    default:
-                                                        echo "statusPlanToWatch";
-                                                        break;
-                                                }
-                                                ?>">
-                                <div class="col-lg-2 contenedorImagen"><img src="<?php echo $value->imagen; ?>"
-                                        alt="imagen" class="img-fluid"></div>
-                                <div class="col-lg d-flex flex-column">
-                                    <div class="row d-flex align-items-center h-75">
-                                        <div class="py-2 text-center col text-lg-start py-lg-0">
-                                            <h1><?php echo $value->nombre; ?></h1>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="my-auto col-7 bordeGenero d-flex align-items-center">
-                                            <h2 class="m-0"><?php echo $value->genero; ?></h2>
+                        <li class="list-unstyled">
+                            <article>
+                                <a class="parImpar" href="detalles.php?peli=<?php echo $value->id; ?>"
+                                    aria-label="Detalles de <?= $value->nombre ?>">
+                                    <div class="row top <?php
+                                                        switch ($value->estado) {
+                                                            case 'on-hold':
+                                                                echo "statusOnHold";
+                                                                break;
+                                                            case 'dropped':
+                                                                echo "statusDropped";
+                                                                break;
+                                                            case 'watching':
+                                                                echo "statusCurrentlyWatching";
+                                                                break;
+                                                            case 'completed':
+                                                                echo "statusCompleted";
+                                                                break;
+                                                            default:
+                                                                echo "statusPlanToWatch";
+                                                                break;
+                                                        }
+                                                        ?>">
+                                        <div class="col-lg-2 contenedorImagen"><img src="<?php echo $value->imagen; ?>"
+                                                alt="imagen" class="img-fluid"></div>
+                                        <div class="col-lg d-flex flex-column">
+                                            <div class="row d-flex align-items-center h-75">
+                                                <div class="py-2 text-center col text-lg-start py-lg-0">
+                                                    <h1><?php echo $value->nombre; ?></h1>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="my-auto col-7 bordeGenero d-flex align-items-center">
+                                                    <h2 class="m-0"><?php echo $value->genero; ?></h2>
+
+                                                </div>
+                                                <div
+                                                    class="my-auto col-5 bordeNota d-flex justify-content-end d-lg-none align-items-center">
+                                                    <div class="nota"><i
+                                                            class="fa-solid fa-star text-primary"></i><?php echo $value->nota; ?>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div
-                                            class="my-auto col-5 bordeNota d-flex justify-content-end d-lg-none align-items-center">
+                                            class="col-lg-3 justify-content-center align-items-center border-start d-lg-flex d-none">
                                             <div class="nota"><i
                                                     class="fa-solid fa-star text-primary"></i><?php echo $value->nota; ?>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div
-                                    class="col-lg-3 justify-content-center align-items-center border-start d-lg-flex d-none">
-                                    <div class="nota"><i
-                                            class="fa-solid fa-star text-primary"></i><?php echo $value->nota; ?>
-                                    </div>
-                                </div>
-                                <div class="col-1 justify-content-center align-items-center d-lg-flex d-none">
-                                    <form action="" method="post"
-                                        onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta película?');">
-                                        <button type="submit" aria-label="Eliminar <?= $value->nombre ?>"
-                                            name="eliminar" class="text-white border-0 bg-danger rounded-1"
-                                            value="<?= $value->id ?>"><i
-                                                class=" fa-solid fa-trash-can delete"></i></button>
-                                    </form>
-                                </div>
+                                        <div class="col-1 justify-content-center align-items-center d-lg-flex d-none">
+                                            <form action="" method="post"
+                                                onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta película?');">
+                                                <button type="submit" aria-label="Eliminar <?= $value->nombre ?>"
+                                                    name="eliminar" class="text-white border-0 bg-danger rounded-1"
+                                                    value="<?= $value->id ?>"><i
+                                                        class=" fa-solid fa-trash-can delete"></i></button>
+                                            </form>
+                                        </div>
 
-                            </div>
-                        </a>
-                    </article>
-                </li>
+                                    </div>
+                                </a>
+                            </article>
+                        </li>
                 <?php
                     }
                     echo '</ul>';

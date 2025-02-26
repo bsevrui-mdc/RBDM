@@ -38,7 +38,7 @@ if (isset($_POST['login'])) {
                 <?php
                 if ($errorLogin) {
                 ?>
-                <p class="error">Correo o Contraseña Incorrectos</p>
+                    <p class="error">Correo o Contraseña Incorrectos</p>
                 <?php
                 }
                 ?>
@@ -46,14 +46,18 @@ if (isset($_POST['login'])) {
                     <div class="mb-3">
                         <label for="email" class="form-label">Correo Electrónico:</label>
                         <input type="email" aria-label="Correo Electrónico" name="email" id="email" class="form-control"
-                            value="<?php if (isset($_POST['email']) && !empty($_POST['email']) && !$errorLogin) { echo $_POST['email']; }?>"
+                            value="<?php if (isset($_POST['email']) && !empty($_POST['email']) && !$errorLogin) {
+                                        echo $_POST['email'];
+                                    } ?>"
                             required>
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Contraseña:</label>
                         <input type="password" aria-label="Contraseña" name="password" id="password"
                             class="form-control"
-                            value="<?php if (isset($_POST['password']) && !empty($_POST['password']) && !$errorLogin) { echo $_POST['password']; } ?>"
+                            value="<?php if (isset($_POST['password']) && !empty($_POST['password']) && !$errorLogin) {
+                                        echo $_POST['password'];
+                                    } ?>"
                             required>
                     </div>
                     <div class="mb-3 d-flex justify-content-center">
