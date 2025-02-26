@@ -175,7 +175,7 @@ if (isset($_SESSION['usuario'])) {
                                         class="fa-solid fa-volume-low"></i></button>
                                 <div
                                     class="dropdown-menu dropdown-menu-end dropup-volume dropdown-menu-dark bg-primary">
-                                    <input class="form-range form-range-volume" type="range">
+                                    <input class="form-range form-range-volume" aria-label="volumen" type="range">
                                 </div>
                             </div>
                         </div>

@@ -72,7 +72,7 @@ document.getElementById('id01').style.display = 'block';
                                             <div class="row">
 
                                                 <div class="col-4 align-content-center">
-                                                    <img src="<?= $peli->imagen ?>" alt="<?php echo $peli->nombre ?>"
+                                                    <img src="<?= $peli->imagen ?>" alt="Poster de la pelicula <?php echo $peli->nombre ?>"
                                                         class="img-fluid">
                                                 </div>
                                                 <div class="col-8 align-content-center ">
@@ -164,7 +164,7 @@ document.getElementById('id01').style.display = 'block';
                                 <div class="col-12">
                                     <div class="my-2 row d-flex flex-grow-1">
                                         <div class="text-center col-4">
-                                            <img src="<?= $peli->imagen ?>" alt="<?php echo $peli->nombre ?>"
+                                            <img src="<?= $peli->imagen ?>" alt="Poster de la serie <?php echo $peli->nombre ?>"
                                                 class="img-fluid">
                                         </div>
                                         <div class="col-8 align-content-center">
