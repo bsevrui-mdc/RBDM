@@ -14,4 +14,11 @@
     background-color: $divTransparency;
     border-radius: 15px;
   }
+
+  input:focus {
+    outline: 2px solid $statusOnHold !important;
+    border-color: $statusOnHold !important;
+    box-shadow: 0 0 5px $statusOnHold !important;
+}
+
 }

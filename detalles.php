@@ -88,30 +88,40 @@ if (isset($_SESSION['usuario'])) {
                     </div>
                     <div class="row">
                         <div class="py-4 text-center col">
-                            <div class="calificacion">Nota: <i class="px-2 fa-solid fa-star text-primary"></i><?php echo $pelicula->nota ?></div>
+                            <div class="calificacion">Nota: <i
+                                    class="px-2 fa-solid fa-star text-primary"></i><?php echo $pelicula->nota ?></div>
                             <?php
                             if (isset($_SESSION['usuario'])) { ?>
-                                <div class="calificacion">Nota Usuario: <i class="px-2 fa-solid fa-star text-primary"></i><?php echo $notaUsuario ?></div>
-                                <form method="post" action="">
-                                    <select name="nuevaNotaUsuario" class="my-4">
-                                        <?php
+                            <div class="calificacion">Nota Usuario: <i
+                                    class="px-2 fa-solid fa-star text-primary"></i><?php echo $notaUsuario ?></div>
+                            <form method="post" action="">
+                                <label for="nuevaNotaUsuario" class="visually-hidden">Nota usuario:</label>
+                                <select name="nuevaNotaUsuario" id="nuevaNotaUsuario" class="my-4">
+                                    <?php
                                         for ($i = 0; $i <= 10; $i++) {
                                             echo "<option value='$i' ";
                                             if ($i == $notaUsuario) echo 'selected';
                                             echo ">$i</option>";
                                         }
                                         ?>
-                                    </select>
+                                </select>
 
-                                    <select name="estadoContenido" class="my-4">
-                                        <option value="ptw" <?php if ($estado == "ptw") echo 'selected' ?>>Planeo verla</option>
-                                        <option value="watching" <?php if ($estado == "watching") echo 'selected' ?>>Viendo</option>
-                                        <option value="dropped" <?php if ($estado == "dropped") echo 'selected' ?>>Abandonada</option>
-                                        <option value="on-hold" <?php if ($estado == "on-hold") echo 'selected' ?>>En pausa</option>
-                                        <option value="completed" <?php if ($estado == "completed") echo 'selected' ?>>Completada</option>
-                                    </select>
-                                    <button class="btn btn-primary" type="submit" name="cambiarValoracion">Cambiar nota y estado</button>
-                                </form>
+                                <label for="estadoContenido" class="visually-hidden">Estado Contenido:</label>
+                                <select name="estadoContenido" id="estadoContenido" class="my-4">
+                                    <option value="ptw" <?php if ($estado == "ptw") echo 'selected' ?>>Planeo verla
+                                    </option>
+                                    <option value="watching" <?php if ($estado == "watching") echo 'selected' ?>>Viendo
+                                    </option>
+                                    <option value="dropped" <?php if ($estado == "dropped") echo 'selected' ?>>
+                                        Abandonada</option>
+                                    <option value="on-hold" <?php if ($estado == "on-hold") echo 'selected' ?>>En pausa
+                                    </option>
+                                    <option value="completed" <?php if ($estado == "completed") echo 'selected' ?>>
+                                        Completada</option>
+                                </select>
+                                <button class="btn btn-primary" type="submit" name="cambiarValoracion">Cambiar nota y
+                                    estado</button>
+                            </form>
                             <?php
                             }
                             ?>
@@ -131,7 +141,8 @@ if (isset($_SESSION['usuario'])) {
                             <p>
                                 <?php echo $pelicula->sinopsis ?>
                             </p>
-                            <a href="https://es.wikipedia.org/wiki/La_casa_de_papel" target="_blank">Fuente: Wikipedia</a>
+                            <a href="https://es.wikipedia.org/wiki/La_casa_de_papel" target="_blank">Fuente:
+                                Wikipedia</a>
                         </div>
                     </div>
                     <div class="row">
@@ -148,23 +159,29 @@ if (isset($_SESSION['usuario'])) {
                             <video class="video" src="<?php echo $pelicula->video ?>"></video>
                         </div>
                         <div class="controls controls-dark bg-primary">
-                            <button class="btn btn-lg btn-video-playpause" data-bs-toggle="tooltip" title="Play Video"
-                                type="button"><i class="fa-solid fa-play"></i><i class="fa-solid fa-pause d-none"></i></button>
+                            <button class="btn btn-lg btn-video-playpause" data-bs-toggle="tooltip" type="button">
+                                <span class="visually-hidden">Boton de
+                                    play/pausar</span><i class="fa-solid fa-play"></i>
+                                <i class="fa-solid fa-pause d-none"></i></button>
                             <div class="px-1 w-100">
                                 <div class="progress w-100">
                                     <div class="progress-bar"></div>
                                 </div>
                             </div>
-                            <button class="btn btn-lg btn-video-fullscreen"><span class="visually-hidden">Boton de aumentar pantalla</span><i class="fa-solid fa-maximize"></i></button>
+                            <button class="btn btn-lg btn-video-fullscreen"><span class="visually-hidden">Boton de
+                                    aumentar pantalla</span><i class="fa-solid fa-maximize"></i></button>
                             <div class="dropup">
-                                <button class="btn btn-lg btn-video-volume" data-bs-toggle="dropdown" title="Volume"><i class="fa-solid fa-volume-low"></i></button>
-                                <div class="dropdown-menu dropdown-menu-end dropup-volume dropdown-menu-dark bg-primary">
+                                <button class="btn btn-lg btn-video-volume" data-bs-toggle="dropdown" title="Volume"><i
+                                        class="fa-solid fa-volume-low"></i></button>
+                                <div
+                                    class="dropdown-menu dropdown-menu-end dropup-volume dropdown-menu-dark bg-primary">
                                     <input class="form-range form-range-volume" type="range">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <p class="text-center">El video muestra una preview de la 1ª temporada de 'La Casa de Papel' e informa de que esta disponible en Netflix</p>
+                    <p class="text-center">El video muestra una preview de la 1ª temporada de 'La Casa de Papel' e
+                        informa de que esta disponible en Netflix</p>
                 </div>
             </div>
             <div class="my-5 row">
@@ -182,7 +199,8 @@ if (isset($_SESSION['usuario'])) {
                     <div class="row align-items-stretch">
                         <div class="px-3 py-5 col-lg-4">
                             <div class="card rounded-4 h-100">
-                                <img src="./assets/img/reparto/Alvaro_Morte.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
+                                <img src="./assets/img/reparto/Alvaro_Morte.jpg"
+                                    class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
                                     Alvaro Morte
                                 </div>
@@ -190,7 +208,8 @@ if (isset($_SESSION['usuario'])) {
                         </div>
                         <div class="px-3 py-5 col-lg-4">
                             <div class="card rounded-4 h-100">
-                                <img src="./assets/img/reparto/Ursula_Corbero.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
+                                <img src="./assets/img/reparto/Ursula_Corbero.jpg"
+                                    class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
                                     Úrsula Corbero
                                 </div>
@@ -198,7 +217,8 @@ if (isset($_SESSION['usuario'])) {
                         </div>
                         <div class="px-3 py-5 col-lg-4">
                             <div class="card rounded-4 h-100">
-                                <img src="./assets/img/reparto/Pedro_Alonso.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
+                                <img src="./assets/img/reparto/Pedro_Alonso.jpg"
+                                    class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
                                     Pedro Alonso
                                 </div>
@@ -210,7 +230,8 @@ if (isset($_SESSION['usuario'])) {
                     <div class="row">
                         <div class="px-3 py-5 col-lg-4">
                             <div class="card rounded-4">
-                                <img src="./assets/img/reparto/Jaime_Lorente.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
+                                <img src="./assets/img/reparto/Jaime_Lorente.jpg"
+                                    class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
                                     Jaime Lorente
                                 </div>
@@ -218,7 +239,8 @@ if (isset($_SESSION['usuario'])) {
                         </div>
                         <div class="px-3 py-5 col-lg-4">
                             <div class="card">
-                                <img src="./assets/img/reparto/Itziar_Ituño.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
+                                <img src="./assets/img/reparto/Itziar_Ituño.jpg"
+                                    class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
                                     Itziar Ituño
                                 </div>
@@ -226,7 +248,8 @@ if (isset($_SESSION['usuario'])) {
                         </div>
                         <div class="px-3 py-5 col-lg-4">
                             <div class="card">
-                                <img src="./assets/img/reparto/Miguel_Herran.jpg" class="img-fluid card-img-top rounded-4" alt="imagen">
+                                <img src="./assets/img/reparto/Miguel_Herran.jpg"
+                                    class="img-fluid card-img-top rounded-4" alt="imagen">
                                 <div class="card-body">
                                     Miguel Herrán
                                 </div>
@@ -244,97 +267,98 @@ if (isset($_SESSION['usuario'])) {
             <?php
             if (isset($_SESSION['usuario'])) {
             ?>
-                <form action="" method="post" id="formulario">
+            <form action="" method="post" id="formulario">
 
-                    <div class="row">
-                        <div class="col">
-                            <div id="standalone-container" style="background-color: white; color: black;">
-                                <div id="toolbar-container">
-                                    <span class="ql-formats">
-                                        <select class="ql-font"></select>
-                                        <select class="ql-size"></select>
-                                    </span>
-                                    <span class="ql-formats">
-                                        <button class="ql-bold"></button>
-                                        <button class="ql-italic"></button>
-                                        <button class="ql-underline"></button>
-                                        <button class="ql-strike"></button>
-                                    </span>
-                                    <span class="ql-formats">
-                                        <select class="ql-color"></select>
-                                        <select class="ql-background"></select>
-                                    </span>
-                                    <span class="ql-formats">
-                                        <button class="ql-script" value="sub"></button>
-                                        <button class="ql-script" value="super"></button>
-                                    </span>
-                                    <span class="ql-formats">
-                                        <button class="ql-header" value="1"></button>
-                                        <button class="ql-header" value="2"></button>
-                                        <button class="ql-blockquote"></button>
-                                        <button class="ql-code-block"></button>
-                                    </span>
-                                    <span class="ql-formats">
-                                        <button class="ql-list" value="ordered"></button>
-                                        <button class="ql-list" value="bullet"></button>
-                                        <button class="ql-indent" value="-1"></button>
-                                        <button class="ql-indent" value="+1"></button>
-                                    </span>
-                                    <span class="ql-formats">
-                                        <button class="ql-direction" value="rtl"></button>
-                                        <select class="ql-align"></select>
-                                    </span>
-                                    <span class="ql-formats">
-                                        <button class="ql-link"></button>
-                                        <button class="ql-image"></button>
-                                        <button class="ql-video"></button>
-                                        <button class="ql-formula"></button>
-                                    </span>
-                                    <span class="ql-formats">
-                                        <button class="ql-clean"></button>
-                                    </span>
-                                </div>
-                                <div id="editor-container"></div>
+                <div class="row">
+                    <div class="col">
+                        <div id="standalone-container" style="background-color: white; color: black;">
+                            <div id="toolbar-container">
+                                <span class="ql-formats">
+                                    <select class="ql-font"></select>
+                                    <select class="ql-size"></select>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-bold"></button>
+                                    <button class="ql-italic"></button>
+                                    <button class="ql-underline"></button>
+                                    <button class="ql-strike"></button>
+                                </span>
+                                <span class="ql-formats">
+                                    <select class="ql-color"></select>
+                                    <select class="ql-background"></select>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-script" value="sub"></button>
+                                    <button class="ql-script" value="super"></button>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-header" value="1"></button>
+                                    <button class="ql-header" value="2"></button>
+                                    <button class="ql-blockquote"></button>
+                                    <button class="ql-code-block"></button>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-list" value="ordered"></button>
+                                    <button class="ql-list" value="bullet"></button>
+                                    <button class="ql-indent" value="-1"></button>
+                                    <button class="ql-indent" value="+1"></button>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-direction" value="rtl"></button>
+                                    <select class="ql-align"></select>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-link"></button>
+                                    <button class="ql-image"></button>
+                                    <button class="ql-video"></button>
+                                    <button class="ql-formula"></button>
+                                </span>
+                                <span class="ql-formats">
+                                    <button class="ql-clean"></button>
+                                </span>
                             </div>
+                            <div id="editor-container"></div>
                         </div>
                     </div>
-                    <input type="hidden" name="comentarioUsuario" id="comentarioUsuario">
-                    <div class="row">
-                        <div class="col text-end">
-                            <input type="submit" name="comentar" value="Comentar" class="btn btn-primary" />
+                </div>
+                <input type="hidden" name="comentarioUsuario" id="comentarioUsuario">
+                <div class="row">
+                    <div class="col text-end">
+                        <input type="submit" name="comentar" value="Comentar" class="btn btn-primary" />
 
-                        </div>
                     </div>
-                </form>
+                </div>
+            </form>
             <?php
             }
             ?>
             <?php
             while ($fila = $comentarios->fetchObject()) {
             ?>
-                <form method="post" action="">
-                    <div class="py-3 row">
-                        <div class="col-lg-1">
-                            <img src="<?php echo $fila->imagen ?>" class="img-fluid" alt="foto de perfil">
-                        </div>
-
-                        <div class="col-lg-10">
-                            <input type="hidden" name="idComentario" value="<?php echo $fila->idComentario ?>">
-                            <textarea name="comentario" class="form-control h-100" aria-label="true"><?php echo $fila->texto ?></textarea>
-                        </div>
-                        <div class="col-lg-1 d-flex align-items-center">
-                            <?php if (isset($_SESSION['usuario']) && $fila->idUsuario == $_SESSION['usuario']->id) { ?>
-                                <button class="mx-1 btn btn-primary" type="submit" name="eliminar">
-                                    <i class="fa-solid fa-trash icono-Log-Out"></i>
-                                </button>
-                                <button class="mx-1 btn btn-primary" type="submit" name="actualizar">
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                </button>
-                            <?php } ?>
-                        </div>
-
+            <form method="post" action="">
+                <div class="py-3 row">
+                    <div class="col-lg-1">
+                        <img src="<?php echo $fila->imagen ?>" class="img-fluid" alt="foto de perfil">
                     </div>
-                </form>
+
+                    <div class="col-lg-10">
+                        <input type="hidden" name="idComentario" value="<?php echo $fila->idComentario ?>">
+                        <textarea name="comentario" class="form-control h-100"
+                            aria-label="true"><?php echo $fila->texto ?></textarea>
+                    </div>
+                    <div class="col-lg-1 d-flex align-items-center">
+                        <?php if (isset($_SESSION['usuario']) && $fila->idUsuario == $_SESSION['usuario']->id) { ?>
+                        <button class="mx-1 btn btn-primary" type="submit" name="eliminar">
+                            <i class="fa-solid fa-trash icono-Log-Out"></i>
+                        </button>
+                        <button class="mx-1 btn btn-primary" type="submit" name="actualizar">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                        <?php } ?>
+                    </div>
+
+                </div>
+            </form>
             <?php
             }
             ?>
@@ -347,25 +371,25 @@ if (isset($_SESSION['usuario'])) {
     <script src="/js/quill.js"></script>
 
     <script>
-        window.onload = function() {
-            var quill = new Quill('#editor-container', {
-                modules: {
-                    formula: true, // Asegúrate de que el módulo 'formula' esté habilitado
-                    syntax: true,
-                    toolbar: '#toolbar-container'
-                },
-                placeholder: 'Escribe un comentario...',
-                theme: 'snow'
-            });
+    window.onload = function() {
+        var quill = new Quill('#editor-container', {
+            modules: {
+                formula: true, // Asegúrate de que el módulo 'formula' esté habilitado
+                syntax: true,
+                toolbar: '#toolbar-container'
+            },
+            placeholder: 'Escribe un comentario...',
+            theme: 'snow'
+        });
 
-            document.getElementById('formulario').addEventListener('submit', function() {
+        document.getElementById('formulario').addEventListener('submit', function() {
 
-                var texto = quill.getText();
+            var texto = quill.getText();
 
 
-                document.getElementById('comentarioUsuario').value = texto;
-            });
-        };
+            document.getElementById('comentarioUsuario').value = texto;
+        });
+    };
     </script>
 </body>
 

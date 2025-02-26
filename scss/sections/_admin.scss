@@ -95,4 +95,10 @@
   .btn-icon2 i {
     color: $red;/* Asegura que el icono de basura sea rojo */
   }
+
+  input:focus {
+    outline: 2px solid $statusOnHold !important;
+    border-color: $statusOnHold !important;
+    box-shadow: 0 0 5px $statusOnHold !important;
+}
 }

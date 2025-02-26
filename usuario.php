@@ -8,16 +8,14 @@ if (!isset($_SESSION['usuario'])) {
     header("Location: login.php");
 }
 
-$pattern1 = '/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,6}$/'; // Email
-$pattern2 = '/^[a-zA-Z\s]+$/'; // Nombre, Apellidos, Pais
-$pattern3 = '/^[a-zA-Z0-9]*$/'; // CP
-$pattern4 = '/^[6-9]\d{0,8}$/'; // Telf
 
 $error = false;
 
+$paises = ["Argentina", "Brasil", "Chile", "México", "Colombia", "España", "Francia", "Italia", "Reino Unido", "Alemania", "Canadá", "Estados Unidos", "Japón", "Australia", "India", "China", "Sudáfrica", "Rusia", "Egipto", "Perú", "Pakistán"];
+
 if (isset($_POST['actualizar'])) {
 
-    if (empty($_POST['correo']) || !preg_match($pattern1, $_POST['correo']) || empty($_POST['nombre']) || !preg_match($pattern2, $_POST['nombre']) || empty($_POST['apellidos']) || !preg_match($pattern2, $_POST['apellidos']) || empty($_POST['fecha']) || empty($_POST['pais']) || !preg_match($pattern2, $_POST['pais']) || empty($_POST['codigo_postal']) || !preg_match($pattern3, $_POST['codigo_postal']) || empty($_POST['telefono']) || !preg_match($pattern4, $_POST['telefono'])) {
+    if (empty($_POST['correo'])  || empty($_POST['nombre'])  || empty($_POST['apellidos'])  || empty($_POST['fecha']) || empty($_POST['pais'])  || empty($_POST['codigo_postal'])  || empty($_POST['telefono']) ) {
         $error = true;
     } else {
         if (isset($_FILES['img']) && is_uploaded_file($_FILES['img']['tmp_name'])) {
@@ -64,7 +62,8 @@ if (isset($_POST['actualizar'])) {
             <div class="p-5 my-4 container-fluid datos-usuario bg-info p-lg-5 rounded-3">
                 <div class="row">
                     <div class="col text-end">
-                        <button type="submit" aria-label="botón de editar" name="editar" class="text-white bg-transparent border-0"><i
+                        <button type="submit" aria-label="botón de editar" name="editar"
+                            class="text-white bg-transparent border-0"><i
                                 class="fa-solid fa-pen-to-square edit"></i></button>
                     </div>
                 </div>
@@ -72,18 +71,19 @@ if (isset($_POST['actualizar'])) {
 
                 if ($error) {
                 ?>
-                    <div class="row">
-                        <div class="col">
-                            <span class="error">Algo ha salido mal :(</span>
-                        </div>
+                <div class="row">
+                    <div class="col">
+                        <span class="error">Algo ha salido mal :(</span>
                     </div>
+                </div>
 
                 <?php
                 }
                 ?>
                 <div class="mx-auto text-center row foto-perfil align-content-center">
                     <div class="col">
-                        <img src="<?php echo $_SESSION['usuario']->imagen; ?>" alt="Foto de perfil" class="text-center img-fluid rounded-3">
+                        <img src="<?php echo $_SESSION['usuario']->imagen; ?>" alt="Foto de perfil"
+                            class="text-center img-fluid rounded-3">
                     </div>
                 </div>
                 <div class="row">
@@ -139,14 +139,14 @@ if (isset($_POST['actualizar'])) {
                         <?php
                         if (isset($_POST["editar"])) {
                         ?>
-                            <div class="gap-4 p-3 row align-content-around campos text-dark">
-                                <div class="col bg-secondary campo p-lg-2 rounded-3">
-                                    <div>
-                                        <span class="fw-bold">Foto de perfil:</span> dejar vacio si no se quiere cambiar
-                                    </div>
-                                    <input type="file" name="img" class="form-control">
+                        <div class="gap-4 p-3 row align-content-around campos text-dark">
+                            <div class="col bg-secondary campo p-lg-2 rounded-3">
+                                <div>
+                                    <span class="fw-bold">Foto de perfil:</span> dejar vacio si no se quiere cambiar
                                 </div>
+                                <input type="file" name="img" class="form-control">
                             </div>
+                        </div>
 
                         <?php
                         }
@@ -188,7 +188,20 @@ if (isset($_POST['actualizar'])) {
                                 <div>
                                     <?php
                                     if (isset($_POST["editar"])) {
-                                        echo "<input class='w-100 rounded-3 ps-1' type='text' name='pais' value='" . $_SESSION['usuario']->pais . "' id='pais'>";
+                                        ?>
+                                    <select id="pais" name="pais" class="form-select" aria-label="Select para el pais"
+                                        required>
+                                        <?php
+                                    foreach($paises as $pais) {
+                                        echo "<option value='".$pais."'";
+                                        if ($_SESSION['usuario']->pais == $pais) {
+                                            echo " selected";
+                                        }
+                                        echo ">".$pais."</option>";
+                                    }
+                                    ?>
+                                    </select>
+                                    <?php
                                     } else {
                                         echo $_SESSION['usuario']->pais;
                                     }
@@ -215,11 +228,11 @@ if (isset($_POST['actualizar'])) {
                         <?php
                         if (isset($_POST["editar"])) {
                         ?>
-                            <div class="p-3 row text-dark justify-content-center">
-                                <div class="col-1">
-                                    <button type="submit" name="actualizar" class="btn btn-primary">Actualizar</button>
-                                </div>
+                        <div class="p-3 row text-dark justify-content-center">
+                            <div class="col-1">
+                                <button type="submit" name="actualizar" class="btn btn-primary">Actualizar</button>
                             </div>
+                        </div>
                         <?php
                         }
                         ?>
