@@ -91,23 +91,23 @@ if (isset($_POST['actualizar'])) {
                         <div class="gap-4 p-3 row align-content-around campos text-dark">
                             <div class="col bg-secondary campo p-lg-2 rounded-3 ">
                                 <div class="fw-bold">Nombre:</div>
-                                <div class="">
+                                <div <?php echo !isset($_POST["editar"]) ? 'tabindex="0"' : ''; ?>>
                                     <?php
                                     if (isset($_POST["editar"])) {
                                         echo "<input class='w-100 rounded-3 ps-1' type='text' name='nombre' value='" . $_SESSION['usuario']->nombre . "' id='nombre'>";
                                     } else {
                                         echo $_SESSION['usuario']->nombre;
                                     }
-                                    ?>
-                                </div>
-                                <span id="errorNombre" class="noError">El nombre solo puede estar compuesto por letras y
+                                    ?> </div>
+                                <span id="errorNombre" class="noError">El nombre solo puede estar compuesto por
+                                    letras y
                                     espacios (no se admiten acentos, tampoco ñ/ç/similares)</span>
                             </div>
                             <div class="col bg-secondary campo p-lg-2 rounded-3">
                                 <div class="fw-bold">
                                     Apellidos:
                                 </div>
-                                <div>
+                                <div <?php echo !isset($_POST["editar"]) ? 'tabindex="0"' : ''; ?>>
                                     <?php
                                     if (isset($_POST["editar"])) {
                                         echo "<input class='w-100 rounded-3 ps-1' type='text' name='apellidos' value='" . $_SESSION['usuario']->apellidos . "' id='apellidos'>";
@@ -116,14 +116,15 @@ if (isset($_POST['actualizar'])) {
                                     }
                                     ?>
                                 </div>
-                                <span id="errorApellidos" class="noError">Los apellidos solo pueden estar compuestos por
+                                <span id="errorApellidos" class="noError">Los apellidos solo pueden estar compuestos
+                                    por
                                     letras y espacios (no se admiten acentos, tampoco ñ/ç/similares)</span>
                             </div>
                         </div>
                         <div class="gap-4 p-3 row align-content-around campos text-dark">
                             <div class="col bg-secondary campo p-lg-2 rounded-3">
                                 <div class="fw-bold">Correo electronico:</div>
-                                <div class="">
+                                <div <?php echo !isset($_POST["editar"]) ? 'tabindex="0"' : ''; ?>>
                                     <?php
                                     if (isset($_POST["editar"])) {
                                         echo "<input class='w-100 rounded-3 ps-1' type='text' name='correo' value='" . $_SESSION['usuario']->correo . "' id='email'>";
@@ -155,7 +156,7 @@ if (isset($_POST['actualizar'])) {
                         <div class="gap-4 p-3 row align-content-around campos text-dark">
                             <div class="col bg-secondary campo p-lg-2 rounded-3">
                                 <div class="fw-bold">Fecha de nacimiento:</div>
-                                <div class="">
+                                <div <?php echo !isset($_POST["editar"]) ? 'tabindex="0"' : ''; ?>>
                                     <?php
                                     if (isset($_POST["editar"])) {
                                         echo "<input class='w-100 rounded-3 ps-1' type='date' name='fecha' value='" . $_SESSION['usuario']->fecha . "'>";
@@ -167,7 +168,7 @@ if (isset($_POST['actualizar'])) {
                             </div>
                             <div class="col bg-secondary campo p-lg-2 rounded-3">
                                 <div class="fw-bold">Telefono:</div>
-                                <div class="">
+                                <div <?php echo !isset($_POST["editar"]) ? 'tabindex="0"' : ''; ?>>
                                     <?php
                                     if (isset($_POST["editar"])) {
                                         echo "<input class='w-100 rounded-3 ps-1' type='text' name='telefono' value='" . $_SESSION['usuario']->telefono . "' id='telf'>";
@@ -185,7 +186,7 @@ if (isset($_POST['actualizar'])) {
                                 <div class="fw-bold">
                                     Pais:
                                 </div>
-                                <div>
+                                <div <?php echo !isset($_POST["editar"]) ? 'tabindex="0"' : ''; ?>>
                                     <?php
                                     if (isset($_POST["editar"])) {
                                         ?>
@@ -212,7 +213,7 @@ if (isset($_POST['actualizar'])) {
                             </div>
                             <div class="col bg-secondary campo p-lg-2 rounded-3">
                                 <div class="fw-bold">Codigo Postal:</div>
-                                <div class="">
+                                <div <?php echo !isset($_POST["editar"]) ? 'tabindex="0"' : ''; ?>>
                                     <?php
                                     if (isset($_POST["editar"])) {
                                         echo "<input class='w-100 rounded-3 ps-1' type='text' name='codigo_postal' value='" . $_SESSION['usuario']->codigo_postal . "' id='cp'>";
@@ -221,7 +222,8 @@ if (isset($_POST['actualizar'])) {
                                     }
                                     ?>
                                 </div>
-                                <span id="errorCP" class="noError">El Código Postal solo acepta carácteres alfanuméricos
+                                <span id="errorCP" class="noError">El Código Postal solo acepta carácteres
+                                    alfanuméricos
                                     (no se admiten acentos, tampoco ñ/ç/similares)</span>
                             </div>
                         </div>
