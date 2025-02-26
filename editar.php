@@ -119,9 +119,11 @@ if(isset($_POST['update'])){
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <?php include("includes/head-tags.php"); ?>
 </head>
+
 <body class="login">
     <?php include("includes/navbar.php"); ?>
     <main class="container-fluid">
@@ -131,128 +133,134 @@ if(isset($_POST['update'])){
 
                 <form action="" method="POST" class="px-3 px-lg-5" enctype="multipart/form-data">
                     <div class="mb-3 text-center">
-                        <label class="form-label">Tipo:</label>
-                        <select name="tipo" class="form-select" >
+                        <label for="tipo" class="form-label">Tipo:</label>
+                        <select name="tipo" id="tipo" class="form-select">
                             <?php if($tipoSeleccionado=='cliente'||$tipoSeleccionado=='admin'): ?>
-                            <option value="cliente" <?php echo ($tipoSeleccionado == 'cliente') ? 'selected' : ''; ?>>Usuario</option>
-                            <option value="admin" <?php echo ($tipoSeleccionado == 'admin') ? 'selected' : ''; ?>>Administrador</option>
+                            <option value="cliente" <?php echo ($tipoSeleccionado == 'cliente') ? 'selected' : ''; ?>>
+                                Usuario</option>
+                            <option value="admin" <?php echo ($tipoSeleccionado == 'admin') ? 'selected' : ''; ?>>
+                                Administrador</option>
                             <?php else: ?>
-                            <option value="Pelicula" <?php echo ($tipoSeleccionado == 'Pelicula') ? 'selected' : ''; ?>>Película</option>
-                            <option value="Serie" <?php echo ($tipoSeleccionado == 'Serie') ? 'selected' : ''; ?>>Serie</option>
+                            <option value="Pelicula" <?php echo ($tipoSeleccionado == 'Pelicula') ? 'selected' : ''; ?>>
+                                Película</option>
+                            <option value="Serie" <?php echo ($tipoSeleccionado == 'Serie') ? 'selected' : ''; ?>>Serie
+                            </option>
                             <?php endif; ?>
                         </select>
                     </div>
-                
+
                     <div class="mb-3 text-center">
-                        <label class="form-label">Nombre:</label>
-                        <input type="text" aria-label="Nombre" name="nombre" class="form-control"
-                               value="<?php echo isset($obj) ? htmlspecialchars($obj->nombre) : ''; ?>"
-                               placeholder="Insertar nombre" required>
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" class="form-control"
+                            value="<?php echo isset($obj) ? htmlspecialchars($obj->nombre) : ''; ?>"
+                            placeholder="Insertar nombre" required>
                     </div>
 
                     <?php if ($tipoSeleccionado == 'cliente' || $tipoSeleccionado == 'admin'): ?>
-                        <!-- FORMULARIO PARA USUARIOS -->
-                        <div class="mb-3 text-center">
-                            <label class="form-label">Apellidos:</label>
-                            <input type="text" aria-label="Apellidos" name="apellidos" class="form-control"
-                                   value="<?php echo isset($obj) ? htmlspecialchars($obj->apellidos) : ''; ?>"
-                                   placeholder="Insertar apellidos" required>
-                        </div>
-                        <div class="mb-3 text-center">
-                            <label class="form-label">Password:</label>
-                            <input type="text" aria-label="Contraseña" name="pass" class="form-control"
-                                   value="<?php echo isset($obj) ? htmlspecialchars($obj->clave) : ''; ?>"
-                                    required>
-                        </div>
-                        <div class="mb-3 text-center">
-                            <label class="form-label">Fecha de nacimiento:</label>
-                            <input type="date" aria-label="fecha de nacimiento" name="fecha" class="form-control"
-                                   value="<?php echo isset($obj) ? $obj->fecha : ''; ?>" required>
-                        </div>
-                        <div class="mb-3 text-center">
-                            <label class="form-label">País:</label>
-                            <input type="text" aria-label="pais" name="pais" class="form-control"
-                                   value="<?php echo isset($obj) ? htmlspecialchars($obj->pais) : ''; ?>"
-                                   placeholder="Insertar país" required>
-                        </div>
-                        <div class="mb-3 text-center">
-                            <label class="form-label">Código Postal:</label>
-                            <input type="number" aria-label="código postal" name="codigo_postal" class="form-control"
-                                   value="<?php echo isset($obj) ? htmlspecialchars($obj->codigo_postal) : ''; ?>"
-                                   placeholder="Insertar Código Postal" required>
-                        </div>
-                        <div class="mb-3 text-center">
-                            <label class="form-label">Teléfono:</label>
-                            <input type="text" aria-label="telefono" name="telefono" class="form-control"
-                                   value="<?php echo isset($obj) ? htmlspecialchars($obj->telefono) : ''; ?>"
-                                   placeholder="Insertar teléfono" required>
-                        </div>
-                        <div class="mb-3 text-center">
-                            <label class="form-label">Correo Electrónico:</label>
-                            <input type="email" aria-label="correo Electrónico" name="email" class="form-control"
-                                   value="<?php echo isset($obj) ? htmlspecialchars($obj->correo) : ''; ?>"
-                                   placeholder="example@example.com" required>
-                        </div>
-                        <div class="mb-3 text-center">
-                            <label class="form-label">Imagen:</label>
-                            <input type="file" aria-label="Imagen" name="img" class="form-control">
-                        </div>
+                    <!-- FORMULARIO PARA USUARIOS -->
+                    <div class="mb-3 text-center">
+                        <label for="apellidos" class="form-label">Apellidos:</label>
+                        <input type="text" name="apellidos" id="apellidos" class="form-control"
+                            value="<?php echo isset($obj) ? htmlspecialchars($obj->apellidos) : ''; ?>"
+                            placeholder="Insertar apellidos" required>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label for="pass" class="form-label">Password:</label>
+                        <input type="text" name="pass" id="pass" class="form-control"
+                            value="<?php echo isset($obj) ? htmlspecialchars($obj->clave) : ''; ?>" required>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label for="fecha" class="form-label">Fecha de nacimiento:</label>
+                        <input type="date" id="fecha" name="fecha" class="form-control"
+                            value="<?php echo isset($obj) ? $obj->fecha : ''; ?>" required>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label for="pais" class="form-label">País:</label>
+                        <input type="text" name="pais" id="pais" class="form-control"
+                            value="<?php echo isset($obj) ? htmlspecialchars($obj->pais) : ''; ?>"
+                            placeholder="Insertar país" required>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label for="codigo_postal" class="form-label">Código Postal:</label>
+                        <input type="number" name="codigo_postal" id="codigo_postal" class="form-control"
+                            value="<?php echo isset($obj) ? htmlspecialchars($obj->codigo_postal) : ''; ?>"
+                            placeholder="Insertar Código Postal" required>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label for="telefono" class="form-label">Teléfono:</label>
+                        <input type="text" id="telefono" name="telefono" class="form-control"
+                            value="<?php echo isset($obj) ? htmlspecialchars($obj->telefono) : ''; ?>"
+                            placeholder="Insertar teléfono" required>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label for="email" class="form-label">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" class="form-control"
+                            value="<?php echo isset($obj) ? htmlspecialchars($obj->correo) : ''; ?>"
+                            placeholder="example@example.com" required>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label for="img" class="form-label">Imagen:</label>
+                        <input type="file" name="img" id="img" class="form-control">
+                    </div>
 
                     <?php else: ?>
-                        <!-- FORMULARIO PARA PELÍCULAS Y SERIES -->
-                        <div class="mb-3 text-center">
-                            <label class="form-label">Género:</label>
-                            <select name="genero" class="form-select">
-                                <?php
+                    <!-- FORMULARIO PARA PELÍCULAS Y SERIES -->
+                    <div class="mb-3 text-center">
+                        <label for="genero" class="form-label">Género:</label>
+                        <select name="genero" id="genero" class="form-select">
+                            <?php
                                 $generos = ["Comedia", "Acción", "Fantasía", "Drama", "Infantil", "Terror"];
                                 foreach ($generos as $genero) {
                                     echo "<option value='$genero' " . (isset($obj) && trim($obj->genero) == $genero ? 'selected' : '') . ">$genero</option>";
                                 }
                                 ?>
-                            </select>
-                        </div>
-                        <div class="mb-3 text-center">
-                            <label class="form-label">Sinopsis:</label>
-                            <textarea name="sinopsis" aria-label="Sinopsis" class="form-control" rows="4"><?php echo isset($obj) ? htmlspecialchars($obj->sinopsis) : ''; ?></textarea>
-                        </div>
-                        <div class="mb-3 text-center">
-                            <label class="form-label">Reparto:</label>
-                            <textarea name="reparto" aria-label="reparto" class="form-control" rows="4"><?php echo isset($obj) ? htmlspecialchars($obj->reparto) : ''; ?></textarea>
-                        </div>
-                        <div class="mb-3 text-center">
-                            <label class="form-label">Nota:</label>
-                            <select name="nota" class="form-select">
-                                <?php
+                        </select>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label for="sinopsis" class="form-label">Sinopsis:</label>
+                        <textarea name="sinopsis" id="sinopsis" class="form-control"
+                            rows="4"><?php echo isset($obj) ? htmlspecialchars($obj->sinopsis) : ''; ?></textarea>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label for="reparto" class="form-label">Reparto:</label>
+                        <textarea name="reparto" id="reparto" class="form-control"
+                            rows="4"><?php echo isset($obj) ? htmlspecialchars($obj->reparto) : ''; ?></textarea>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label for="nota" class="form-label">Nota:</label>
+                        <select name="nota" id="nota" class="form-select">
+                            <?php
                                 $notas = [1,2,3,4,5,6,7,8,9,10];
                                 foreach ($notas as $nota) {
                                     echo "<option value='$nota' " . (isset($obj) && trim($obj->nota) == $nota ? 'selected' : '') . ">$nota</option>";
                                 }
                                 ?>
-                            </select>
-                        </div>
-                        <div class="mb-3 text-center">
-                            <label class="form-label">Fecha de lanzamiento:</label>
-                            <input type="date" aria-label="fecha de lanzamiento" name="fecha" class="form-control"
-                                   value="<?php echo isset($obj) ? $obj->fecha : ''; ?>" required>
-                        </div>
-                        <div class="mb-3 text-center">
-                            <label class="form-label">Imagen:</label>
-                            <input type="file" aria-label="Imagen" name="img" class="form-control">
-                            <input type="hidden" name="imagen_actual" value="<?php echo isset($obj) ? $obj->imagen : ''; ?>">
+                        </select>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label for="fecha" class="form-label">Fecha de lanzamiento:</label>
+                        <input type="date" name="fecha" id="fecha" class="form-control"
+                            value="<?php echo isset($obj) ? $obj->fecha : ''; ?>" required>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label for="img" class="form-label">Imagen:</label>
+                        <input type="file" name="img" id="img" class="form-control">
+                        <input type="hidden" name="imagen_actual"
+                            value="<?php echo isset($obj) ? $obj->imagen : ''; ?>">
 
-                        </div>
-                        <div class="mb-3 text-center">
-                            <label class="form-label">Video:</label>
-                            <input type="file" aria-label="video" name="video" class="form-control">
-                            <input type="hidden" name="video_actual" value="<?php echo isset($obj) ? $obj->video : ''; ?>">
-                        </div>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label for="video" class="form-label">Video:</label>
+                        <input type="file" id="video" name="video" class="form-control">
+                        <input type="hidden" name="video_actual" value="<?php echo isset($obj) ? $obj->video : ''; ?>">
+                    </div>
                     <?php endif; ?>
                     <div class="mb-3 text-center">
-                    <input type="hidden" name="id" value="<?php echo isset($obj->id) ? $obj->id : ''; ?>">
-                    <button type="submit" class="btn btn-primary " 
-                        name="<?php echo isset($obj) ? 'update' : 'insert'; ?>">
-                        <?php echo isset($obj) ? 'Actualizar' : 'Añadir'; ?>
-                    </button>
+                        <input type="hidden" name="id" value="<?php echo isset($obj->id) ? $obj->id : ''; ?>">
+                        <button type="submit" class="btn btn-primary "
+                            name="<?php echo isset($obj) ? 'update' : 'insert'; ?>">
+                            <?php echo isset($obj) ? 'Actualizar' : 'Añadir'; ?>
+                        </button>
                     </div>
                 </form>
             </div>
@@ -261,4 +269,5 @@ if(isset($_POST['update'])){
     <?php include("includes/footer.php"); ?>
     <script src="./js/signup.js" type="text/javascript"></script>
 </body>
+
 </html>
