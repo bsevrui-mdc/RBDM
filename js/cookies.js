@@ -14,10 +14,14 @@ document.addEventListener("DOMContentLoaded", function () {
     cookieAlert.classList.remove("oculto");
     bloqueoCookies.classList.remove("oculto");
     document.body.style.overflow = "hidden";
+    cookieAlert.setAttribute("tabindex", "-1");
+    acceptCookies.focus();
   } else {
     ocultarAvisoCookies();
     if (!getCookie("novedades")) {
       modal.style.display = "block";
+      modal.setAttribute("tabindex", "-1");
+      aceptarmodal.focus();
     }
   }
 
@@ -26,6 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
     ocultarAvisoCookies();
     if (!getCookie("novedades")) {
       modal.style.display = "block";
+      modal.setAttribute("tabindex", "-1");
+      aceptarmodal.focus();
     }
   });
 
