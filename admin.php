@@ -86,7 +86,7 @@ if(isset($_POST['borrar'])) {
                             </div>
                         </div>
                     </div>
-                    <div class="col d-none d-lg-block">
+                    <div class="col d-none d-lg-block" tabindex="0">
                         <div class="display-3 nameAdmin">admin</div>
                         <p><?php echo $_SESSION['usuario']->nombre ?></p>
                         <p><?php echo $_SESSION['usuario']->apellidos ?></p>
@@ -111,15 +111,15 @@ if(isset($_POST['borrar'])) {
                             <input class="form-control py-2 border-right-0 border" id="search"
                                 aria-label="Cuadro de texto para buscar" type="search" placeholder="Buscar"
                                 id="example-search-input"></label>
-                            <button class="btn bg-white border-0"><i class="fa fa-search" aria-label="Buscar"></i><span
-                                    class="visually-hidden">Buscador</span></button>
+                            <button tabindex="-1" class="btn bg-white border-0"><i class="fa fa-search"
+                                    aria-label="Buscar"></i><span class="visually-hidden">Buscador</span></button>
                         </div>
                     </div>
                     <form action="editar.php" method="post">
                         <div class="row py-2">
                             <div class="col textList">
 
-                                <h1><?php
+                                <h1 tabindex="0"><?php
                             if($l === 'pelicula'){
                                 echo "lista de películas";
                             }else if($l==='serie'){
@@ -166,28 +166,27 @@ if(isset($_POST['borrar'])) {
                                 </div>
                                 -->
                                 <div class="col-6 d-flex flex-column justify-content-center text-center">
-                                    <p class="titulo"><?php echo $value->nombre ?></p>
+                                    <p class="titulo" tabindex="0"><?php echo $value->nombre ?></p>
                                     <?php if ($l === 'usuario'): ?>
-                                    <p><?php echo $value->apellidos ?></p>
-                                    <p><?php echo $value->tipo ?></p>
+                                    <p tabindex="0"><?php echo $value->apellidos ?></p>
+                                    <p tabindex="0"><?php echo $value->tipo ?></p>
                                     <?php else: ?>
-                                    <p><?php echo $value->genero ?></p>
-                                    <p><?php echo $value->nota ?></p>
+                                    <p tabindex="0"><?php echo $value->genero ?></p>
+                                    <p tabindex="0"><?php echo $value->nota ?></p>
                                     <?php endif; ?>
                                 </div>
                                 <div class="col d-flex justify-content-around align-items-center">
                                     <form action="editar.php" method="post">
                                         <input type="hidden" name="id" value="<?php echo $value->id; ?>">
                                         <input type="hidden" name="tipo" value="<?php echo $tabla; ?>">
-                                        <button name="editar" class="btn-icon"><span class="visually-hidden">btn
+                                        <button name="editar" class="btn-icon"><span class="visually-hidden">boton
                                                 editar</span><i class="fa-solid fa-pen" aria-hidden="true"></i></button>
                                     </form>
                                     <form action="" method="post">
                                         <input type="hidden" name="idD" value="<?php echo $value->id; ?>">
                                         <input type="hidden" name="tipoD" value="<?php echo $tabla; ?>">
-                                        <button name="borrar" class="btn-icon2"><span
-                                                class="visually-hidden">borrar</span><i
-                                                class="fa-solid fa-trash-can color-trash"></i></button>
+                                        <button name="borrar" class="btn-icon2"><span class="visually-hidden">boton
+                                                borrar</span><i class="fa-solid fa-trash-can color-trash"></i></button>
                                     </form>
                                 </div>
                             </div>

@@ -215,7 +215,7 @@ function borrarPeliculaDeLista($id_usuario, $id_contenido)
 function obtenerComentarios($conn, $idPeli)
 {
     try {
-        $comentarios = $conn->query("select u.imagen as imagen, c.texto as texto , c.id as idComentario, u.id as idUsuario from comentario c, usuario u where c.id_contenido = $idPeli and c.id_usuario = u.id");
+        $comentarios = $conn->query("select u.imagen as imagen, c.texto as texto , c.id as idComentario, u.id as idUsuario, u.nombre as nombreUsuario from comentario c, usuario u where c.id_contenido = $idPeli and c.id_usuario = u.id");
         return $comentarios;
     } catch (PDOException $ex) {
         echo $ex->getMessage();

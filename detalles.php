@@ -26,6 +26,7 @@ if (isset($_POST['actualizar'])) {
 <head>
     <?php include("includes/head-tags.php"); ?>
 
+
     <head>
 
 
@@ -77,22 +78,22 @@ if (isset($_SESSION['usuario'])) {
             <div class="row">
                 <div class="col-lg-3">
                     <div class="py-3 row">
-                        <div class="col d-flex justify-content-center">
+                        <div class="col d-flex justify-content-center" tabindex="0">
                             <img src="<?php echo $pelicula->imagen ?>" alt="imagenPelicula" class="img-fluid">
                         </div>
                     </div>
                     <div class="py-3 row">
-                        <div class="text-center col">
+                        <div class="text-center col" tabindex="0">
                             <h1 class="text-break"><?php echo $pelicula->nombre ?></h1>
                         </div>
                     </div>
                     <div class="row">
                         <div class="py-4 text-center col">
-                            <div class="calificacion">Nota: <i
+                            <div class="calificacion" tabindex="0">Nota: <i
                                     class="px-2 fa-solid fa-star text-primary"></i><?php echo $pelicula->nota ?></div>
                             <?php
                             if (isset($_SESSION['usuario'])) { ?>
-                            <div class="calificacion">Nota Usuario: <i
+                            <div class="calificacion" tabindex="0">Nota Usuario: <i
                                     class="px-2 fa-solid fa-star text-primary"></i><?php echo $notaUsuario ?></div>
                             <form method="post" action="">
                                 <label for="nuevaNotaUsuario" class="visually-hidden">Nota usuario:</label>
@@ -131,13 +132,13 @@ if (isset($_SESSION['usuario'])) {
                 </div>
                 <div class="px-5 col-lg-9">
                     <div class="row">
-                        <div class="px-2 py-2 col text-start">
+                        <div class="px-2 py-2 col text-start" tabindex="0">
 
                             <h2>sinopsis</h2>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="py-3 col">
+                        <div class="py-3 col" tabindex="0">
                             <p>
                                 <?php echo $pelicula->sinopsis ?>
                             </p>
@@ -146,7 +147,7 @@ if (isset($_SESSION['usuario'])) {
                         </div>
                     </div>
                     <div class="row">
-                        <div class="px-2 py-3 col">
+                        <div class="px-2 py-3 col" tabindex="0">
                             <h3><?php echo $pelicula->fecha ?></h3>
                         </div>
                     </div>
@@ -186,40 +187,40 @@ if (isset($_SESSION['usuario'])) {
             </div>
             <div class="my-5 row">
                 <div class="col-lg-3 order-lg-1 d-flex align-items-center justify-content-center flex-column">
-                    <h3>DIRECTOR</h3>
-                    <img src="./assets/img/reparto/Alex_Pina.jpg" alt="imagen" class="py-2 img-fluid">
-                    <h1 class="pb-5 text-center">Alex Pina</h1>
+                    <h3 tabindex="0">DIRECTOR</h3>
+                    <img tabindex="0" src="./assets/img/reparto/Alex_Pina.jpg" alt="imagen" class="py-2 img-fluid">
+                    <h1 tabindex="0" class="pb-5 text-center">Alex Pina</h1>
                 </div>
                 <div class="col-lg-9">
                     <div class="row">
                         <div class="col text-start">
-                            <h2>Reparto</h2>
+                            <h2 tabindex="0">Reparto</h2>
                         </div>
                     </div>
                     <div class="row align-items-stretch">
                         <div class="px-3 py-5 col-lg-4">
                             <div class="card rounded-4 h-100">
-                                <img src="./assets/img/reparto/Alvaro_Morte.jpg"
+                                <img src="./assets/img/reparto/Alvaro_Morte.jpg" tabindex="0"
                                     class="img-fluid card-img-top rounded-4" alt="imagen">
-                                <div class="card-body">
+                                <div class="card-body" tabindex="0">
                                     Alvaro Morte
                                 </div>
                             </div>
                         </div>
                         <div class="px-3 py-5 col-lg-4">
                             <div class="card rounded-4 h-100">
-                                <img src="./assets/img/reparto/Ursula_Corbero.jpg"
+                                <img src="./assets/img/reparto/Ursula_Corbero.jpg" tabindex="0"
                                     class="img-fluid card-img-top rounded-4" alt="imagen">
-                                <div class="card-body">
+                                <div class="card-body" tabindex="0">
                                     Úrsula Corbero
                                 </div>
                             </div>
                         </div>
                         <div class="px-3 py-5 col-lg-4">
                             <div class="card rounded-4 h-100">
-                                <img src="./assets/img/reparto/Pedro_Alonso.jpg"
+                                <img src="./assets/img/reparto/Pedro_Alonso.jpg" tabindex="0"
                                     class="img-fluid card-img-top rounded-4" alt="imagen">
-                                <div class="card-body">
+                                <div class="card-body" tabindex="0">
                                     Pedro Alonso
                                 </div>
                             </div>
@@ -230,27 +231,27 @@ if (isset($_SESSION['usuario'])) {
                     <div class="row">
                         <div class="px-3 py-5 col-lg-4">
                             <div class="card rounded-4">
-                                <img src="./assets/img/reparto/Jaime_Lorente.jpg"
+                                <img src="./assets/img/reparto/Jaime_Lorente.jpg" tabindex="0"
                                     class="img-fluid card-img-top rounded-4" alt="imagen">
-                                <div class="card-body">
+                                <div class="card-body" tabindex="0">
                                     Jaime Lorente
                                 </div>
                             </div>
                         </div>
                         <div class="px-3 py-5 col-lg-4">
                             <div class="card">
-                                <img src="./assets/img/reparto/Itziar_Ituño.jpg"
+                                <img src="./assets/img/reparto/Itziar_Ituño.jpg" tabindex="0"
                                     class="img-fluid card-img-top rounded-4" alt="imagen">
-                                <div class="card-body">
+                                <div class="card-body" tabindex="0">
                                     Itziar Ituño
                                 </div>
                             </div>
                         </div>
                         <div class="px-3 py-5 col-lg-4">
                             <div class="card">
-                                <img src="./assets/img/reparto/Miguel_Herran.jpg"
+                                <img src="./assets/img/reparto/Miguel_Herran.jpg" tabindex="0"
                                     class="img-fluid card-img-top rounded-4" alt="imagen">
-                                <div class="card-body">
+                                <div class="card-body" tabindex="0">
                                     Miguel Herrán
                                 </div>
                             </div>
@@ -324,7 +325,7 @@ if (isset($_SESSION['usuario'])) {
                 <input type="hidden" name="comentarioUsuario" id="comentarioUsuario">
                 <div class="row">
                     <div class="col text-end">
-                        <input type="submit" name="comentar" value="Comentar" class="btn btn-primary" />
+                        <input type="submit" id="comentar" name="comentar" value="Comentar" class="btn btn-primary" />
 
                     </div>
                 </div>
@@ -338,20 +339,23 @@ if (isset($_SESSION['usuario'])) {
             <form method="post" action="">
                 <div class="py-3 row">
                     <div class="col-lg-1">
-                        <img src="<?php echo $fila->imagen ?>" class="img-fluid" alt="foto de perfil">
+                        <img src="<?php echo $fila->imagen ?>" tabindex="0" class="img-fluid" alt="foto de perfil">
                     </div>
 
                     <div class="col-lg-10">
                         <input type="hidden" name="idComentario" value="<?php echo $fila->idComentario ?>">
-                        <textarea name="comentario" class="form-control h-100"
-                            aria-label="true"><?php echo $fila->texto ?></textarea>
+                        <textarea aria-label="Comentario de <?= $fila->nombreUsuario ?>" name="comentario"
+                            class="form-control h-100" aria-label="true"><?php echo $fila->texto ?></textarea>
                     </div>
                     <div class="col-lg-1 d-flex align-items-center">
                         <?php if (isset($_SESSION['usuario']) && $fila->idUsuario == $_SESSION['usuario']->id) { ?>
-                        <button class="mx-1 btn btn-primary" type="submit" name="eliminar">
+                        <button class="mx-1 btn btn-primary"
+                            aria-label="Borrar comentario de <?= $fila->nombreUsuario ?>" type="submit" name="eliminar">
                             <i class="fa-solid fa-trash icono-Log-Out"></i>
                         </button>
-                        <button class="mx-1 btn btn-primary" type="submit" name="actualizar">
+                        <button class="mx-1 btn btn-primary"
+                            aria-label="Editar comentario de <?= $fila->nombreUsuario ?>" type="submit"
+                            name="actualizar">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </button>
                         <?php } ?>
@@ -371,10 +375,10 @@ if (isset($_SESSION['usuario'])) {
     <script src="/js/quill.js"></script>
 
     <script>
-    window.onload = function() {
-        var quill = new Quill('#editor-container', {
+    document.addEventListener("DOMContentLoaded", function() {
+        const quill = new Quill('#editor-container', {
             modules: {
-                formula: true, // Asegúrate de que el módulo 'formula' esté habilitado
+                formula: true,
                 syntax: true,
                 toolbar: '#toolbar-container'
             },
@@ -382,14 +386,24 @@ if (isset($_SESSION['usuario'])) {
             theme: 'snow'
         });
 
+        const editorContainer = document.querySelector('#editor-container .ql-editor');
+
+        editorContainer.addEventListener('keydown', function(event) {
+            if (event.key === 'Tab') {
+                event.preventDefault();
+
+
+                const comentarButton = document.querySelector('input[name="comentar"]');
+
+                comentarButton.focus();
+            }
+        });
+
         document.getElementById('formulario').addEventListener('submit', function() {
-
-            var texto = quill.getText();
-
-
+            const texto = quill.getText();
             document.getElementById('comentarioUsuario').value = texto;
         });
-    };
+    });
     </script>
 </body>
 
