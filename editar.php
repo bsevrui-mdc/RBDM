@@ -14,6 +14,7 @@ if ($_SESSION['usuario']->tipo != "admin") {
 $obj = null;
 $tipoSeleccionado = isset($_POST['tipo']) ? $_POST['tipo'] : null;
 
+
 // Verificar si se está editando un usuario/contenido
 if (isset($_POST['editar']) || isset($_POST['media']) || isset($_POST['user'])) {
     if (isset($_POST['id']) && isset($_POST['tipo'])) {
@@ -23,6 +24,9 @@ if (isset($_POST['editar']) || isset($_POST['media']) || isset($_POST['user'])) 
 }
 
 if(isset($_POST['insert'])){
+    if(empty($_POST['nombre']) || empty($_POST['tipo']) || empty($_POST['genero']) || empty($_POST['nota']) || empty($_POST['sinopsis']) || !$rutaImg || !$rutaVideo || empty($_POST['reparto']) || empty($_POST['fecha_lanzamiento'])){
+        $errorEditar=true;
+    }
     if($tipoSeleccionado=='cliente'|| $tipoSeleccionado=='admin'){
         if(is_uploaded_file($_FILES['img']['tmp_name'])){
             $ruta = "./assets/img/profilePictures/".time()."-".$_FILES['img']['name'];
@@ -46,19 +50,17 @@ if(isset($_POST['insert'])){
         if (is_uploaded_file($_FILES['img']['tmp_name'])) {
             move_uploaded_file($_FILES['img']['tmp_name'], $rutaImg);
         } else {
-            die("Error al subir la imagen.");
+            $errorEditar=true;
         }
         // Construir la ruta para el video 
         $rutaVideo = "./assets/video/" . time() . "-" . $_FILES['video']['name'];
         if (is_uploaded_file($_FILES['video']['tmp_name'])) {
             move_uploaded_file($_FILES['video']['tmp_name'], $rutaVideo);
         } else {
-            die("Error al subir el video.");
+            $errorEditar=true;
         }
-        if(insertarMultimedia($_POST['nombre'],$_POST['tipo'],$_POST['genero'],$_POST['nota'],$_POST['sinopsis'],$rutaImg,$rutaVideo,$_POST['reparto'],$_POST['fecha_lanzamiento'])){
+        if(insertarMultimedia($_POST['nombre'],$_POST['tipo'],$_POST['genero'],$_POST['nota'],$_POST['sinopsis'],$rutaImg,$rutaVideo,$_POST['reparto'],$_POST['fecha'])){
             header('Location: admin.php');
-        }else{
-            echo 'Error al insertar la Serie/Peliculaelicula';
         }
     }
     
@@ -108,9 +110,7 @@ if(isset($_POST['update'])){
             // Redirigir después de la actualización
             header('Location: admin.php');
         } else {
-
             echo 'Error al actualizar';
-            var_dump($_POST);
         }
     }
    
@@ -130,7 +130,8 @@ if(isset($_POST['update'])){
         <div class="row justify-content-center">
             <div class="col-lg-6 my-lg-4 p-4 content rounded shadow">
                 <h1 class="text-center mb-4">Zona de edición</h1>
-
+                <?php if(isset($_POST['insert']) && $errorEditar) 
+                echo "<span class='text-danger'>Ha ocurrido un error al enviar el formulario</span>"?>
                 <form action="" method="POST" class="px-3 px-lg-5" enctype="multipart/form-data">
                     <div class="mb-3 text-center">
                         <label for="tipo" class="form-label">Tipo:</label>
@@ -152,8 +153,9 @@ if(isset($_POST['update'])){
                     <div class="mb-3 text-center">
                         <label for="nombre" class="form-label">Nombre:</label>
                         <input type="text" name="nombre" id="nombre" class="form-control"
-                            value="<?php echo isset($obj) ? htmlspecialchars($obj->nombre) : ''; ?>"
+                            value="<?php echo isset($obj) && !$error ? htmlspecialchars($obj->nombre) : ''; ?>"
                             placeholder="Insertar nombre" required>
+                            <span id="errorNombre" class="text-danger"></span>
                     </div>
 
                     <?php if ($tipoSeleccionado == 'cliente' || $tipoSeleccionado == 'admin'): ?>
@@ -163,11 +165,13 @@ if(isset($_POST['update'])){
                         <input type="text" name="apellidos" id="apellidos" class="form-control"
                             value="<?php echo isset($obj) ? htmlspecialchars($obj->apellidos) : ''; ?>"
                             placeholder="Insertar apellidos" required>
+                            <span id="errorApellidos" class="text-danger"></span>
                     </div>
                     <div class="mb-3 text-center">
                         <label for="pass" class="form-label">Password:</label>
                         <input type="text" name="pass" id="pass" class="form-control"
                             value="<?php echo isset($obj) ? htmlspecialchars($obj->clave) : ''; ?>" required>
+                            <span id="errorPass" class="text-danger"></span>
                     </div>
                     <div class="mb-3 text-center">
                         <label for="fecha" class="form-label">Fecha de nacimiento:</label>
@@ -185,22 +189,25 @@ if(isset($_POST['update'])){
                         <input type="number" name="codigo_postal" id="codigo_postal" class="form-control"
                             value="<?php echo isset($obj) ? htmlspecialchars($obj->codigo_postal) : ''; ?>"
                             placeholder="Insertar Código Postal" required>
+                            <span id="errorCP" class="text-danger"></span>
                     </div>
                     <div class="mb-3 text-center">
                         <label for="telefono" class="form-label">Teléfono:</label>
                         <input type="text" id="telefono" name="telefono" class="form-control"
                             value="<?php echo isset($obj) ? htmlspecialchars($obj->telefono) : ''; ?>"
                             placeholder="Insertar teléfono" required>
+                            <span id="errorTelf" class="text-danger"></span>
                     </div>
                     <div class="mb-3 text-center">
                         <label for="email" class="form-label">Correo Electrónico:</label>
                         <input type="email" id="email" name="email" class="form-control"
                             value="<?php echo isset($obj) ? htmlspecialchars($obj->correo) : ''; ?>"
                             placeholder="example@example.com" required>
+                            <span id="errorEmail" class="text-danger"></span>
                     </div>
                     <div class="mb-3 text-center">
                         <label for="img" class="form-label">Imagen:</label>
-                        <input type="file" name="img" id="img" class="form-control">
+                        <input type="file" name="img" id="img" class="form-control" required>
                     </div>
 
                     <?php else: ?>
@@ -218,12 +225,12 @@ if(isset($_POST['update'])){
                     </div>
                     <div class="mb-3 text-center">
                         <label for="sinopsis" class="form-label">Sinopsis:</label>
-                        <textarea name="sinopsis" id="sinopsis" class="form-control"
+                        <textarea name="sinopsis" id="sinopsis" class="form-control" required
                             rows="4"><?php echo isset($obj) ? htmlspecialchars($obj->sinopsis) : ''; ?></textarea>
                     </div>
                     <div class="mb-3 text-center">
                         <label for="reparto" class="form-label">Reparto:</label>
-                        <textarea name="reparto" id="reparto" class="form-control"
+                        <textarea name="reparto" id="reparto" class="form-control" required
                             rows="4"><?php echo isset($obj) ? htmlspecialchars($obj->reparto) : ''; ?></textarea>
                     </div>
                     <div class="mb-3 text-center">
@@ -244,14 +251,14 @@ if(isset($_POST['update'])){
                     </div>
                     <div class="mb-3 text-center">
                         <label for="img" class="form-label">Imagen:</label>
-                        <input type="file" name="img" id="img" class="form-control">
+                        <input type="file" name="img" id="img" class="form-control" required>
                         <input type="hidden" name="imagen_actual"
                             value="<?php echo isset($obj) ? $obj->imagen : ''; ?>">
 
                     </div>
                     <div class="mb-3 text-center">
                         <label for="video" class="form-label">Video:</label>
-                        <input type="file" id="video" name="video" class="form-control">
+                        <input type="file" id="video" name="video" class="form-control" required>
                         <input type="hidden" name="video_actual" value="<?php echo isset($obj) ? $obj->video : ''; ?>">
                     </div>
                     <?php endif; ?>
@@ -267,7 +274,7 @@ if(isset($_POST['update'])){
         </div>
     </main>
     <?php include("includes/footer.php"); ?>
-    <script src="./js/signup.js" type="text/javascript"></script>
+    <script src="./js/editar.js" type="text/javascript"></script>
 </body>
 
 </html>
